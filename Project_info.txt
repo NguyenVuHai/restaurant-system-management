@@ -1,0 +1,4 @@
+﻿Restaurant System Management
+- source checkout: https://restaurant-system-management.googlecode.com/svn/trunk/
+- username: ngthanhloan90@gmail.com
+- password: get password from here: https://code.google.com/hosting/settings
