@@ -1,0 +1,15 @@
+﻿Hình thức: báo cáo
+Nội dung: 
+- Thông tin nhóm (MSSV, Họ tên, email, số điện thoại, trưởng nhóm)
+- Phân tích chức năng: 
++ mô tả các chức năng có trong hệ thống ứng với từng loại người dùng cụ thể trong hệ thống
++ liên kết giữa các chức năng
+- Thiết kế dữ liệu:
++ lược đồ CSDL
++ mô tả các bảng, thuộc tính và ý nghĩa từng bảng, thuộc tính(chỉ cần nêu các thuộc tính quan trọng)
+
+Qui định nộp:R01_Mãnhóm.zip(rar)
+Trong tập tin trên gồm báo cáo cuối kỳ đặt tên là R01_Mãnhóm cùng các ảnh đính kèm.
+Lưu ý: nếu các ảnh trong báo cáo(lược đồ CSDL,...) nhỏ quá có thể gửi kèm ảnh trong file nộp và nén lại trong file nộp.
+
+---------
