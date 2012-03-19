@@ -14,5 +14,7 @@ Lưu ý: nếu các ảnh trong báo cáo(lược đồ CSDL,...) nhỏ quá có
 
 ---------
 Kế hoạch nộp đề tài có 1 số thay đổi sau:
-1/ Do đa số các bạn chưa học use-case nên chúng ta sẽ không yêu cầu nộp use-case diagram trong lần 1 nữa. Thay vào đó, các bạn chỉ cần đọc đặc tả và xác định các loại người dùng có trong hệ thống, các chức năng ứng với từng loại người dùng (vẫn có quyền làm use-case nếu các bạn đã biết và sẽ coi như điểm cộng cho nhóm)
+1/ Do đa số các bạn chưa học use-case nên chúng ta sẽ không yêu cầu nộp use-case diagram trong lần 1 nữa. 
+Thay vào đó, các bạn chỉ cần đọc đặc tả và xác định các loại người dùng có trong hệ thống, 
+các chức năng ứng với từng loại người dùng (vẫn có quyền làm use-case nếu các bạn đã biết và sẽ coi như điểm cộng cho nhóm)
 2/ Deadline lần 1 và lần 2 sẽ được ghép vào với nhau (xem yêu cầu nộp đề tài)
