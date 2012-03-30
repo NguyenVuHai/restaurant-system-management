@@ -1,5 +1,0 @@
-E:\HCDH\HK1\He QTCSDL\Restaurant\trunk\Restaurant\Restaurant\bin\Restaurant.dll
-E:\HCDH\HK1\He QTCSDL\Restaurant\trunk\Restaurant\Restaurant\bin\Restaurant.pdb
-E:\HCDH\HK1\He QTCSDL\Restaurant\trunk\Restaurant\Restaurant\obj\Debug\ResolveAssemblyReference.cache
-E:\HCDH\HK1\He QTCSDL\Restaurant\trunk\Restaurant\Restaurant\obj\Debug\Restaurant.dll
-E:\HCDH\HK1\He QTCSDL\Restaurant\trunk\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
