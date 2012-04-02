@@ -34,8 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>C:\Users\Nguyen Minh Huong\Desktop\VB_Tuan_4\DotNetBar-9.3.0.4-bin\DevComponents.DotNetBar2.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Puppy Cun\Desktop\VB_Tuan_4\DotNetBar-9.3.0.4-bin\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6" />
+    <Reference Include="DevComponents.Instrumentation, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
+    <Reference Include="envdte, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,16 +57,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="uCtr_BanChuaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_BanChuaDat.Designer.cs">
+      <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uCtr_DatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_DatBan.Designer.cs">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="uCtr_BanDaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_BanDaDat.Designer.cs">
+      <DependentUpon>uCtr_BanDaDat.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="uCtr_BanChuaDat.resx">
+      <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtr_DatBan.resx">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -68,6 +100,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +111,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeBlue_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\hBlue_.png" />
+    <Content Include="Resources\Charts.png" />
+    <Content Include="Resources\Details.png" />
+    <Content Include="Resources\hBlue_.png" />
+    <Content Include="Resources\Help.png" />
+    <Content Include="Resources\Invoice.png" />
+    <Content Include="Resources\TableReportt.png" />
+    <Content Include="Resources\Unpaid.png" />
+    <Content Include="Resources\Web.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
