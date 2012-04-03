@@ -1,6 +1,6 @@
 ﻿namespace RestaurantApp_G21
 {
-    partial class m_formThongTinNhanVien
+    partial class FormThongTinNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -298,7 +298,7 @@
             this.m_btnHuy.TabIndex = 5;
             this.m_btnHuy.Text = "Hủy";
             // 
-            // m_formThongTinNhanVien
+            // FormThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -323,7 +323,8 @@
             this.Controls.Add(this.m_txtMaNhanVien);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "m_formThongTinNhanVien";
+            this.Name = "FormThongTinNhanVien";
+            this.RightToLeftLayout = true;
             this.Text = "Form thông tin nhân viên";
             this.ResumeLayout(false);
 

@@ -15,5 +15,11 @@ namespace RestaurantApp_G21
         {
             InitializeComponent();
         }
+
+        private void m_btnXemChiTiet_Click(object sender, EventArgs e)
+        {
+            FormDSNhanVienTheoCa form = new FormDSNhanVienTheoCa();
+            form.Show();
+        }
     }
 }
