@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace RestaurantApp_G21
 {
-    public partial class uCtr_DatBan : UserControl
+    public partial class frmTimBanTrong : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public uCtr_DatBan()
+        public frmTimBanTrong()
         {
             InitializeComponent();
         }
