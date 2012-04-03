@@ -114,6 +114,7 @@
     </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="uCtr_QuanLyNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,7 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uCtr_BanChuaDat.resx">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
-    </EmbeddedResource>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimBanTrong.resx">
       <DependentUpon>frmTimBanTrong.cs</DependentUpon>
