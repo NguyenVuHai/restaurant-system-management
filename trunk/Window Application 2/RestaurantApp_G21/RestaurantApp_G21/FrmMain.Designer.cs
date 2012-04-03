@@ -30,10 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mainMetro = new DevComponents.DotNetBar.Metro.MetroShell();
+            this.metroTabPanel6 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.tabControl3 = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel7 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemNhanVien = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel8 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tabItem9 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.itemPanel9 = new DevComponents.DotNetBar.ItemPanel();
+            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTabPanel3 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.m_tabControlDatBan = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemHoaDon = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.m_btnTimBan = new DevComponents.DotNetBar.ButtonX();
             this.itemPanel27 = new DevComponents.DotNetBar.ItemPanel();
@@ -57,44 +63,14 @@
             this.itemPanel19 = new DevComponents.DotNetBar.ItemPanel();
             this.itemPanel15 = new DevComponents.DotNetBar.ItemPanel();
             this.m_tabItemDatBan = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemHoaDon = new DevComponents.DotNetBar.TabItem(this.components);
             this.m_tabControlPanelDatMonAn = new DevComponents.DotNetBar.TabControlPanel();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.m_tabItemDatMon = new DevComponents.DotNetBar.TabItem(this.components);
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTabPanel6 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.tabControl3 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel8 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem9 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel7 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemNhanVien = new DevComponents.DotNetBar.TabItem(this.components);
-            this.itemPanel9 = new DevComponents.DotNetBar.ItemPanel();
-            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTabPanel7 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.m_tabControlQLyNhanVien = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel10 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemQLyDoanhThu = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel9 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemQLyNhanVien = new DevComponents.DotNetBar.TabItem(this.components);
-            this.itemPanel10 = new DevComponents.DotNetBar.ItemPanel();
-            this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTabPanel8 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.m_tabControlKhoHang = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel12 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemNhaCungCap = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel11 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemQLyKho = new DevComponents.DotNetBar.TabItem(this.components);
-            this.itemPanel11 = new DevComponents.DotNetBar.ItemPanel();
-            this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTabPanel2 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.m_tabControlQTHeThong = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.m_tabItemTTTaiKhoan = new DevComponents.DotNetBar.TabItem(this.components);
-            this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
-            this.metroTileItem11 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTabPanel1 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.itemPanel14 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -115,6 +91,30 @@
             this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItemBatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTabPanel8 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.m_tabControlKhoHang = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel11 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemQLyKho = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel12 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemNhaCungCap = new DevComponents.DotNetBar.TabItem(this.components);
+            this.itemPanel11 = new DevComponents.DotNetBar.ItemPanel();
+            this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTabPanel2 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.m_tabControlQTHeThong = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemTTTaiKhoan = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
+            this.metroTileItem11 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTabPanel7 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.m_tabControlQLyNhanVien = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel9 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemQLyNhanVien = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel10 = new DevComponents.DotNetBar.TabControlPanel();
+            this.m_tabItemQLyDoanhThu = new DevComponents.DotNetBar.TabItem(this.components);
+            this.itemPanel10 = new DevComponents.DotNetBar.ItemPanel();
+            this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.m_metroTabIteHome = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.m_tabDatBan = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.m_mtTabItemNhaHang = new DevComponents.DotNetBar.Metro.MetroTabItem();
@@ -135,24 +135,24 @@
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.m_tabItemTTNhaHang = new DevComponents.DotNetBar.TabItem(this.components);
             this.mainMetro.SuspendLayout();
+            this.metroTabPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControl3)).BeginInit();
+            this.tabControl3.SuspendLayout();
             this.metroTabPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlDatBan)).BeginInit();
             this.m_tabControlDatBan.SuspendLayout();
             this.tabControlPanel4.SuspendLayout();
             this.m_tabControlPanelDatMonAn.SuspendLayout();
-            this.metroTabPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl3)).BeginInit();
-            this.tabControl3.SuspendLayout();
-            this.metroTabPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQLyNhanVien)).BeginInit();
-            this.m_tabControlQLyNhanVien.SuspendLayout();
+            this.metroTabPanel1.SuspendLayout();
             this.metroTabPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlKhoHang)).BeginInit();
             this.m_tabControlKhoHang.SuspendLayout();
             this.metroTabPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQTHeThong)).BeginInit();
             this.m_tabControlQTHeThong.SuspendLayout();
-            this.metroTabPanel1.SuspendLayout();
+            this.metroTabPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQLyNhanVien)).BeginInit();
+            this.m_tabControlQLyNhanVien.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMetro
@@ -207,6 +207,138 @@
             this.mainMetro.TabStripFont = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainMetro.Text = "metroShell1";
             // 
+            // metroTabPanel6
+            // 
+            this.metroTabPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel6.Controls.Add(this.tabControl3);
+            this.metroTabPanel6.Controls.Add(this.itemPanel9);
+            this.metroTabPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel6.Location = new System.Drawing.Point(0, 51);
+            this.metroTabPanel6.Name = "metroTabPanel6";
+            this.metroTabPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel6.Size = new System.Drawing.Size(830, 629);
+            // 
+            // 
+            // 
+            this.metroTabPanel6.Style.Class = "";
+            this.metroTabPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel6.StyleMouseDown.Class = "";
+            this.metroTabPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel6.StyleMouseOver.Class = "";
+            this.metroTabPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel6.TabIndex = 6;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.BackColor = System.Drawing.Color.White;
+            this.tabControl3.CanReorderTabs = true;
+            this.tabControl3.Controls.Add(this.tabControlPanel7);
+            this.tabControl3.Controls.Add(this.tabControlPanel8);
+            this.tabControl3.ForeColor = System.Drawing.Color.Black;
+            this.tabControl3.Location = new System.Drawing.Point(0, 15);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tabControl3.SelectedTabIndex = 1;
+            this.tabControl3.Size = new System.Drawing.Size(830, 612);
+            this.tabControl3.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
+            this.tabControl3.TabIndex = 1;
+            this.tabControl3.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.tabControl3.Tabs.Add(this.m_tabItemNhanVien);
+            this.tabControl3.Tabs.Add(this.tabItem9);
+            this.tabControl3.Text = "tabControl3";
+            // 
+            // tabControlPanel7
+            // 
+            this.tabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel7.Location = new System.Drawing.Point(0, 28);
+            this.tabControlPanel7.Name = "tabControlPanel7";
+            this.tabControlPanel7.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel7.Size = new System.Drawing.Size(830, 584);
+            this.tabControlPanel7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel7.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel7.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel7.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel7.Style.GradientAngle = 90;
+            this.tabControlPanel7.TabIndex = 1;
+            this.tabControlPanel7.TabItem = this.m_tabItemNhanVien;
+            this.tabControlPanel7.Visible = false;
+            // 
+            // m_tabItemNhanVien
+            // 
+            this.m_tabItemNhanVien.AttachedControl = this.tabControlPanel7;
+            this.m_tabItemNhanVien.Name = "m_tabItemNhanVien";
+            this.m_tabItemNhanVien.Text = "Quản Lý Nhân Viên";
+            // 
+            // tabControlPanel8
+            // 
+            this.tabControlPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel8.Location = new System.Drawing.Point(0, 28);
+            this.tabControlPanel8.Name = "tabControlPanel8";
+            this.tabControlPanel8.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel8.Size = new System.Drawing.Size(830, 584);
+            this.tabControlPanel8.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel8.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel8.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel8.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel8.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel8.Style.GradientAngle = 90;
+            this.tabControlPanel8.TabIndex = 2;
+            this.tabControlPanel8.TabItem = this.tabItem9;
+            // 
+            // tabItem9
+            // 
+            this.tabItem9.AttachedControl = this.tabControlPanel8;
+            this.tabItem9.Name = "tabItem9";
+            this.tabItem9.Text = "Thống Kê Doanh Thu";
+            // 
+            // itemPanel9
+            // 
+            this.itemPanel9.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel9.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.itemPanel9.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel9.ContainerControlProcessDialogKey = true;
+            this.itemPanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.itemPanel9.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem5});
+            this.itemPanel9.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel9.Location = new System.Drawing.Point(3, 0);
+            this.itemPanel9.Name = "itemPanel9";
+            this.itemPanel9.Size = new System.Drawing.Size(824, 35);
+            this.itemPanel9.TabIndex = 0;
+            this.itemPanel9.Text = "itemPanel9";
+            // 
+            // metroTileItem5
+            // 
+            this.metroTileItem5.Name = "metroTileItem5";
+            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellowish;
+            // 
+            // 
+            // 
+            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(102)))), ((int)(((byte)(168)))));
+            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(120)))), ((int)(((byte)(190)))));
+            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem5.TileStyle.Class = "";
+            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem5.TileStyle.PaddingBottom = 4;
+            this.metroTileItem5.TileStyle.PaddingLeft = 4;
+            this.metroTileItem5.TileStyle.PaddingRight = 4;
+            this.metroTileItem5.TileStyle.PaddingTop = 4;
+            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
             // metroTabPanel3
             // 
             this.metroTabPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -258,29 +390,6 @@
             this.m_tabControlDatBan.Tabs.Add(this.m_tabItemHoaDon);
             this.m_tabControlDatBan.Text = "tabControl2";
             // 
-            // tabControlPanel6
-            // 
-            this.tabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel6.Location = new System.Drawing.Point(0, 31);
-            this.tabControlPanel6.Name = "tabControlPanel6";
-            this.tabControlPanel6.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel6.Size = new System.Drawing.Size(830, 583);
-            this.tabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel6.Style.GradientAngle = 90;
-            this.tabControlPanel6.TabIndex = 3;
-            this.tabControlPanel6.TabItem = this.m_tabItemHoaDon;
-            // 
-            // m_tabItemHoaDon
-            // 
-            this.m_tabItemHoaDon.AttachedControl = this.tabControlPanel6;
-            this.m_tabItemHoaDon.Name = "m_tabItemHoaDon";
-            this.m_tabItemHoaDon.Text = "Hóa Đơn Bán Ra";
-            // 
             // tabControlPanel4
             // 
             this.tabControlPanel4.Controls.Add(this.m_btnTimBan);
@@ -305,10 +414,10 @@
             this.tabControlPanel4.Controls.Add(this.itemPanel19);
             this.tabControlPanel4.Controls.Add(this.itemPanel15);
             this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel4.Location = new System.Drawing.Point(0, 31);
+            this.tabControlPanel4.Location = new System.Drawing.Point(0, 3);
             this.tabControlPanel4.Name = "tabControlPanel4";
             this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel4.Size = new System.Drawing.Size(830, 583);
+            this.tabControlPanel4.Size = new System.Drawing.Size(830, 611);
             this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
             this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.White;
             this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -677,15 +786,38 @@
             this.m_tabItemDatBan.Name = "m_tabItemDatBan";
             this.m_tabItemDatBan.Text = "Đặt Bàn";
             // 
+            // tabControlPanel6
+            // 
+            this.tabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel6.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel6.Name = "tabControlPanel6";
+            this.tabControlPanel6.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel6.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel6.Style.GradientAngle = 90;
+            this.tabControlPanel6.TabIndex = 3;
+            this.tabControlPanel6.TabItem = this.m_tabItemHoaDon;
+            // 
+            // m_tabItemHoaDon
+            // 
+            this.m_tabItemHoaDon.AttachedControl = this.tabControlPanel6;
+            this.m_tabItemHoaDon.Name = "m_tabItemHoaDon";
+            this.m_tabItemHoaDon.Text = "Hóa Đơn Bán Ra";
+            // 
             // m_tabControlPanelDatMonAn
             // 
             this.m_tabControlPanelDatMonAn.Controls.Add(this.textBoxX1);
             this.m_tabControlPanelDatMonAn.Controls.Add(this.labelX1);
             this.m_tabControlPanelDatMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_tabControlPanelDatMonAn.Location = new System.Drawing.Point(0, 31);
+            this.m_tabControlPanelDatMonAn.Location = new System.Drawing.Point(0, 3);
             this.m_tabControlPanelDatMonAn.Name = "m_tabControlPanelDatMonAn";
             this.m_tabControlPanelDatMonAn.Padding = new System.Windows.Forms.Padding(1);
-            this.m_tabControlPanelDatMonAn.Size = new System.Drawing.Size(830, 583);
+            this.m_tabControlPanelDatMonAn.Size = new System.Drawing.Size(830, 611);
             this.m_tabControlPanelDatMonAn.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
             this.m_tabControlPanelDatMonAn.Style.BackColor2.Color = System.Drawing.Color.White;
             this.m_tabControlPanelDatMonAn.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -769,538 +901,6 @@
             this.metroTileItem1.TileStyle.PaddingRight = 4;
             this.metroTileItem1.TileStyle.PaddingTop = 4;
             this.metroTileItem1.TileStyle.TextColor = System.Drawing.Color.White;
-            // 
-            // metroTabPanel6
-            // 
-            this.metroTabPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel6.Controls.Add(this.tabControl3);
-            this.metroTabPanel6.Controls.Add(this.itemPanel9);
-            this.metroTabPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel6.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel6.Name = "metroTabPanel6";
-            this.metroTabPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel6.Size = new System.Drawing.Size(830, 629);
-            // 
-            // 
-            // 
-            this.metroTabPanel6.Style.Class = "";
-            this.metroTabPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel6.StyleMouseDown.Class = "";
-            this.metroTabPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel6.StyleMouseOver.Class = "";
-            this.metroTabPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel6.TabIndex = 6;
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.BackColor = System.Drawing.Color.White;
-            this.tabControl3.CanReorderTabs = true;
-            this.tabControl3.Controls.Add(this.tabControlPanel7);
-            this.tabControl3.Controls.Add(this.tabControlPanel8);
-            this.tabControl3.ForeColor = System.Drawing.Color.Black;
-            this.tabControl3.Location = new System.Drawing.Point(0, 15);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tabControl3.SelectedTabIndex = 1;
-            this.tabControl3.Size = new System.Drawing.Size(830, 612);
-            this.tabControl3.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
-            this.tabControl3.TabIndex = 1;
-            this.tabControl3.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabControl3.Tabs.Add(this.m_tabItemNhanVien);
-            this.tabControl3.Tabs.Add(this.tabItem9);
-            this.tabControl3.Text = "tabControl3";
-            // 
-            // tabControlPanel8
-            // 
-            this.tabControlPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel8.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel8.Name = "tabControlPanel8";
-            this.tabControlPanel8.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel8.Size = new System.Drawing.Size(830, 584);
-            this.tabControlPanel8.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel8.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel8.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel8.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel8.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel8.Style.GradientAngle = 90;
-            this.tabControlPanel8.TabIndex = 2;
-            this.tabControlPanel8.TabItem = this.tabItem9;
-            // 
-            // tabItem9
-            // 
-            this.tabItem9.AttachedControl = this.tabControlPanel8;
-            this.tabItem9.Name = "tabItem9";
-            this.tabItem9.Text = "Thống Kê Doanh Thu";
-            // 
-            // tabControlPanel7
-            // 
-            this.tabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel7.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel7.Name = "tabControlPanel7";
-            this.tabControlPanel7.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel7.Size = new System.Drawing.Size(830, 584);
-            this.tabControlPanel7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel7.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel7.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel7.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel7.Style.GradientAngle = 90;
-            this.tabControlPanel7.TabIndex = 1;
-            this.tabControlPanel7.TabItem = this.m_tabItemNhanVien;
-            this.tabControlPanel7.Visible = false;
-            // 
-            // m_tabItemNhanVien
-            // 
-            this.m_tabItemNhanVien.AttachedControl = this.tabControlPanel7;
-            this.m_tabItemNhanVien.Name = "m_tabItemNhanVien";
-            this.m_tabItemNhanVien.Text = "Quản Lý Nhân Viên";
-            // 
-            // itemPanel9
-            // 
-            this.itemPanel9.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel9.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.itemPanel9.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel9.ContainerControlProcessDialogKey = true;
-            this.itemPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.itemPanel9.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem5});
-            this.itemPanel9.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel9.Location = new System.Drawing.Point(3, 0);
-            this.itemPanel9.Name = "itemPanel9";
-            this.itemPanel9.Size = new System.Drawing.Size(824, 35);
-            this.itemPanel9.TabIndex = 0;
-            this.itemPanel9.Text = "itemPanel9";
-            // 
-            // metroTileItem5
-            // 
-            this.metroTileItem5.Name = "metroTileItem5";
-            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellowish;
-            // 
-            // 
-            // 
-            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(102)))), ((int)(((byte)(168)))));
-            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(120)))), ((int)(((byte)(190)))));
-            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem5.TileStyle.Class = "";
-            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem5.TileStyle.PaddingBottom = 4;
-            this.metroTileItem5.TileStyle.PaddingLeft = 4;
-            this.metroTileItem5.TileStyle.PaddingRight = 4;
-            this.metroTileItem5.TileStyle.PaddingTop = 4;
-            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
-            // 
-            // metroTabPanel7
-            // 
-            this.metroTabPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel7.Controls.Add(this.m_tabControlQLyNhanVien);
-            this.metroTabPanel7.Controls.Add(this.itemPanel10);
-            this.metroTabPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel7.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel7.Name = "metroTabPanel7";
-            this.metroTabPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel7.Size = new System.Drawing.Size(830, 629);
-            // 
-            // 
-            // 
-            this.metroTabPanel7.Style.Class = "";
-            this.metroTabPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel7.StyleMouseDown.Class = "";
-            this.metroTabPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel7.StyleMouseOver.Class = "";
-            this.metroTabPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel7.TabIndex = 7;
-            this.metroTabPanel7.Visible = false;
-            // 
-            // m_tabControlQLyNhanVien
-            // 
-            this.m_tabControlQLyNhanVien.BackColor = System.Drawing.Color.White;
-            this.m_tabControlQLyNhanVien.CanReorderTabs = true;
-            this.m_tabControlQLyNhanVien.Controls.Add(this.tabControlPanel9);
-            this.m_tabControlQLyNhanVien.Controls.Add(this.tabControlPanel10);
-            this.m_tabControlQLyNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.m_tabControlQLyNhanVien.Location = new System.Drawing.Point(0, 15);
-            this.m_tabControlQLyNhanVien.Name = "m_tabControlQLyNhanVien";
-            this.m_tabControlQLyNhanVien.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.m_tabControlQLyNhanVien.SelectedTabIndex = 1;
-            this.m_tabControlQLyNhanVien.Size = new System.Drawing.Size(830, 614);
-            this.m_tabControlQLyNhanVien.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
-            this.m_tabControlQLyNhanVien.TabIndex = 4;
-            this.m_tabControlQLyNhanVien.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.m_tabControlQLyNhanVien.Tabs.Add(this.m_tabItemQLyNhanVien);
-            this.m_tabControlQLyNhanVien.Tabs.Add(this.m_tabItemQLyDoanhThu);
-            // 
-            // tabControlPanel10
-            // 
-            this.tabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel10.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel10.Name = "tabControlPanel10";
-            this.tabControlPanel10.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel10.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel10.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel10.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel10.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel10.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel10.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel10.Style.GradientAngle = 90;
-            this.tabControlPanel10.TabIndex = 2;
-            this.tabControlPanel10.TabItem = this.m_tabItemQLyDoanhThu;
-            // 
-            // m_tabItemQLyDoanhThu
-            // 
-            this.m_tabItemQLyDoanhThu.AttachedControl = this.tabControlPanel10;
-            this.m_tabItemQLyDoanhThu.Name = "m_tabItemQLyDoanhThu";
-            this.m_tabItemQLyDoanhThu.Text = "Quản Lý Doanh Thu";
-            // 
-            // tabControlPanel9
-            // 
-            this.tabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel9.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel9.Name = "tabControlPanel9";
-            this.tabControlPanel9.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel9.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel9.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel9.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel9.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel9.Style.GradientAngle = 90;
-            this.tabControlPanel9.TabIndex = 1;
-            this.tabControlPanel9.TabItem = this.m_tabItemQLyNhanVien;
-            this.tabControlPanel9.Visible = false;
-            // 
-            // m_tabItemQLyNhanVien
-            // 
-            this.m_tabItemQLyNhanVien.AttachedControl = this.tabControlPanel9;
-            this.m_tabItemQLyNhanVien.Name = "m_tabItemQLyNhanVien";
-            this.m_tabItemQLyNhanVien.Text = "Quản Lý Nhân Viên";
-            // 
-            // itemPanel10
-            // 
-            this.itemPanel10.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel10.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.itemPanel10.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel10.ContainerControlProcessDialogKey = true;
-            this.itemPanel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.itemPanel10.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem8});
-            this.itemPanel10.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel10.Location = new System.Drawing.Point(3, 0);
-            this.itemPanel10.Name = "itemPanel10";
-            this.itemPanel10.Size = new System.Drawing.Size(824, 23);
-            this.itemPanel10.TabIndex = 5;
-            this.itemPanel10.Text = "itemPanel10";
-            // 
-            // metroTileItem8
-            // 
-            this.metroTileItem8.Name = "metroTileItem8";
-            this.metroTileItem8.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellow;
-            // 
-            // 
-            // 
-            this.metroTileItem8.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(234)))), ((int)(((byte)(0)))));
-            this.metroTileItem8.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(218)))), ((int)(((byte)(0)))));
-            this.metroTileItem8.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem8.TileStyle.Class = "";
-            this.metroTileItem8.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem8.TileStyle.PaddingBottom = 4;
-            this.metroTileItem8.TileStyle.PaddingLeft = 4;
-            this.metroTileItem8.TileStyle.PaddingRight = 4;
-            this.metroTileItem8.TileStyle.PaddingTop = 4;
-            this.metroTileItem8.TileStyle.TextColor = System.Drawing.Color.White;
-            // 
-            // metroTabPanel8
-            // 
-            this.metroTabPanel8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel8.Controls.Add(this.m_tabControlKhoHang);
-            this.metroTabPanel8.Controls.Add(this.itemPanel11);
-            this.metroTabPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel8.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel8.Name = "metroTabPanel8";
-            this.metroTabPanel8.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel8.Size = new System.Drawing.Size(830, 629);
-            // 
-            // 
-            // 
-            this.metroTabPanel8.Style.Class = "";
-            this.metroTabPanel8.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel8.StyleMouseDown.Class = "";
-            this.metroTabPanel8.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel8.StyleMouseOver.Class = "";
-            this.metroTabPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel8.TabIndex = 8;
-            this.metroTabPanel8.Visible = false;
-            // 
-            // m_tabControlKhoHang
-            // 
-            this.m_tabControlKhoHang.BackColor = System.Drawing.Color.White;
-            this.m_tabControlKhoHang.CanReorderTabs = true;
-            this.m_tabControlKhoHang.Controls.Add(this.tabControlPanel11);
-            this.m_tabControlKhoHang.Controls.Add(this.tabControlPanel12);
-            this.m_tabControlKhoHang.ForeColor = System.Drawing.Color.Black;
-            this.m_tabControlKhoHang.Location = new System.Drawing.Point(0, 16);
-            this.m_tabControlKhoHang.Margin = new System.Windows.Forms.Padding(0);
-            this.m_tabControlKhoHang.Name = "m_tabControlKhoHang";
-            this.m_tabControlKhoHang.Padding = new System.Windows.Forms.Padding(10);
-            this.m_tabControlKhoHang.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.m_tabControlKhoHang.SelectedTabIndex = 1;
-            this.m_tabControlKhoHang.Size = new System.Drawing.Size(830, 614);
-            this.m_tabControlKhoHang.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
-            this.m_tabControlKhoHang.TabIndex = 5;
-            this.m_tabControlKhoHang.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.m_tabControlKhoHang.Tabs.Add(this.m_tabItemQLyKho);
-            this.m_tabControlKhoHang.Tabs.Add(this.m_tabItemNhaCungCap);
-            // 
-            // tabControlPanel12
-            // 
-            this.tabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel12.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel12.Name = "tabControlPanel12";
-            this.tabControlPanel12.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel12.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel12.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel12.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel12.Style.GradientAngle = 90;
-            this.tabControlPanel12.TabIndex = 2;
-            this.tabControlPanel12.TabItem = this.m_tabItemNhaCungCap;
-            // 
-            // m_tabItemNhaCungCap
-            // 
-            this.m_tabItemNhaCungCap.AttachedControl = this.tabControlPanel12;
-            this.m_tabItemNhaCungCap.Name = "m_tabItemNhaCungCap";
-            this.m_tabItemNhaCungCap.Text = "Quản Lý Nhà Cung Cấp";
-            // 
-            // tabControlPanel11
-            // 
-            this.tabControlPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel11.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel11.Name = "tabControlPanel11";
-            this.tabControlPanel11.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel11.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel11.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel11.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel11.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel11.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel11.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel11.Style.GradientAngle = 90;
-            this.tabControlPanel11.TabIndex = 1;
-            this.tabControlPanel11.TabItem = this.m_tabItemQLyKho;
-            this.tabControlPanel11.Visible = false;
-            // 
-            // m_tabItemQLyKho
-            // 
-            this.m_tabItemQLyKho.AttachedControl = this.tabControlPanel11;
-            this.m_tabItemQLyKho.DarkBorderColor = System.Drawing.Color.White;
-            this.m_tabItemQLyKho.Name = "m_tabItemQLyKho";
-            this.m_tabItemQLyKho.Text = "Quản Lý Kho";
-            // 
-            // itemPanel11
-            // 
-            this.itemPanel11.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel11.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.itemPanel11.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel11.ContainerControlProcessDialogKey = true;
-            this.itemPanel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.itemPanel11.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem10});
-            this.itemPanel11.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel11.Location = new System.Drawing.Point(3, 0);
-            this.itemPanel11.Name = "itemPanel11";
-            this.itemPanel11.Size = new System.Drawing.Size(824, 23);
-            this.itemPanel11.TabIndex = 6;
-            this.itemPanel11.Text = "itemPanel11";
-            // 
-            // metroTileItem10
-            // 
-            this.metroTileItem10.Name = "metroTileItem10";
-            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
-            // 
-            // 
-            // 
-            this.metroTileItem10.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
-            this.metroTileItem10.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
-            this.metroTileItem10.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem10.TileStyle.Class = "";
-            this.metroTileItem10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem10.TileStyle.PaddingBottom = 4;
-            this.metroTileItem10.TileStyle.PaddingLeft = 4;
-            this.metroTileItem10.TileStyle.PaddingRight = 4;
-            this.metroTileItem10.TileStyle.PaddingTop = 4;
-            this.metroTileItem10.TileStyle.TextColor = System.Drawing.Color.White;
-            // 
-            // metroTabPanel2
-            // 
-            this.metroTabPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel2.Controls.Add(this.m_tabControlQTHeThong);
-            this.metroTabPanel2.Controls.Add(this.itemPanel12);
-            this.metroTabPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel2.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel2.Name = "metroTabPanel2";
-            this.metroTabPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel2.Size = new System.Drawing.Size(830, 629);
-            // 
-            // 
-            // 
-            this.metroTabPanel2.Style.Class = "";
-            this.metroTabPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel2.StyleMouseDown.Class = "";
-            this.metroTabPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel2.StyleMouseOver.Class = "";
-            this.metroTabPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel2.TabIndex = 9;
-            this.metroTabPanel2.Visible = false;
-            // 
-            // m_tabControlQTHeThong
-            // 
-            this.m_tabControlQTHeThong.BackColor = System.Drawing.Color.White;
-            this.m_tabControlQTHeThong.CanReorderTabs = true;
-            this.m_tabControlQTHeThong.Controls.Add(this.tabControlPanel1);
-            this.m_tabControlQTHeThong.Controls.Add(this.tabControlPanel3);
-            this.m_tabControlQTHeThong.ForeColor = System.Drawing.Color.Black;
-            this.m_tabControlQTHeThong.Location = new System.Drawing.Point(0, 15);
-            this.m_tabControlQTHeThong.Name = "m_tabControlQTHeThong";
-            this.m_tabControlQTHeThong.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.m_tabControlQTHeThong.SelectedTabIndex = 1;
-            this.m_tabControlQTHeThong.Size = new System.Drawing.Size(830, 614);
-            this.m_tabControlQTHeThong.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
-            this.m_tabControlQTHeThong.TabIndex = 4;
-            this.m_tabControlQTHeThong.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.m_tabControlQTHeThong.Tabs.Add(this.m_tabItemTTTaiKhoan);
-            this.m_tabControlQTHeThong.Tabs.Add(this.tabItem2);
-            this.m_tabControlQTHeThong.Text = "tabControl1";
-            // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 2;
-            this.tabControlPanel3.TabItem = this.tabItem2;
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.AttachedControl = this.tabControlPanel3;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "Thông Tin Nhà Hàng";
-            // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(830, 586);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.m_tabItemTTTaiKhoan;
-            this.tabControlPanel1.Visible = false;
-            // 
-            // m_tabItemTTTaiKhoan
-            // 
-            this.m_tabItemTTTaiKhoan.AttachedControl = this.tabControlPanel1;
-            this.m_tabItemTTTaiKhoan.Name = "m_tabItemTTTaiKhoan";
-            this.m_tabItemTTTaiKhoan.Text = "Thông Tin Tài Khoản";
-            // 
-            // itemPanel12
-            // 
-            this.itemPanel12.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel12.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.itemPanel12.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel12.ContainerControlProcessDialogKey = true;
-            this.itemPanel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.itemPanel12.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem11});
-            this.itemPanel12.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel12.Location = new System.Drawing.Point(3, 0);
-            this.itemPanel12.Name = "itemPanel12";
-            this.itemPanel12.Size = new System.Drawing.Size(824, 19);
-            this.itemPanel12.TabIndex = 5;
-            this.itemPanel12.Text = "itemPanel12";
-            // 
-            // metroTileItem11
-            // 
-            this.metroTileItem11.Name = "metroTileItem11";
-            this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
-            // 
-            // 
-            // 
-            this.metroTileItem11.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
-            this.metroTileItem11.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
-            this.metroTileItem11.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem11.TileStyle.Class = "";
-            this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem11.TileStyle.PaddingBottom = 4;
-            this.metroTileItem11.TileStyle.PaddingLeft = 4;
-            this.metroTileItem11.TileStyle.PaddingRight = 4;
-            this.metroTileItem11.TileStyle.PaddingTop = 4;
-            this.metroTileItem11.TileStyle.TextColor = System.Drawing.Color.White;
             // 
             // metroTabPanel1
             // 
@@ -1722,6 +1322,406 @@
             this.metroTileItemBatBan.TileStyle.TextColor = System.Drawing.Color.White;
             this.metroTileItemBatBan.Click += new System.EventHandler(this.metroTileItem1_Click);
             // 
+            // metroTabPanel8
+            // 
+            this.metroTabPanel8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel8.Controls.Add(this.m_tabControlKhoHang);
+            this.metroTabPanel8.Controls.Add(this.itemPanel11);
+            this.metroTabPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel8.Location = new System.Drawing.Point(0, 51);
+            this.metroTabPanel8.Name = "metroTabPanel8";
+            this.metroTabPanel8.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel8.Size = new System.Drawing.Size(830, 629);
+            // 
+            // 
+            // 
+            this.metroTabPanel8.Style.Class = "";
+            this.metroTabPanel8.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel8.StyleMouseDown.Class = "";
+            this.metroTabPanel8.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel8.StyleMouseOver.Class = "";
+            this.metroTabPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel8.TabIndex = 8;
+            this.metroTabPanel8.Visible = false;
+            // 
+            // m_tabControlKhoHang
+            // 
+            this.m_tabControlKhoHang.BackColor = System.Drawing.Color.White;
+            this.m_tabControlKhoHang.CanReorderTabs = true;
+            this.m_tabControlKhoHang.Controls.Add(this.tabControlPanel11);
+            this.m_tabControlKhoHang.Controls.Add(this.tabControlPanel12);
+            this.m_tabControlKhoHang.ForeColor = System.Drawing.Color.Black;
+            this.m_tabControlKhoHang.Location = new System.Drawing.Point(0, 16);
+            this.m_tabControlKhoHang.Margin = new System.Windows.Forms.Padding(0);
+            this.m_tabControlKhoHang.Name = "m_tabControlKhoHang";
+            this.m_tabControlKhoHang.Padding = new System.Windows.Forms.Padding(10);
+            this.m_tabControlKhoHang.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.m_tabControlKhoHang.SelectedTabIndex = 1;
+            this.m_tabControlKhoHang.Size = new System.Drawing.Size(830, 614);
+            this.m_tabControlKhoHang.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
+            this.m_tabControlKhoHang.TabIndex = 5;
+            this.m_tabControlKhoHang.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.m_tabControlKhoHang.Tabs.Add(this.m_tabItemQLyKho);
+            this.m_tabControlKhoHang.Tabs.Add(this.m_tabItemNhaCungCap);
+            // 
+            // tabControlPanel11
+            // 
+            this.tabControlPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel11.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel11.Name = "tabControlPanel11";
+            this.tabControlPanel11.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel11.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel11.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel11.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel11.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel11.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel11.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel11.Style.GradientAngle = 90;
+            this.tabControlPanel11.TabIndex = 1;
+            this.tabControlPanel11.TabItem = this.m_tabItemQLyKho;
+            this.tabControlPanel11.Visible = false;
+            // 
+            // m_tabItemQLyKho
+            // 
+            this.m_tabItemQLyKho.AttachedControl = this.tabControlPanel11;
+            this.m_tabItemQLyKho.DarkBorderColor = System.Drawing.Color.White;
+            this.m_tabItemQLyKho.Name = "m_tabItemQLyKho";
+            this.m_tabItemQLyKho.Text = "Quản Lý Kho";
+            // 
+            // tabControlPanel12
+            // 
+            this.tabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel12.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel12.Name = "tabControlPanel12";
+            this.tabControlPanel12.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel12.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel12.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel12.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel12.Style.GradientAngle = 90;
+            this.tabControlPanel12.TabIndex = 2;
+            this.tabControlPanel12.TabItem = this.m_tabItemNhaCungCap;
+            // 
+            // m_tabItemNhaCungCap
+            // 
+            this.m_tabItemNhaCungCap.AttachedControl = this.tabControlPanel12;
+            this.m_tabItemNhaCungCap.Name = "m_tabItemNhaCungCap";
+            this.m_tabItemNhaCungCap.Text = "Quản Lý Nhà Cung Cấp";
+            // 
+            // itemPanel11
+            // 
+            this.itemPanel11.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel11.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.itemPanel11.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel11.ContainerControlProcessDialogKey = true;
+            this.itemPanel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.itemPanel11.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem10});
+            this.itemPanel11.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel11.Location = new System.Drawing.Point(3, 0);
+            this.itemPanel11.Name = "itemPanel11";
+            this.itemPanel11.Size = new System.Drawing.Size(824, 23);
+            this.itemPanel11.TabIndex = 6;
+            this.itemPanel11.Text = "itemPanel11";
+            // 
+            // metroTileItem10
+            // 
+            this.metroTileItem10.Name = "metroTileItem10";
+            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
+            // 
+            // 
+            // 
+            this.metroTileItem10.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
+            this.metroTileItem10.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
+            this.metroTileItem10.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem10.TileStyle.Class = "";
+            this.metroTileItem10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem10.TileStyle.PaddingBottom = 4;
+            this.metroTileItem10.TileStyle.PaddingLeft = 4;
+            this.metroTileItem10.TileStyle.PaddingRight = 4;
+            this.metroTileItem10.TileStyle.PaddingTop = 4;
+            this.metroTileItem10.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
+            // metroTabPanel2
+            // 
+            this.metroTabPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel2.Controls.Add(this.m_tabControlQTHeThong);
+            this.metroTabPanel2.Controls.Add(this.itemPanel12);
+            this.metroTabPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel2.Location = new System.Drawing.Point(0, 51);
+            this.metroTabPanel2.Name = "metroTabPanel2";
+            this.metroTabPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel2.Size = new System.Drawing.Size(830, 629);
+            // 
+            // 
+            // 
+            this.metroTabPanel2.Style.Class = "";
+            this.metroTabPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel2.StyleMouseDown.Class = "";
+            this.metroTabPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel2.StyleMouseOver.Class = "";
+            this.metroTabPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel2.TabIndex = 9;
+            this.metroTabPanel2.Visible = false;
+            // 
+            // m_tabControlQTHeThong
+            // 
+            this.m_tabControlQTHeThong.BackColor = System.Drawing.Color.White;
+            this.m_tabControlQTHeThong.CanReorderTabs = true;
+            this.m_tabControlQTHeThong.Controls.Add(this.tabControlPanel1);
+            this.m_tabControlQTHeThong.Controls.Add(this.tabControlPanel3);
+            this.m_tabControlQTHeThong.ForeColor = System.Drawing.Color.Black;
+            this.m_tabControlQTHeThong.Location = new System.Drawing.Point(0, 15);
+            this.m_tabControlQTHeThong.Name = "m_tabControlQTHeThong";
+            this.m_tabControlQTHeThong.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.m_tabControlQTHeThong.SelectedTabIndex = 1;
+            this.m_tabControlQTHeThong.Size = new System.Drawing.Size(830, 614);
+            this.m_tabControlQTHeThong.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
+            this.m_tabControlQTHeThong.TabIndex = 4;
+            this.m_tabControlQTHeThong.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.m_tabControlQTHeThong.Tabs.Add(this.m_tabItemTTTaiKhoan);
+            this.m_tabControlQTHeThong.Tabs.Add(this.tabItem2);
+            this.m_tabControlQTHeThong.Text = "tabControl1";
+            // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 1;
+            this.tabControlPanel1.TabItem = this.m_tabItemTTTaiKhoan;
+            this.tabControlPanel1.Visible = false;
+            // 
+            // m_tabItemTTTaiKhoan
+            // 
+            this.m_tabItemTTTaiKhoan.AttachedControl = this.tabControlPanel1;
+            this.m_tabItemTTTaiKhoan.Name = "m_tabItemTTTaiKhoan";
+            this.m_tabItemTTTaiKhoan.Text = "Thông Tin Tài Khoản";
+            // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 2;
+            this.tabControlPanel3.TabItem = this.tabItem2;
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.AttachedControl = this.tabControlPanel3;
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Text = "Thông Tin Nhà Hàng";
+            // 
+            // itemPanel12
+            // 
+            this.itemPanel12.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel12.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.itemPanel12.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel12.ContainerControlProcessDialogKey = true;
+            this.itemPanel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.itemPanel12.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem11});
+            this.itemPanel12.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel12.Location = new System.Drawing.Point(3, 0);
+            this.itemPanel12.Name = "itemPanel12";
+            this.itemPanel12.Size = new System.Drawing.Size(824, 19);
+            this.itemPanel12.TabIndex = 5;
+            this.itemPanel12.Text = "itemPanel12";
+            // 
+            // metroTileItem11
+            // 
+            this.metroTileItem11.Name = "metroTileItem11";
+            this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
+            // 
+            // 
+            // 
+            this.metroTileItem11.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.metroTileItem11.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
+            this.metroTileItem11.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem11.TileStyle.Class = "";
+            this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem11.TileStyle.PaddingBottom = 4;
+            this.metroTileItem11.TileStyle.PaddingLeft = 4;
+            this.metroTileItem11.TileStyle.PaddingRight = 4;
+            this.metroTileItem11.TileStyle.PaddingTop = 4;
+            this.metroTileItem11.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
+            // metroTabPanel7
+            // 
+            this.metroTabPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel7.Controls.Add(this.m_tabControlQLyNhanVien);
+            this.metroTabPanel7.Controls.Add(this.itemPanel10);
+            this.metroTabPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel7.Location = new System.Drawing.Point(0, 51);
+            this.metroTabPanel7.Name = "metroTabPanel7";
+            this.metroTabPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel7.Size = new System.Drawing.Size(830, 629);
+            // 
+            // 
+            // 
+            this.metroTabPanel7.Style.Class = "";
+            this.metroTabPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel7.StyleMouseDown.Class = "";
+            this.metroTabPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel7.StyleMouseOver.Class = "";
+            this.metroTabPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel7.TabIndex = 7;
+            this.metroTabPanel7.Visible = false;
+            // 
+            // m_tabControlQLyNhanVien
+            // 
+            this.m_tabControlQLyNhanVien.BackColor = System.Drawing.Color.White;
+            this.m_tabControlQLyNhanVien.CanReorderTabs = true;
+            this.m_tabControlQLyNhanVien.Controls.Add(this.tabControlPanel9);
+            this.m_tabControlQLyNhanVien.Controls.Add(this.tabControlPanel10);
+            this.m_tabControlQLyNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.m_tabControlQLyNhanVien.Location = new System.Drawing.Point(0, 15);
+            this.m_tabControlQLyNhanVien.Name = "m_tabControlQLyNhanVien";
+            this.m_tabControlQLyNhanVien.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.m_tabControlQLyNhanVien.SelectedTabIndex = 1;
+            this.m_tabControlQLyNhanVien.Size = new System.Drawing.Size(830, 614);
+            this.m_tabControlQLyNhanVien.Style = DevComponents.DotNetBar.eTabStripStyle.SimulatedTheme;
+            this.m_tabControlQLyNhanVien.TabIndex = 4;
+            this.m_tabControlQLyNhanVien.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.m_tabControlQLyNhanVien.Tabs.Add(this.m_tabItemQLyNhanVien);
+            this.m_tabControlQLyNhanVien.Tabs.Add(this.m_tabItemQLyDoanhThu);
+            // 
+            // tabControlPanel9
+            // 
+            this.tabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel9.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel9.Name = "tabControlPanel9";
+            this.tabControlPanel9.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel9.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel9.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel9.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel9.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel9.Style.GradientAngle = 90;
+            this.tabControlPanel9.TabIndex = 1;
+            this.tabControlPanel9.TabItem = this.m_tabItemQLyNhanVien;
+            this.tabControlPanel9.Visible = false;
+            // 
+            // m_tabItemQLyNhanVien
+            // 
+            this.m_tabItemQLyNhanVien.AttachedControl = this.tabControlPanel9;
+            this.m_tabItemQLyNhanVien.Name = "m_tabItemQLyNhanVien";
+            this.m_tabItemQLyNhanVien.Text = "Quản Lý Nhân Viên";
+            // 
+            // tabControlPanel10
+            // 
+            this.tabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel10.Location = new System.Drawing.Point(0, 3);
+            this.tabControlPanel10.Name = "tabControlPanel10";
+            this.tabControlPanel10.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel10.Size = new System.Drawing.Size(830, 611);
+            this.tabControlPanel10.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.tabControlPanel10.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.tabControlPanel10.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel10.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(168)))), ((int)(((byte)(153)))));
+            this.tabControlPanel10.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel10.Style.GradientAngle = 90;
+            this.tabControlPanel10.TabIndex = 2;
+            this.tabControlPanel10.TabItem = this.m_tabItemQLyDoanhThu;
+            // 
+            // m_tabItemQLyDoanhThu
+            // 
+            this.m_tabItemQLyDoanhThu.AttachedControl = this.tabControlPanel10;
+            this.m_tabItemQLyDoanhThu.Name = "m_tabItemQLyDoanhThu";
+            this.m_tabItemQLyDoanhThu.Text = "Quản Lý Doanh Thu";
+            // 
+            // itemPanel10
+            // 
+            this.itemPanel10.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel10.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.itemPanel10.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel10.ContainerControlProcessDialogKey = true;
+            this.itemPanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.itemPanel10.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem8});
+            this.itemPanel10.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel10.Location = new System.Drawing.Point(3, 0);
+            this.itemPanel10.Name = "itemPanel10";
+            this.itemPanel10.Size = new System.Drawing.Size(824, 23);
+            this.itemPanel10.TabIndex = 5;
+            this.itemPanel10.Text = "itemPanel10";
+            // 
+            // metroTileItem8
+            // 
+            this.metroTileItem8.Name = "metroTileItem8";
+            this.metroTileItem8.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellow;
+            // 
+            // 
+            // 
+            this.metroTileItem8.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(234)))), ((int)(((byte)(0)))));
+            this.metroTileItem8.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(218)))), ((int)(((byte)(0)))));
+            this.metroTileItem8.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem8.TileStyle.Class = "";
+            this.metroTileItem8.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem8.TileStyle.PaddingBottom = 4;
+            this.metroTileItem8.TileStyle.PaddingLeft = 4;
+            this.metroTileItem8.TileStyle.PaddingRight = 4;
+            this.metroTileItem8.TileStyle.PaddingTop = 4;
+            this.metroTileItem8.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
             // m_metroTabIteHome
             // 
             this.m_metroTabIteHome.Name = "m_metroTabIteHome";
@@ -1930,24 +1930,24 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.mainMetro.ResumeLayout(false);
             this.mainMetro.PerformLayout();
+            this.metroTabPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabControl3)).EndInit();
+            this.tabControl3.ResumeLayout(false);
             this.metroTabPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlDatBan)).EndInit();
             this.m_tabControlDatBan.ResumeLayout(false);
             this.tabControlPanel4.ResumeLayout(false);
             this.m_tabControlPanelDatMonAn.ResumeLayout(false);
-            this.metroTabPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl3)).EndInit();
-            this.tabControl3.ResumeLayout(false);
-            this.metroTabPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQLyNhanVien)).EndInit();
-            this.m_tabControlQLyNhanVien.ResumeLayout(false);
+            this.metroTabPanel1.ResumeLayout(false);
             this.metroTabPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlKhoHang)).EndInit();
             this.m_tabControlKhoHang.ResumeLayout(false);
             this.metroTabPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQTHeThong)).EndInit();
             this.m_tabControlQTHeThong.ResumeLayout(false);
-            this.metroTabPanel1.ResumeLayout(false);
+            this.metroTabPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_tabControlQLyNhanVien)).EndInit();
+            this.m_tabControlQLyNhanVien.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
