@@ -40,6 +40,11 @@ namespace RestaurantApp_G21
             mainMetro.SelectedTab = m_mtTabItemQuanTri; 
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
        
         
 
