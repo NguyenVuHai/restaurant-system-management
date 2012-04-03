@@ -34,34 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar.Design, Version=10.1.0.0, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.DotNetBar.Design.dll</HintPath>
+      <HintPath>C:\Users\Puppy Cun\Desktop\VB_Tuan_4\DotNetBar-9.3.0.4-bin\DevComponents.DotNetBar.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.DotNetBar.Keyboard.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.DotNetBar.Schedule.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=10.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.Instrumentation, Version=10.1.0.0, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.Instrumentation.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.Instrumentation.Design, Version=10.1.0.0, Culture=neutral, PublicKeyToken=76cb4c6eb576bca5, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.Instrumentation.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.TreeGX, Version=10.1.0.0, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DotNetBar\DotNetBar 10.1\crack\DevComponents.TreeGX.dll</HintPath>
-    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6" />
+    <Reference Include="DevComponents.Instrumentation, Version=10.1.0.0, Culture=neutral, PublicKeyToken=ff0069e61369d6d6, processorArchitecture=MSIL" />
     <Reference Include="envdte, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -77,28 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<!-->>>>>>>> .mine-->
-    <Compile Include="frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ThongTinNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ThongTinNhanVien.Designer.cs">
-      <DependentUpon>frm_ThongTinNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="uCtr_BanChuaDat.cs">
       <SubType>UserControl</SubType>
-<!-->>>>>>> .r130-->
     </Compile>
-    <Compile Include="frmDangNhap.designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    <Compile Include="uCtr_BanChuaDat.Designer.cs">
+      <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimBanTrong.cs">
-      <SubType>Form</SubType>
+    <Compile Include="uCtr_DatBan.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmTimBanTrong.Designer.cs">
-      <DependentUpon>frmTimBanTrong.cs</DependentUpon>
+    <Compile Include="uCtr_DatBan.Designer.cs">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -108,33 +77,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uCtr_BanDat.cs">
+    <Compile Include="uCtr_BanDaDat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtr_BanDat.Designer.cs">
-      <DependentUpon>uCtr_BanDat.cs</DependentUpon>
+    <Compile Include="uCtr_BanDaDat.Designer.cs">
+      <DependentUpon>uCtr_BanDaDat.cs</DependentUpon>
     </Compile>
-<!-->>>>>>> .mine-->
-    <EmbeddedResource Include="frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-<!--=======-->
-    <Compile Include="uCtr_QuanLyNhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uCtr_QuanLyNhanVien.Designer.cs">
-      <DependentUpon>uCtr_QuanLyNhanVien.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="frm_ThongTinNhanVien.resx">
-      <DependentUpon>frm_ThongTinNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="uCtr_BanChuaDat.resx">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
     </EmbeddedResource>
-
-      >>>>>>> .r130
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTimBanTrong.resx">
-      <DependentUpon>frmTimBanTrong.cs</DependentUpon>
+    <EmbeddedResource Include="uCtr_DatBan.resx">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -149,15 +102,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<!--<<<<<<< .mine-->
-    <EmbeddedResource Include="uCtr_BanDat.resx">
-      <DependentUpon>uCtr_BanDat.cs</DependentUpon>
-    </EmbeddedResource>
-<!--=======-->
-    <EmbeddedResource Include="uCtr_QuanLyNhanVien.resx">
-      <DependentUpon>uCtr_QuanLyNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-<!-->>>>>>> .r130-->
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

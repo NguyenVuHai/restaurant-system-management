@@ -40,41 +40,6 @@ namespace RestaurantApp_G21
             mainMetro.SelectedTab = m_mtTabItemQuanTri; 
         }
 
-//<<<<<<< .mine
-//        private void m_btnTimBan_Click(object sender, EventArgs e)
-//        {
-//            frmTimBanTrong frm = new frmTimBanTrong();
-//            frm.Show();
-//        }
-
-//        private void m_lbelDatBan_Click(object sender, EventArgs e)
-//        {
-
-//            //m_tabControlDatBan.SelectedTab = m_tabItemDatBan;
-//        }
-
-        
-//=======
-//        private void frmMain_Load(object sender, EventArgs e)
-//        {
-
-//        }
-
-//>>>>>>> .r130
-       
-
-      
-
-        
-        
-
-       
-
-        
-
-       
-       
-
        
         
 
