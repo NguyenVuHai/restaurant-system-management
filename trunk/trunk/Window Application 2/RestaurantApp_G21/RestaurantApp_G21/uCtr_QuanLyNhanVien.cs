@@ -20,5 +20,23 @@ namespace RestaurantApp_G21
         {
 
         }
+
+        private void m_btnThem_Click(object sender, EventArgs e)
+        {
+            FormThongTinNhanVien form = new FormThongTinNhanVien();
+            form.Show();
+        }
+
+        private void m_btnThayDoi_Click(object sender, EventArgs e)
+        {
+            FormThongTinNhanVien form = new FormThongTinNhanVien();
+            form.Show();
+        }
+
+        private void m_btnXepLichLamViec_Click(object sender, EventArgs e)
+        {
+            FormXepLichLamViec form = new FormXepLichLamViec();
+            form.Show();
+        }
     }
 }

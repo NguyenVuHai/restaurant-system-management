@@ -9,11 +9,17 @@ using DevComponents.DotNetBar;
 
 namespace RestaurantApp_G21
 {
-    public partial class frm_DSNhanVienTheoCa : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class FormDSNhanVienTheoCa : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public frm_DSNhanVienTheoCa()
+        public FormDSNhanVienTheoCa()
         {
             InitializeComponent();
+        }
+
+        private void m_btnPhanCongThem_Click(object sender, EventArgs e)
+        {
+            FormXepLichLamViec form = new FormXepLichLamViec();
+            form.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace RestaurantApp_G21
 {
-    partial class frm_XepLichLamViec
+    partial class FormXepLichLamViec
     {
         /// <summary>
         /// Required designer variable.
@@ -320,7 +320,7 @@
             this.m_lblXepLich.TabIndex = 31;
             this.m_lblXepLich.Text = "Xếp lịch:";
             // 
-            // frm_XepLichLamViec
+            // FormXepLichLamViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -346,7 +346,7 @@
             this.Controls.Add(this.m_lblXepLichLamViec);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "frm_XepLichLamViec";
+            this.Name = "FormXepLichLamViec";
             this.Text = "MetroForm";
             this.Load += new System.EventHandler(this.frm_XepLichLamViec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
