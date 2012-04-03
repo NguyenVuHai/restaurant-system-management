@@ -9,9 +9,9 @@ using DevComponents.DotNetBar;
 
 namespace RestaurantApp_G21
 {
-    public partial class m_formThongTinNhanVien : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class FormThongTinNhanVien : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public m_formThongTinNhanVien()
+        public FormThongTinNhanVien()
         {
             InitializeComponent();
         }
