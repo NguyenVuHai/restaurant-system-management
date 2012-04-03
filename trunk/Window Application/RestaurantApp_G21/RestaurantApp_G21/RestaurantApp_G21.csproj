@@ -77,7 +77,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<!-->>>>>>>> .mine-->
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +88,6 @@
     </Compile>
     <Compile Include="uCtr_BanChuaDat.cs">
       <SubType>UserControl</SubType>
-<!-->>>>>>> .r130-->
     </Compile>
     <Compile Include="frmDangNhap.designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -114,10 +112,8 @@
     <Compile Include="uCtr_BanDat.Designer.cs">
       <DependentUpon>uCtr_BanDat.cs</DependentUpon>
     </Compile>
-<!-->>>>>>> .mine-->
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
-<!--=======-->
     <Compile Include="uCtr_QuanLyNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,8 +126,6 @@
     <EmbeddedResource Include="uCtr_BanChuaDat.resx">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
     </EmbeddedResource>
-
-      >>>>>>> .r130
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimBanTrong.resx">
       <DependentUpon>frmTimBanTrong.cs</DependentUpon>
@@ -149,15 +143,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<!--<<<<<<< .mine-->
     <EmbeddedResource Include="uCtr_BanDat.resx">
       <DependentUpon>uCtr_BanDat.cs</DependentUpon>
     </EmbeddedResource>
-<!--=======-->
     <EmbeddedResource Include="uCtr_QuanLyNhanVien.resx">
       <DependentUpon>uCtr_QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-<!-->>>>>>> .r130-->
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
