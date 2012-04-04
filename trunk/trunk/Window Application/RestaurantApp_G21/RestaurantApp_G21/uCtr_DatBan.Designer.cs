@@ -1,6 +1,6 @@
 ﻿namespace RestaurantApp_G21
 {
-    partial class uCtr_BanDat
+    partial class uCtr_DatBan
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(3, 97);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Shape = new DevComponents.DotNetBar.EllipticalShapeDescriptor();
-            this.buttonX1.Size = new System.Drawing.Size(51, 50);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-            this.buttonX1.TabIndex = 0;
-            // 
-            // uCtr_BanDat
+            // controlDatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonX1);
-            this.Name = "uCtr_BanDat";
+            this.Name = "controlDatBan";
+            this.Size = new System.Drawing.Size(568, 412);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
