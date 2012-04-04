@@ -53,28 +53,28 @@
             this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
             this.itemPanel6 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel5 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel4 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtHThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel3 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel2 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileDatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileHome = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel7 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtHThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileDatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileHome = new DevComponents.DotNetBar.Metro.MetroTileItem();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrDatBan)).BeginInit();
@@ -282,15 +282,15 @@
             this.m_sTabCtrDatBan.ControlBox.MenuBox,
             this.m_sTabCtrDatBan.ControlBox.CloseBox});
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel6);
-            this.m_sTabCtrDatBan.Controls.Add(this.m_sTabCtrPDatBan);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel5);
+            this.m_sTabCtrDatBan.Controls.Add(this.m_sTabCtrPDatBan);
             this.m_sTabCtrDatBan.ForeColor = System.Drawing.Color.Black;
-            this.m_sTabCtrDatBan.Location = new System.Drawing.Point(-11, 128);
+            this.m_sTabCtrDatBan.Location = new System.Drawing.Point(12, 135);
             this.m_sTabCtrDatBan.Name = "m_sTabCtrDatBan";
             this.m_sTabCtrDatBan.ReorderTabsEnabled = true;
             this.m_sTabCtrDatBan.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.m_sTabCtrDatBan.SelectedTabIndex = 1;
-            this.m_sTabCtrDatBan.Size = new System.Drawing.Size(986, 541);
+            this.m_sTabCtrDatBan.Size = new System.Drawing.Size(963, 556);
             this.m_sTabCtrDatBan.TabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_sTabCtrDatBan.TabIndex = 16;
             this.m_sTabCtrDatBan.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -304,7 +304,7 @@
             this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel6.Name = "superTabControlPanel6";
-            this.superTabControlPanel6.Size = new System.Drawing.Size(986, 516);
+            this.superTabControlPanel6.Size = new System.Drawing.Size(963, 531);
             this.superTabControlPanel6.TabIndex = 1;
             this.superTabControlPanel6.TabItem = this.m_sTabItmDBan;
             // 
@@ -318,9 +318,9 @@
             // m_sTabCtrPDatBan
             // 
             this.m_sTabCtrPDatBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_sTabCtrPDatBan.Location = new System.Drawing.Point(0, 0);
+            this.m_sTabCtrPDatBan.Location = new System.Drawing.Point(0, 25);
             this.m_sTabCtrPDatBan.Name = "m_sTabCtrPDatBan";
-            this.m_sTabCtrPDatBan.Size = new System.Drawing.Size(986, 541);
+            this.m_sTabCtrPDatBan.Size = new System.Drawing.Size(963, 531);
             this.m_sTabCtrPDatBan.TabIndex = 0;
             this.m_sTabCtrPDatBan.TabItem = this.m_sTabItmHoaDon;
             // 
@@ -334,9 +334,9 @@
             // superTabControlPanel5
             // 
             this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(986, 541);
+            this.superTabControlPanel5.Size = new System.Drawing.Size(963, 531);
             this.superTabControlPanel5.TabIndex = 0;
             this.superTabControlPanel5.TabItem = this.m_sTabItmTTBanDat;
             // 
@@ -385,26 +385,6 @@
             this.labelX7.TabIndex = 0;
             this.labelX7.Text = "Trang Chủ";
             // 
-            // metroTileItem6
-            // 
-            this.metroTileItem6.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem6.Image")));
-            this.metroTileItem6.Name = "metroTileItem6";
-            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.metroTileItem6.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.metroTileItem6.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.metroTileItem6.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem6.TileStyle.Class = "";
-            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem6.TileStyle.PaddingBottom = 4;
-            this.metroTileItem6.TileStyle.PaddingLeft = 4;
-            this.metroTileItem6.TileStyle.PaddingRight = 4;
-            this.metroTileItem6.TileStyle.PaddingTop = 4;
-            this.metroTileItem6.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem6.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel5
             // 
             this.itemPanel5.BackColor = System.Drawing.Color.Transparent;
@@ -442,26 +422,6 @@
             this.labelX6.Size = new System.Drawing.Size(71, 38);
             this.labelX6.TabIndex = 0;
             this.labelX6.Text = "Kho Hàng";
-            // 
-            // metroTileItem5
-            // 
-            this.metroTileItem5.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem5.Image")));
-            this.metroTileItem5.Name = "metroTileItem5";
-            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem5.TileStyle.Class = "";
-            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem5.TileStyle.PaddingBottom = 4;
-            this.metroTileItem5.TileStyle.PaddingLeft = 4;
-            this.metroTileItem5.TileStyle.PaddingRight = 4;
-            this.metroTileItem5.TileStyle.PaddingTop = 4;
-            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem5.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel4
             // 
@@ -518,26 +478,6 @@
             this.labelX5.TabIndex = 0;
             this.labelX5.Text = "Quản Trị ";
             // 
-            // m_mtHThong
-            // 
-            this.m_mtHThong.Image = ((System.Drawing.Image)(resources.GetObject("m_mtHThong.Image")));
-            this.m_mtHThong.Name = "m_mtHThong";
-            this.m_mtHThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtHThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtHThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtHThong.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtHThong.TileStyle.Class = "";
-            this.m_mtHThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtHThong.TileStyle.PaddingBottom = 4;
-            this.m_mtHThong.TileStyle.PaddingLeft = 4;
-            this.m_mtHThong.TileStyle.PaddingRight = 4;
-            this.m_mtHThong.TileStyle.PaddingTop = 4;
-            this.m_mtHThong.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtHThong.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel3
             // 
             this.itemPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -575,26 +515,6 @@
             this.labelX4.Size = new System.Drawing.Size(71, 38);
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Công Ty";
-            // 
-            // m_mtTileCongTy
-            // 
-            this.m_mtTileCongTy.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileCongTy.Image")));
-            this.m_mtTileCongTy.Name = "m_mtTileCongTy";
-            this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileCongTy.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileCongTy.TileStyle.Class = "";
-            this.m_mtTileCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileCongTy.TileStyle.PaddingBottom = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingLeft = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingRight = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingTop = 4;
-            this.m_mtTileCongTy.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileCongTy.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel2
             // 
@@ -634,26 +554,6 @@
             this.labelX3.TabIndex = 0;
             this.labelX3.Text = "Nhà Hàng";
             // 
-            // m_mtTileNhaHang
-            // 
-            this.m_mtTileNhaHang.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileNhaHang.Image")));
-            this.m_mtTileNhaHang.Name = "m_mtTileNhaHang";
-            this.m_mtTileNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileNhaHang.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileNhaHang.TileStyle.Class = "";
-            this.m_mtTileNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileNhaHang.TileStyle.PaddingBottom = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingLeft = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingRight = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingTop = 4;
-            this.m_mtTileNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileNhaHang.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel8
             // 
             this.itemPanel8.BackColor = System.Drawing.Color.Transparent;
@@ -691,26 +591,6 @@
             this.labelX2.Size = new System.Drawing.Size(71, 38);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Đặt Bàn";
-            // 
-            // m_mtTileDatBan
-            // 
-            this.m_mtTileDatBan.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileDatBan.Image")));
-            this.m_mtTileDatBan.Name = "m_mtTileDatBan";
-            this.m_mtTileDatBan.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileDatBan.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileDatBan.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileDatBan.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileDatBan.TileStyle.Class = "";
-            this.m_mtTileDatBan.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileDatBan.TileStyle.PaddingBottom = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingLeft = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingRight = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingTop = 4;
-            this.m_mtTileDatBan.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileDatBan.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel1
             // 
@@ -753,26 +633,6 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Trang Chủ";
             // 
-            // m_mtTileHome
-            // 
-            this.m_mtTileHome.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileHome.Image")));
-            this.m_mtTileHome.Name = "m_mtTileHome";
-            this.m_mtTileHome.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileHome.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileHome.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileHome.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileHome.TileStyle.Class = "";
-            this.m_mtTileHome.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.m_mtTileHome.TileStyle.PaddingBottom = 4;
-            this.m_mtTileHome.TileStyle.PaddingLeft = 4;
-            this.m_mtTileHome.TileStyle.PaddingRight = 4;
-            this.m_mtTileHome.TileStyle.PaddingTop = 4;
-            this.m_mtTileHome.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileHome.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel7
             // 
             this.itemPanel7.BackColor = System.Drawing.Color.White;
@@ -810,6 +670,146 @@
             this.metroTileItem1.TileStyle.PaddingRight = 4;
             this.metroTileItem1.TileStyle.PaddingTop = 4;
             this.metroTileItem1.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
+            // metroTileItem6
+            // 
+            this.metroTileItem6.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem6.Image")));
+            this.metroTileItem6.Name = "metroTileItem6";
+            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.metroTileItem6.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.metroTileItem6.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.metroTileItem6.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem6.TileStyle.Class = "";
+            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem6.TileStyle.PaddingBottom = 4;
+            this.metroTileItem6.TileStyle.PaddingLeft = 4;
+            this.metroTileItem6.TileStyle.PaddingRight = 4;
+            this.metroTileItem6.TileStyle.PaddingTop = 4;
+            this.metroTileItem6.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem6.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // metroTileItem5
+            // 
+            this.metroTileItem5.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem5.Image")));
+            this.metroTileItem5.Name = "metroTileItem5";
+            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem5.TileStyle.Class = "";
+            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem5.TileStyle.PaddingBottom = 4;
+            this.metroTileItem5.TileStyle.PaddingLeft = 4;
+            this.metroTileItem5.TileStyle.PaddingRight = 4;
+            this.metroTileItem5.TileStyle.PaddingTop = 4;
+            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem5.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtHThong
+            // 
+            this.m_mtHThong.Image = ((System.Drawing.Image)(resources.GetObject("m_mtHThong.Image")));
+            this.m_mtHThong.Name = "m_mtHThong";
+            this.m_mtHThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtHThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtHThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtHThong.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtHThong.TileStyle.Class = "";
+            this.m_mtHThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtHThong.TileStyle.PaddingBottom = 4;
+            this.m_mtHThong.TileStyle.PaddingLeft = 4;
+            this.m_mtHThong.TileStyle.PaddingRight = 4;
+            this.m_mtHThong.TileStyle.PaddingTop = 4;
+            this.m_mtHThong.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtHThong.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileCongTy
+            // 
+            this.m_mtTileCongTy.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileCongTy.Image")));
+            this.m_mtTileCongTy.Name = "m_mtTileCongTy";
+            this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileCongTy.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileCongTy.TileStyle.Class = "";
+            this.m_mtTileCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileCongTy.TileStyle.PaddingBottom = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingLeft = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingRight = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingTop = 4;
+            this.m_mtTileCongTy.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileCongTy.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileNhaHang
+            // 
+            this.m_mtTileNhaHang.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileNhaHang.Image")));
+            this.m_mtTileNhaHang.Name = "m_mtTileNhaHang";
+            this.m_mtTileNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileNhaHang.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileNhaHang.TileStyle.Class = "";
+            this.m_mtTileNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileNhaHang.TileStyle.PaddingBottom = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingLeft = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingRight = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingTop = 4;
+            this.m_mtTileNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileNhaHang.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileDatBan
+            // 
+            this.m_mtTileDatBan.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileDatBan.Image")));
+            this.m_mtTileDatBan.Name = "m_mtTileDatBan";
+            this.m_mtTileDatBan.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileDatBan.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileDatBan.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileDatBan.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileDatBan.TileStyle.Class = "";
+            this.m_mtTileDatBan.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileDatBan.TileStyle.PaddingBottom = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingLeft = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingRight = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingTop = 4;
+            this.m_mtTileDatBan.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileDatBan.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileHome
+            // 
+            this.m_mtTileHome.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileHome.Image")));
+            this.m_mtTileHome.Name = "m_mtTileHome";
+            this.m_mtTileHome.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileHome.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileHome.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileHome.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileHome.TileStyle.Class = "";
+            this.m_mtTileHome.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.m_mtTileHome.TileStyle.PaddingBottom = 4;
+            this.m_mtTileHome.TileStyle.PaddingLeft = 4;
+            this.m_mtTileHome.TileStyle.PaddingRight = 4;
+            this.m_mtTileHome.TileStyle.PaddingTop = 4;
+            this.m_mtTileHome.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileHome.TitleText = "<b>Trang Chủ</b>";
             // 
             // frmHeThong
             // 
