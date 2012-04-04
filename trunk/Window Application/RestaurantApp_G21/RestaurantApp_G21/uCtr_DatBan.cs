@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace RestaurantApp_G21
 {
-    public partial class uCtr_QuanLyLichLamViec : UserControl
+    public partial class uCtr_DatBan : UserControl
     {
-        public uCtr_QuanLyLichLamViec()
+        public uCtr_DatBan()
         {
             InitializeComponent();
-        }
-
-        private void m_btnXemChiTiet_Click(object sender, EventArgs e)
-        {
-            FormDSNhanVienTheoCa form = new FormDSNhanVienTheoCa();
-            form.Show();
         }
     }
 }
