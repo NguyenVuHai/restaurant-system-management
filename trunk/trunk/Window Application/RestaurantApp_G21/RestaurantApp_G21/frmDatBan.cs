@@ -13,6 +13,7 @@ namespace RestaurantApp_G21
         public frmDatBan()
         {
             InitializeComponent();
+            
         }
 
        

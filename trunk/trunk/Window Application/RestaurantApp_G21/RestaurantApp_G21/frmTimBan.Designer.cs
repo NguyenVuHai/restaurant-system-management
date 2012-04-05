@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.m_cBoxNhaHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -36,6 +37,8 @@
             this.m_cboxGhe = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.m_btnTimBan = new DevComponents.DotNetBar.ButtonX();
             this.m_btnThoat = new DevComponents.DotNetBar.ButtonX();
+            this.dgvDanhSachBan = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBan)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -57,6 +60,7 @@
             // 
             this.m_cBoxNhaHang.DisplayMember = "Text";
             this.m_cBoxNhaHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.m_cBoxNhaHang.ForeColor = System.Drawing.Color.Black;
             this.m_cBoxNhaHang.FormattingEnabled = true;
             this.m_cBoxNhaHang.ItemHeight = 16;
             this.m_cBoxNhaHang.Location = new System.Drawing.Point(146, 37);
@@ -84,6 +88,7 @@
             // 
             this.m_cBoxKhuVuc.DisplayMember = "Text";
             this.m_cBoxKhuVuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.m_cBoxKhuVuc.ForeColor = System.Drawing.Color.Black;
             this.m_cBoxKhuVuc.FormattingEnabled = true;
             this.m_cBoxKhuVuc.ItemHeight = 16;
             this.m_cBoxKhuVuc.Location = new System.Drawing.Point(146, 65);
@@ -111,6 +116,7 @@
             // 
             this.m_cboxGhe.DisplayMember = "Text";
             this.m_cboxGhe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.m_cboxGhe.ForeColor = System.Drawing.Color.Black;
             this.m_cboxGhe.FormattingEnabled = true;
             this.m_cboxGhe.ItemHeight = 16;
             this.m_cboxGhe.Location = new System.Drawing.Point(146, 93);
@@ -129,6 +135,7 @@
             this.m_btnTimBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_btnTimBan.TabIndex = 2;
             this.m_btnTimBan.Text = "Tìm Bàn";
+            this.m_btnTimBan.Click += new System.EventHandler(this.m_btnTimBan_Click);
             // 
             // m_btnThoat
             // 
@@ -140,12 +147,32 @@
             this.m_btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_btnThoat.TabIndex = 2;
             this.m_btnThoat.Text = "Thoát";
+            this.m_btnThoat.Click += new System.EventHandler(this.m_btnThoat_Click);
+            // 
+            // dgvDanhSachBan
+            // 
+            this.dgvDanhSachBan.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDanhSachBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhSachBan.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDanhSachBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.dgvDanhSachBan.Location = new System.Drawing.Point(12, 199);
+            this.dgvDanhSachBan.Name = "dgvDanhSachBan";
+            this.dgvDanhSachBan.Size = new System.Drawing.Size(722, 256);
+            this.dgvDanhSachBan.TabIndex = 6;
             // 
             // frmTimBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 223);
+            this.ClientSize = new System.Drawing.Size(746, 467);
+            this.Controls.Add(this.dgvDanhSachBan);
             this.Controls.Add(this.m_btnThoat);
             this.Controls.Add(this.m_btnTimBan);
             this.Controls.Add(this.m_cboxGhe);
@@ -158,6 +185,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmTimBan";
             this.Text = "Tìm Bàn Trống";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +200,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx m_cboxGhe;
         private DevComponents.DotNetBar.ButtonX m_btnTimBan;
         private DevComponents.DotNetBar.ButtonX m_btnThoat;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvDanhSachBan;
     }
 }
