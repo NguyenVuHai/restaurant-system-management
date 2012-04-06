@@ -13,7 +13,7 @@ namespace RestaurantApp_G21
         public frmKhoHang()
         {
             InitializeComponent();
-          //  frmKhoHang frm = new frmKhoHang(); sao day co dong nay nak, no lap vo tan lun ak xã yeu :-*
+          //  frmKhoHang frm = new frmKhoHang();
         }
 
         
