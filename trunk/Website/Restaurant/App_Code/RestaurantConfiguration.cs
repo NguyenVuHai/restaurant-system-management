@@ -36,7 +36,7 @@ public static class RestaurantConfiguration
 
     static RestaurantConfiguration()
     {
-        dbConnectionString = ConfigurationManager.ConnectionStrings["RestaurantConnection"].ConnectionString;
-        dbProviderName = ConfigurationManager.ConnectionStrings["RestaurantConnection"].ProviderName;
+        dbConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
+        dbProviderName = ConfigurationManager.ConnectionStrings["ApplicationServices"].ProviderName;
     }
 }
