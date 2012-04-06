@@ -146,25 +146,19 @@
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="App_Code\RestaurantConfiguration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uCtr_BanChuaDat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtr_BanChuaDat.Designer.cs">
+    <Compile Include="uCtr_BanChuaDat.designer.cs">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
     </Compile>
-    <Compile Include="uCtr_DatBan.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="uCtr_KhuVuc.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="uCtr_DatBan.Designer.cs">
-      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uCtr_BanDaDat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uCtr_BanDaDat.Designer.cs">
-      <DependentUpon>uCtr_BanDaDat.cs</DependentUpon>
+    <Compile Include="uCtr_KhuVuc.Designer.cs">
+      <DependentUpon>uCtr_KhuVuc.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmCongTy.resx">
       <DependentUpon>frmCongTy.cs</DependentUpon>
@@ -190,12 +184,6 @@
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uCtr_BanChuaDat.resx">
-      <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtr_DatBan.resx">
-      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,6 +194,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="uCtr_BanChuaDat.resx">
+      <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtr_KhuVuc.resx">
+      <DependentUpon>uCtr_KhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
