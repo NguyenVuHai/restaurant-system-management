@@ -1,1 +1,0 @@
-Copy this QLNHAHANG.mdf to \trunk\Window Application\RestaurantApp_G21\RestaurantApp_G21\bin\Debug\App_Data
