@@ -70,7 +70,7 @@ namespace RestaurantApp_G21
             maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
             //maNhaHang = m_cBoxNhaHang
             List<KhuVucDTO> dt = KhuVucBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
-            NhaHangBUS.LayNhaHang();
+            //NhaHangBUS.LayNhaHang();
             dgvDanhSachBan.DataSource = dt;
         }
 
