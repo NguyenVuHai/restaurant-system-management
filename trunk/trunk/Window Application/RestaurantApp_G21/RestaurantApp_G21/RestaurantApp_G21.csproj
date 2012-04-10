@@ -96,7 +96,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\DataAccessCode.cs" />
+    <Compile Include="BUS\KhuVucBUS.cs" />
+    <Compile Include="BUS\NhaHangBUS.cs" />
+    <Compile Include="BUS\ThongTinBanBUS.cs" />
+    <Compile Include="DAO\DataAccessCode.cs" />
+    <Compile Include="DAO\KhuVucDAO.cs" />
+    <Compile Include="DAO\NhaHangDAO.cs" />
+    <Compile Include="DAO\ThongTinBanDAO.cs" />
+    <Compile Include="DTO\KhuVucDTO.cs" />
+    <Compile Include="DTO\NhaHangDTO.cs" />
+    <Compile Include="DTO\ThongTinBanDTO.cs" />
     <Compile Include="frmCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,10 +118,10 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatBan.cs">
+    <Compile Include="GUI\frmDatBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatBan.Designer.cs">
+    <Compile Include="GUI\frmDatBan.Designer.cs">
       <DependentUpon>frmDatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHeThong.cs">
@@ -133,10 +142,10 @@
     <Compile Include="frmNhaHang.Designer.cs">
       <DependentUpon>frmNhaHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimBan.cs">
+    <Compile Include="GUI\frmTimBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTimBan.Designer.cs">
+    <Compile Include="GUI\frmTimBan.Designer.cs">
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrangChu.cs">
@@ -145,7 +154,7 @@
     <Compile Include="frmTrangChu.Designer.cs">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\RestaurantConfiguration.cs" />
+    <Compile Include="DAO\RestaurantConfiguration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uCtr_BanChuaDat.cs">
@@ -166,7 +175,7 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatBan.resx">
+    <EmbeddedResource Include="GUI\frmDatBan.resx">
       <DependentUpon>frmDatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHeThong.resx">
@@ -178,7 +187,7 @@
     <EmbeddedResource Include="frmNhaHang.resx">
       <DependentUpon>frmNhaHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTimBan.resx">
+    <EmbeddedResource Include="GUI\frmTimBan.resx">
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
@@ -272,9 +281,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
