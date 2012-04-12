@@ -32,7 +32,6 @@
             // 
             // uCtr_KhuVuc
             // 
-            this.AutoScroll = true;
             this.AutoSize = true;
             this.Size = new System.Drawing.Size(456, 155);
             this.SizeChanged += new System.EventHandler(this.uCtr_KhuVuc_SizeChanged);
