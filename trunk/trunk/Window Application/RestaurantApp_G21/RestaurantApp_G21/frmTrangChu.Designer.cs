@@ -38,18 +38,18 @@
             this.itemPanel14 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
-            this.m_mtTileItemHeThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel9 = new DevComponents.DotNetBar.ItemPanel();
-            this.m_mtTileItemKho = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel10 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel11 = new DevComponents.DotNetBar.ItemPanel();
-            this.m_mtTileItemCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
-            this.m_mtTileItemNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel13 = new DevComponents.DotNetBar.ItemPanel();
-            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel15 = new DevComponents.DotNetBar.ItemPanel();
+            this.m_mtTileItemHeThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileItemKho = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileItemCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileItemNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItemBatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
@@ -154,6 +154,7 @@
             // metroTileItem13
             // 
             this.metroTileItem13.Name = "metroTileItem13";
+            this.metroTileItem13.Text = "Trợ Giúp";
             this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
             this.metroTileItem13.TileSize = new System.Drawing.Size(180, 150);
             // 
@@ -190,27 +191,6 @@
             this.itemPanel8.TabIndex = 36;
             this.itemPanel8.Text = "itemPanel6";
             // 
-            // m_mtTileItemHeThong
-            // 
-            this.m_mtTileItemHeThong.Name = "m_mtTileItemHeThong";
-            this.m_mtTileItemHeThong.Text = "Quản Trị Hệ Thống";
-            this.m_mtTileItemHeThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
-            this.m_mtTileItemHeThong.TileSize = new System.Drawing.Size(180, 130);
-            // 
-            // 
-            // 
-            this.m_mtTileItemHeThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemHeThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemHeThong.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemHeThong.TileStyle.Class = "";
-            this.m_mtTileItemHeThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemHeThong.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemHeThong.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemHeThong.Click += new System.EventHandler(this.m_mtTileItemHeThong_Click);
-            // 
             // itemPanel9
             // 
             this.itemPanel9.BackColor = System.Drawing.Color.White;
@@ -230,27 +210,6 @@
             this.itemPanel9.Size = new System.Drawing.Size(282, 137);
             this.itemPanel9.TabIndex = 37;
             this.itemPanel9.Text = "itemPanel9";
-            // 
-            // m_mtTileItemKho
-            // 
-            this.m_mtTileItemKho.Name = "m_mtTileItemKho";
-            this.m_mtTileItemKho.Text = "Quản Lý Kho";
-            this.m_mtTileItemKho.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
-            this.m_mtTileItemKho.TileSize = new System.Drawing.Size(180, 130);
-            // 
-            // 
-            // 
-            this.m_mtTileItemKho.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
-            this.m_mtTileItemKho.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
-            this.m_mtTileItemKho.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemKho.TileStyle.Class = "";
-            this.m_mtTileItemKho.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemKho.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemKho.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemKho.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
             // 
             // itemPanel10
             // 
@@ -279,6 +238,7 @@
             // metroTileItem8
             // 
             this.metroTileItem8.Name = "metroTileItem8";
+            this.metroTileItem8.Text = "About";
             this.metroTileItem8.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
             this.metroTileItem8.TileSize = new System.Drawing.Size(180, 300);
             // 
@@ -315,27 +275,6 @@
             this.itemPanel11.TabIndex = 34;
             this.itemPanel11.Text = "itemPanel11";
             // 
-            // m_mtTileItemCongTy
-            // 
-            this.m_mtTileItemCongTy.Name = "m_mtTileItemCongTy";
-            this.m_mtTileItemCongTy.Text = "Công Ty";
-            this.m_mtTileItemCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellow;
-            this.m_mtTileItemCongTy.TileSize = new System.Drawing.Size(180, 150);
-            // 
-            // 
-            // 
-            this.m_mtTileItemCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(234)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(218)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemCongTy.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemCongTy.TileStyle.Class = "";
-            this.m_mtTileItemCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemCongTy.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemCongTy.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemCongTy.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemCongTy.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemCongTy.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemCongTy.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
-            // 
             // itemPanel12
             // 
             this.itemPanel12.BackColor = System.Drawing.Color.White;
@@ -355,27 +294,6 @@
             this.itemPanel12.Size = new System.Drawing.Size(190, 153);
             this.itemPanel12.TabIndex = 31;
             this.itemPanel12.Text = "itemPanel1";
-            // 
-            // m_mtTileItemNhaHang
-            // 
-            this.m_mtTileItemNhaHang.Name = "m_mtTileItemNhaHang";
-            this.m_mtTileItemNhaHang.Text = "Quản Lý Nhà Hàng";
-            this.m_mtTileItemNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellowish;
-            this.m_mtTileItemNhaHang.TileSize = new System.Drawing.Size(180, 150);
-            // 
-            // 
-            // 
-            this.m_mtTileItemNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
-            this.m_mtTileItemNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(4)))));
-            this.m_mtTileItemNhaHang.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemNhaHang.TileStyle.Class = "";
-            this.m_mtTileItemNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemNhaHang.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemNhaHang.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemNhaHang.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemNhaHang.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemNhaHang.Click += new System.EventHandler(this.m_mtTileItemNhaHang_Click);
             // 
             // itemPanel13
             // 
@@ -397,25 +315,6 @@
             this.itemPanel13.TabIndex = 32;
             this.itemPanel13.Text = "itemPanel1";
             // 
-            // metroTileItem9
-            // 
-            this.metroTileItem9.Name = "metroTileItem9";
-            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
-            this.metroTileItem9.TileSize = new System.Drawing.Size(180, 150);
-            // 
-            // 
-            // 
-            this.metroTileItem9.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(102)))), ((int)(((byte)(168)))));
-            this.metroTileItem9.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(120)))), ((int)(((byte)(190)))));
-            this.metroTileItem9.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem9.TileStyle.Class = "";
-            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem9.TileStyle.PaddingBottom = 4;
-            this.metroTileItem9.TileStyle.PaddingLeft = 4;
-            this.metroTileItem9.TileStyle.PaddingRight = 4;
-            this.metroTileItem9.TileStyle.PaddingTop = 4;
-            this.metroTileItem9.TileStyle.TextColor = System.Drawing.Color.White;
-            // 
             // itemPanel15
             // 
             this.itemPanel15.BackColor = System.Drawing.Color.White;
@@ -436,6 +335,115 @@
             this.itemPanel15.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.itemPanel15.TabIndex = 33;
             this.itemPanel15.Text = "itemPanel15";
+            // 
+            // m_mtTileItemHeThong
+            // 
+            this.m_mtTileItemHeThong.Image = global::RestaurantApp_G21.Properties.Resources.crewdrive_wrench2;
+            this.m_mtTileItemHeThong.Name = "m_mtTileItemHeThong";
+            this.m_mtTileItemHeThong.Text = "<font size =\'+5\'><b>Quản Trị Hệ Thống</b></font>";
+            this.m_mtTileItemHeThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
+            this.m_mtTileItemHeThong.TileSize = new System.Drawing.Size(180, 130);
+            // 
+            // 
+            // 
+            this.m_mtTileItemHeThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemHeThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemHeThong.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemHeThong.TileStyle.Class = "";
+            this.m_mtTileItemHeThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemHeThong.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemHeThong.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemHeThong.Click += new System.EventHandler(this.m_mtTileItemHeThong_Click);
+            // 
+            // m_mtTileItemKho
+            // 
+            this.m_mtTileItemKho.Image = global::RestaurantApp_G21.Properties.Resources.warehouse;
+            this.m_mtTileItemKho.Name = "m_mtTileItemKho";
+            this.m_mtTileItemKho.Text = "<font size =\'15\'><b>Quản Lý Kho</b></font>";
+            this.m_mtTileItemKho.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
+            this.m_mtTileItemKho.TileSize = new System.Drawing.Size(180, 130);
+            // 
+            // 
+            // 
+            this.m_mtTileItemKho.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
+            this.m_mtTileItemKho.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
+            this.m_mtTileItemKho.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemKho.TileStyle.Class = "";
+            this.m_mtTileItemKho.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemKho.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemKho.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemKho.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
+            // 
+            // m_mtTileItemCongTy
+            // 
+            this.m_mtTileItemCongTy.Image = global::RestaurantApp_G21.Properties.Resources.corporate;
+            this.m_mtTileItemCongTy.Name = "m_mtTileItemCongTy";
+            this.m_mtTileItemCongTy.Text = "<font size=\'15\'><b>Công Ty</b></font>";
+            this.m_mtTileItemCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellow;
+            this.m_mtTileItemCongTy.TileSize = new System.Drawing.Size(180, 150);
+            // 
+            // 
+            // 
+            this.m_mtTileItemCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(234)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(218)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemCongTy.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemCongTy.TileStyle.Class = "";
+            this.m_mtTileItemCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemCongTy.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemCongTy.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemCongTy.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemCongTy.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemCongTy.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemCongTy.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
+            // 
+            // m_mtTileItemNhaHang
+            // 
+            this.m_mtTileItemNhaHang.Image = global::RestaurantApp_G21.Properties.Resources.restaurant2;
+            this.m_mtTileItemNhaHang.Name = "m_mtTileItemNhaHang";
+            this.m_mtTileItemNhaHang.Text = "<font size =\'+5\'><b>Quản Lý Nhà Hàng</b></font>";
+            this.m_mtTileItemNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellowish;
+            this.m_mtTileItemNhaHang.TileSize = new System.Drawing.Size(180, 150);
+            // 
+            // 
+            // 
+            this.m_mtTileItemNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            this.m_mtTileItemNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(4)))));
+            this.m_mtTileItemNhaHang.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemNhaHang.TileStyle.Class = "";
+            this.m_mtTileItemNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemNhaHang.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemNhaHang.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemNhaHang.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemNhaHang.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemNhaHang.Click += new System.EventHandler(this.m_mtTileItemNhaHang_Click);
+            // 
+            // metroTileItem9
+            // 
+            this.metroTileItem9.Image = global::RestaurantApp_G21.Properties.Resources.Contact_Person1;
+            this.metroTileItem9.Name = "metroTileItem9";
+            this.metroTileItem9.Text = "<font size =\'+5\'><b>Liên Hệ</b></font>";
+            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
+            this.metroTileItem9.TileSize = new System.Drawing.Size(180, 150);
+            // 
+            // 
+            // 
+            this.metroTileItem9.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(102)))), ((int)(((byte)(168)))));
+            this.metroTileItem9.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(120)))), ((int)(((byte)(190)))));
+            this.metroTileItem9.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem9.TileStyle.Class = "";
+            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem9.TileStyle.PaddingBottom = 4;
+            this.metroTileItem9.TileStyle.PaddingLeft = 4;
+            this.metroTileItem9.TileStyle.PaddingRight = 4;
+            this.metroTileItem9.TileStyle.PaddingTop = 4;
+            this.metroTileItem9.TileStyle.TextColor = System.Drawing.Color.White;
             // 
             // metroTileItemBatBan
             // 
@@ -478,7 +486,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DotNetBar Metro App Form";
+            this.Text = "Restaurant Management";
             this.ResumeLayout(false);
 
         }
