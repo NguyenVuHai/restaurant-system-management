@@ -236,12 +236,18 @@
       <DependentUpon>QLNHAHANG.mdf</DependentUpon>
     </Content>
     <Content Include="Resources\Charts.png" />
+    <None Include="Resources\Contact_Person1.png" />
+    <None Include="Resources\corporate.png" />
+    <None Include="Resources\crewdrive-wrench2.png" />
     <Content Include="Resources\Details.png" />
     <Content Include="Resources\hBlue_.png" />
     <Content Include="Resources\Help.png" />
+    <None Include="Resources\Image1.bmp" />
     <Content Include="Resources\Invoice.png" />
+    <None Include="Resources\restaurant2.png" />
     <Content Include="Resources\TableReportt.png" />
     <Content Include="Resources\Unpaid.png" />
+    <None Include="Resources\warehouse.png" />
     <Content Include="Resources\Web.png" />
   </ItemGroup>
   <ItemGroup>
