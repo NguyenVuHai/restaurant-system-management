@@ -11,23 +11,23 @@ namespace RestaurantApp_G21
 {    
     public partial class uCtr_KhuVuc : FlowLayoutPanel // kế thừa
     {
-        private Label lblTenKhuVuc = new Label();
+        //private Label lblTenKhuVuc = new Label();
         private frmDatBan parentForm = null;
-        private string maKV;
+        private int maKV;
 
-        public string MaKV
+        public int MaKV
         {
             get { return maKV; }
             set { maKV = value; }
         }
 
-        public uCtr_KhuVuc(frmDatBan parent, string maKhuVuc, int soBan)// hàm dựng, tên khu vực và số bàn
+        public uCtr_KhuVuc(frmDatBan parent, int maKhuVuc, int soBan)// hàm dựng, tên khu vực và số bàn
         {
             InitializeComponent();
             
-            this.lblTenKhuVuc.Text = maKhuVuc;
+            //this.lblTenKhuVuc.Text = maKhuVuc;
             this.maKV = maKhuVuc;
-            this.Controls.Add(lblTenKhuVuc);
+            //this.Controls.Add(lblTenKhuVuc);
             this.parentForm = parent;
             for (int i = 0; i < soBan; i++)
             { 
@@ -45,8 +45,8 @@ namespace RestaurantApp_G21
         }
 
         private void uCtr_KhuVuc_SizeChanged(object sender, EventArgs e)
-        {
-            this.lblTenKhuVuc.Width = this.Width;
+        {           
+            //this.lblTenKhuVuc.Width = this.Width;
         }
 
     }
