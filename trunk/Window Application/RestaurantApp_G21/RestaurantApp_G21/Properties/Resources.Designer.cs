@@ -74,9 +74,30 @@ namespace RestaurantApp_G21.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Contact_Person1 {
+            get {
+                object obj = ResourceManager.GetObject("Contact_Person1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap contact1 {
             get {
                 object obj = ResourceManager.GetObject("contact1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap corporate {
+            get {
+                object obj = ResourceManager.GetObject("corporate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap crewdrive_wrench2 {
+            get {
+                object obj = ResourceManager.GetObject("crewdrive_wrench2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,9 +137,23 @@ namespace RestaurantApp_G21.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Image1 {
+            get {
+                object obj = ResourceManager.GetObject("Image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Invoice {
             get {
                 object obj = ResourceManager.GetObject("Invoice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap restaurant2 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +168,13 @@ namespace RestaurantApp_G21.Properties {
         internal static System.Drawing.Bitmap Unpaid {
             get {
                 object obj = ResourceManager.GetObject("Unpaid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap warehouse {
+            get {
+                object obj = ResourceManager.GetObject("warehouse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
