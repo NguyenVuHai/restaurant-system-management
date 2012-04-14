@@ -31,7 +31,7 @@ namespace RestaurantApp_G21
             this.parentForm = parent;
             for (int i = 0; i < soBan; i++)
             { 
-                themBnVaoKhuVuc(new uCtr_BanChuaDat(this,false,"BAN_"+i)); // Truyền false vì cái khuvuc mới tạo sẽ toàn là bàn chưa đặt
+                themBnVaoKhuVuc(new uCtr_BanChuaDat(this,false,i.ToString())); // Truyền false vì cái khuvuc mới tạo sẽ toàn là bàn chưa đặt
             }
         }
 
