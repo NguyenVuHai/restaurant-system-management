@@ -51,6 +51,7 @@ namespace RestaurantApp_G21
         {
             InitializeComponent();
             LoadNhaHang();
+           
         }
 
         private void m_btnThoat_Click(object sender, EventArgs e)
@@ -63,13 +64,13 @@ namespace RestaurantApp_G21
             int maNhaHang = 0;
             int maKhuVuc = 0;
             DateTime ngayDatBan = new DateTime();
-            string buoi = String.Empty;
+            int buoi = 0;
             int soLuong = 0;
 
             maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
             maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
             ngayDatBan = m_dateTimeInputNgayDatBan.Value;
-            buoi = m_textBoxBuoi.Text;
+            //buoi = m_textBoxBuoi.Text;
             //maNhaHang = m_cBoxNhaHang
             List<ThongTinBanDTO> dt = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
             //NhaHangBUS.LayNhaHang();

@@ -14,7 +14,6 @@ namespace RestaurantApp_G21
     public partial class frmDatBan : DevComponents.DotNetBar.Metro.MetroAppForm
     {
         public List<ThongTinBanDTO> listBan = new List<ThongTinBanDTO>();
-        private int m_maNhaHang = 1;
 
         #region Utils Methods
 
@@ -55,14 +54,33 @@ namespace RestaurantApp_G21
             return false;
         }
 
+        private void LoadBuoi(ComboBox cboxBuoi, int selectIndex)
+        {
+            try
+            {
+                cboxBuoi.Items.Clear();
+                cboxBuoi.Items.Add("Chọn buổi");
+                List<BuoiDTO> buoi = BuoiBUS.LayDanhSachBuoi();
+                foreach (BuoiDTO oBuoi in buoi)
+                {
+                    cboxBuoi.Items.Add(oBuoi);
+                }
+                cboxBuoi.SelectedIndex = selectIndex;
+                cboxBuoi.ValueMember = "MaBuoi";
+                cboxBuoi.DisplayMember = "TenBuoi";
+            }
+            catch
+            {
+            }
+        }
         #endregion
 
         public frmDatBan()                          
-        {
-            //int soBan = 50;                        
+        {                     
             InitializeComponent();
             LoadNhaHang();
-            //LoadBanTrongKhuVuc();
+            LoadBuoi(m_cboxTimBuoi,0);
+            LoadBuoi(m_cboxBuoi,0);
         }
 
         public void LoadBanTrongKhuVuc()
@@ -84,7 +102,7 @@ namespace RestaurantApp_G21
                     tabCtrP.AutoSize = true;
                     tabCtrP.Dock = System.Windows.Forms.DockStyle.Fill;
                     tabCtrP.TabItem = tabI;// chỗ này là gán
-                    tabI.AttachedControl = tabCtrP;//                
+                    tabI.AttachedControl = tabCtrP;            
 
                     uCtr_KhuVuc khuvuc = new uCtr_KhuVuc(this, kv.MaKhuVuc);
                     khuvuc.MaximumSize = new Size(m_tabCtrKhuVuc.Width, 0);
@@ -103,7 +121,7 @@ namespace RestaurantApp_G21
             m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
             m_txtMaBan.Text = maBan;
             m_txtKhuVuc.Text = maKhuVuc.ToString();
-
+            LoadBuoi(m_cboxBuoi, m_cboxTimBuoi.SelectedIndex);
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
@@ -126,21 +144,16 @@ namespace RestaurantApp_G21
             int maNhaHang = 0;
             int maKhuVuc = 0;
             DateTime ngayDatBan = new DateTime();
-            string buoi = String.Empty;
+            int buoi = 0;
             int soLuong = 0;
 
             maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
             maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
             ngayDatBan = m_dateTimeInputNgayDatBan.Value;
-            buoi = m_textBoxBuoi.Text;
-            //maNhaHang = m_cBoxNhaHang
+            buoi = m_cboxBuoi.SelectedIndex == 0 ? 0 : ((BuoiDTO)m_cboxBuoi.SelectedItem).MaBuoi;
+            
             listBan = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
             LoadBanTrongKhuVuc();
-            //NhaHangBUS.LayNhaHang();
-            //if (dt.Count > 0)
-            //    dgvDanhSachBan.DataSource = dt;
-            //else dgvDanhSachBan.DataSource = null;
-            
         }
 
         private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,7 +161,6 @@ namespace RestaurantApp_G21
             int maNhaHang = 0;
             if (m_cBoxNhaHang.SelectedIndex != 0)
             {
-
                 maNhaHang = ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
             }
             LoadKhuVuc(maNhaHang);
