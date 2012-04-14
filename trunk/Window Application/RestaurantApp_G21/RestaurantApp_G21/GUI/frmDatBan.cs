@@ -58,6 +58,12 @@ namespace RestaurantApp_G21
 
         }
 
+        private void m_btnTimNhaHang_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmTimBan();
+            frm.ShowDialog();
+        }
+
        
        
 

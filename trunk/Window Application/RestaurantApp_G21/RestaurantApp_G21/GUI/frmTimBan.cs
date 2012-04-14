@@ -75,7 +75,7 @@ namespace RestaurantApp_G21
             //NhaHangBUS.LayNhaHang();
             if (dt.Count > 0)
                 dgvDanhSachBan.DataSource = dt;
-            else dgvDanhSachBan.Rows.Clear();
+            else dgvDanhSachBan.DataSource = null;
         }
 
         private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)
