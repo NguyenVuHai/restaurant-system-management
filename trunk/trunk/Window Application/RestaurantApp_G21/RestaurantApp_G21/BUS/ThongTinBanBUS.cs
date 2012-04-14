@@ -13,5 +13,11 @@ namespace RestaurantApp_G21.BUS
         {
             return ThongTinBanDAO.LayDanhSachThongTinBan(maKhuVuc);
         }
+
+
+        public static List<ThongTinBanDTO> TimBanTrong(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, string buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
     }
 }

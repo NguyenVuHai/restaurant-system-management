@@ -14,9 +14,5 @@ namespace RestaurantApp_G21.BUS
             return KhuVucDAO.LayDanhSachKhuVuc(maNhaHang);
         }
 
-        public static List<KhuVucDTO> TimBanTrong(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, string buoi, int soLuong)
-        {
-            return KhuVucDAO.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
-        }
     }
 }
