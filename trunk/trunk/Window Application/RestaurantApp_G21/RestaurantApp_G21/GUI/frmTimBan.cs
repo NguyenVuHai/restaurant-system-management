@@ -76,6 +76,10 @@ namespace RestaurantApp_G21
             if (dt.Count > 0)
                 dgvDanhSachBan.DataSource = dt;
             else dgvDanhSachBan.DataSource = null;
+            foreach (var item in dt)
+            {
+                ((frmDatBan)this.ParentForm).listBan.Add(item);
+            }
         }
 
         private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)

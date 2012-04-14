@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RestaurantApp_G21.DTO;
 
 namespace RestaurantApp_G21
 {    
@@ -29,9 +30,13 @@ namespace RestaurantApp_G21
             this.maKV = maKhuVuc;
             //this.Controls.Add(lblTenKhuVuc);
             this.parentForm = parent;
-            for (int i = 0; i < soBan; i++)
-            { 
-                themBnVaoKhuVuc(new uCtr_BanChuaDat(this,false,i.ToString())); // Truyền false vì cái khuvuc mới tạo sẽ toàn là bàn chưa đặt
+            List<ThongTinBanDTO> listBan = parent.listBan;
+            for (int i = 0; i < listBan.Count; i++)
+            {
+                if (listBan[i].MaKhuVuc == maKhuVuc)
+                {
+                    themBanVaoKhuVuc(new uCtr_BanChuaDat(this, false, listBan[i].MaBan.ToString())); // Truyền false vì cái khuvuc mới tạo sẽ toàn là bàn chưa đặt
+                }
             }
         }
 
@@ -39,7 +44,7 @@ namespace RestaurantApp_G21
         {
             return this.parentForm;
         }
-        public void themBnVaoKhuVuc(uCtr_BanChuaDat ban)
+        public void themBanVaoKhuVuc(uCtr_BanChuaDat ban)
         {
             this.Controls.Add(ban);
         }
