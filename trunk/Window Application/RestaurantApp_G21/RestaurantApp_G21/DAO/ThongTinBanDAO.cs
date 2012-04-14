@@ -39,7 +39,7 @@ namespace RestaurantApp_G21.DAO
         }
 
 
-        public static List<ThongTinBanDTO> TimBanTrong(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, string buoi, int soLuong)
+        public static List<ThongTinBanDTO> TimBanTrong(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.TimBanTrong";
@@ -70,7 +70,7 @@ namespace RestaurantApp_G21.DAO
             // create a new parameter
             param = command.CreateParameter();
             param.ParameterName = "@Buoi";
-            if (buoi == String.Empty)
+            if (buoi == 0)
                 param.Value = DBNull.Value;
             else param.Value = buoi;
             param.DbType = DbType.Int32;

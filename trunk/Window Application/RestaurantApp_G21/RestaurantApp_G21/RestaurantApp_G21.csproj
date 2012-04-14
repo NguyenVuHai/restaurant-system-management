@@ -96,13 +96,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BuoiBUS.cs" />
     <Compile Include="BUS\KhuVucBUS.cs" />
     <Compile Include="BUS\NhaHangBUS.cs" />
     <Compile Include="BUS\ThongTinBanBUS.cs" />
+    <Compile Include="DAO\BuoiDAO.cs" />
     <Compile Include="DAO\DataAccessCode.cs" />
     <Compile Include="DAO\KhuVucDAO.cs" />
     <Compile Include="DAO\NhaHangDAO.cs" />
     <Compile Include="DAO\ThongTinBanDAO.cs" />
+    <Compile Include="DTO\BuoiDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
     <Compile Include="DTO\NhaHangDTO.cs" />
     <Compile Include="DTO\ThongTinBanDTO.cs" />

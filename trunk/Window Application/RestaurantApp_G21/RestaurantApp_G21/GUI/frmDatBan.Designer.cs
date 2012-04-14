@@ -82,10 +82,10 @@
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
+            this.m_cboxTimBuoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.m_dateTimeInputNgayDatBan = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX21 = new DevComponents.DotNetBar.LabelX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.m_textBoxBuoi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX23 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.m_btnTimBan = new DevComponents.DotNetBar.ButtonX();
@@ -743,8 +743,8 @@
             this.m_sTabCtrDatBan.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabCtrDatBan.ControlBox.MenuBox,
             this.m_sTabCtrDatBan.ControlBox.CloseBox});
-            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel1);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel2);
+            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel1);
             this.m_sTabCtrDatBan.Controls.Add(this.m_sTabCtrPDatBan);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel3);
             this.m_sTabCtrDatBan.ForeColor = System.Drawing.Color.Black;
@@ -819,10 +819,10 @@
             // 
             this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expandablePanel1.Controls.Add(this.m_cboxTimBuoi);
             this.expandablePanel1.Controls.Add(this.m_dateTimeInputNgayDatBan);
             this.expandablePanel1.Controls.Add(this.labelX21);
             this.expandablePanel1.Controls.Add(this.labelX22);
-            this.expandablePanel1.Controls.Add(this.m_textBoxBuoi);
             this.expandablePanel1.Controls.Add(this.labelX23);
             this.expandablePanel1.Controls.Add(this.textBoxX5);
             this.expandablePanel1.Controls.Add(this.m_btnTimBan);
@@ -847,6 +847,19 @@
             this.expandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.expandablePanel1.TitleStyle.GradientAngle = 90;
             this.expandablePanel1.TitleText = "<font color=\"#000000\"><b>Tìm Bàn Trống</b></font>";
+            // 
+            // m_cboxTimBuoi
+            // 
+            this.m_cboxTimBuoi.DisplayMember = "Text";
+            this.m_cboxTimBuoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.m_cboxTimBuoi.ForeColor = System.Drawing.Color.Black;
+            this.m_cboxTimBuoi.FormattingEnabled = true;
+            this.m_cboxTimBuoi.ItemHeight = 16;
+            this.m_cboxTimBuoi.Location = new System.Drawing.Point(504, 100);
+            this.m_cboxTimBuoi.Name = "m_cboxTimBuoi";
+            this.m_cboxTimBuoi.Size = new System.Drawing.Size(106, 22);
+            this.m_cboxTimBuoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_cboxTimBuoi.TabIndex = 10;
             // 
             // m_dateTimeInputNgayDatBan
             // 
@@ -930,20 +943,6 @@
             this.labelX22.Size = new System.Drawing.Size(75, 23);
             this.labelX22.TabIndex = 32;
             this.labelX22.Text = "Ngày đặt bàn";
-            // 
-            // m_textBoxBuoi
-            // 
-            this.m_textBoxBuoi.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_textBoxBuoi.Border.Class = "TextBoxBorder";
-            this.m_textBoxBuoi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_textBoxBuoi.ForeColor = System.Drawing.Color.Black;
-            this.m_textBoxBuoi.Location = new System.Drawing.Point(504, 98);
-            this.m_textBoxBuoi.Name = "m_textBoxBuoi";
-            this.m_textBoxBuoi.Size = new System.Drawing.Size(233, 22);
-            this.m_textBoxBuoi.TabIndex = 30;
             // 
             // labelX23
             // 
@@ -1074,9 +1073,9 @@
             this.superTabControlPanel2.Controls.Add(this.labelX9);
             this.superTabControlPanel2.Controls.Add(this.m_iPanelTTBan);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 572);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 547);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
             this.superTabControlPanel2.Text = "s";
@@ -1288,6 +1287,7 @@
             // 
             this.m_txtKhuVuc.Border.Class = "TextBoxBorder";
             this.m_txtKhuVuc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtKhuVuc.Enabled = false;
             this.m_txtKhuVuc.ForeColor = System.Drawing.Color.Black;
             this.m_txtKhuVuc.Location = new System.Drawing.Point(604, 107);
             this.m_txtKhuVuc.Name = "m_txtKhuVuc";
@@ -1316,6 +1316,7 @@
             // 
             this.m_txtMaBan.Border.Class = "TextBoxBorder";
             this.m_txtMaBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtMaBan.Enabled = false;
             this.m_txtMaBan.ForeColor = System.Drawing.Color.Black;
             this.m_txtMaBan.Location = new System.Drawing.Point(604, 79);
             this.m_txtMaBan.Name = "m_txtMaBan";
@@ -2711,7 +2712,6 @@
         private DevComponents.Editors.DateTimeAdv.DateTimeInput m_dateTimeInputNgayDatBan;
         private DevComponents.DotNetBar.LabelX labelX21;
         private DevComponents.DotNetBar.LabelX labelX22;
-        private DevComponents.DotNetBar.Controls.TextBoxX m_textBoxBuoi;
         private DevComponents.DotNetBar.LabelX labelX23;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private DevComponents.DotNetBar.ButtonX m_btnTimBan;
@@ -2719,6 +2719,7 @@
         private DevComponents.DotNetBar.LabelX labelX24;
         private DevComponents.DotNetBar.Controls.ComboBoxEx m_cBoxNhaHang;
         private DevComponents.DotNetBar.LabelX labelX30;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx m_cboxTimBuoi;
 
     }
 }
