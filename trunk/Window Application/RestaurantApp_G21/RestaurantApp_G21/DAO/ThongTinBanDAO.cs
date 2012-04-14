@@ -73,7 +73,7 @@ namespace RestaurantApp_G21.DAO
             if (buoi == String.Empty)
                 param.Value = DBNull.Value;
             else param.Value = buoi;
-            param.DbType = DbType.String;
+            param.DbType = DbType.Int32;
             command.Parameters.Add(param);
             // create a new parameter
             param = command.CreateParameter();
