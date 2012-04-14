@@ -69,6 +69,7 @@ namespace RestaurantApp_G21
             maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
             maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
             ngayDatBan = m_dateTimeInputNgayDatBan.Value;
+            buoi = m_textBoxBuoi.Text;
             //maNhaHang = m_cBoxNhaHang
             List<ThongTinBanDTO> dt = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
             //NhaHangBUS.LayNhaHang();
