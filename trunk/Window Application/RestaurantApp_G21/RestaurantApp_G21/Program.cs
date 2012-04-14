@@ -16,7 +16,8 @@ namespace RestaurantApp_G21
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmTrangChu());
-            Application.Run(new frmDatBan());
+            //Application.Run(new frmDatBan());
+            Application.Run(new frmTimBan());
         }
     }
 }

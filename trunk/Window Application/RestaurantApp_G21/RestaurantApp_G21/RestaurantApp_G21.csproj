@@ -242,7 +242,6 @@
     <Content Include="Resources\Details.png" />
     <Content Include="Resources\hBlue_.png" />
     <Content Include="Resources\Help.png" />
-    <None Include="Resources\Image1.bmp" />
     <Content Include="Resources\Invoice.png" />
     <None Include="Resources\restaurant2.png" />
     <Content Include="Resources\TableReportt.png" />

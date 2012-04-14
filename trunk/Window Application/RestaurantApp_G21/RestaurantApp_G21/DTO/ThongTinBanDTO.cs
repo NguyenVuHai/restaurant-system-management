@@ -11,6 +11,20 @@ namespace RestaurantApp_G21.DTO
         private string tenBan;
         private int maKhuVuc;
         private int sucChua;
+        private int maNhaHang;
+        private decimal giaBan;
+
+        public decimal GiaBan
+        {
+            get { return giaBan; }
+            set { giaBan = value; }
+        }
+
+        public int MaNhaHang
+        {
+            get { return maNhaHang; }
+            set { maNhaHang = value; }
+        }
 
         public int MaBan
         {
