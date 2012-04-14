@@ -22,7 +22,7 @@ namespace RestaurantApp_G21
             set { maKV = value; }
         }
 
-        public uCtr_KhuVuc(frmDatBan parent, int maKhuVuc, int soBan)// hàm dựng, tên khu vực và số bàn
+        public uCtr_KhuVuc(frmDatBan parent, int maKhuVuc)// hàm dựng, tên khu vực và số bàn
         {
             InitializeComponent();
             

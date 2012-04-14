@@ -46,6 +46,15 @@ namespace RestaurantApp_G21
             m_cBoxKhuVuc.DisplayMember = "TenKhuVuc";
         }
 
+        private bool KiemTraKhuVuc(int maKhuVuc)
+        {
+            foreach (var ban in listBan)
+            {
+                if (ban.MaKhuVuc == maKhuVuc) return true;
+            }
+            return false;
+        }
+
         #endregion
 
         public frmDatBan()                          
@@ -59,31 +68,35 @@ namespace RestaurantApp_G21
         public void LoadBanTrongKhuVuc()
         {
             m_tabCtrKhuVuc.Tabs.Clear();
-            List<KhuVucDTO> dsKhuVuc = KhuVucBUS.LayDanhSachKhuVuc(((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang);
+            int maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
+            List<KhuVucDTO> dsKhuVuc = KhuVucBUS.LayDanhSachKhuVuc(maNhaHang);
 
             foreach (KhuVucDTO kv in dsKhuVuc)
             {
-                TabItem tabI = new TabItem();
-                TabControlPanel tabCtrP = new TabControlPanel();
-                tabI.Name = "m_tabIKhuVuc" + kv.MaKhuVuc;
-                tabI.Text = kv.TenKhuVuc;
-                tabCtrP.Name = "m_tabCtrP" + kv.MaKhuVuc;
-                tabCtrP.AutoScroll = true;
-                tabCtrP.AutoSize = true;
-                tabCtrP.Dock = System.Windows.Forms.DockStyle.Fill;
-                tabCtrP.TabItem = tabI;// chỗ này là gán
-                tabI.AttachedControl = tabCtrP;//                
-                int soBan = 50;
-                uCtr_KhuVuc khuvuc = new uCtr_KhuVuc(this, kv.MaKhuVuc, soBan);
-                khuvuc.MaximumSize = new Size(m_tabCtrKhuVuc.Width, 0);
+                if (KiemTraKhuVuc(kv.MaKhuVuc))
+                {
+                    TabItem tabI = new TabItem();
+                    TabControlPanel tabCtrP = new TabControlPanel();
+                    tabI.Name = "m_tabIKhuVuc" + kv.MaKhuVuc;
+                    tabI.Text = kv.TenKhuVuc;
+                    tabCtrP.Name = "m_tabCtrP" + kv.MaKhuVuc;
+                    tabCtrP.AutoScroll = true;
+                    tabCtrP.AutoSize = true;
+                    tabCtrP.Dock = System.Windows.Forms.DockStyle.Fill;
+                    tabCtrP.TabItem = tabI;// chỗ này là gán
+                    tabI.AttachedControl = tabCtrP;//                
 
-                tabCtrP.Controls.Add(khuvuc);
-                m_tabCtrKhuVuc.Controls.Add(tabCtrP); // chỗ này là add
-                m_tabCtrKhuVuc.Tabs.Add(tabI);
+                    uCtr_KhuVuc khuvuc = new uCtr_KhuVuc(this, kv.MaKhuVuc);
+                    khuvuc.MaximumSize = new Size(m_tabCtrKhuVuc.Width, 0);
+
+                    tabCtrP.Controls.Add(khuvuc);
+                    m_tabCtrKhuVuc.Controls.Add(tabCtrP); // chỗ này là add
+                    m_tabCtrKhuVuc.Tabs.Add(tabI);
+                }
 
             }
-
         }
+
 
         public void tabThongTinDatBan(string maBan, int maKhuVuc)
         {
