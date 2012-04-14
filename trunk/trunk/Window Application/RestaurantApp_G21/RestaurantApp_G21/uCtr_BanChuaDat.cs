@@ -31,7 +31,7 @@ namespace RestaurantApp_G21
             this.parentKhuVuc = kv;
             this.maBan = ma;
             bIsDaDat = bDaDat;
-
+            m_labelMaBan.Text = ma;
             pDatOi.Visible = bIsDaDat; //Cho nay co nghia la neu ban da dat thi cai itemlist daoi no hien ra
             pChuaDat.Visible = !bIsDaDat;  //Cai nay thi pChuaDat se nguoc voi cai pDaDat tuc la pDaDat hien len thi pChuaDat se an di
         }

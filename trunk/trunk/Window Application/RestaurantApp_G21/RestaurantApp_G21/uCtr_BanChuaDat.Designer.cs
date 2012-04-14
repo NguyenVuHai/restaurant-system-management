@@ -39,6 +39,7 @@
             this.m_btnHuyDatBan = new DevComponents.DotNetBar.ButtonX();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_labelMaBan = new System.Windows.Forms.Label();
             this.pChuaDat.SuspendLayout();
             this.pDatOi.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.pChuaDat.BackgroundStyle.Class = "";
             this.pChuaDat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pChuaDat.ContainerControlProcessDialogKey = true;
+            this.pChuaDat.Controls.Add(this.m_labelMaBan);
             this.pChuaDat.Controls.Add(this.circularProgress1);
             this.pChuaDat.Controls.Add(this.m_btnDatBan);
             this.pChuaDat.Dock = System.Windows.Forms.DockStyle.Left;
@@ -220,6 +222,16 @@
             this.metroTileItem2.TileStyle.PaddingTop = 4;
             this.metroTileItem2.TileStyle.TextColor = System.Drawing.Color.White;
             // 
+            // m_labelMaBan
+            // 
+            this.m_labelMaBan.AutoSize = true;
+            this.m_labelMaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_labelMaBan.ForeColor = System.Drawing.Color.Yellow;
+            this.m_labelMaBan.Location = new System.Drawing.Point(32, 36);
+            this.m_labelMaBan.Name = "m_labelMaBan";
+            this.m_labelMaBan.Size = new System.Drawing.Size(0, 31);
+            this.m_labelMaBan.TabIndex = 2;
+            // 
             // uCtr_BanChuaDat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +242,7 @@
             this.Name = "uCtr_BanChuaDat";
             this.Size = new System.Drawing.Size(222, 117);
             this.pChuaDat.ResumeLayout(false);
+            this.pChuaDat.PerformLayout();
             this.pDatOi.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -247,5 +260,6 @@
         private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
         private DevComponents.DotNetBar.ButtonX m_btnNhapThongKhach;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem2;
+        private System.Windows.Forms.Label m_labelMaBan;
     }
 }
