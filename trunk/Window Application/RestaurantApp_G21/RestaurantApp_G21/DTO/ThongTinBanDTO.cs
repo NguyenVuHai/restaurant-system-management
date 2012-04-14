@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RestaurantApp_G21.DTO
 {
-    class ThongTinBanDTO
+    public class ThongTinBanDTO
     {
         private int maBan;
         private string tenBan;

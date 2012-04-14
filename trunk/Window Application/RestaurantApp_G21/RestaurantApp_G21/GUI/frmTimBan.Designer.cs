@@ -109,7 +109,7 @@
             // 
             this.m_btnTimBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnTimBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnTimBan.Location = new System.Drawing.Point(247, 169);
+            this.m_btnTimBan.Location = new System.Drawing.Point(249, 170);
             this.m_btnTimBan.Name = "m_btnTimBan";
             this.m_btnTimBan.Size = new System.Drawing.Size(75, 23);
             this.m_btnTimBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -121,7 +121,7 @@
             // 
             this.m_btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThoat.Location = new System.Drawing.Point(328, 169);
+            this.m_btnThoat.Location = new System.Drawing.Point(330, 170);
             this.m_btnThoat.Name = "m_btnThoat";
             this.m_btnThoat.Size = new System.Drawing.Size(75, 23);
             this.m_btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

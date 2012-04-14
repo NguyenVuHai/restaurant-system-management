@@ -94,6 +94,7 @@ namespace RestaurantApp_G21.DAO
                     thongTinBan.SucChua = Int32.Parse(dt.Rows[i]["SucChua"].ToString());
                     thongTinBan.MaNhaHang = Int32.Parse(dt.Rows[i]["MaNhaHang"].ToString());
                     thongTinBan.GiaBan = Decimal.Parse(dt.Rows[i]["GiaBan"].ToString());
+                    thongTinBan.MaKhuVuc = Int32.Parse(dt.Rows[i]["MaKhuVuc"].ToString());
                     list.Add(thongTinBan);
                 }
             }
