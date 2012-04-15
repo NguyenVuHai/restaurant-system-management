@@ -80,7 +80,7 @@ namespace RestaurantApp_G21
             InitializeComponent();
             LoadNhaHang();
             LoadBuoi(m_cboxTimBuoi,0);
-            LoadBuoi(m_cboxBuoi,0);
+            LoadBuoi(cbbBuoi,0);
         }
 
         public void LoadBanTrongKhuVuc()
@@ -119,9 +119,9 @@ namespace RestaurantApp_G21
         public void tabThongTinDatBan(string maBan, int maKhuVuc)
         {
             m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
-            m_txtMaBan.Text = maBan;
-            m_txtKhuVuc.Text = maKhuVuc.ToString();
-            LoadBuoi(m_cboxBuoi, m_cboxTimBuoi.SelectedIndex);
+            txtMaBan.Text = maBan;
+            txtKhuVuc.Text = maKhuVuc.ToString();
+            LoadBuoi(cbbBuoi, m_cboxTimBuoi.SelectedIndex);
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
@@ -141,19 +141,39 @@ namespace RestaurantApp_G21
 
         private void m_btnTimBan_Click(object sender, EventArgs e)
         {
-            int maNhaHang = 0;
-            int maKhuVuc = 0;
-            DateTime ngayDatBan = new DateTime();
-            int buoi = 0;
-            int soLuong = 0;
+            try
+            {
+                int maNhaHang = 0;
+                int maKhuVuc = 0;
+                DateTime ngayDatBan = new DateTime();
+                int buoi = 0;
+                int soLuong = 0;
 
-            maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
-            maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
-            ngayDatBan = m_dateTimeInputNgayDatBan.Value;
-            buoi = m_cboxBuoi.SelectedIndex == 0 ? 0 : ((BuoiDTO)m_cboxBuoi.SelectedItem).MaBuoi;
-            
-            listBan = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
-            LoadBanTrongKhuVuc();
+                maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
+                maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
+                DateTime.TryParse(m_dateTimeInputNgayDatBan.Text,out ngayDatBan);
+                buoi = cbbBuoi.SelectedIndex == 0 ? 0 : ((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
+                Int32.TryParse(m_txtTimSoLuong.Text, out soLuong);
+                if (soLuong == 0)
+                {
+                    MessageBox.Show("Số lượng không hợp lệ.");
+                    m_txtTimSoLuong.Focus();
+                    m_txtTimSoLuong.SelectAll();
+                    return;
+                }
+                if (ngayDatBan == new DateTime())
+                {
+                    MessageBox.Show("Ngày đặt bàn không hợp lệ.");
+                    m_dateTimeInputNgayDatBan.Focus();
+                    return;
+                }
+                listBan = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                LoadBanTrongKhuVuc();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi hệ thống");
+            }
         }
 
         private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,14 +185,29 @@ namespace RestaurantApp_G21
             }
             LoadKhuVuc(maNhaHang);
         }
-       
 
-       
+        private void btnLuuThongTinDatBan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int loai = 1;
+                BanDatDTO banDat = new BanDatDTO()
+                {
+                    HoTen = txtHoTenKhachHang.Text,
+                    Cmnd = txtCMND.Text,
+                    DienThoai = txtSoDienThoai.Text,
+                    MaBan = Int32.Parse(txtMaBan.Text),
+                    MaBuoi = (int)cbbBuoi.SelectedValue,
+                    NgayDatBan = dtNgayDatBan.Value,
+                    SoLuong = Int32.Parse(txtSoLuong.Text)
+                };
+                BanDatBUS.ThemThongTinBanDat(banDat, loai);
+                
+            }
+            catch (Exception ex)
+            {
+            }
+        }
 
-      
-
-        
-
-        
     }
 }
