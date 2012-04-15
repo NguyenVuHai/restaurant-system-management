@@ -124,10 +124,10 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmDatBan.cs">
+    <Compile Include="GUI\DatBan\frmDatBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDatBan.Designer.cs">
+    <Compile Include="GUI\DatBan\frmDatBan.Designer.cs">
       <DependentUpon>frmDatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHeThong.cs">
@@ -148,10 +148,10 @@
     <Compile Include="frmNhaHang.Designer.cs">
       <DependentUpon>frmNhaHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmTimBan.cs">
+    <Compile Include="GUI\DatBan\frmTimBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmTimBan.Designer.cs">
+    <Compile Include="GUI\DatBan\frmTimBan.Designer.cs">
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrangChu.cs">
@@ -161,6 +161,36 @@
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\RestaurantConfiguration.cs" />
+    <Compile Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.Designer.cs">
+      <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_NCC_ChiTiet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_NCC_ChiTiet.Designer.cs">
+      <DependentUpon>uc_NCC_ChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_NCC_dsNguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_NCC_dsNguyenLieu.Designer.cs">
+      <DependentUpon>uc_NCC_dsNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_traCuuNCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_traCuuNCC.Designer.cs">
+      <DependentUpon>uc_traCuuNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\uc_main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\uc_main.Designer.cs">
+      <DependentUpon>uc_main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uCtr_BanChuaDat.cs">
@@ -181,7 +211,7 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDatBan.resx">
+    <EmbeddedResource Include="GUI\DatBan\frmDatBan.resx">
       <DependentUpon>frmDatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHeThong.resx">
@@ -193,11 +223,26 @@
     <EmbeddedResource Include="frmNhaHang.resx">
       <DependentUpon>frmNhaHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmTimBan.resx">
+    <EmbeddedResource Include="GUI\DatBan\frmTimBan.resx">
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.resx">
+      <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\uc_NCC_ChiTiet.resx">
+      <DependentUpon>uc_NCC_ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\uc_NCC_dsNguyenLieu.resx">
+      <DependentUpon>uc_NCC_dsNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\uc_traCuuNCC.resx">
+      <DependentUpon>uc_traCuuNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\uc_main.resx">
+      <DependentUpon>uc_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,15 +286,22 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QLNHAHANG.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\1334501656_bullet_black.png" />
+    <Content Include="Resources\1334501745_bullet_toggle_plus.png" />
     <Content Include="Resources\Charts.png" />
     <None Include="Resources\Contact_Person1.png" />
     <None Include="Resources\corporate.png" />
     <None Include="Resources\crewdrive-wrench2.png" />
+    <Content Include="Resources\Contact_Person.png" />
+    <Content Include="Resources\crewdrive-wrench.png" />
+    <Content Include="Resources\crewdrive-wrench1.png" />
     <Content Include="Resources\Details.png" />
     <Content Include="Resources\hBlue_.png" />
     <Content Include="Resources\Help.png" />
     <Content Include="Resources\Invoice.png" />
     <None Include="Resources\restaurant2.png" />
+    <Content Include="Resources\restaurant.png" />
+    <Content Include="Resources\restaurant1.png" />
     <Content Include="Resources\TableReportt.png" />
     <Content Include="Resources\Unpaid.png" />
     <None Include="Resources\warehouse.png" />
@@ -292,7 +344,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GUI\KhoHang\QuanLyNhapXuatHang\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

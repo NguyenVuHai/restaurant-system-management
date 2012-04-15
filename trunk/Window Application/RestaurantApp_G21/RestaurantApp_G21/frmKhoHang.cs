@@ -14,6 +14,8 @@ namespace RestaurantApp_G21
         {
             InitializeComponent();
           //  frmKhoHang frm = new frmKhoHang();
+            GUI.KhoHang.NhaCungCap.uc_traCuuNCC uc = new GUI.KhoHang.NhaCungCap.uc_traCuuNCC();
+            m_sTabItmTTBanDat.AttachedControl.Controls.Add(uc);
         }
 
         

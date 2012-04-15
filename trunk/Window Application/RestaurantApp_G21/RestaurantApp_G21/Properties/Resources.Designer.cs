@@ -60,6 +60,20 @@ namespace RestaurantApp_G21.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _1334501656_bullet_black {
+            get {
+                object obj = ResourceManager.GetObject("_1334501656_bullet_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1334501745_bullet_toggle_plus {
+            get {
+                object obj = ResourceManager.GetObject("_1334501745_bullet_toggle_plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Charts {
             get {
                 object obj = ResourceManager.GetObject("Charts", resourceCulture);
