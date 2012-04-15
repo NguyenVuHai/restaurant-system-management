@@ -37,12 +37,12 @@
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.m_sTabCtrlDatBan = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.m_sTabItmDBan = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.m_sTabItmHoaDon = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
             this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -174,8 +174,8 @@
             this.m_sTabCtrlDatBan.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabCtrlDatBan.ControlBox.MenuBox,
             this.m_sTabCtrlDatBan.ControlBox.CloseBox});
-            this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel1);
+            this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel3);
             this.m_sTabCtrlDatBan.ForeColor = System.Drawing.Color.Black;
             this.m_sTabCtrlDatBan.Location = new System.Drawing.Point(46, 143);
@@ -192,6 +192,22 @@
             this.m_sTabItmHoaDon});
             this.m_sTabCtrlDatBan.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.m_sTabCtrlDatBan.Text = "superTabControl1";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(990, 528);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
+            // 
+            // m_sTabItmTTBanDat
+            // 
+            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
+            this.m_sTabItmTTBanDat.GlobalItem = false;
+            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
+            this.m_sTabItmTTBanDat.Text = "Nhà Cung Cấp";
             // 
             // superTabControlPanel1
             // 
@@ -212,9 +228,9 @@
             // superTabControlPanel3
             // 
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(990, 503);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(990, 528);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.m_sTabItmHoaDon;
             // 
@@ -224,22 +240,6 @@
             this.m_sTabItmHoaDon.GlobalItem = false;
             this.m_sTabItmHoaDon.Name = "m_sTabItmHoaDon";
             this.m_sTabItmHoaDon.Text = "abcd";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(990, 503);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
-            // 
-            // m_sTabItmTTBanDat
-            // 
-            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
-            this.m_sTabItmTTBanDat.GlobalItem = false;
-            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
-            this.m_sTabItmTTBanDat.Text = "Nhà Cung Cấp";
             // 
             // itemPanel12
             // 
