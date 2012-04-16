@@ -10,6 +10,7 @@ namespace RestaurantApp_G21.DTO
         private string hoTen;
         private string cmnd;
         private string dienThoai;
+        private int maLichBan;
         private int maBan;
         private DateTime ngayDatBan;
         private int maBuoi;
@@ -33,6 +34,12 @@ namespace RestaurantApp_G21.DTO
         {
             get { return dienThoai; }
             set { dienThoai = value; }
+        }
+
+        public int MaLichBan
+        {
+            get { return maLichBan; }
+            set { maLichBan = value; }
         }
 
         public int MaBan
