@@ -17,6 +17,16 @@ namespace RestaurantApp_G21
 
         #region Utils Methods
 
+        private void LoadDanhSachBanDat()
+        {
+            List<BanDatDTO> listBanDat = BanDatBUS.LayDanhSachBanDat();
+            dgvDanhSachBanDat.DataSource = listBanDat;
+            dgvDanhSachBanDat.Columns["HoTen"].Visible = false;
+            dgvDanhSachBanDat.Columns["CMND"].Visible = false;
+            dgvDanhSachBanDat.Columns["DienThoai"].Visible = false;
+            dgvDanhSachBanDat.Columns["MaLichBan"].Visible = false;
+        }
+
         private void LoadNhaHang()
         {
             m_cBoxNhaHang.Items.Clear();
@@ -75,12 +85,13 @@ namespace RestaurantApp_G21
         }
         #endregion
 
-        public frmDatBan()                          
-        {                     
+        public frmDatBan()
+        {
             InitializeComponent();
+            LoadDanhSachBanDat();
             LoadNhaHang();
-            LoadBuoi(m_cboxTimBuoi,0);
-            LoadBuoi(cbbBuoi,0);
+            LoadBuoi(m_cboxTimBuoi, 0);
+            LoadBuoi(cbbBuoi, 0);
         }
 
         public void LoadBanTrongKhuVuc()
@@ -102,7 +113,7 @@ namespace RestaurantApp_G21
                     tabCtrP.AutoSize = true;
                     tabCtrP.Dock = System.Windows.Forms.DockStyle.Fill;
                     tabCtrP.TabItem = tabI;// chỗ này là gán
-                    tabI.AttachedControl = tabCtrP;            
+                    tabI.AttachedControl = tabCtrP;
 
                     uCtr_KhuVuc khuvuc = new uCtr_KhuVuc(this, kv.MaKhuVuc);
                     khuvuc.MaximumSize = new Size(m_tabCtrKhuVuc.Width, 0);
@@ -147,21 +158,21 @@ namespace RestaurantApp_G21
                 int maKhuVuc = 0;
                 DateTime ngayDatBan = new DateTime();
                 int buoi = 0;
-                int soLuong = 0;
+                int soLuong = -1;
 
                 maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
                 maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
-                DateTime.TryParse(m_dateTimeInputNgayDatBan.Text,out ngayDatBan);
+                DateTime.TryParse(m_dateTimeInputNgayDatBan.Text, out ngayDatBan);
                 buoi = cbbBuoi.SelectedIndex == 0 ? 0 : ((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
                 Int32.TryParse(m_txtTimSoLuong.Text, out soLuong);
-                if (soLuong == 0)
+                if (m_txtTimSoLuong.Text != "" && soLuong < 0)
                 {
                     MessageBox.Show("Số lượng không hợp lệ.");
                     m_txtTimSoLuong.Focus();
                     m_txtTimSoLuong.SelectAll();
                     return;
                 }
-                if (ngayDatBan == new DateTime())
+                if (ngayDatBan == new DateTime() && m_dateTimeInputNgayDatBan.Text != "")
                 {
                     MessageBox.Show("Ngày đặt bàn không hợp lệ.");
                     m_dateTimeInputNgayDatBan.Focus();
@@ -190,22 +201,32 @@ namespace RestaurantApp_G21
         {
             try
             {
-                int loai = 1;
+                int loai = chkDatBan.Checked == true ? 1 : 0;
+                if (chkDatBan.Checked)
+                {
+                    if (txtCMND.Text == String.Empty)
+                    {
+                        MessageBox.Show("Nhập chứng minh nhân dân.");
+                        return;
+                    }
+                }
                 BanDatDTO banDat = new BanDatDTO()
                 {
                     HoTen = txtHoTenKhachHang.Text,
                     Cmnd = txtCMND.Text,
                     DienThoai = txtSoDienThoai.Text,
                     MaBan = Int32.Parse(txtMaBan.Text),
-                    MaBuoi = (int)cbbBuoi.SelectedValue,
+                    MaBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi,
                     NgayDatBan = dtNgayDatBan.Value,
-                    SoLuong = Int32.Parse(txtSoLuong.Text)
+                    SoLuong = Int32.Parse(txtSoLuong.Text),
+                    TinhTrangBan = !chkDatBan.Checked
                 };
                 BanDatBUS.ThemThongTinBanDat(banDat, loai);
-                
+                LoadDanhSachBanDat();
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Lỗi hệ thống.");
             }
         }
 

@@ -19,8 +19,7 @@ namespace RestaurantApp_G21
         private void metroTileItemBatBan_Click(object sender, EventArgs e)
         {
             frmDatBan frm = new frmDatBan();
-            frm.Show();
-            
+            frm.ShowDialog();
         }
 
        

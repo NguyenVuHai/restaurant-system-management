@@ -13,5 +13,10 @@ namespace RestaurantApp_G21.BUS
         {
             BanDatDAO.ThemThongTinBanDat(banDat, loai);
         }
+
+        public static List<BanDatDTO> LayDanhSachBanDat()
+        {
+            return BanDatDAO.LayDanhSachBanDat();
+        }
     }
 }
