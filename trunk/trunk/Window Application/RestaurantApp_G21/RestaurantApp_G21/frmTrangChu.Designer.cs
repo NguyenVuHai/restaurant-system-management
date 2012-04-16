@@ -38,18 +38,18 @@
             this.itemPanel14 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
+            this.m_mtTileItemHeThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel9 = new DevComponents.DotNetBar.ItemPanel();
+            this.m_mtTileItemKho = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel10 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel11 = new DevComponents.DotNetBar.ItemPanel();
-            this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
-            this.itemPanel13 = new DevComponents.DotNetBar.ItemPanel();
-            this.itemPanel15 = new DevComponents.DotNetBar.ItemPanel();
-            this.m_mtTileItemHeThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.m_mtTileItemKho = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.m_mtTileItemCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
             this.m_mtTileItemNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.itemPanel13 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.itemPanel15 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItemBatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
@@ -191,6 +191,28 @@
             this.itemPanel8.TabIndex = 36;
             this.itemPanel8.Text = "itemPanel6";
             // 
+            // m_mtTileItemHeThong
+            // 
+            this.m_mtTileItemHeThong.Image = global::RestaurantApp_G21.Properties.Resources.crewdrive_wrench2;
+            this.m_mtTileItemHeThong.Name = "m_mtTileItemHeThong";
+            this.m_mtTileItemHeThong.Text = "<font size =\'+5\'><b>Quản Trị Hệ Thống</b></font>";
+            this.m_mtTileItemHeThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
+            this.m_mtTileItemHeThong.TileSize = new System.Drawing.Size(180, 130);
+            // 
+            // 
+            // 
+            this.m_mtTileItemHeThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemHeThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
+            this.m_mtTileItemHeThong.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemHeThong.TileStyle.Class = "";
+            this.m_mtTileItemHeThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemHeThong.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemHeThong.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemHeThong.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemHeThong.Click += new System.EventHandler(this.m_mtTileItemHeThong_Click);
+            // 
             // itemPanel9
             // 
             this.itemPanel9.BackColor = System.Drawing.Color.White;
@@ -210,6 +232,28 @@
             this.itemPanel9.Size = new System.Drawing.Size(282, 137);
             this.itemPanel9.TabIndex = 37;
             this.itemPanel9.Text = "itemPanel9";
+            // 
+            // m_mtTileItemKho
+            // 
+            this.m_mtTileItemKho.Image = global::RestaurantApp_G21.Properties.Resources.warehouse;
+            this.m_mtTileItemKho.Name = "m_mtTileItemKho";
+            this.m_mtTileItemKho.Text = "<font size =\'15\'><b>Quản Lý Kho</b></font>";
+            this.m_mtTileItemKho.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
+            this.m_mtTileItemKho.TileSize = new System.Drawing.Size(180, 130);
+            // 
+            // 
+            // 
+            this.m_mtTileItemKho.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
+            this.m_mtTileItemKho.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
+            this.m_mtTileItemKho.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileItemKho.TileStyle.Class = "";
+            this.m_mtTileItemKho.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileItemKho.TileStyle.PaddingBottom = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingLeft = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingRight = 4;
+            this.m_mtTileItemKho.TileStyle.PaddingTop = 4;
+            this.m_mtTileItemKho.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileItemKho.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
             // 
             // itemPanel10
             // 
@@ -275,111 +319,6 @@
             this.itemPanel11.TabIndex = 34;
             this.itemPanel11.Text = "itemPanel11";
             // 
-            // itemPanel12
-            // 
-            this.itemPanel12.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel12.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.itemPanel12.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel12.ContainerControlProcessDialogKey = true;
-            this.itemPanel12.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_mtTileItemNhaHang});
-            this.itemPanel12.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel12.Location = new System.Drawing.Point(490, 296);
-            this.itemPanel12.Name = "itemPanel12";
-            this.itemPanel12.Size = new System.Drawing.Size(190, 153);
-            this.itemPanel12.TabIndex = 31;
-            this.itemPanel12.Text = "itemPanel1";
-            // 
-            // itemPanel13
-            // 
-            this.itemPanel13.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel13.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.itemPanel13.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel13.ContainerControlProcessDialogKey = true;
-            this.itemPanel13.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem9});
-            this.itemPanel13.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel13.Location = new System.Drawing.Point(490, 144);
-            this.itemPanel13.Name = "itemPanel13";
-            this.itemPanel13.Size = new System.Drawing.Size(190, 151);
-            this.itemPanel13.TabIndex = 32;
-            this.itemPanel13.Text = "itemPanel1";
-            // 
-            // itemPanel15
-            // 
-            this.itemPanel15.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.itemPanel15.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.itemPanel15.BackgroundStyle.Class = "ItemPanel";
-            this.itemPanel15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemPanel15.ContainerControlProcessDialogKey = true;
-            this.itemPanel15.ForeColor = System.Drawing.Color.Black;
-            this.itemPanel15.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItemBatBan});
-            this.itemPanel15.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel15.Location = new System.Drawing.Point(207, 144);
-            this.itemPanel15.Name = "itemPanel15";
-            this.itemPanel15.Size = new System.Drawing.Size(283, 151);
-            this.itemPanel15.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-            this.itemPanel15.TabIndex = 33;
-            this.itemPanel15.Text = "itemPanel15";
-            // 
-            // m_mtTileItemHeThong
-            // 
-            this.m_mtTileItemHeThong.Image = global::RestaurantApp_G21.Properties.Resources.crewdrive_wrench2;
-            this.m_mtTileItemHeThong.Name = "m_mtTileItemHeThong";
-            this.m_mtTileItemHeThong.Text = "<font size =\'+5\'><b>Quản Trị Hệ Thống</b></font>";
-            this.m_mtTileItemHeThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
-            this.m_mtTileItemHeThong.TileSize = new System.Drawing.Size(180, 130);
-            // 
-            // 
-            // 
-            this.m_mtTileItemHeThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemHeThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(57)))), ((int)(((byte)(0)))));
-            this.m_mtTileItemHeThong.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemHeThong.TileStyle.Class = "";
-            this.m_mtTileItemHeThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemHeThong.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemHeThong.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemHeThong.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemHeThong.Click += new System.EventHandler(this.m_mtTileItemHeThong_Click);
-            // 
-            // m_mtTileItemKho
-            // 
-            this.m_mtTileItemKho.Image = global::RestaurantApp_G21.Properties.Resources.warehouse;
-            this.m_mtTileItemKho.Name = "m_mtTileItemKho";
-            this.m_mtTileItemKho.Text = "<font size =\'15\'><b>Quản Lý Kho</b></font>";
-            this.m_mtTileItemKho.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
-            this.m_mtTileItemKho.TileSize = new System.Drawing.Size(180, 130);
-            // 
-            // 
-            // 
-            this.m_mtTileItemKho.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(151)))), ((int)(((byte)(42)))));
-            this.m_mtTileItemKho.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(177)))), ((int)(((byte)(51)))));
-            this.m_mtTileItemKho.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileItemKho.TileStyle.Class = "";
-            this.m_mtTileItemKho.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileItemKho.TileStyle.PaddingBottom = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingLeft = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingRight = 4;
-            this.m_mtTileItemKho.TileStyle.PaddingTop = 4;
-            this.m_mtTileItemKho.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemKho.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
-            // 
             // m_mtTileItemCongTy
             // 
             this.m_mtTileItemCongTy.Image = global::RestaurantApp_G21.Properties.Resources.corporate;
@@ -400,7 +339,27 @@
             this.m_mtTileItemCongTy.TileStyle.PaddingRight = 4;
             this.m_mtTileItemCongTy.TileStyle.PaddingTop = 4;
             this.m_mtTileItemCongTy.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileItemCongTy.Click += new System.EventHandler(this.m_mtTileItemKho_Click);
+            this.m_mtTileItemCongTy.Click += new System.EventHandler(this.m_mtTileItemCongTy_Click);
+            // 
+            // itemPanel12
+            // 
+            this.itemPanel12.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel12.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.itemPanel12.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel12.ContainerControlProcessDialogKey = true;
+            this.itemPanel12.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_mtTileItemNhaHang});
+            this.itemPanel12.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel12.Location = new System.Drawing.Point(490, 296);
+            this.itemPanel12.Name = "itemPanel12";
+            this.itemPanel12.Size = new System.Drawing.Size(190, 153);
+            this.itemPanel12.TabIndex = 31;
+            this.itemPanel12.Text = "itemPanel1";
             // 
             // m_mtTileItemNhaHang
             // 
@@ -424,6 +383,26 @@
             this.m_mtTileItemNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
             this.m_mtTileItemNhaHang.Click += new System.EventHandler(this.m_mtTileItemNhaHang_Click);
             // 
+            // itemPanel13
+            // 
+            this.itemPanel13.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel13.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.itemPanel13.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel13.ContainerControlProcessDialogKey = true;
+            this.itemPanel13.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem9});
+            this.itemPanel13.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel13.Location = new System.Drawing.Point(490, 144);
+            this.itemPanel13.Name = "itemPanel13";
+            this.itemPanel13.Size = new System.Drawing.Size(190, 151);
+            this.itemPanel13.TabIndex = 32;
+            this.itemPanel13.Text = "itemPanel1";
+            // 
             // metroTileItem9
             // 
             this.metroTileItem9.Image = global::RestaurantApp_G21.Properties.Resources.Contact_Person1;
@@ -444,6 +423,27 @@
             this.metroTileItem9.TileStyle.PaddingRight = 4;
             this.metroTileItem9.TileStyle.PaddingTop = 4;
             this.metroTileItem9.TileStyle.TextColor = System.Drawing.Color.White;
+            // 
+            // itemPanel15
+            // 
+            this.itemPanel15.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.itemPanel15.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.itemPanel15.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel15.ContainerControlProcessDialogKey = true;
+            this.itemPanel15.ForeColor = System.Drawing.Color.Black;
+            this.itemPanel15.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItemBatBan});
+            this.itemPanel15.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel15.Location = new System.Drawing.Point(207, 144);
+            this.itemPanel15.Name = "itemPanel15";
+            this.itemPanel15.Size = new System.Drawing.Size(283, 151);
+            this.itemPanel15.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+            this.itemPanel15.TabIndex = 33;
+            this.itemPanel15.Text = "itemPanel15";
             // 
             // metroTileItemBatBan
             // 

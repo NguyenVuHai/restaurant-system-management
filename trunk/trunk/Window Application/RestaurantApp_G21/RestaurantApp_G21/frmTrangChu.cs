@@ -40,5 +40,11 @@ namespace RestaurantApp_G21
             frmHeThong frm = new frmHeThong();
             frm.Show();
         }
+
+        private void m_mtTileItemCongTy_Click(object sender, EventArgs e)
+        {
+            frmCongTy frm = new frmCongTy();
+            frm.Show();
+        }
     }
 }
