@@ -129,6 +129,7 @@ namespace RestaurantApp_G21
 
         public void tabThongTinDatBan(string maBan, int maKhuVuc)
         {
+            m_sTabItmTTBanDat.Visible = true;
             m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
             txtMaBan.Text = maBan;
             txtKhuVuc.Text = maKhuVuc.ToString();
@@ -228,6 +229,12 @@ namespace RestaurantApp_G21
             {
                 MessageBox.Show("Lỗi hệ thống.");
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            m_sTabItmTTBanDat.Visible = false;
+            m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
         }
 
     }
