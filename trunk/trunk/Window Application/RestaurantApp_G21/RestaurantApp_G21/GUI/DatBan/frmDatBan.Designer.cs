@@ -80,7 +80,7 @@
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.dgvDanhSachBanDat = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.btnHuyBanDat = new DevComponents.DotNetBar.ButtonX();
             this.btnLuuThongTinDatBan = new DevComponents.DotNetBar.ButtonX();
             this.cbbBuoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.dtNgayDatBan = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
@@ -184,6 +184,7 @@
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.itemPanel1.SuspendLayout();
             this.itemPanel8.SuspendLayout();
             this.itemPanel2.SuspendLayout();
@@ -739,8 +740,8 @@
             this.m_sTabCtrDatBan.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabCtrDatBan.ControlBox.MenuBox,
             this.m_sTabCtrDatBan.ControlBox.CloseBox});
-            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel1);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel2);
+            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel1);
             this.m_sTabCtrDatBan.Controls.Add(this.m_sTabCtrPDatBan);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel3);
             this.m_sTabCtrDatBan.ForeColor = System.Drawing.Color.Black;
@@ -763,7 +764,7 @@
             // 
             this.superTabControlPanel2.Controls.Add(this.dgvDanhSachBanDat);
             this.superTabControlPanel2.Controls.Add(this.buttonX3);
-            this.superTabControlPanel2.Controls.Add(this.buttonX2);
+            this.superTabControlPanel2.Controls.Add(this.btnHuyBanDat);
             this.superTabControlPanel2.Controls.Add(this.btnLuuThongTinDatBan);
             this.superTabControlPanel2.Controls.Add(this.cbbBuoi);
             this.superTabControlPanel2.Controls.Add(this.dtNgayDatBan);
@@ -783,9 +784,9 @@
             this.superTabControlPanel2.Controls.Add(this.labelX9);
             this.superTabControlPanel2.Controls.Add(this.m_iPanelTTBan);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 572);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 547);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
             this.superTabControlPanel2.Text = "s";
@@ -835,16 +836,16 @@
             this.buttonX3.TabIndex = 4;
             this.buttonX3.Text = "Thay Đổi";
             // 
-            // buttonX2
+            // btnHuyBanDat
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(902, 412);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(101, 24);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 4;
-            this.buttonX2.Text = "Hủy ";
+            this.btnHuyBanDat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuyBanDat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyBanDat.Location = new System.Drawing.Point(902, 412);
+            this.btnHuyBanDat.Name = "btnHuyBanDat";
+            this.btnHuyBanDat.Size = new System.Drawing.Size(101, 24);
+            this.btnHuyBanDat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuyBanDat.TabIndex = 4;
+            this.btnHuyBanDat.Text = "Xóa";
             // 
             // btnLuuThongTinDatBan
             // 
@@ -1156,6 +1157,7 @@
             this.m_iPanelTTBan.BackgroundStyle.Class = "ItemPanel";
             this.m_iPanelTTBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_iPanelTTBan.ContainerControlProcessDialogKey = true;
+            this.m_iPanelTTBan.Controls.Add(this.btnHuy);
             this.m_iPanelTTBan.Controls.Add(this.chkDatBan);
             this.m_iPanelTTBan.ForeColor = System.Drawing.Color.Black;
             this.m_iPanelTTBan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -1205,6 +1207,7 @@
             this.m_sTabItmTTBanDat.GlobalItem = false;
             this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
             this.m_sTabItmTTBanDat.Text = "Thông Tin Bàn Đặt";
+            this.m_sTabItmTTBanDat.Visible = false;
             // 
             // superTabControlPanel1
             // 
@@ -2493,6 +2496,18 @@
             this.tabControlPanel1.Style.GradientAngle = 90;
             this.tabControlPanel1.TabIndex = 1;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuy.Location = new System.Drawing.Point(80, 167);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(101, 24);
+            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuy.TabIndex = 8;
+            this.btnHuy.Text = "Hủy ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // frmDatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2609,7 +2624,7 @@
         private DevComponents.DotNetBar.ButtonX btnLuuThongTinDatBan;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvDanhSachBanDat;
         private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnHuyBanDat;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
         private DevComponents.DotNetBar.SuperTabItem m_sTabItmDatMon;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
@@ -2689,6 +2704,7 @@
         private DevComponents.DotNetBar.LabelX labelX30;
         private DevComponents.DotNetBar.Controls.ComboBoxEx m_cboxTimBuoi;
         private System.Windows.Forms.CheckBox chkDatBan;
+        private DevComponents.DotNetBar.ButtonX btnHuy;
 
     }
 }
