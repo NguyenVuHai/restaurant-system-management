@@ -184,7 +184,7 @@ namespace RestaurantApp_G21
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi hệ thống");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -227,7 +227,7 @@ namespace RestaurantApp_G21
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi hệ thống.");
+                MessageBox.Show(ex.Message);
             }
         }
 
