@@ -1,10 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using RestaurantApp_G21.DTO;
+using RestaurantApp_G21.BUS;
 
 namespace RestaurantApp_G21
 {
@@ -13,11 +15,71 @@ namespace RestaurantApp_G21
         public frmCongTy()
         {
             InitializeComponent();
+            LoadNhaHang();
+            LoadLoaiNhanVien();
         }
 
         private void frmCongTy_Load(object sender, EventArgs e)
         {
             this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+        }
+
+        private void LoadNhaHang()
+        {
+            m_cbxNhaHang.Items.Clear();
+            m_cbxNhaHang.Items.Add("Chọn nhà hàng");
+            List<NhaHangDTO> nhaHang = NhaHangBUS.LayDanhSachNhaHang();
+            foreach (NhaHangDTO oNhaHang in nhaHang)
+            {
+                m_cbxNhaHang.Items.Add(oNhaHang);
+            }
+            m_cbxNhaHang.SelectedIndex = 0;
+            m_cbxNhaHang.ValueMember = "MaNhaHang";
+            m_cbxNhaHang.DisplayMember = "TenNhaHang";
+        }
+
+        private void LoadLoaiNhanVien()
+        {
+            m_cbxLoaiNV.Items.Clear();
+            m_cbxLoaiNV.Items.Add("Chọn loại nhân viên");
+            List<LoaiNhanVienDTO> loaiNhanVien = LoaiNhanVienBUS.LayDanhSachLoaiNhanVien();
+            foreach (LoaiNhanVienDTO oLoaiNhanVien in loaiNhanVien)
+            {
+                m_cbxLoaiNV.Items.Add(oLoaiNhanVien);
+            }
+            m_cbxLoaiNV.SelectedIndex = 0;
+            m_cbxLoaiNV.ValueMember = "MaLoaiNhanVien";
+            m_cbxLoaiNV.DisplayMember = "TenLoaiNhanVien";
+        }
+
+        private void m_btnTimKiemNhanVien_Click(object sender, EventArgs e)
+        {
+            int maNhanVien = 0;
+            int maNhaHang = 0;
+            int maLoaiNhanVien = 0;
+            string ho = string.Empty;
+            string ten = string.Empty;
+            string cmnd = string.Empty;
+            string diaChi = string.Empty;
+            string dienThoai = string.Empty;
+            int loaiNhanVien = 0;
+            DateTime ngayVaoLam = new DateTime();
+
+            maNhanVien = Int32.Parse(m_txtMaNV.Text == "" ? "0" : m_txtMaNV.Text);
+            ho = m_txtHoNV.Text;
+            ten = m_txtTenNV.Text;
+            cmnd = m_txtCMND.Text;
+            dienThoai = m_txtDienThoai.Text;
+            maNhaHang = m_cbxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cbxNhaHang.SelectedItem).MaNhaHang;
+            loaiNhanVien = m_cbxLoaiNV.SelectedIndex == 0 ? 0 : ((LoaiNhanVienDTO)m_cbxLoaiNV.SelectedItem).MaLoaiNhanVien;
+            ngayVaoLam = m_dateTimeInputNgayVaoLam.Value;
+
+            List<ThongTinNhanVienDTO> dt = ThongTinNhanVienBUS.TimKiemNhanVien(maNhanVien, maNhaHang, maLoaiNhanVien, ho, ten, cmnd, diaChi, dienThoai, ngayVaoLam);
+ 
+            if (dt.Count > 0)
+                m_dgvDanhSachNhanVien.DataSource = dt;
+            else 
+                m_dgvDanhSachNhanVien.DataSource = null;
         }
 
     }
