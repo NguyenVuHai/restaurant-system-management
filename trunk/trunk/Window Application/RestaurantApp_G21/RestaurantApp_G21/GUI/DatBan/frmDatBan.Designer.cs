@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatBan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
@@ -56,26 +56,19 @@
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileHome = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileDatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel2 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel3 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtTileCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel4 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.m_mtHThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel5 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel6 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.m_sTabCtrDatBan = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.dgvDanhSachBanDat = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -185,6 +178,13 @@
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtHThong = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileCongTy = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileNhaHang = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileDatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_mtTileHome = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel1.SuspendLayout();
             this.itemPanel8.SuspendLayout();
             this.itemPanel2.SuspendLayout();
@@ -337,26 +337,6 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Trang Chủ";
             // 
-            // m_mtTileHome
-            // 
-            this.m_mtTileHome.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileHome.Image")));
-            this.m_mtTileHome.Name = "m_mtTileHome";
-            this.m_mtTileHome.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileHome.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileHome.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileHome.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileHome.TileStyle.Class = "";
-            this.m_mtTileHome.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.m_mtTileHome.TileStyle.PaddingBottom = 4;
-            this.m_mtTileHome.TileStyle.PaddingLeft = 4;
-            this.m_mtTileHome.TileStyle.PaddingRight = 4;
-            this.m_mtTileHome.TileStyle.PaddingTop = 4;
-            this.m_mtTileHome.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileHome.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel8
             // 
             this.itemPanel8.BackColor = System.Drawing.Color.Transparent;
@@ -394,26 +374,6 @@
             this.labelX2.Size = new System.Drawing.Size(71, 38);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Đặt Bàn";
-            // 
-            // m_mtTileDatBan
-            // 
-            this.m_mtTileDatBan.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileDatBan.Image")));
-            this.m_mtTileDatBan.Name = "m_mtTileDatBan";
-            this.m_mtTileDatBan.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileDatBan.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileDatBan.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileDatBan.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileDatBan.TileStyle.Class = "";
-            this.m_mtTileDatBan.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileDatBan.TileStyle.PaddingBottom = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingLeft = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingRight = 4;
-            this.m_mtTileDatBan.TileStyle.PaddingTop = 4;
-            this.m_mtTileDatBan.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileDatBan.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel2
             // 
@@ -453,26 +413,6 @@
             this.labelX3.TabIndex = 0;
             this.labelX3.Text = "Nhà Hàng";
             // 
-            // m_mtTileNhaHang
-            // 
-            this.m_mtTileNhaHang.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileNhaHang.Image")));
-            this.m_mtTileNhaHang.Name = "m_mtTileNhaHang";
-            this.m_mtTileNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileNhaHang.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileNhaHang.TileStyle.Class = "";
-            this.m_mtTileNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileNhaHang.TileStyle.PaddingBottom = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingLeft = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingRight = 4;
-            this.m_mtTileNhaHang.TileStyle.PaddingTop = 4;
-            this.m_mtTileNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileNhaHang.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel3
             // 
             this.itemPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -510,26 +450,6 @@
             this.labelX4.Size = new System.Drawing.Size(71, 38);
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Công Ty";
-            // 
-            // m_mtTileCongTy
-            // 
-            this.m_mtTileCongTy.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileCongTy.Image")));
-            this.m_mtTileCongTy.Name = "m_mtTileCongTy";
-            this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtTileCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtTileCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtTileCongTy.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtTileCongTy.TileStyle.Class = "";
-            this.m_mtTileCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtTileCongTy.TileStyle.PaddingBottom = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingLeft = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingRight = 4;
-            this.m_mtTileCongTy.TileStyle.PaddingTop = 4;
-            this.m_mtTileCongTy.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtTileCongTy.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel4
             // 
@@ -586,26 +506,6 @@
             this.labelX5.TabIndex = 0;
             this.labelX5.Text = "Quản Trị ";
             // 
-            // m_mtHThong
-            // 
-            this.m_mtHThong.Image = ((System.Drawing.Image)(resources.GetObject("m_mtHThong.Image")));
-            this.m_mtHThong.Name = "m_mtHThong";
-            this.m_mtHThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.m_mtHThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.m_mtHThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.m_mtHThong.TileStyle.BackColorGradientAngle = 45;
-            this.m_mtHThong.TileStyle.Class = "";
-            this.m_mtHThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_mtHThong.TileStyle.PaddingBottom = 4;
-            this.m_mtHThong.TileStyle.PaddingLeft = 4;
-            this.m_mtHThong.TileStyle.PaddingRight = 4;
-            this.m_mtHThong.TileStyle.PaddingTop = 4;
-            this.m_mtHThong.TileStyle.TextColor = System.Drawing.Color.White;
-            this.m_mtHThong.TitleText = "<b>Trang Chủ</b>";
-            // 
             // itemPanel5
             // 
             this.itemPanel5.BackColor = System.Drawing.Color.Transparent;
@@ -643,26 +543,6 @@
             this.labelX6.Size = new System.Drawing.Size(71, 38);
             this.labelX6.TabIndex = 0;
             this.labelX6.Text = "Kho Hàng";
-            // 
-            // metroTileItem5
-            // 
-            this.metroTileItem5.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem5.Image")));
-            this.metroTileItem5.Name = "metroTileItem5";
-            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem5.TileStyle.Class = "";
-            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem5.TileStyle.PaddingBottom = 4;
-            this.metroTileItem5.TileStyle.PaddingLeft = 4;
-            this.metroTileItem5.TileStyle.PaddingRight = 4;
-            this.metroTileItem5.TileStyle.PaddingTop = 4;
-            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem5.TitleText = "<b>Trang Chủ</b>";
             // 
             // itemPanel6
             // 
@@ -702,26 +582,6 @@
             this.labelX7.TabIndex = 0;
             this.labelX7.Text = "Trang Chủ";
             // 
-            // metroTileItem6
-            // 
-            this.metroTileItem6.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem6.Image")));
-            this.metroTileItem6.Name = "metroTileItem6";
-            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.metroTileItem6.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
-            this.metroTileItem6.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
-            this.metroTileItem6.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem6.TileStyle.Class = "";
-            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem6.TileStyle.PaddingBottom = 4;
-            this.metroTileItem6.TileStyle.PaddingLeft = 4;
-            this.metroTileItem6.TileStyle.PaddingRight = 4;
-            this.metroTileItem6.TileStyle.PaddingTop = 4;
-            this.metroTileItem6.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem6.TitleText = "<b>Trang Chủ</b>";
-            // 
             // m_sTabCtrDatBan
             // 
             this.m_sTabCtrDatBan.BackColor = System.Drawing.Color.White;
@@ -740,8 +600,8 @@
             this.m_sTabCtrDatBan.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabCtrDatBan.ControlBox.MenuBox,
             this.m_sTabCtrDatBan.ControlBox.CloseBox});
-            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel1);
+            this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrDatBan.Controls.Add(this.m_sTabCtrPDatBan);
             this.m_sTabCtrDatBan.Controls.Add(this.superTabControlPanel3);
             this.m_sTabCtrDatBan.ForeColor = System.Drawing.Color.Black;
@@ -784,9 +644,9 @@
             this.superTabControlPanel2.Controls.Add(this.labelX9);
             this.superTabControlPanel2.Controls.Add(this.m_iPanelTTBan);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 547);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 572);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
             this.superTabControlPanel2.Text = "s";
@@ -794,34 +654,34 @@
             // dgvDanhSachBanDat
             // 
             this.dgvDanhSachBanDat.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSachBanDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSachBanDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDanhSachBanDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDanhSachBanDat.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhSachBanDat.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDanhSachBanDat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.dgvDanhSachBanDat.Location = new System.Drawing.Point(146, 259);
             this.dgvDanhSachBanDat.Name = "dgvDanhSachBanDat";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSachBanDat.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSachBanDat.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDanhSachBanDat.Size = new System.Drawing.Size(722, 256);
             this.dgvDanhSachBanDat.TabIndex = 5;
             // 
@@ -1732,14 +1592,14 @@
             // dataGridViewX3
             // 
             this.dataGridViewX3.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -1747,25 +1607,25 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.dataGridViewX3.Location = new System.Drawing.Point(302, 144);
             this.dataGridViewX3.Name = "dataGridViewX3";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX3.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX3.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewX3.Size = new System.Drawing.Size(692, 263);
             this.dataGridViewX3.TabIndex = 6;
             // 
@@ -1932,37 +1792,37 @@
             // m_dtGridDSBanH
             // 
             this.m_dtGridDSBanH.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGridDSBanH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGridDSBanH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.m_dtGridDSBanH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_dtGridDSBanH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.m_dtGridDSBanH.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.m_dtGridDSBanH.DefaultCellStyle = dataGridViewCellStyle8;
             this.m_dtGridDSBanH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.m_dtGridDSBanH.Location = new System.Drawing.Point(58, 79);
             this.m_dtGridDSBanH.Name = "m_dtGridDSBanH";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGridDSBanH.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGridDSBanH.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.m_dtGridDSBanH.Size = new System.Drawing.Size(236, 429);
             this.m_dtGridDSBanH.TabIndex = 4;
             // 
@@ -2202,14 +2062,14 @@
             // m_dtGridDSDatMon
             // 
             this.m_dtGridDSDatMon.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGridDSDatMon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGridDSDatMon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.m_dtGridDSDatMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_dtGridDSDatMon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.m_colTenMonAn,
@@ -2217,25 +2077,25 @@
             this.m_colSoLuongDat,
             this.m_colDonGia,
             this.m_colThanhTien});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.m_dtGridDSDatMon.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.m_dtGridDSDatMon.DefaultCellStyle = dataGridViewCellStyle11;
             this.m_dtGridDSDatMon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.m_dtGridDSDatMon.Location = new System.Drawing.Point(248, 30);
             this.m_dtGridDSDatMon.Name = "m_dtGridDSDatMon";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGridDSDatMon.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGridDSDatMon.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.m_dtGridDSDatMon.Size = new System.Drawing.Size(543, 395);
             this.m_dtGridDSDatMon.TabIndex = 3;
             // 
@@ -2269,37 +2129,37 @@
             // dataGridViewX2
             // 
             this.dataGridViewX2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.dataGridViewX2.Location = new System.Drawing.Point(795, 93);
             this.dataGridViewX2.Name = "dataGridViewX2";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX2.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX2.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewX2.Size = new System.Drawing.Size(237, 332);
             this.dataGridViewX2.TabIndex = 3;
             // 
@@ -2316,37 +2176,37 @@
             // m_dtGirdDSBan
             // 
             this.m_dtGirdDSBan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGirdDSBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGirdDSBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.m_dtGirdDSBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_dtGirdDSBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.m_colMBDatMon,
             this.m_colTKhach});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.m_dtGirdDSBan.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.m_dtGirdDSBan.DefaultCellStyle = dataGridViewCellStyle17;
             this.m_dtGirdDSBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.m_dtGirdDSBan.Location = new System.Drawing.Point(6, 67);
             this.m_dtGirdDSBan.Name = "m_dtGirdDSBan";
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGirdDSBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGirdDSBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.m_dtGirdDSBan.Size = new System.Drawing.Size(236, 477);
             this.m_dtGirdDSBan.TabIndex = 3;
             // 
@@ -2507,6 +2367,146 @@
                         | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanel1.Style.GradientAngle = 90;
             this.tabControlPanel1.TabIndex = 1;
+            // 
+            // metroTileItem6
+            // 
+            this.metroTileItem6.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem6.Image")));
+            this.metroTileItem6.Name = "metroTileItem6";
+            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.metroTileItem6.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.metroTileItem6.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.metroTileItem6.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem6.TileStyle.Class = "";
+            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem6.TileStyle.PaddingBottom = 4;
+            this.metroTileItem6.TileStyle.PaddingLeft = 4;
+            this.metroTileItem6.TileStyle.PaddingRight = 4;
+            this.metroTileItem6.TileStyle.PaddingTop = 4;
+            this.metroTileItem6.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem6.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // metroTileItem5
+            // 
+            this.metroTileItem5.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem5.Image")));
+            this.metroTileItem5.Name = "metroTileItem5";
+            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.metroTileItem5.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.metroTileItem5.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.metroTileItem5.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem5.TileStyle.Class = "";
+            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem5.TileStyle.PaddingBottom = 4;
+            this.metroTileItem5.TileStyle.PaddingLeft = 4;
+            this.metroTileItem5.TileStyle.PaddingRight = 4;
+            this.metroTileItem5.TileStyle.PaddingTop = 4;
+            this.metroTileItem5.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem5.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtHThong
+            // 
+            this.m_mtHThong.Image = ((System.Drawing.Image)(resources.GetObject("m_mtHThong.Image")));
+            this.m_mtHThong.Name = "m_mtHThong";
+            this.m_mtHThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtHThong.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtHThong.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtHThong.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtHThong.TileStyle.Class = "";
+            this.m_mtHThong.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtHThong.TileStyle.PaddingBottom = 4;
+            this.m_mtHThong.TileStyle.PaddingLeft = 4;
+            this.m_mtHThong.TileStyle.PaddingRight = 4;
+            this.m_mtHThong.TileStyle.PaddingTop = 4;
+            this.m_mtHThong.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtHThong.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileCongTy
+            // 
+            this.m_mtTileCongTy.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileCongTy.Image")));
+            this.m_mtTileCongTy.Name = "m_mtTileCongTy";
+            this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileCongTy.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileCongTy.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileCongTy.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileCongTy.TileStyle.Class = "";
+            this.m_mtTileCongTy.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileCongTy.TileStyle.PaddingBottom = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingLeft = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingRight = 4;
+            this.m_mtTileCongTy.TileStyle.PaddingTop = 4;
+            this.m_mtTileCongTy.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileCongTy.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileNhaHang
+            // 
+            this.m_mtTileNhaHang.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileNhaHang.Image")));
+            this.m_mtTileNhaHang.Name = "m_mtTileNhaHang";
+            this.m_mtTileNhaHang.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileNhaHang.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileNhaHang.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileNhaHang.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileNhaHang.TileStyle.Class = "";
+            this.m_mtTileNhaHang.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileNhaHang.TileStyle.PaddingBottom = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingLeft = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingRight = 4;
+            this.m_mtTileNhaHang.TileStyle.PaddingTop = 4;
+            this.m_mtTileNhaHang.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileNhaHang.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileDatBan
+            // 
+            this.m_mtTileDatBan.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileDatBan.Image")));
+            this.m_mtTileDatBan.Name = "m_mtTileDatBan";
+            this.m_mtTileDatBan.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileDatBan.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileDatBan.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileDatBan.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileDatBan.TileStyle.Class = "";
+            this.m_mtTileDatBan.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_mtTileDatBan.TileStyle.PaddingBottom = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingLeft = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingRight = 4;
+            this.m_mtTileDatBan.TileStyle.PaddingTop = 4;
+            this.m_mtTileDatBan.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileDatBan.TitleText = "<b>Trang Chủ</b>";
+            // 
+            // m_mtTileHome
+            // 
+            this.m_mtTileHome.Image = ((System.Drawing.Image)(resources.GetObject("m_mtTileHome.Image")));
+            this.m_mtTileHome.Name = "m_mtTileHome";
+            this.m_mtTileHome.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.m_mtTileHome.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(85)))), ((int)(((byte)(148)))));
+            this.m_mtTileHome.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(98)))), ((int)(((byte)(185)))));
+            this.m_mtTileHome.TileStyle.BackColorGradientAngle = 45;
+            this.m_mtTileHome.TileStyle.Class = "";
+            this.m_mtTileHome.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.m_mtTileHome.TileStyle.PaddingBottom = 4;
+            this.m_mtTileHome.TileStyle.PaddingLeft = 4;
+            this.m_mtTileHome.TileStyle.PaddingRight = 4;
+            this.m_mtTileHome.TileStyle.PaddingTop = 4;
+            this.m_mtTileHome.TileStyle.TextColor = System.Drawing.Color.White;
+            this.m_mtTileHome.TitleText = "<b>Trang Chủ</b>";
             // 
             // frmDatBan
             // 

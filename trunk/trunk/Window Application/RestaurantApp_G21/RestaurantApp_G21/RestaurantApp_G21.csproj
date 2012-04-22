@@ -99,19 +99,25 @@
     <Compile Include="BUS\BanDatBUS.cs" />
     <Compile Include="BUS\BuoiBUS.cs" />
     <Compile Include="BUS\KhuVucBUS.cs" />
+    <Compile Include="BUS\LoaiNhanVienBUS.cs" />
     <Compile Include="BUS\NhaHangBUS.cs" />
     <Compile Include="BUS\ThongTinBanBUS.cs" />
+    <Compile Include="BUS\ThongTinNhanVienBUS.cs" />
     <Compile Include="DAO\BanDatDAO.cs" />
     <Compile Include="DAO\BuoiDAO.cs" />
     <Compile Include="DAO\DataAccessCode.cs" />
     <Compile Include="DAO\KhuVucDAO.cs" />
+    <Compile Include="DAO\LoaiNhanVienDAO.cs" />
     <Compile Include="DAO\NhaHangDAO.cs" />
     <Compile Include="DAO\ThongTinBanDAO.cs" />
+    <Compile Include="DAO\ThongTinNhanVienDAO.cs" />
     <Compile Include="DTO\BuoiDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
+    <Compile Include="DTO\LoaiNhanVienDTO.cs" />
     <Compile Include="DTO\NhaHangDTO.cs" />
     <Compile Include="DTO\BanDatDTO.cs" />
     <Compile Include="DTO\ThongTinBanDTO.cs" />
+    <Compile Include="DTO\ThongTinNhanVienDTO.cs" />
     <Compile Include="frmCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,18 @@
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Demo\frmDirtyReadNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Demo\frmDirtyReadNhanVien.Designer.cs">
+      <DependentUpon>frmDirtyReadNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DatBan\frmDatBan.cs">
       <SubType>Form</SubType>
@@ -199,6 +217,24 @@
     <Compile Include="uCtr_BanChuaDat.designer.cs">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
     </Compile>
+    <Compile Include="uCtr_BanDaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_BanDaDat.Designer.cs">
+      <DependentUpon>uCtr_BanDaDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uCtr_BanDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_BanDat.Designer.cs">
+      <DependentUpon>uCtr_BanDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uCtr_DatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtr_DatBan.Designer.cs">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="uCtr_KhuVuc.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -210,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DatBan\frmDatBan.resx">
       <DependentUpon>frmDatBan.cs</DependentUpon>
@@ -228,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Demo\frmDirtyReadNhanVien.resx">
+      <DependentUpon>frmDirtyReadNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.resx">
       <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
@@ -256,6 +298,12 @@
     </Compile>
     <EmbeddedResource Include="uCtr_BanChuaDat.resx">
       <DependentUpon>uCtr_BanChuaDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtr_BanDat.resx">
+      <DependentUpon>uCtr_BanDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtr_DatBan.resx">
+      <DependentUpon>uCtr_DatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtr_KhuVuc.resx">
       <DependentUpon>uCtr_KhuVuc.cs</DependentUpon>
