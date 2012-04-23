@@ -14,7 +14,6 @@ public static class DataAccessCode
     static DataAccessCode()
     {
     }
-
     public static DbCommand CreateCommand()
     {
         string providerName = RestaurantConfiguration.DbProviderName;
@@ -22,10 +21,22 @@ public static class DataAccessCode
         DbProviderFactory factory = DbProviderFactories.GetFactory(providerName);
         DbConnection connection = factory.CreateConnection();
         connection.ConnectionString = connectionString;
-        DbCommand command = connection.CreateCommand();
-        command.CommandType = CommandType.StoredProcedure;
-        return command;
+        RestaurantConfiguration.command = connection.CreateCommand();
+        RestaurantConfiguration.command.CommandType = CommandType.StoredProcedure;
+        return RestaurantConfiguration.command;
     }
+
+    //public static DbCommand CreateCommand()
+    //{
+    //    string providerName = RestaurantConfiguration.DbProviderName;
+    //    string connectionString = RestaurantConfiguration.DbConnectionString;
+    //    DbProviderFactory factory = DbProviderFactories.GetFactory(providerName);
+    //    DbConnection connection = factory.CreateConnection();
+    //    connection.ConnectionString = connectionString;
+    //    DbCommand command = connection.CreateCommand();
+    //    command.CommandType = CommandType.StoredProcedure;
+    //    return command;
+    //}
 
     public static DataTable ExecuteSelectCommand(DbCommand command)
     {
@@ -47,6 +58,31 @@ public static class DataAccessCode
             command.Connection.Close();
         }
         return table;
+    }
+
+    public static int ExecuteNonQuery()
+    {
+        // The number of affected rows 
+        int affectedRows = -1;
+        // Execute the command making sure the connection gets closed in the
+        try
+        {
+            // Open the connection of the command
+            RestaurantConfiguration.command.Connection.Open();
+            // Execute the command and get the number of affected rows
+            affectedRows = RestaurantConfiguration.command.ExecuteNonQuery();
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+        finally
+        {
+            // Close the connection
+            RestaurantConfiguration.command.Connection.Close();
+        }
+        // return the number of affected rows
+        return affectedRows;
     }
 
     public static int ExecuteNonQuery(DbCommand command)
