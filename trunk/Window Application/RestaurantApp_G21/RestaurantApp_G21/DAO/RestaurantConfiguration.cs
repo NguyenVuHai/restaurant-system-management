@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data.Common;
  
 public static class RestaurantConfiguration
 {
@@ -36,4 +37,6 @@ public static class RestaurantConfiguration
         dbConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
         dbProviderName = ConfigurationManager.ConnectionStrings["ApplicationServices"].ProviderName;
     }
+
+    public static DbCommand command;
 }

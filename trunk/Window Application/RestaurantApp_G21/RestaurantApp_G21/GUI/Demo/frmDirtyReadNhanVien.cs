@@ -13,6 +13,7 @@ namespace RestaurantApp_G21
 {
     public partial class frmDirtyReadNhanVien : Form
     {
+        public bool isDirtyRead = false;
         public frmDirtyReadNhanVien()
         {
             InitializeComponent();
@@ -20,17 +21,24 @@ namespace RestaurantApp_G21
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DbCommand command = DataAccessCode.CreateCommand();
-            command.CommandText = "dbo.T2";
-            DataAccessCode.ExecuteNonQuery(command);
+            RestaurantConfiguration.command = DataAccessCode.CreateCommand();
+            RestaurantConfiguration.command.CommandText = "dbo.T2";
+            DataAccessCode.ExecuteNonQuery();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DbCommand command = DataAccessCode.CreateCommand();
-            command.CommandText = "dbo.T1";
-            
-            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            RestaurantConfiguration.command = DataAccessCode.CreateCommand();
+            if (isDirtyRead)
+            {
+                RestaurantConfiguration.command.CommandText = "dbo.T1DirtyRead";
+            }
+            else
+            {
+                RestaurantConfiguration.command.CommandText = "dbo.T1ResolvedDirtyRead";
+            }
+
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(RestaurantConfiguration.command);
             List<ThongTinNhanVienDTO> list = new List<ThongTinNhanVienDTO>();
             if (dt != null)
             {
@@ -43,6 +51,16 @@ namespace RestaurantApp_G21
                 }
             }
             dgvData.DataSource = list;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            isDirtyRead = checkBox1.Checked;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RestaurantConfiguration.command.Connection.Close();
         }
     }
 }
