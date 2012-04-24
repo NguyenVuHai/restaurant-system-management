@@ -36,11 +36,12 @@
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.m_sTabCtrlDatBan = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.m_sTabItmDBan = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.m_sTabItmHoaDon = new DevComponents.DotNetBar.SuperTabItem();
             this.itemPanel12 = new DevComponents.DotNetBar.ItemPanel();
@@ -67,6 +68,7 @@
             this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel6 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrlDatBan)).BeginInit();
             this.m_sTabCtrlDatBan.SuspendLayout();
             this.itemPanel12.SuspendLayout();
@@ -156,6 +158,30 @@
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.Text = "READY";
             // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Window;
+            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.m_sTabCtrlDatBan);
+            this.panelEx1.Controls.Add(this.itemPanel12);
+            this.panelEx1.Controls.Add(this.itemPanel9);
+            this.panelEx1.Controls.Add(this.itemPanel11);
+            this.panelEx1.Controls.Add(this.itemPanel10);
+            this.panelEx1.Controls.Add(this.itemPanel3);
+            this.panelEx1.Controls.Add(this.itemPanel4);
+            this.panelEx1.Controls.Add(this.itemPanel5);
+            this.panelEx1.Controls.Add(this.itemPanel6);
+            this.panelEx1.Location = new System.Drawing.Point(4, 46);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(996, 618);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 2;
+            this.panelEx1.Text = "panelEx1";
+            // 
             // m_sTabCtrlDatBan
             // 
             this.m_sTabCtrlDatBan.BackColor = System.Drawing.Color.White;
@@ -174,40 +200,24 @@
             this.m_sTabCtrlDatBan.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabCtrlDatBan.ControlBox.MenuBox,
             this.m_sTabCtrlDatBan.ControlBox.CloseBox});
-            this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel1);
+            this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel2);
             this.m_sTabCtrlDatBan.Controls.Add(this.superTabControlPanel3);
             this.m_sTabCtrlDatBan.ForeColor = System.Drawing.Color.Black;
-            this.m_sTabCtrlDatBan.Location = new System.Drawing.Point(46, 143);
+            this.m_sTabCtrlDatBan.Location = new System.Drawing.Point(3, 85);
             this.m_sTabCtrlDatBan.Name = "m_sTabCtrlDatBan";
             this.m_sTabCtrlDatBan.ReorderTabsEnabled = true;
             this.m_sTabCtrlDatBan.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.m_sTabCtrlDatBan.SelectedTabIndex = 1;
             this.m_sTabCtrlDatBan.Size = new System.Drawing.Size(990, 528);
             this.m_sTabCtrlDatBan.TabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_sTabCtrlDatBan.TabIndex = 39;
+            this.m_sTabCtrlDatBan.TabIndex = 48;
             this.m_sTabCtrlDatBan.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_sTabItmDBan,
             this.m_sTabItmTTBanDat,
             this.m_sTabItmHoaDon});
             this.m_sTabCtrlDatBan.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.m_sTabCtrlDatBan.Text = "superTabControl1";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(990, 503);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
-            // 
-            // m_sTabItmTTBanDat
-            // 
-            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
-            this.m_sTabItmTTBanDat.GlobalItem = false;
-            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
-            this.m_sTabItmTTBanDat.Text = "Nhà Cung Cấp";
             // 
             // superTabControlPanel1
             // 
@@ -224,6 +234,22 @@
             this.m_sTabItmDBan.GlobalItem = false;
             this.m_sTabItmDBan.Name = "m_sTabItmDBan";
             this.m_sTabItmDBan.Text = "Quản Lý Nhập Xuất Hàng";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(990, 528);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
+            // 
+            // m_sTabItmTTBanDat
+            // 
+            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
+            this.m_sTabItmTTBanDat.GlobalItem = false;
+            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
+            this.m_sTabItmTTBanDat.Text = "Nhà Cung Cấp";
             // 
             // superTabControlPanel3
             // 
@@ -257,10 +283,10 @@
             this.itemPanel12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem7});
             this.itemPanel12.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel12.Location = new System.Drawing.Point(872, 61);
+            this.itemPanel12.Location = new System.Drawing.Point(829, 3);
             this.itemPanel12.Name = "itemPanel12";
             this.itemPanel12.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel12.TabIndex = 37;
+            this.itemPanel12.TabIndex = 46;
             this.itemPanel12.Text = "itemPanel9";
             // 
             // labelX11
@@ -315,10 +341,10 @@
             this.itemPanel9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem6});
             this.itemPanel9.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel9.Location = new System.Drawing.Point(735, 61);
+            this.itemPanel9.Location = new System.Drawing.Point(692, 3);
             this.itemPanel9.Name = "itemPanel9";
             this.itemPanel9.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel9.TabIndex = 36;
+            this.itemPanel9.TabIndex = 45;
             this.itemPanel9.Text = "itemPanel9";
             // 
             // labelX7
@@ -373,10 +399,10 @@
             this.itemPanel11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_mtTileCongTy});
             this.itemPanel11.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel11.Location = new System.Drawing.Point(468, 61);
+            this.itemPanel11.Location = new System.Drawing.Point(425, 3);
             this.itemPanel11.Name = "itemPanel11";
             this.itemPanel11.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel11.TabIndex = 38;
+            this.itemPanel11.TabIndex = 47;
             this.itemPanel11.Text = "itemPanel11";
             // 
             // labelX10
@@ -432,10 +458,10 @@
             this.itemPanel10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_mtHThong});
             this.itemPanel10.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel10.Location = new System.Drawing.Point(600, 61);
+            this.itemPanel10.Location = new System.Drawing.Point(557, 3);
             this.itemPanel10.Name = "itemPanel10";
             this.itemPanel10.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel10.TabIndex = 35;
+            this.itemPanel10.TabIndex = 44;
             this.itemPanel10.Text = "itemPanel10";
             // 
             // labelX8
@@ -506,10 +532,10 @@
             this.itemPanel3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem2});
             this.itemPanel3.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel3.Location = new System.Drawing.Point(337, 61);
+            this.itemPanel3.Location = new System.Drawing.Point(294, 3);
             this.itemPanel3.Name = "itemPanel3";
             this.itemPanel3.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel3.TabIndex = 33;
+            this.itemPanel3.TabIndex = 42;
             this.itemPanel3.Text = "itemPanel2";
             // 
             // labelX4
@@ -564,10 +590,10 @@
             this.itemPanel4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem3});
             this.itemPanel4.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel4.Location = new System.Drawing.Point(202, 61);
+            this.itemPanel4.Location = new System.Drawing.Point(159, 3);
             this.itemPanel4.Name = "itemPanel4";
             this.itemPanel4.Size = new System.Drawing.Size(119, 49);
-            this.itemPanel4.TabIndex = 32;
+            this.itemPanel4.TabIndex = 41;
             this.itemPanel4.Text = "itemPanel8";
             // 
             // labelX5
@@ -623,11 +649,11 @@
             this.itemPanel5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem4});
             this.itemPanel5.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel5.Location = new System.Drawing.Point(67, 61);
+            this.itemPanel5.Location = new System.Drawing.Point(24, 3);
             this.itemPanel5.Name = "itemPanel5";
             this.itemPanel5.Size = new System.Drawing.Size(119, 49);
             this.itemPanel5.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            this.itemPanel5.TabIndex = 31;
+            this.itemPanel5.TabIndex = 40;
             this.itemPanel5.Text = "itemPanel1";
             // 
             // labelX6
@@ -681,10 +707,10 @@
             this.itemPanel6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem5});
             this.itemPanel6.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel6.Location = new System.Drawing.Point(46, 102);
+            this.itemPanel6.Location = new System.Drawing.Point(3, 44);
             this.itemPanel6.Name = "itemPanel6";
             this.itemPanel6.Size = new System.Drawing.Size(977, 16);
-            this.itemPanel6.TabIndex = 34;
+            this.itemPanel6.TabIndex = 43;
             this.itemPanel6.Text = "itemPanel7";
             // 
             // metroTileItem5
@@ -710,21 +736,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 730);
-            this.Controls.Add(this.m_sTabCtrlDatBan);
-            this.Controls.Add(this.itemPanel12);
-            this.Controls.Add(this.itemPanel9);
-            this.Controls.Add(this.itemPanel11);
-            this.Controls.Add(this.itemPanel10);
-            this.Controls.Add(this.itemPanel3);
-            this.Controls.Add(this.itemPanel4);
-            this.Controls.Add(this.itemPanel5);
-            this.Controls.Add(this.itemPanel6);
+            this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.metroStatusBar1);
             this.Controls.Add(this.metroShell1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmKhoHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DotNetBar Metro App Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrlDatBan)).EndInit();
             this.m_sTabCtrlDatBan.ResumeLayout(false);
             this.itemPanel12.ResumeLayout(false);
@@ -746,13 +766,14 @@
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Metro.MetroStatusBar metroStatusBar1;
         private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.SuperTabControl m_sTabCtrlDatBan;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;
         private DevComponents.DotNetBar.SuperTabItem m_sTabItmDBan;
-        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
-        private DevComponents.DotNetBar.SuperTabItem m_sTabItmHoaDon;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
         private DevComponents.DotNetBar.SuperTabItem m_sTabItmTTBanDat;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
+        private DevComponents.DotNetBar.SuperTabItem m_sTabItmHoaDon;
         private DevComponents.DotNetBar.ItemPanel itemPanel12;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem7;

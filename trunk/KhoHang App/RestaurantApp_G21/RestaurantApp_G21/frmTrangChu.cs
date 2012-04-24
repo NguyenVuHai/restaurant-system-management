@@ -13,7 +13,7 @@ namespace RestaurantApp_G21
         public frmTrangChu()
         {
             InitializeComponent();
-           
+            panelEx1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - panelEx1.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - panelEx1.Height) / 2);
         }
 
         private void m_mtTileItemKho_Click(object sender, EventArgs e)

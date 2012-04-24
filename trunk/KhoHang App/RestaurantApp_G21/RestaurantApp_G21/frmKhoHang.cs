@@ -16,6 +16,7 @@ namespace RestaurantApp_G21
           //  frmKhoHang frm = new frmKhoHang();
             GUI.KhoHang.NhaCungCap.uc_traCuuNCC uc = new GUI.KhoHang.NhaCungCap.uc_traCuuNCC();
             m_sTabItmTTBanDat.AttachedControl.Controls.Add(uc);
+            panelEx1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - panelEx1.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - panelEx1.Height) / 2);
         }
 
         
