@@ -13,7 +13,8 @@ namespace RestaurantApp_G21
         public frmTrangChu()
         {
             InitializeComponent();
-           
+            panelEx1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - panelEx1.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - panelEx1.Height) / 2);
+            this.BackColor = SystemColors.InactiveCaptionText;
         }
 
         private void metroTileItemBatBan_Click(object sender, EventArgs e)
@@ -45,6 +46,17 @@ namespace RestaurantApp_G21
         {
             frmCongTy frm = new frmCongTy();
             frm.Show();
+        }
+
+        private void frmTrangChu_Resize(object sender, EventArgs e)
+        {
+            panelEx1.Location = new Point((this.Width - panelEx1.Width) / 2, (this.Height - panelEx1.Height) / 2);
+            this.BackColor = SystemColors.InactiveCaptionText;
+        }
+
+        private void frmTrangChu_Paint(object sender, PaintEventArgs e)
+        {
+            this.BackColor = SystemColors.InactiveCaptionText;
         }
     }
 }
