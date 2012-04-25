@@ -41,7 +41,7 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         {
             GUI.accessory.checkAllRowsOfGrid(grid_ds, true);
             bt_chonAll.Text = "Bỏ chọn";
-            bt_chonAll.Click += new EventHandler(bt_chonAll_Click);
+            bt_chonAll.Click += new EventHandler(bt_boChon_Click);
         }
         private void bt_boChon_Click(object sender, EventArgs e)
         {
