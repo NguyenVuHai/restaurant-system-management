@@ -84,6 +84,7 @@
             this.bt_chonTatCa.TabIndex = 26;
             this.bt_chonTatCa.Text = "Chọn tất cả";
             this.bt_chonTatCa.UseVisualStyleBackColor = true;
+            this.bt_chonTatCa.Click += new System.EventHandler(this.bt_chonTatCa_Click);
             // 
             // bt_them
             // 

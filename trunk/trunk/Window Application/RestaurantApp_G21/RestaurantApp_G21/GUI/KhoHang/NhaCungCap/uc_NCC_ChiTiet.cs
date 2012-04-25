@@ -46,5 +46,11 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         {
             initGiaoDienCapNhat();
         }
+
+        private void bt_dong_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Close();
+        }
+
     }
 }

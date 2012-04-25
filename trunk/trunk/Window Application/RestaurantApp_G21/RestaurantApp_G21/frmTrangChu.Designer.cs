@@ -62,20 +62,21 @@
             // 
             // 
             // 
-            this.metroShell1.BackgroundStyle.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.metroShell1.BackgroundStyle.BackColor = System.Drawing.SystemColors.Highlight;
             this.metroShell1.BackgroundStyle.Class = "";
             this.metroShell1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroShell1.BackgroundStyle.TextColor = System.Drawing.Color.White;
             this.metroShell1.CaptionVisible = true;
             this.metroShell1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroShell1.ForeColor = System.Drawing.Color.Black;
+            this.metroShell1.ForeColor = System.Drawing.Color.White;
             this.metroShell1.HelpButtonText = null;
-            this.metroShell1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
+            this.metroShell1.KeyTipsFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroShell1.Location = new System.Drawing.Point(1, 1);
             this.metroShell1.Name = "metroShell1";
             this.metroShell1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_btn3QC,
             this.qatCustomizeItem1});
-            this.metroShell1.Size = new System.Drawing.Size(996, 40);
+            this.metroShell1.Size = new System.Drawing.Size(996, 29);
             this.metroShell1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.metroShell1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
             this.metroShell1.SystemText.QatAddItemText = "&Add to Quick Access Toolbar";
@@ -92,8 +93,9 @@
             this.metroShell1.SystemText.QatPlaceBelowRibbonText = "&Place Quick Access Toolbar below the Ribbon";
             this.metroShell1.SystemText.QatRemoveItemText = "&Remove from Quick Access Toolbar";
             this.metroShell1.TabIndex = 0;
-            this.metroShell1.TabStripFont = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroShell1.Text = "metroShell1";
+            this.metroShell1.TabStripFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroShell1.Text = "Hệ thống quản lý Nhà Hàng";
+            this.metroShell1.TitleText = "<font color=\"#FFFFFF\" size=\"12\"><b>HỆ THỐNG QUẢN LÝ NHÀ HÀNG</b></font>";
             // 
             // m_btn3QC
             // 

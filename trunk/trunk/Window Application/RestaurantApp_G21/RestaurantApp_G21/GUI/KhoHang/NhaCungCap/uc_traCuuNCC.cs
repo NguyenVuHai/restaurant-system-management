@@ -28,7 +28,7 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         }
         private void bt_sua_Click(object sender, EventArgs e)
         {
-            int totalSelectedRows = gv_ds.SelectedRows.Count;
+            int totalSelectedRows = grid_ds.SelectedRows.Count;
             if (totalSelectedRows != 1)
             {
                 MessageBox.Show("Mỗi lần chỉ được sửa thông tin của 1 NCC", "[!]Thông báo");
@@ -37,6 +37,22 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
             showFormNCC_ChiTiet(true);
         }
 
+        private void bt_chonAll_Click(object sender, EventArgs e)
+        {
+            GUI.accessory.checkAllRowsOfGrid(grid_ds, true);
+            bt_chonAll.Text = "Bỏ chọn";
+            bt_chonAll.Click += new EventHandler(bt_chonAll_Click);
+        }
+        private void bt_boChon_Click(object sender, EventArgs e)
+        {
+            GUI.accessory.checkAllRowsOfGrid(grid_ds, false);
+            bt_chonAll.Text = "Chọn tất cả";
+            bt_chonAll.Click += new EventHandler(bt_chonAll_Click);
+        }
+        private void checkAllRowsOfGrid(bool stt)
+        {
+
+        }
 
 
 

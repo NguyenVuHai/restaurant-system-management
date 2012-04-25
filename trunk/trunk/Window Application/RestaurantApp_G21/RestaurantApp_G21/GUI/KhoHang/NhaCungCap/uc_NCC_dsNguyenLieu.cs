@@ -15,5 +15,10 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         {
             InitializeComponent();
         }
+
+        private void bt_chonTatCa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

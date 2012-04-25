@@ -276,6 +276,7 @@
             this.bt_dong.TabIndex = 36;
             this.bt_dong.Text = "Đóng";
             this.bt_dong.UseVisualStyleBackColor = true;
+            this.bt_dong.Click += new System.EventHandler(this.bt_dong_Click);
             // 
             // uc_NCC_ChiTiet
             // 
