@@ -21,6 +21,9 @@ namespace RestaurantApp_G21
 
             GUI.KhoHang.NguyenLieuTon.uc_phieuDatHang uc_phieuDatHang = new GUI.KhoHang.NguyenLieuTon.uc_phieuDatHang();
             tab_nguyenLieuCanNhap.AttachedControl.Controls.Add(uc_phieuDatHang);
+
+            GUI.KhoHang.NguyenLieuTon.uc_nhapHangDotXuat uc_nhapHangDotXuat = new GUI.KhoHang.NguyenLieuTon.uc_nhapHangDotXuat();
+            tab_nhapHangDotXuat.AttachedControl.Controls.Add(uc_nhapHangDotXuat);
         }
 
         private void bt_dong_Click(object sender, EventArgs e)

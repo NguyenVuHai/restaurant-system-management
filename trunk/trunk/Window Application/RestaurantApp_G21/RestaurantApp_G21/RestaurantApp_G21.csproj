@@ -193,6 +193,18 @@
     <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_PhieuDatHang.Designer.cs">
       <DependentUpon>fm_PhieuDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_nguyenLieuToiMucToiThieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_nguyenLieuToiMucToiThieu.Designer.cs">
+      <DependentUpon>uc_nguyenLieuToiMucToiThieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_nhapHangDotXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_nhapHangDotXuat.Designer.cs">
+      <DependentUpon>uc_nhapHangDotXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_phieuDatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_PhieuDatHang.resx">
       <DependentUpon>fm_PhieuDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\uc_nguyenLieuToiMucToiThieu.resx">
+      <DependentUpon>uc_nguyenLieuToiMucToiThieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\uc_nhapHangDotXuat.resx">
+      <DependentUpon>uc_nhapHangDotXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\uc_phieuDatHang.resx">
       <DependentUpon>uc_phieuDatHang.cs</DependentUpon>

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_ten = new System.Windows.Forms.TextBox();
@@ -96,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 81);
+            this.label3.Location = new System.Drawing.Point(462, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 16);
             this.label3.TabIndex = 6;
@@ -104,26 +104,28 @@
             // 
             // cb_tinTrangGiaoDich
             // 
+            this.cb_tinTrangGiaoDich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tinTrangGiaoDich.FormattingEnabled = true;
             this.cb_tinTrangGiaoDich.Items.AddRange(new object[] {
             "Tất cả",
             "Ngừng",
             "Đã có",
             "Chưa từng"});
-            this.cb_tinTrangGiaoDich.Location = new System.Drawing.Point(235, 80);
+            this.cb_tinTrangGiaoDich.Location = new System.Drawing.Point(617, 45);
             this.cb_tinTrangGiaoDich.Name = "cb_tinTrangGiaoDich";
             this.cb_tinTrangGiaoDich.Size = new System.Drawing.Size(175, 21);
             this.cb_tinTrangGiaoDich.TabIndex = 7;
             // 
             // cb_tinhTrangNo
             // 
+            this.cb_tinhTrangNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tinhTrangNo.FormattingEnabled = true;
             this.cb_tinhTrangNo.Items.AddRange(new object[] {
             "Tất cả",
             "Có",
             "Không",
             "Đến hạn"});
-            this.cb_tinhTrangNo.Location = new System.Drawing.Point(235, 116);
+            this.cb_tinhTrangNo.Location = new System.Drawing.Point(617, 81);
             this.cb_tinhTrangNo.Name = "cb_tinhTrangNo";
             this.cb_tinhTrangNo.Size = new System.Drawing.Size(175, 21);
             this.cb_tinhTrangNo.TabIndex = 10;
@@ -132,7 +134,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 117);
+            this.label4.Location = new System.Drawing.Point(462, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 9;
@@ -141,7 +143,7 @@
             // bt_tim
             // 
             this.bt_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tim.Location = new System.Drawing.Point(428, 98);
+            this.bt_tim.Location = new System.Drawing.Point(810, 63);
             this.bt_tim.Name = "bt_tim";
             this.bt_tim.Size = new System.Drawing.Size(51, 39);
             this.bt_tim.TabIndex = 11;
@@ -152,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 164);
+            this.label5.Location = new System.Drawing.Point(40, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 16);
             this.label5.TabIndex = 14;
@@ -163,14 +165,14 @@
             this.grid_ds.AllowUserToDeleteRows = false;
             this.grid_ds.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_ds.BackgroundColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_ds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_ds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_ds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_ds.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cb,
@@ -179,10 +181,10 @@
             this.soDT,
             this.tongNo,
             this.giaoDich});
-            this.grid_ds.Location = new System.Drawing.Point(6, 191);
+            this.grid_ds.Location = new System.Drawing.Point(6, 154);
             this.grid_ds.Name = "grid_ds";
             this.grid_ds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_ds.Size = new System.Drawing.Size(928, 294);
+            this.grid_ds.Size = new System.Drawing.Size(928, 331);
             this.grid_ds.TabIndex = 15;
             this.grid_ds.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gv_ds_CellMouseDoubleClick);
             // 
@@ -286,7 +288,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
-            this.pictureBox3.Location = new System.Drawing.Point(46, 73);
+            this.pictureBox3.Location = new System.Drawing.Point(428, 38);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 29);
             this.pictureBox3.TabIndex = 13;
@@ -295,7 +297,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
-            this.pictureBox5.Location = new System.Drawing.Point(46, 108);
+            this.pictureBox5.Location = new System.Drawing.Point(428, 73);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 29);
             this.pictureBox5.TabIndex = 12;
@@ -304,7 +306,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::RestaurantApp_G21.Properties.Resources._1334501745_bullet_toggle_plus;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 156);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 119);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 29);
             this.pictureBox4.TabIndex = 8;
