@@ -32,6 +32,10 @@ namespace RestaurantApp_G21
 
         private void m_mtTileItemKho_Click(object sender, EventArgs e)
         {
+            //GUI.KhoHang.uc_main uc = new GUI.KhoHang.uc_main();
+            //this.panelEx1.Controls.Clear();
+            //this.panelEx1.Controls.Add(uc);
+
             frmKhoHang frm = new frmKhoHang();
             frm.Show();
         }

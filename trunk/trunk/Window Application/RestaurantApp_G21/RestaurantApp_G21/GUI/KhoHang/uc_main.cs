@@ -14,6 +14,8 @@ namespace RestaurantApp_G21.GUI.KhoHang
         public uc_main()
         {
             InitializeComponent();
+            //GUI.KhoHang.NhaCungCap.uc_traCuuNCC uc = new GUI.KhoHang.NhaCungCap.uc_traCuuNCC();
+            //sTab_ncc.AttachedControl.Controls.Add(uc);
         }
     }
 }

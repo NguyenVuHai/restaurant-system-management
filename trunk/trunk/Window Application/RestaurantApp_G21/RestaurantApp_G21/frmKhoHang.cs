@@ -18,6 +18,13 @@ namespace RestaurantApp_G21
             m_sTabItmTTBanDat.AttachedControl.Controls.Add(uc);
         }
 
+        private void bt_dong_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+
+
         
     }
 }
