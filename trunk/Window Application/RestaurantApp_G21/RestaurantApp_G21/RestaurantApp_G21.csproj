@@ -114,6 +114,7 @@
     <Compile Include="DTO\BuoiDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
+    <Compile Include="DTO\NguyenLieuDTO.cs" />
     <Compile Include="DTO\NhaHangDTO.cs" />
     <Compile Include="DTO\BanDatDTO.cs" />
     <Compile Include="DTO\ThongTinBanDTO.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\accessory.cs" />
     <Compile Include="GUI\Demo\frmDirtyReadNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +181,30 @@
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\RestaurantConfiguration.cs" />
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu_info.Designer.cs">
+      <DependentUpon>fm_nguyenLieu_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_PhieuDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_PhieuDatHang.Designer.cs">
+      <DependentUpon>fm_PhieuDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_phieuDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_phieuDatHang.Designer.cs">
+      <DependentUpon>uc_phieuDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_traCuuNguyenLieuTon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\uc_traCuuNguyenLieuTon.Designer.cs">
+      <DependentUpon>uc_traCuuNguyenLieuTon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +296,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Demo\frmDirtyReadNhanVien.resx">
       <DependentUpon>frmDirtyReadNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu_info.resx">
+      <DependentUpon>fm_nguyenLieu_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_PhieuDatHang.resx">
+      <DependentUpon>fm_PhieuDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\uc_phieuDatHang.resx">
+      <DependentUpon>uc_phieuDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\uc_traCuuNguyenLieuTon.resx">
+      <DependentUpon>uc_traCuuNguyenLieuTon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.resx">
       <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
@@ -392,9 +430,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\KhoHang\QuanLyNhapXuatHang\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
