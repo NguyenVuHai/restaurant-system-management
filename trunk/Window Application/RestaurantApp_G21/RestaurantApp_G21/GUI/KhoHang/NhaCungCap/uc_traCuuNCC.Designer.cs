@@ -39,6 +39,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.gv_ds = new System.Windows.Forms.DataGridView();
+            this.cb = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaoDich = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.bt_sua = new System.Windows.Forms.Button();
@@ -49,12 +55,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cb = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaoDich = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -171,14 +171,55 @@
             this.gv_ds.Name = "gv_ds";
             this.gv_ds.ReadOnly = true;
             this.gv_ds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_ds.Size = new System.Drawing.Size(833, 150);
+            this.gv_ds.Size = new System.Drawing.Size(833, 294);
             this.gv_ds.TabIndex = 15;
             this.gv_ds.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gv_ds_CellMouseDoubleClick);
+            // 
+            // cb
+            // 
+            this.cb.FillWeight = 50F;
+            this.cb.HeaderText = "";
+            this.cb.Name = "cb";
+            this.cb.ReadOnly = true;
+            // 
+            // ma
+            // 
+            this.ma.FillWeight = 150F;
+            this.ma.HeaderText = "Mã";
+            this.ma.Name = "ma";
+            this.ma.ReadOnly = true;
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.FillWeight = 150F;
+            this.tenNCC.HeaderText = "Tên NCC";
+            this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
+            // 
+            // soDT
+            // 
+            this.soDT.FillWeight = 150F;
+            this.soDT.HeaderText = "Số điện thoại";
+            this.soDT.Name = "soDT";
+            this.soDT.ReadOnly = true;
+            // 
+            // tongNo
+            // 
+            this.tongNo.FillWeight = 150F;
+            this.tongNo.HeaderText = "Tổng nợ";
+            this.tongNo.Name = "tongNo";
+            this.tongNo.ReadOnly = true;
+            // 
+            // giaoDich
+            // 
+            this.giaoDich.HeaderText = "Giao dịch";
+            this.giaoDich.Name = "giaoDich";
+            this.giaoDich.ReadOnly = true;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(120, 347);
+            this.button2.Location = new System.Drawing.Point(120, 491);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 28);
             this.button2.TabIndex = 17;
@@ -188,7 +229,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(6, 347);
+            this.button3.Location = new System.Drawing.Point(6, 491);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 28);
             this.button3.TabIndex = 18;
@@ -198,7 +239,7 @@
             // bt_sua
             // 
             this.bt_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_sua.Location = new System.Drawing.Point(200, 347);
+            this.bt_sua.Location = new System.Drawing.Point(200, 491);
             this.bt_sua.Name = "bt_sua";
             this.bt_sua.Size = new System.Drawing.Size(75, 28);
             this.bt_sua.TabIndex = 19;
@@ -209,7 +250,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(280, 347);
+            this.button5.Location = new System.Drawing.Point(280, 491);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(142, 28);
             this.button5.TabIndex = 20;
@@ -219,7 +260,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(428, 347);
+            this.button6.Location = new System.Drawing.Point(428, 491);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(109, 28);
             this.button6.TabIndex = 21;
@@ -271,47 +312,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // cb
-            // 
-            this.cb.FillWeight = 50F;
-            this.cb.HeaderText = "";
-            this.cb.Name = "cb";
-            this.cb.ReadOnly = true;
-            // 
-            // ma
-            // 
-            this.ma.FillWeight = 150F;
-            this.ma.HeaderText = "Mã";
-            this.ma.Name = "ma";
-            this.ma.ReadOnly = true;
-            // 
-            // tenNCC
-            // 
-            this.tenNCC.FillWeight = 150F;
-            this.tenNCC.HeaderText = "Tên NCC";
-            this.tenNCC.Name = "tenNCC";
-            this.tenNCC.ReadOnly = true;
-            // 
-            // soDT
-            // 
-            this.soDT.FillWeight = 150F;
-            this.soDT.HeaderText = "Số điện thoại";
-            this.soDT.Name = "soDT";
-            this.soDT.ReadOnly = true;
-            // 
-            // tongNo
-            // 
-            this.tongNo.FillWeight = 150F;
-            this.tongNo.HeaderText = "Tổng nợ";
-            this.tongNo.Name = "tongNo";
-            this.tongNo.ReadOnly = true;
-            // 
-            // giaoDich
-            // 
-            this.giaoDich.HeaderText = "Giao dịch";
-            this.giaoDich.Name = "giaoDich";
-            this.giaoDich.ReadOnly = true;
-            // 
             // uc_traCuuNCC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -338,7 +338,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "uc_traCuuNCC";
-            this.Size = new System.Drawing.Size(990, 392);
+            this.Size = new System.Drawing.Size(990, 526);
             ((System.ComponentModel.ISupportInitialize)(this.gv_ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
