@@ -124,8 +124,8 @@
   <data name="m_mtTileItemHeThong.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEgAA
-        CxIB0t1+/AAACH1JREFUeF7tmmesFUUUx8WuqA97l2fvir0i2KNRwRZjhaixx9hrNMQufrDGrmAkGjQI
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDgAA
+        Cw4BQL7hQQAACH1JREFUeF7tmmesFUUUx8WuqA97l2fvir0i2KNRwRZjhaixx9hrNMQufrDGrmAkGjQI
         Gnt7GHvng8beNfbeK/5/ZIYchp3dmb17eS95THJy5+7MnvKfduac7TN58uRZenUBgN5Mvdr4KbO/N4/+
         TABamAEDhd49ortFN4pOEg0WLdWNM2ptyT5BdKSI+qwputRdAouI+eWi/0S+/KjK46KjREunCG+wD+C/
         bHT5RPXTRP2qZNQFgPcWEF0k+tsIpvqvqEu0j2jOKgUaaN9OPF43Onyn+hfu/036XbRMRisA8O48oksD
@@ -167,8 +167,8 @@
   <data name="m_mtTileItemKho.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEgAA
-        CxIB0t1+/AAAA/BJREFUeF7tmluoD0Ecx91JyKW8caLcSpQi91xCeeGJ8nIkD4iDEOWJ5MXlJPdLUYgH
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDgAA
+        Cw4BQL7hQQAAA/BJREFUeF7tmluoD0Ecx91JyKW8caLcSpQi91xCeeGJ8nIkD4iDEOWJ5MXlJPdLUYgH
         HHIXipB48KgkhCjJcb/z9/2edrVn2/3PzszOzP73v1Of9jLX33d/Mzs7Oy1LpVKLqg4UoJqpauObvL+a
         n34hgEMPaAv154D94DiYDzq78EbbXaAVjJwKdoAPwA+/cHIQzAStbQphS4COMGoCOAVeBwwPn77DjdNg
         FGhvQwjTAtDw4eAGoHFJw1skPAaGmfYIkwJMR+MPJ7W4TLp6xI035Q0mBKhFY4+CvykY7xfxHif7wNC0
@@ -267,8 +267,8 @@
   <data name="metroTileItem9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwwAA
-        DsMBx2+oZAAABo1JREFUeF7tm3eoHUUUxo29v4i9x46iBHsDIxLBggSx14i9YcF/7L0gFixYiA1R7P0P
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOvwAA
+        Dr8BOAVTJAAABo1JREFUeF7tm3eoHUUUxo29v4i9x46iBHsDIxLBggSx14i9YcF/7L0gFixYiA1R7P0P
         sZJYELuxF8QKdknsnef3e8zIZLKzM7O79+5ek4GP++7dMzPnfFP2nDPzRg0PD88xSxcImJXRVeNHa1BW
         E8YLBwpnCxcbnK/PY4QdhbWFJeoMYJcIWEWG7CbcLLwkfCb8LoTK33rwpTBVuE3YXRiTS0bbBGD0UcJT
         EWNLeJjh0W/6dr+wszB3ChltEbCJlLtVmB6x7Ec9/1x4V3jF4C19fiT8IPxTUp9ZtGeMhH4TsJ4Uukdg
@@ -326,6 +326,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>27</value>
   </metadata>
 </root>

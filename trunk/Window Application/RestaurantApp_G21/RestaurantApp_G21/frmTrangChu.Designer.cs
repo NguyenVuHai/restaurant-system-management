@@ -58,7 +58,7 @@
             // 
             // metroShell1
             // 
-            this.metroShell1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.metroShell1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -75,7 +75,7 @@
             this.metroShell1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_btn3QC,
             this.qatCustomizeItem1});
-            this.metroShell1.Size = new System.Drawing.Size(1052, 40);
+            this.metroShell1.Size = new System.Drawing.Size(996, 40);
             this.metroShell1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.metroShell1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
             this.metroShell1.SystemText.QatAddItemText = "&Add to Quick Access Toolbar";
@@ -124,9 +124,9 @@
             this.metroStatusBar1.ForeColor = System.Drawing.Color.Black;
             this.metroStatusBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem1});
-            this.metroStatusBar1.Location = new System.Drawing.Point(1, 708);
+            this.metroStatusBar1.Location = new System.Drawing.Point(1, 694);
             this.metroStatusBar1.Name = "metroStatusBar1";
-            this.metroStatusBar1.Size = new System.Drawing.Size(1052, 21);
+            this.metroStatusBar1.Size = new System.Drawing.Size(996, 21);
             this.metroStatusBar1.TabIndex = 1;
             this.metroStatusBar1.Text = "metroStatusBar1";
             // 
@@ -146,15 +146,15 @@
             this.panelEx1.Controls.Add(this.itemPanel12);
             this.panelEx1.Controls.Add(this.itemPanel13);
             this.panelEx1.Controls.Add(this.itemPanel15);
-            this.panelEx1.Location = new System.Drawing.Point(50, 66);
+            this.panelEx1.Location = new System.Drawing.Point(14, 47);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(948, 541);
+            this.panelEx1.Size = new System.Drawing.Size(1004, 631);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.SystemColors.InactiveCaptionText;
             this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 2;
+            this.panelEx1.TabIndex = 5;
             this.panelEx1.Text = "panelEx1";
             // 
             // itemPanel14
@@ -499,13 +499,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1054, 730);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(998, 716);
             this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.metroStatusBar1);
             this.Controls.Add(this.metroShell1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Name = "frmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restaurant Management";
