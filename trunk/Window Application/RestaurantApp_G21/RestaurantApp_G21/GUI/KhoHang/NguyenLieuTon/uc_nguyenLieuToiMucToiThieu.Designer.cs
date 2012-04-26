@@ -46,7 +46,7 @@
             // 
             this.grid_ds.AllowUserToDeleteRows = false;
             this.grid_ds.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grid_ds.BackgroundColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.grid_ds.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grid_ds.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

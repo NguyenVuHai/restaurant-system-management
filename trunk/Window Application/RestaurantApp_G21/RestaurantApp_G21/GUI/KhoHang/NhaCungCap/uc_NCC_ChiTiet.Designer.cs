@@ -148,6 +148,7 @@
             // 
             // pn_ds_nguyenLieu
             // 
+            this.pn_ds_nguyenLieu.BackColor = System.Drawing.Color.AliceBlue;
             this.pn_ds_nguyenLieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_ds_nguyenLieu.Location = new System.Drawing.Point(43, 179);
             this.pn_ds_nguyenLieu.Name = "pn_ds_nguyenLieu";

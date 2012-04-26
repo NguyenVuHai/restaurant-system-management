@@ -14,7 +14,7 @@ namespace RestaurantApp_G21
         {
             InitializeComponent();
             panelEx1.Location = new Point((Screen.PrimaryScreen.Bounds.Width - panelEx1.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - panelEx1.Height) / 2);
-            this.BackColor = SystemColors.InactiveCaptionText;
+            this.BackColor = Color.AliceBlue;
         }
 
         private void metroTileItemBatBan_Click(object sender, EventArgs e)
@@ -55,12 +55,12 @@ namespace RestaurantApp_G21
         private void frmTrangChu_Resize(object sender, EventArgs e)
         {
             panelEx1.Location = new Point((this.Width - panelEx1.Width) / 2, (this.Height - panelEx1.Height) / 2);
-            this.BackColor = SystemColors.InactiveCaptionText;
+            this.BackColor = Color.AliceBlue;
         }
 
         private void frmTrangChu_Paint(object sender, PaintEventArgs e)
         {
-            this.BackColor = SystemColors.InactiveCaptionText;
+            this.BackColor = Color.AliceBlue;
         }
     }
 }
