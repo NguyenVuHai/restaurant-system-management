@@ -119,7 +119,7 @@
             // 
             this.gv_nguyenLieuCC.AllowUserToDeleteRows = false;
             this.gv_nguyenLieuCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gv_nguyenLieuCC.BackgroundColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.gv_nguyenLieuCC.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.gv_nguyenLieuCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

@@ -33,6 +33,7 @@
             // 
             // pn
             // 
+            this.pn.BackColor = System.Drawing.Color.AliceBlue;
             this.pn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn.Location = new System.Drawing.Point(0, 0);
@@ -48,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(719, 742);
             this.Controls.Add(this.pn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fm_NCC_ChiTiet";
             this.Text = "Nhà cung cấp::Thông tin chi tiết";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
