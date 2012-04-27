@@ -34,6 +34,7 @@
             this.m_txtTenDangNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.m_txtMatKhau = new DevComponents.DotNetBar.LabelX();
             this.m_textMatKhau = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.m_lbTrangThaiDangNhap = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // m_tenDang
@@ -55,23 +56,25 @@
             // 
             this.m_btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnDangNhap.Location = new System.Drawing.Point(93, 118);
+            this.m_btnDangNhap.Location = new System.Drawing.Point(185, 118);
             this.m_btnDangNhap.Name = "m_btnDangNhap";
             this.m_btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.m_btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnDangNhap.TabIndex = 1;
+            this.m_btnDangNhap.TabIndex = 3;
             this.m_btnDangNhap.Text = "Đăng Nhập";
+            this.m_btnDangNhap.Click += new System.EventHandler(this.m_btnDangNhap_Click);
             // 
             // m_btnThoat
             // 
             this.m_btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThoat.Location = new System.Drawing.Point(194, 118);
+            this.m_btnThoat.Location = new System.Drawing.Point(279, 118);
             this.m_btnThoat.Name = "m_btnThoat";
             this.m_btnThoat.Size = new System.Drawing.Size(75, 23);
             this.m_btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnThoat.TabIndex = 1;
+            this.m_btnThoat.TabIndex = 4;
             this.m_btnThoat.Text = "Thoát";
+            this.m_btnThoat.Click += new System.EventHandler(this.m_btnThoat_Click_1);
             // 
             // m_txtTenDangNhap
             // 
@@ -84,8 +87,8 @@
             this.m_txtTenDangNhap.ForeColor = System.Drawing.Color.Black;
             this.m_txtTenDangNhap.Location = new System.Drawing.Point(168, 27);
             this.m_txtTenDangNhap.Name = "m_txtTenDangNhap";
-            this.m_txtTenDangNhap.Size = new System.Drawing.Size(126, 22);
-            this.m_txtTenDangNhap.TabIndex = 2;
+            this.m_txtTenDangNhap.Size = new System.Drawing.Size(218, 22);
+            this.m_txtTenDangNhap.TabIndex = 0;
             // 
             // m_txtMatKhau
             // 
@@ -96,7 +99,7 @@
             this.m_txtMatKhau.BackgroundStyle.Class = "";
             this.m_txtMatKhau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.m_txtMatKhau.Location = new System.Drawing.Point(65, 55);
+            this.m_txtMatKhau.Location = new System.Drawing.Point(61, 56);
             this.m_txtMatKhau.Name = "m_txtMatKhau";
             this.m_txtMatKhau.Size = new System.Drawing.Size(75, 23);
             this.m_txtMatKhau.TabIndex = 0;
@@ -114,18 +117,33 @@
             this.m_textMatKhau.ForeColor = System.Drawing.Color.Black;
             this.m_textMatKhau.Location = new System.Drawing.Point(168, 56);
             this.m_textMatKhau.Name = "m_textMatKhau";
-            this.m_textMatKhau.Size = new System.Drawing.Size(126, 22);
-            this.m_textMatKhau.TabIndex = 2;
+            this.m_textMatKhau.Size = new System.Drawing.Size(218, 22);
+            this.m_textMatKhau.TabIndex = 1;
+            // 
+            // m_lbTrangThaiDangNhap
+            // 
+            this.m_lbTrangThaiDangNhap.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_lbTrangThaiDangNhap.BackgroundStyle.Class = "";
+            this.m_lbTrangThaiDangNhap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_lbTrangThaiDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.m_lbTrangThaiDangNhap.Location = new System.Drawing.Point(76, 89);
+            this.m_lbTrangThaiDangNhap.Name = "m_lbTrangThaiDangNhap";
+            this.m_lbTrangThaiDangNhap.Size = new System.Drawing.Size(331, 23);
+            this.m_lbTrangThaiDangNhap.TabIndex = 0;
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 166);
+            this.ClientSize = new System.Drawing.Size(471, 182);
             this.Controls.Add(this.m_textMatKhau);
             this.Controls.Add(this.m_txtTenDangNhap);
             this.Controls.Add(this.m_btnThoat);
             this.Controls.Add(this.m_btnDangNhap);
+            this.Controls.Add(this.m_lbTrangThaiDangNhap);
             this.Controls.Add(this.m_txtMatKhau);
             this.Controls.Add(this.m_tenDang);
             this.DoubleBuffered = true;
@@ -142,8 +160,9 @@
         private DevComponents.DotNetBar.LabelX m_tenDang;
         private DevComponents.DotNetBar.ButtonX m_btnDangNhap;
         private DevComponents.DotNetBar.ButtonX m_btnThoat;
-        private DevComponents.DotNetBar.Controls.TextBoxX m_txtTenDangNhap;
         private DevComponents.DotNetBar.LabelX m_txtMatKhau;
         private DevComponents.DotNetBar.Controls.TextBoxX m_textMatKhau;
+        private DevComponents.DotNetBar.LabelX m_lbTrangThaiDangNhap;
+        public DevComponents.DotNetBar.Controls.TextBoxX m_txtTenDangNhap;
     }
 }
