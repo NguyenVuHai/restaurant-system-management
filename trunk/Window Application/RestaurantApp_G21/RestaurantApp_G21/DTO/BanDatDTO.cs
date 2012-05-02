@@ -17,6 +17,20 @@ namespace RestaurantApp_G21.DTO
         private int maThongTinKhachHang;
         private int soLuong;
         private bool tinhTrangBan;
+        private string tenBuoi;
+        private int maNhaHang;
+
+        public int MaNhaHang
+        {
+            get { return maNhaHang; }
+            set { maNhaHang = value; }
+        }
+
+        public string TenBuoi
+        {
+            get { return tenBuoi; }
+            set { tenBuoi = value; }
+        }
 
         public string HoTen
         {
