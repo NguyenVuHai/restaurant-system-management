@@ -92,6 +92,13 @@ namespace RestaurantApp_G21
             LoadNhaHang();
             LoadBuoi(m_cboxTimBuoi, 0);
             LoadBuoi(cbbBuoi, 0);
+            LoadHoaDon();
+        }
+
+        private void LoadHoaDon()
+        {
+            UserControl uc = new ucQuanLyHoaDon();
+            panelQuanLyHoaDOn.Controls.Add(uc);
         }
 
         public void LoadBanTrongKhuVuc()
@@ -126,7 +133,6 @@ namespace RestaurantApp_G21
             }
         }
 
-
         public void tabThongTinDatBan(string maBan, int maKhuVuc)
         {
             m_sTabItmTTBanDat.Visible = true;
@@ -149,7 +155,6 @@ namespace RestaurantApp_G21
             frm.Show();
             LoadBanTrongKhuVuc();
         }
-
 
         private void m_btnTimBan_Click(object sender, EventArgs e)
         {

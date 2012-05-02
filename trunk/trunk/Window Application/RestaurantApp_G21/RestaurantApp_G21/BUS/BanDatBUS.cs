@@ -18,5 +18,10 @@ namespace RestaurantApp_G21.BUS
         {
             return BanDatDAO.LayDanhSachBanDat();
         }
+
+        public static List<BanDatDTO> TimBan(int maBan, string tenBan, DateTime ngay)
+        {
+            return BanDatDAO.TimBan(maBan, tenBan, ngay);
+        }
     }
 }
