@@ -15,18 +15,6 @@ public static class DataAccessCode
     static DataAccessCode()
     {
     }
-    public static DbCommand CreateCommand()
-    {
-        string providerName = RestaurantConfiguration.DbProviderName;
-        string connectionString = RestaurantConfiguration.DbConnectionString;
-        DbProviderFactory factory = DbProviderFactories.GetFactory(providerName);
-        DbConnection connection = factory.CreateConnection();
-        connection.ConnectionString = connectionString;
-        RestaurantConfiguration.command = connection.CreateCommand();
-        RestaurantConfiguration.command.CommandType = CommandType.StoredProcedure;
-        return RestaurantConfiguration.command;
-    }
-
     //public static DbCommand CreateCommand()
     //{
     //    string providerName = RestaurantConfiguration.DbProviderName;
@@ -34,10 +22,22 @@ public static class DataAccessCode
     //    DbProviderFactory factory = DbProviderFactories.GetFactory(providerName);
     //    DbConnection connection = factory.CreateConnection();
     //    connection.ConnectionString = connectionString;
-    //    DbCommand command = connection.CreateCommand();
-    //    command.CommandType = CommandType.StoredProcedure;
-    //    return command;
+    //    RestaurantConfiguration.command = connection.CreateCommand();
+    //    RestaurantConfiguration.command.CommandType = CommandType.StoredProcedure;
+    //    return RestaurantConfiguration.command;
     //}
+
+    public static DbCommand CreateCommand()
+    {
+        string providerName = RestaurantConfiguration.DbProviderName;
+        string connectionString = RestaurantConfiguration.DbConnectionString;
+        DbProviderFactory factory = DbProviderFactories.GetFactory(providerName);
+        DbConnection connection = factory.CreateConnection();
+        connection.ConnectionString = connectionString;
+        DbCommand command = connection.CreateCommand();
+        command.CommandType = CommandType.StoredProcedure;
+        return command;
+    }
 
     public static DataTable ExecuteSelectCommand(DbCommand command)
     {

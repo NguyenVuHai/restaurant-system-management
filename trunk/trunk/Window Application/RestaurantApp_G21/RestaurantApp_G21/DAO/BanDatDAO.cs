@@ -101,12 +101,18 @@ namespace RestaurantApp_G21.DAO
             DataAccessCode.ExecuteNonQuery(command);
         }
 
-        public static List<BanDatDTO> TimBan(int maBan, string tenBan, DateTime ngay)
+        public static List<BanDatDTO> TimBan(int maNhaHang, int maBan, string tenBan, DateTime ngay)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.TimBan";
             // create a new parameter
             DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            // create a new parameter
+            param = command.CreateParameter();
             param.ParameterName = "@MaBan";
             if (maBan == 0)
                 param.Value = DBNull.Value;
@@ -134,6 +140,7 @@ namespace RestaurantApp_G21.DAO
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     BanDatDTO banDat = new BanDatDTO();
+                    banDat.MaNhaHang = Int32.Parse(dt.Rows[i]["MaNhaHang"].ToString());
                     banDat.MaBan = Int32.Parse(dt.Rows[i]["MaBan"].ToString());
                     banDat.HoTen = dt.Rows[i]["HoTen"].ToString();
                     banDat.Cmnd =dt.Rows[i]["CMND"].ToString();
@@ -141,6 +148,7 @@ namespace RestaurantApp_G21.DAO
                     banDat.NgayDatBan = DateTime.Parse(dt.Rows[i]["NgayDatBan"].ToString());
                     banDat.MaLichBan = Int32.Parse(dt.Rows[i]["MaLichBan"].ToString());
                     //banDat.MaThongTinKhachHang = Int32.Parse(dt.Rows[i]["MaThongTinKhachHang"].ToString());
+                    banDat.TenBuoi = dt.Rows[i]["TenBuoi"].ToString();
                     list.Add(banDat);
                     
                 }

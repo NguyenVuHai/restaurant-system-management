@@ -114,6 +114,8 @@
     <Compile Include="DAO\ThongTinBanDAO.cs" />
     <Compile Include="DAO\ThongTinNhanVienDAO.cs" />
     <Compile Include="DTO\BuoiDTO.cs" />
+    <Compile Include="DTO\ChiTietThucDonDTO.cs" />
+    <Compile Include="DTO\GlobalVariables.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
