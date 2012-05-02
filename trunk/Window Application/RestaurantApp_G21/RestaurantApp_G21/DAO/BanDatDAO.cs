@@ -100,5 +100,52 @@ namespace RestaurantApp_G21.DAO
             command.Parameters.Add(param);
             DataAccessCode.ExecuteNonQuery(command);
         }
+
+        public static List<BanDatDTO> TimBan(int maBan, string tenBan, DateTime ngay)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.TimBan";
+            // create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaBan";
+            if (maBan == 0)
+                param.Value = DBNull.Value;
+            else param.Value = maBan;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            // create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@Ngay";
+            param.DbType = DbType.DateTime;
+            if (ngay == new DateTime())
+                param.Value = DBNull.Value;
+            else param.Value = ngay;
+            command.Parameters.Add(param);
+            // create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@TenBan";
+            param.Value = tenBan;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            List<BanDatDTO> list = new List<BanDatDTO>();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    BanDatDTO banDat = new BanDatDTO();
+                    banDat.MaBan = Int32.Parse(dt.Rows[i]["MaBan"].ToString());
+                    banDat.HoTen = dt.Rows[i]["HoTen"].ToString();
+                    banDat.Cmnd =dt.Rows[i]["CMND"].ToString();
+                    banDat.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    banDat.NgayDatBan = DateTime.Parse(dt.Rows[i]["NgayDatBan"].ToString());
+                    banDat.MaLichBan = Int32.Parse(dt.Rows[i]["MaLichBan"].ToString());
+                    //banDat.MaThongTinKhachHang = Int32.Parse(dt.Rows[i]["MaThongTinKhachHang"].ToString());
+                    list.Add(banDat);
+                    
+                }
+            }
+            return list;
+        }
     }
 }
