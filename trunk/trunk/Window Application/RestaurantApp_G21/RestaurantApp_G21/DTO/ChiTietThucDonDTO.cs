@@ -7,9 +7,41 @@ namespace RestaurantApp_G21.DTO
 {
     class ChiTietThucDonDTO
     {
-        private static int maThucDon;
-        private static int maMonAn;
-        private static string tenMonAn;
-        private static decimal donGia;
+        private int maChiTietThucDon;
+
+        public int MaChiTietThucDon
+        {
+            get { return maChiTietThucDon; }
+            set { maChiTietThucDon = value; }
+        }
+        private int maThucDon;
+
+        public int MaThucDon
+        {
+            get { return maThucDon; }
+            set { maThucDon = value; }
+        }
+        private string tenMonAn;
+
+        public string TenMonAn
+        {
+            get { return tenMonAn; }
+            set { tenMonAn = value; }
+        }
+        private decimal donGia;
+
+        public decimal DonGia
+        {
+            get { return donGia; }
+            set { donGia = value; }
+        }
+        private int maMonAn;
+
+        public int MaMonAn
+        {
+            get { return maMonAn; }
+            set { maMonAn = value; }
+        }
+
     }
 }

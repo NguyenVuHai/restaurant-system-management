@@ -13,15 +13,26 @@ namespace RestaurantApp_G21
 {
     public partial class ucQuanLyHoaDon : UserControl
     {
-    #region Utils Methods
+        #region Utils Methods
         private void LoadMonAn()
         {
-            
+            try
+            {
+                int maNhaHang = GlobalVariables.maNhaHang;
+                DateTime ngay = DateTime.Today;
+                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTheoNhaHang(maNhaHang, ngay);
+                cbbDanhSachMonAn.DataSource = list;
+                cbbDanhSachMonAn.DisplayMember = "TenMonAn";
+            }
+            catch (Exception ex)
+            {
+            }
         }
-    #endregion
+        #endregion
         public ucQuanLyHoaDon()
         {
             InitializeComponent();
+            LoadMonAn();
         }
 
         private void txtTimMaBan_Enter(object sender, EventArgs e)
@@ -74,15 +85,18 @@ namespace RestaurantApp_G21
         private void m_dtGirdDSBan_Click(object sender, EventArgs e)
         {
             int index = m_dtGirdDSBan.SelectedCells[0].RowIndex;
-            lblMaLichBan.Text = m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString();
-            if (HoaDonBUS.KiemTraHoaDon(Int32.Parse(lblMaLichBan.Text)))
+            GlobalVariables.maLichBan=  Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
+            string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
+            if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
             {
                 LoadThongTinHoaDon(index);
-            } else {
-                if (MessageBox.Show("Hóa đơn chưa tồn tại. Bạn có muốn tạo mới hóa đơn không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            }
+            else
+            {
+                if (MessageBox.Show("Hóa đơn chưa tồn tại. Bạn có muốn tạo mới hóa đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    int maLichBan = Int32.Parse(lblMaLichBan.Text);
-                    HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
+                    int maLichBan = GlobalVariables.maLichBan;
+                    GlobalVariables.curMaHoaDon = HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
                     LoadThongTinHoaDon(index);
                 }
             }
@@ -101,8 +115,31 @@ namespace RestaurantApp_G21
 
         private void btnTaoMoiHoaDon_Click(object sender, EventArgs e)
         {
-            int maLichBan = Int32.Parse(lblMaLichBan.Text);
+            int maLichBan = GlobalVariables.maLichBan;
             HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
+        }
+
+        private void btnThemMonAn_Click(object sender, EventArgs e)
+        {
+            if (!Guid.TryParse(HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan), out GlobalVariables.curMaHoaDon))
+            {
+                MessageBox.Show("Vui lòng tạo hóa đơn.");
+                return;
+            }
+            if (txtSoLuong.Text.Equals(""))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng");
+                return;
+            }
+            int maChiTietThucDon = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).MaChiTietThucDon;
+            decimal donGia;
+            if (txtDonGia.Text.Equals(""))
+                donGia = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).DonGia;
+            else
+                donGia = Decimal.Parse(txtDonGia.Text);
+            int soLuong = Int32.Parse(txtSoLuong.Text);
+            //m_dtGridDSDatMon
+            HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong);
         }
 
     }
