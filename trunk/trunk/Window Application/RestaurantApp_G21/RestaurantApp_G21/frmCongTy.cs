@@ -82,5 +82,17 @@ namespace RestaurantApp_G21
                 m_dgvDanhSachNhanVien.DataSource = null;
         }
 
+        private void m_btnThemNV_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmThongTinNhanVien();
+            frm.ShowDialog();
+        }
+
+        private void m_btnSuaNV_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmThongTinNhanVien();
+            frm.ShowDialog();
+        }
+
     }
 }
