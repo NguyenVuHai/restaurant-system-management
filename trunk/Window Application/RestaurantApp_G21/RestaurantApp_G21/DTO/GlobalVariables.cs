@@ -9,5 +9,7 @@ namespace RestaurantApp_G21.DTO
     {
         public static int maNhaHang = 1;
         public static int maNhanVien = 1;
+        public static Guid curMaHoaDon;
+        public static int maLichBan;
     }
 }

@@ -8,12 +8,17 @@ namespace RestaurantApp_G21.BUS
 {
     class HoaDonBUS
     {
-        public static void ThemHoaDon(int maLichBan, DateTime ngayLapHoaDon)
+        public static Guid ThemHoaDon(int maLichBan, DateTime ngayLapHoaDon)
         {
-            HoaDonDAO.ThemHoaDon(maLichBan, ngayLapHoaDon);
+            return HoaDonDAO.ThemHoaDon(maLichBan, ngayLapHoaDon);
         }
 
-        public static bool KiemTraHoaDon(int maLichBan)
+        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong)
+        {
+            HoaDonDAO.ThemMonAn(maHoaDon, maChiTietThucDon, donGia, soLuong);
+        }
+
+        public static string KiemTraHoaDon(int maLichBan)
         {
             return HoaDonDAO.KiemTraHoaDon(maLichBan);
         }
