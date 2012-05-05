@@ -84,13 +84,28 @@ namespace RestaurantApp_G21
 
         private void m_btnThemNV_Click(object sender, EventArgs e)
         {
-            Form frm = new frmThongTinNhanVien();
-            frm.ShowDialog();
+            //Form frm = new frmThongTinNhanVien();
+            //frm.ShowDialog();
         }
 
         private void m_btnSuaNV_Click(object sender, EventArgs e)
         {
-            Form frm = new frmThongTinNhanVien();
+            //DataRowView curDataRowView = (DataRowView)m_dgvDanhSachNhanVien.CurrentRow.DataBoundItem;
+            //DataRow curRow = curDataRowView.Row;
+            
+            int numRow = m_dgvDanhSachNhanVien.CurrentCell.RowIndex;
+            string maNV = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[0].Value);
+            int nh = Convert.ToInt32(m_dgvDanhSachNhanVien.Rows[numRow].Cells[1].Value);
+            int loaiNV = Convert.ToInt32(m_dgvDanhSachNhanVien.Rows[numRow].Cells[2].Value);
+            string hoNV = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[3].Value);
+            string tenNV = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[4].Value);
+            string cmnd = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[5].Value);
+            string diaChi = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[6].Value);
+            string dienThoai = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[7].Value);
+            //DateTime.DateTime ngayVaoLam = Convert.ToDateTime(m_dgvDanhSachNhanVien.Rows[numRow].Cells[8].Value);
+            //MessageBox.Show(nh.ToString());
+            
+            Form frm = new frmThongTinNhanVien(maNV, nh, loaiNV, hoNV, tenNV, cmnd, diaChi, dienThoai);
             frm.ShowDialog();
         }
 
