@@ -11,5 +11,7 @@ namespace RestaurantApp_G21.DTO
         public static int maNhanVien = 1;
         public static Guid curMaHoaDon;
         public static int maLichBan;
+        public static bool bBongMa = false;
+        public static bool bDuLieuRac = false;
     }
 }

@@ -29,12 +29,18 @@ namespace RestaurantApp_G21
             }
         }
 
-        private void LoadDanhSachMonAnTrongHoaDon(bool isPhantom)
+        private void LoadDanhSachMonAnTrongHoaDon(bool isPhantom, bool isDirtyRead)
         {
             try 
             {
-                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, isPhantom);
+                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, isPhantom, isDirtyRead);
+                decimal total = 0;
+                foreach(var item in list)
+                {
+                    total += item.SoLuong * item.DonGia;
+                }
                 m_dtGridDSDatMon.DataSource = list;
+                m_txtTongTien.Text = total.ToString();
             } catch(Exception ex)
             {
             }
@@ -98,10 +104,12 @@ namespace RestaurantApp_G21
             int index = m_dtGirdDSBan.SelectedCells[0].RowIndex;
             GlobalVariables.maLichBan=  Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
             string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
+            GlobalVariables.bBongMa = rbBiBongMa.Checked;
+            GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
             if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
             {
                 LoadThongTinHoaDon(index);
-                LoadDanhSachMonAnTrongHoaDon(chkBongMa.Checked);
+                LoadDanhSachMonAnTrongHoaDon(rbBongMa.Checked, rbDirtyRead.Checked);
             }
             else
             {
@@ -151,14 +159,10 @@ namespace RestaurantApp_G21
                 donGia = Decimal.Parse(txtDonGia.Text);
             int soLuong = Int32.Parse(txtSoLuong.Text);
             //m_dtGridDSDatMon
-            HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong);
-            LoadDanhSachMonAnTrongHoaDon(chkBongMa.Checked);
+            HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong, rbBongMa.Checked, rbDirtyRead.Checked);
+            LoadDanhSachMonAnTrongHoaDon(rbBongMa.Checked, rbDirtyRead.Checked);
         }
 
-        private void chkBongMa_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

@@ -43,14 +43,22 @@ namespace RestaurantApp_G21.DAO
             return list;
         }
 
-        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom)
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            if (isPhantom) {
-            command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
-            } else 
+            if (isPhantom)
             {
-            command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDon";
+                if (GlobalVariables.bBongMa)
+                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
+                else
+                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolvePhantom";
+            }
+            else
+            {
+                if (GlobalVariables.bDuLieuRac)
+                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonDirtyRead";
+                else
+                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveDirtyRead";
             }
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";
