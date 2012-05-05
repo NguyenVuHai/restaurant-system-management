@@ -13,5 +13,10 @@ namespace RestaurantApp_G21.BUS
         {
             return ThongTinNhanVienDAO.TimKiemNhanVien(maNhanVien, maNhaHang, maLoaiNhanVien, ho, ten, cmnd, diaChi, dienThoai, ngayVaoLam);
         }
+
+        public static void ThemNhanVien(ThongTinNhanVienDTO nv)
+        {
+            ThongTinNhanVienDAO.ThemNhanVien(nv);
+        }
     }
 }
