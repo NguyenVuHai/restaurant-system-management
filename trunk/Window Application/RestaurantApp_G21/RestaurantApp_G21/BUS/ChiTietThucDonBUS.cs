@@ -13,5 +13,10 @@ namespace RestaurantApp_G21.BUS
         {
             return ChiTietThucDonDAO.LayDanhSachMonAnTheoNhaHang(maNhaHang,ngay);
         }
+
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom)
+        {
+            return ChiTietThucDonDAO.LayDanhSachMonAnTrongHoaDon(maHoaDon, isPhantom);
+        }
     }
 }

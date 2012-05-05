@@ -138,6 +138,12 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinNhanVien.Designer.cs">
+      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\accessory.cs" />
     <Compile Include="GUI\Demo\frmDirtyReadNhanVien.cs">
       <SubType>Form</SubType>
@@ -238,10 +244,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucQuanLyHoaDon.cs">
+    <Compile Include="GUI\HoaDon\ucQuanLyHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucQuanLyHoaDon.Designer.cs">
+    <Compile Include="GUI\HoaDon\ucQuanLyHoaDon.Designer.cs">
       <DependentUpon>ucQuanLyHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="uCtr_BanChuaDat.cs">
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinNhanVien.resx">
+      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DatBan\frmDatBan.resx">
       <DependentUpon>frmDatBan.cs</DependentUpon>
@@ -338,7 +347,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucQuanLyHoaDon.resx">
+    <EmbeddedResource Include="GUI\HoaDon\ucQuanLyHoaDon.resx">
       <DependentUpon>ucQuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtr_BanChuaDat.resx">

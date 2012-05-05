@@ -43,5 +43,13 @@ namespace RestaurantApp_G21.DTO
             set { maMonAn = value; }
         }
 
+        private int soLuong;
+
+        public int SoLuong
+        {
+            get { return soLuong; }
+            set { soLuong = value; }
+        }
+
     }
 }
