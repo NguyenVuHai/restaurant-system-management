@@ -13,9 +13,9 @@ namespace RestaurantApp_G21.BUS
             return HoaDonDAO.ThemHoaDon(maLichBan, ngayLapHoaDon);
         }
 
-        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong)
+        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead)
         {
-            HoaDonDAO.ThemMonAn(maHoaDon, maChiTietThucDon, donGia, soLuong);
+            HoaDonDAO.ThemMonAn(maHoaDon, maChiTietThucDon, donGia, soLuong, isPhantom, isDirtyRead);
         }
 
         public static string KiemTraHoaDon(int maLichBan)

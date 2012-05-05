@@ -50,10 +50,13 @@ namespace RestaurantApp_G21.DAO
             return flag;
         }
 
-        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong)
+        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            command.CommandText = "dbo.ThemMonAn";
+            if (isPhantom)
+                command.CommandText = "dbo.ThemMonAnPhantom";
+            else if (isDirtyRead)
+                command.CommandText = "dbo.ThemMonAnDirtyRead";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";
