@@ -28,6 +28,17 @@ namespace RestaurantApp_G21
             {
             }
         }
+
+        private void LoadDanhSachMonAnTrongHoaDon(bool isPhantom)
+        {
+            try 
+            {
+                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, isPhantom);
+                m_dtGridDSDatMon.DataSource = list;
+            } catch(Exception ex)
+            {
+            }
+        }
         #endregion
         public ucQuanLyHoaDon()
         {
@@ -90,6 +101,7 @@ namespace RestaurantApp_G21
             if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
             {
                 LoadThongTinHoaDon(index);
+                LoadDanhSachMonAnTrongHoaDon(chkBongMa.Checked);
             }
             else
             {
@@ -140,6 +152,12 @@ namespace RestaurantApp_G21
             int soLuong = Int32.Parse(txtSoLuong.Text);
             //m_dtGridDSDatMon
             HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong);
+            LoadDanhSachMonAnTrongHoaDon(chkBongMa.Checked);
+        }
+
+        private void chkBongMa_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

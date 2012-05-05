@@ -42,5 +42,38 @@ namespace RestaurantApp_G21.DAO
             }
             return list;
         }
+
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            if (isPhantom) {
+            command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
+            } else 
+            {
+            command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDon";
+            }
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaHoaDon";
+            param.Value = maHoaDon.ToString();
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            List<ChiTietThucDonDTO> list = new List<ChiTietThucDonDTO>();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ChiTietThucDonDTO chiTietThucDon = new ChiTietThucDonDTO();
+                    chiTietThucDon.MaChiTietThucDon = Int32.Parse(dt.Rows[i]["MaChiTietThucDon"].ToString());
+                    chiTietThucDon.MaMonAn = Int32.Parse(dt.Rows[i]["MaMonAn"].ToString());
+                    chiTietThucDon.TenMonAn = dt.Rows[i]["TenMonAn"].ToString();
+                    chiTietThucDon.DonGia = Decimal.Parse(dt.Rows[i]["DonGia"].ToString());
+                    chiTietThucDon.SoLuong = Int32.Parse(dt.Rows[i]["SoLuong"].ToString());
+                    list.Add(chiTietThucDon);
+                }
+            }
+            return list;
+        }
     }
 }
