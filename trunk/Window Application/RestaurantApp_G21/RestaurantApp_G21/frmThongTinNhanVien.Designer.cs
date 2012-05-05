@@ -349,12 +349,13 @@
             // 
             this.m_btnThemNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnThemNV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThemNV.Location = new System.Drawing.Point(134, 194);
+            this.m_btnThemNV.Location = new System.Drawing.Point(135, 194);
             this.m_btnThemNV.Name = "m_btnThemNV";
             this.m_btnThemNV.Size = new System.Drawing.Size(75, 23);
             this.m_btnThemNV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_btnThemNV.TabIndex = 43;
             this.m_btnThemNV.Text = "Thêm";
+            this.m_btnThemNV.Click += new System.EventHandler(this.m_btnThemNV_Click);
             // 
             // m_txtDiaChi
             // 
