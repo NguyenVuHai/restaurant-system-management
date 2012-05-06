@@ -22,5 +22,10 @@ namespace RestaurantApp_G21.BUS
         {
             return HoaDonDAO.KiemTraHoaDon(maLichBan);
         }
+
+        public static void XoaMonAn(int maChiTietHoaDon)
+        {
+            HoaDonDAO.XoaMonAn(maChiTietHoaDon);
+        }
     }
 }

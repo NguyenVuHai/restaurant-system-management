@@ -163,6 +163,11 @@ namespace RestaurantApp_G21
             LoadDanhSachMonAnTrongHoaDon(rbBongMa.Checked, rbDirtyRead.Checked);
         }
 
+        private void btnXoaMonAn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
 
     }
 }
