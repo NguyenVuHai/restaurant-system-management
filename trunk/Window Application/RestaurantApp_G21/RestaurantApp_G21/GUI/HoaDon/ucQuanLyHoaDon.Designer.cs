@@ -915,7 +915,7 @@
             // 
             this.rbBongMa.AutoSize = true;
             this.rbBongMa.Checked = true;
-            this.rbBongMa.Location = new System.Drawing.Point(826, 184);
+            this.rbBongMa.Location = new System.Drawing.Point(826, 237);
             this.rbBongMa.Name = "rbBongMa";
             this.rbBongMa.Size = new System.Drawing.Size(67, 17);
             this.rbBongMa.TabIndex = 21;
@@ -927,7 +927,7 @@
             // rbDirtyRead
             // 
             this.rbDirtyRead.AutoSize = true;
-            this.rbDirtyRead.Location = new System.Drawing.Point(826, 231);
+            this.rbDirtyRead.Location = new System.Drawing.Point(826, 284);
             this.rbDirtyRead.Name = "rbDirtyRead";
             this.rbDirtyRead.Size = new System.Drawing.Size(97, 17);
             this.rbDirtyRead.TabIndex = 21;
@@ -990,7 +990,7 @@
             // 
             this.panel1.Controls.Add(this.rbKhongDuLieuRac);
             this.panel1.Controls.Add(this.rbBiDuLieuRac);
-            this.panel1.Location = new System.Drawing.Point(836, 254);
+            this.panel1.Location = new System.Drawing.Point(836, 307);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 26);
             this.panel1.TabIndex = 25;
@@ -999,7 +999,7 @@
             // 
             this.panel2.Controls.Add(this.rbKhongBongMa);
             this.panel2.Controls.Add(this.rbBiBongMa);
-            this.panel2.Location = new System.Drawing.Point(836, 201);
+            this.panel2.Location = new System.Drawing.Point(836, 254);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 24);
             this.panel2.TabIndex = 26;

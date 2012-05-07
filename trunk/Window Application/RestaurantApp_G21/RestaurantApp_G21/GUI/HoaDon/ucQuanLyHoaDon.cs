@@ -166,25 +166,20 @@ namespace RestaurantApp_G21
 
         private void btnXoaMonAn_Click(object sender, EventArgs e)
         {
-            foreach (int oMaChiTietThucDon in GlobalVariables.maChiTietThucDon)
-            {
-                HoaDonBUS.XoaMonAn(oMaChiTietThucDon);
-            }
+            HoaDonBUS.XoaMonAn(GlobalVariables.maChiTietHoaDon);
         }
 
         private void m_dtGridDSDatMon_Click(object sender, EventArgs e)
         {
             if (m_dtGridDSDatMon.Rows.Count > 0)
             {
-                GlobalVariables.maChiTietThucDon.Clear();
-                foreach (int row in m_dtGridDSDatMon.SelectedRows)
+                GlobalVariables.maChiTietHoaDon.Clear();
+                foreach (DataGridViewCell cell in m_dtGridDSDatMon.SelectedCells)
                 {
-                    int maChiTietThucDon = Int32.Parse(m_dtGridDSDatMon.Rows[row].Cells["MaChiTietThucDon"].Value.ToString());
-                    GlobalVariables.maChiTietThucDon.Add(maChiTietThucDon);
+                    int maChiTietHoaDon = Int32.Parse(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietHoaDon"].Value.ToString());
+                    GlobalVariables.maChiTietHoaDon.Add(maChiTietHoaDon);
                 }
             }
         }
-
-
     }
 }
