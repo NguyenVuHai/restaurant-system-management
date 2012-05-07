@@ -49,6 +49,8 @@
             this.m_btnThemNV = new DevComponents.DotNetBar.ButtonX();
             this.m_txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.m_lblDiaChi = new DevComponents.DotNetBar.LabelX();
+            this.m_txtTinhTrang = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.m_dateTimeInputNgayVaoLam)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             this.m_txtCMND.Border.Class = "TextBoxBorder";
             this.m_txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtCMND.ForeColor = System.Drawing.Color.Black;
-            this.m_txtCMND.Location = new System.Drawing.Point(107, 83);
+            this.m_txtCMND.Location = new System.Drawing.Point(583, 57);
             this.m_txtCMND.Name = "m_txtCMND";
             this.m_txtCMND.Size = new System.Drawing.Size(121, 22);
             this.m_txtCMND.TabIndex = 42;
@@ -75,7 +77,7 @@
             this.m_lblCMND.BackgroundStyle.Class = "";
             this.m_lblCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblCMND.ForeColor = System.Drawing.Color.Black;
-            this.m_lblCMND.Location = new System.Drawing.Point(27, 83);
+            this.m_lblCMND.Location = new System.Drawing.Point(503, 57);
             this.m_lblCMND.Name = "m_lblCMND";
             this.m_lblCMND.Size = new System.Drawing.Size(45, 23);
             this.m_lblCMND.TabIndex = 41;
@@ -90,7 +92,7 @@
             this.m_txtDienThoai.Border.Class = "TextBoxBorder";
             this.m_txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.m_txtDienThoai.Location = new System.Drawing.Point(354, 29);
+            this.m_txtDienThoai.Location = new System.Drawing.Point(583, 85);
             this.m_txtDienThoai.Name = "m_txtDienThoai";
             this.m_txtDienThoai.Size = new System.Drawing.Size(121, 22);
             this.m_txtDienThoai.TabIndex = 40;
@@ -104,7 +106,7 @@
             this.m_lblDienThoai.BackgroundStyle.Class = "";
             this.m_lblDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.m_lblDienThoai.Location = new System.Drawing.Point(274, 29);
+            this.m_lblDienThoai.Location = new System.Drawing.Point(503, 85);
             this.m_lblDienThoai.Name = "m_lblDienThoai";
             this.m_lblDienThoai.Size = new System.Drawing.Size(57, 23);
             this.m_lblDienThoai.TabIndex = 39;
@@ -122,7 +124,7 @@
             this.m_dateTimeInputNgayVaoLam.ButtonDropDown.Visible = true;
             this.m_dateTimeInputNgayVaoLam.ForeColor = System.Drawing.Color.Black;
             this.m_dateTimeInputNgayVaoLam.IsPopupCalendarOpen = false;
-            this.m_dateTimeInputNgayVaoLam.Location = new System.Drawing.Point(354, 84);
+            this.m_dateTimeInputNgayVaoLam.Location = new System.Drawing.Point(107, 111);
             // 
             // 
             // 
@@ -213,7 +215,7 @@
             this.m_cbxLoaiNV.ForeColor = System.Drawing.Color.Black;
             this.m_cbxLoaiNV.FormattingEnabled = true;
             this.m_cbxLoaiNV.ItemHeight = 16;
-            this.m_cbxLoaiNV.Location = new System.Drawing.Point(354, 112);
+            this.m_cbxLoaiNV.Location = new System.Drawing.Point(583, 27);
             this.m_cbxLoaiNV.Name = "m_cbxLoaiNV";
             this.m_cbxLoaiNV.Size = new System.Drawing.Size(121, 22);
             this.m_cbxLoaiNV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -226,7 +228,7 @@
             this.m_cbxNhaHang.ForeColor = System.Drawing.Color.Black;
             this.m_cbxNhaHang.FormattingEnabled = true;
             this.m_cbxNhaHang.ItemHeight = 16;
-            this.m_cbxNhaHang.Location = new System.Drawing.Point(107, 111);
+            this.m_cbxNhaHang.Location = new System.Drawing.Point(336, 26);
             this.m_cbxNhaHang.Name = "m_cbxNhaHang";
             this.m_cbxNhaHang.Size = new System.Drawing.Size(121, 22);
             this.m_cbxNhaHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -241,7 +243,7 @@
             this.m_txtTenNV.Border.Class = "TextBoxBorder";
             this.m_txtTenNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtTenNV.ForeColor = System.Drawing.Color.Black;
-            this.m_txtTenNV.Location = new System.Drawing.Point(354, 55);
+            this.m_txtTenNV.Location = new System.Drawing.Point(336, 56);
             this.m_txtTenNV.Name = "m_txtTenNV";
             this.m_txtTenNV.Size = new System.Drawing.Size(121, 22);
             this.m_txtTenNV.TabIndex = 32;
@@ -255,7 +257,7 @@
             this.m_lblLoaiNV.BackgroundStyle.Class = "";
             this.m_lblLoaiNV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblLoaiNV.ForeColor = System.Drawing.Color.Black;
-            this.m_lblLoaiNV.Location = new System.Drawing.Point(274, 112);
+            this.m_lblLoaiNV.Location = new System.Drawing.Point(503, 27);
             this.m_lblLoaiNV.Name = "m_lblLoaiNV";
             this.m_lblLoaiNV.Size = new System.Drawing.Size(59, 23);
             this.m_lblLoaiNV.TabIndex = 28;
@@ -270,7 +272,7 @@
             this.m_lblNhaHang.BackgroundStyle.Class = "";
             this.m_lblNhaHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblNhaHang.ForeColor = System.Drawing.Color.Black;
-            this.m_lblNhaHang.Location = new System.Drawing.Point(27, 111);
+            this.m_lblNhaHang.Location = new System.Drawing.Point(256, 26);
             this.m_lblNhaHang.Name = "m_lblNhaHang";
             this.m_lblNhaHang.Size = new System.Drawing.Size(59, 23);
             this.m_lblNhaHang.TabIndex = 27;
@@ -285,7 +287,7 @@
             this.m_lblTenNV.BackgroundStyle.Class = "";
             this.m_lblTenNV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblTenNV.ForeColor = System.Drawing.Color.Black;
-            this.m_lblTenNV.Location = new System.Drawing.Point(274, 55);
+            this.m_lblTenNV.Location = new System.Drawing.Point(256, 56);
             this.m_lblTenNV.Name = "m_lblTenNV";
             this.m_lblTenNV.Size = new System.Drawing.Size(45, 23);
             this.m_lblTenNV.TabIndex = 29;
@@ -300,7 +302,7 @@
             this.m_lblNgayVaoLam.BackgroundStyle.Class = "";
             this.m_lblNgayVaoLam.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblNgayVaoLam.ForeColor = System.Drawing.Color.Black;
-            this.m_lblNgayVaoLam.Location = new System.Drawing.Point(274, 84);
+            this.m_lblNgayVaoLam.Location = new System.Drawing.Point(27, 111);
             this.m_lblNgayVaoLam.Name = "m_lblNgayVaoLam";
             this.m_lblNgayVaoLam.Size = new System.Drawing.Size(81, 23);
             this.m_lblNgayVaoLam.TabIndex = 31;
@@ -325,7 +327,7 @@
             // 
             this.m_btnSuaNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnSuaNV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnSuaNV.Location = new System.Drawing.Point(230, 194);
+            this.m_btnSuaNV.Location = new System.Drawing.Point(256, 179);
             this.m_btnSuaNV.Name = "m_btnSuaNV";
             this.m_btnSuaNV.Size = new System.Drawing.Size(75, 23);
             this.m_btnSuaNV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -337,7 +339,7 @@
             // 
             this.m_btnHuy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnHuy.Location = new System.Drawing.Point(324, 194);
+            this.m_btnHuy.Location = new System.Drawing.Point(350, 179);
             this.m_btnHuy.Name = "m_btnHuy";
             this.m_btnHuy.Size = new System.Drawing.Size(75, 23);
             this.m_btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -349,7 +351,7 @@
             // 
             this.m_btnThemNV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnThemNV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThemNV.Location = new System.Drawing.Point(135, 194);
+            this.m_btnThemNV.Location = new System.Drawing.Point(161, 179);
             this.m_btnThemNV.Name = "m_btnThemNV";
             this.m_btnThemNV.Size = new System.Drawing.Size(75, 23);
             this.m_btnThemNV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -366,9 +368,9 @@
             this.m_txtDiaChi.Border.Class = "TextBoxBorder";
             this.m_txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.m_txtDiaChi.Location = new System.Drawing.Point(107, 139);
+            this.m_txtDiaChi.Location = new System.Drawing.Point(107, 83);
             this.m_txtDiaChi.Name = "m_txtDiaChi";
-            this.m_txtDiaChi.Size = new System.Drawing.Size(368, 22);
+            this.m_txtDiaChi.Size = new System.Drawing.Size(350, 22);
             this.m_txtDiaChi.TabIndex = 47;
             // 
             // m_lblDiaChi
@@ -380,17 +382,48 @@
             this.m_lblDiaChi.BackgroundStyle.Class = "";
             this.m_lblDiaChi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_lblDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.m_lblDiaChi.Location = new System.Drawing.Point(27, 139);
+            this.m_lblDiaChi.Location = new System.Drawing.Point(27, 83);
             this.m_lblDiaChi.Name = "m_lblDiaChi";
             this.m_lblDiaChi.Size = new System.Drawing.Size(45, 23);
             this.m_lblDiaChi.TabIndex = 46;
             this.m_lblDiaChi.Text = "Địa chỉ:";
             // 
+            // m_txtTinhTrang
+            // 
+            this.m_txtTinhTrang.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_txtTinhTrang.Border.Class = "TextBoxBorder";
+            this.m_txtTinhTrang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtTinhTrang.ForeColor = System.Drawing.Color.Black;
+            this.m_txtTinhTrang.Location = new System.Drawing.Point(336, 111);
+            this.m_txtTinhTrang.Name = "m_txtTinhTrang";
+            this.m_txtTinhTrang.Size = new System.Drawing.Size(121, 22);
+            this.m_txtTinhTrang.TabIndex = 49;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.Class = "";
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(256, 111);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(57, 23);
+            this.labelX2.TabIndex = 48;
+            this.labelX2.Text = "Tình trạng:";
+            // 
             // frmThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 229);
+            this.ClientSize = new System.Drawing.Size(736, 222);
+            this.Controls.Add(this.m_txtTinhTrang);
+            this.Controls.Add(this.labelX2);
             this.Controls.Add(this.m_txtDiaChi);
             this.Controls.Add(this.m_lblDiaChi);
             this.Controls.Add(this.m_btnSuaNV);
@@ -444,5 +477,7 @@
         private DevComponents.DotNetBar.ButtonX m_btnThemNV;
         private DevComponents.DotNetBar.Controls.TextBoxX m_txtDiaChi;
         private DevComponents.DotNetBar.LabelX m_lblDiaChi;
+        private DevComponents.DotNetBar.Controls.TextBoxX m_txtTinhTrang;
+        private DevComponents.DotNetBar.LabelX labelX2;
     }
 }

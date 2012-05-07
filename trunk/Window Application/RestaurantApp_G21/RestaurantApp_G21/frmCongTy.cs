@@ -90,7 +90,6 @@ namespace RestaurantApp_G21
 
         private void m_btnSuaNV_Click(object sender, EventArgs e)
         {
-            //int numRow = m_dgvDanhSachNhanVien.CurrentCell.RowIndex;
             if (m_dgvDanhSachNhanVien.CurrentCell.RowIndex == null)
             {
                 MessageBox.Show("Chọn một nhân viên cần thay đổi thông tin.");
