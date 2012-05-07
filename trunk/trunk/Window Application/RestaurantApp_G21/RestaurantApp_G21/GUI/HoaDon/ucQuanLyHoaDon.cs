@@ -31,17 +31,18 @@ namespace RestaurantApp_G21
 
         private void LoadDanhSachMonAnTrongHoaDon(bool isPhantom, bool isDirtyRead)
         {
-            try 
+            try
             {
                 List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, isPhantom, isDirtyRead);
                 decimal total = 0;
-                foreach(var item in list)
+                foreach (var item in list)
                 {
                     total += item.SoLuong * item.DonGia;
                 }
                 m_dtGridDSDatMon.DataSource = list;
                 m_txtTongTien.Text = total.ToString();
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
             }
         }
@@ -102,7 +103,7 @@ namespace RestaurantApp_G21
         private void m_dtGirdDSBan_Click(object sender, EventArgs e)
         {
             int index = m_dtGirdDSBan.SelectedCells[0].RowIndex;
-            GlobalVariables.maLichBan=  Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
+            GlobalVariables.maLichBan = Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
             string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
             GlobalVariables.bBongMa = rbBiBongMa.Checked;
             GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
@@ -165,7 +166,23 @@ namespace RestaurantApp_G21
 
         private void btnXoaMonAn_Click(object sender, EventArgs e)
         {
-            
+            foreach (int oMaChiTietThucDon in GlobalVariables.maChiTietThucDon)
+            {
+                HoaDonBUS.XoaMonAn(oMaChiTietThucDon);
+            }
+        }
+
+        private void m_dtGridDSDatMon_Click(object sender, EventArgs e)
+        {
+            if (m_dtGridDSDatMon.Rows.Count > 0)
+            {
+                GlobalVariables.maChiTietThucDon.Clear();
+                foreach (int row in m_dtGridDSDatMon.SelectedRows)
+                {
+                    int maChiTietThucDon = Int32.Parse(m_dtGridDSDatMon.Rows[row].Cells["MaChiTietThucDon"].Value.ToString());
+                    GlobalVariables.maChiTietThucDon.Add(maChiTietThucDon);
+                }
+            }
         }
 
 

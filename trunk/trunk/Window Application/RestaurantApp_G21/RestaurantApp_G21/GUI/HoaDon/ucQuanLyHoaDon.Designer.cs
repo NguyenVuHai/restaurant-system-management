@@ -401,6 +401,7 @@
             this.m_dtGridDSDatMon.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.m_dtGridDSDatMon.Size = new System.Drawing.Size(523, 257);
             this.m_dtGridDSDatMon.TabIndex = 3;
+            this.m_dtGridDSDatMon.Click += new System.EventHandler(this.m_dtGridDSDatMon_Click);
             // 
             // groupPanel3
             // 
