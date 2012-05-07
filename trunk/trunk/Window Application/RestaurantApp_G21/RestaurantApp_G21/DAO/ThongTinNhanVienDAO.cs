@@ -179,5 +179,33 @@ namespace RestaurantApp_G21.DAO
             DataAccessCode.ExecuteNonQuery(command);
             //return maNV;
         }
+
+
+
+        internal static List<ThongTinNhanVienDTO> LoadDanhSachNhanVien()
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.LayDanhSachNhanVienFull";
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            List<ThongTinNhanVienDTO> list = new List<ThongTinNhanVienDTO>();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ThongTinNhanVienDTO thongTinNhanVien = new ThongTinNhanVienDTO();
+                    thongTinNhanVien.MaNhanVien = Int32.Parse(dt.Rows[i]["MaNhanVien"].ToString());
+                    thongTinNhanVien.MaNhaHang = Int32.Parse(dt.Rows[i]["MaNhaHang"].ToString());
+                    thongTinNhanVien.MaLoaiNhanVien = Int32.Parse(dt.Rows[i]["MaLoaiNhanVien"].ToString());
+                    thongTinNhanVien.Ho = dt.Rows[i]["Ho"].ToString();
+                    thongTinNhanVien.Ten = dt.Rows[i]["Ten"].ToString();
+                    thongTinNhanVien.CMND = dt.Rows[i]["CMND"].ToString();
+                    thongTinNhanVien.DiaChi = dt.Rows[i]["DiaChi"].ToString();
+                    thongTinNhanVien.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    thongTinNhanVien.NgayVaoLam = DateTime.Parse(dt.Rows[i]["NgayVaoLam"].ToString());
+                    list.Add(thongTinNhanVien);
+                }
+            }
+            return list;
+        }
     }
 }
