@@ -11,7 +11,14 @@ namespace RestaurantApp_G21.DTO
         private string tenNhaHang;
         private string dienThoai;
         private string diaChi;
-        
+
+        public NhaHangDTO()
+        {
+            this.maNhaHang = 0;
+            this.tenNhaHang = "";
+            this.dienThoai = "";
+            this.diaChi = "";
+        }
         public NhaHangDTO(int maNhaHang, string tenNhaHang, string dienThoai, string diaChi)
         {
             this.maNhaHang = maNhaHang;

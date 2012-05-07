@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using RestaurantApp_G21.BUS;
+using RestaurantApp_G21.DTO;
+
 namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
 {
     public partial class uc_traCuuNguyenLieuTon : UserControl
@@ -14,6 +17,25 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         public uc_traCuuNguyenLieuTon()
         {
             InitializeComponent();
+
+            //load combo loai mon an
+            ArrayList dsLoaiMonAn = new ArrayList();
+            dsLoaiMonAn = LoaiMonAnBUS.layDanhSachLoaiMonAn();
+            cb_loaiMonAn.Items.Clear();
+            accessory.initComboLoaiMonAn(dsLoaiMonAn, cb_loaiMonAn);
+            
+            
+            showComboMonAn();
+            
+
+        }
+
+        public void showComboMonAn()
+        {
+            ArrayList dsMonAnTheoPhanLoaiMonAn = new ArrayList();
+            dsMonAnTheoPhanLoaiMonAn = PhanLoaiMonAnBUS.layDanhSachMonAnTheoPhanLoaiMonAn((LoaiMonAnDTO)cb_loaiMonAn.SelectedItem, GlobalVariables.maNhaHang);
+            cb_monAn.Items.Clear();
+            accessory.initComboMonAnTheoPhanLoai(dsMonAnTheoPhanLoaiMonAn, cb_monAn);
         }
 
         private void bt_lapPhieuDatHang_Click(object sender, EventArgs e)
@@ -54,7 +76,41 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
             GUI.accessory.checkAllRowsOfGrid(grid_ds, false);
             bt_chonTatCa.Text = "Chọn tất cả";
             bt_chonTatCa.Click += new EventHandler(bt_chonTatCa_Click);
-        } 
+        }
+
+        private void cb_loaiMonAn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showComboMonAn();
+        }
+
+        private void cb_monAn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            grid_ds.Rows.Clear();
+            if (cb_monAn.SelectedIndex != 0)
+                showDanhSachNguyenLieuTheoMonAn(((PhanLoaiMonAnDTO)cb_monAn.SelectedItem).MonAn);
+            else
+            {
+                for (int i = 1; i < cb_monAn.Items.Count; i++)
+                {
+                    showDanhSachNguyenLieuTheoMonAn(((PhanLoaiMonAnDTO)cb_monAn.Items[i]).MonAn);
+                }
+            }
+        }
+        private void showDanhSachNguyenLieuTheoMonAn(MonAnDTO monAn)
+        {
+            ArrayList ds = new ArrayList();
+            ds = MonAnBUS.layDanhSachNguyenLieuTheoMonAn(monAn);
+
+            for (int i = 0; i < ds.Count; i++)
+            {
+                grid_ds.Rows.Add();
+                grid_ds.Rows[grid_ds.RowCount - 1].ReadOnly = true;
+                grid_ds.Rows[grid_ds.RowCount-1].Cells["cMaNguyenLieu"].Value = ((MonAn_NguyenLieuDTO)ds[i]).NguyenLieu.MaNguyenLieu;
+                grid_ds.Rows[grid_ds.RowCount-1].Cells["cTenNguyenLieu"].Value = ((MonAn_NguyenLieuDTO)ds[i]).NguyenLieu;
+                grid_ds.Rows[grid_ds.RowCount-1].Cells["cDonViTinh"].Value = ((MonAn_NguyenLieuDTO)ds[i]).NguyenLieu.DonViTinh;
+            }
+            lb_soLuongKQ.Text = grid_ds.RowCount.ToString();
+        }
 
     }
 }
