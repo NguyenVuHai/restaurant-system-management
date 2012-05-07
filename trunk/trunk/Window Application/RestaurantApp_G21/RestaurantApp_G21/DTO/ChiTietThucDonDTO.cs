@@ -7,6 +7,13 @@ namespace RestaurantApp_G21.DTO
 {
     class ChiTietThucDonDTO
     {
+        private int maChiTietHoaDon;
+
+        public int MaChiTietHoaDon
+        {
+            get { return maChiTietHoaDon; }
+            set { maChiTietHoaDon = value; }
+        }
         private int maChiTietThucDon;
 
         public int MaChiTietThucDon

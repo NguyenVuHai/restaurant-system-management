@@ -61,31 +61,6 @@ public static class DataAccessCode
         return table;
     }
 
-    public static int ExecuteNonQuery()
-    {
-        // The number of affected rows 
-        int affectedRows = -1;
-        // Execute the command making sure the connection gets closed in the
-        try
-        {
-            // Open the connection of the command
-            RestaurantConfiguration.command.Connection.Open();
-            // Execute the command and get the number of affected rows
-            affectedRows = RestaurantConfiguration.command.ExecuteNonQuery();
-        }
-        catch (Exception ex)
-        {
-            throw;
-        }
-        finally
-        {
-            // Close the connection
-            RestaurantConfiguration.command.Connection.Close();
-        }
-        // return the number of affected rows
-        return affectedRows;
-    }
-
     public static int ExecuteNonQuery(DbCommand command)
     {
         // The number of affected rows 

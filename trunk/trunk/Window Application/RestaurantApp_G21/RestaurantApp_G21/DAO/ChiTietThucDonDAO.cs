@@ -78,6 +78,7 @@ namespace RestaurantApp_G21.DAO
                     chiTietThucDon.TenMonAn = dt.Rows[i]["TenMonAn"].ToString();
                     chiTietThucDon.DonGia = Decimal.Parse(dt.Rows[i]["DonGia"].ToString());
                     chiTietThucDon.SoLuong = Int32.Parse(dt.Rows[i]["SoLuong"].ToString());
+                    chiTietThucDon.MaChiTietHoaDon = Int32.Parse(dt.Rows[i]["MaChiTietHoaDon"].ToString());
                     list.Add(chiTietThucDon);
                 }
             }

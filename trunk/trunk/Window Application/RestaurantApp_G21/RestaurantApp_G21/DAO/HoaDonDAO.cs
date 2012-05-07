@@ -84,15 +84,15 @@ namespace RestaurantApp_G21.DAO
             DataAccessCode.ExecuteNonQuery(command);
         }
 
-        public static void XoaMonAn(int maChiTietHoaDon)
+        public static void XoaMonAn(string maChiTietHoaDon)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.XoaMonAnDirtyRead";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
-            param.ParameterName = "@MaChiTietHoaDOn";
+            param.ParameterName = "@MaChiTietHoaDon";
             param.Value = maChiTietHoaDon;
-            param.DbType = DbType.Int32;
+            param.DbType = DbType.String;
             command.Parameters.Add(param);
             DataAccessCode.ExecuteNonQuery(command);
         }

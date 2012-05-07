@@ -21,9 +21,9 @@ namespace RestaurantApp_G21
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RestaurantConfiguration.command = DataAccessCode.CreateCommand();
-            RestaurantConfiguration.command.CommandText = "dbo.T2";
-            DataAccessCode.ExecuteNonQuery();
+            //command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.T2";
+            //DataAccessCode.ExecuteNonQuery();
         }
 
         private void button1_Click(object sender, EventArgs e)
