@@ -91,15 +91,16 @@ namespace RestaurantApp_G21
         {
             ThongTinNhanVienDTO nv = new ThongTinNhanVienDTO()
             {
-                MaNhanVien = Convert.ToInt32(m_txtMaNV.Text),
+                //MaNhanVien = Convert.ToInt32(m_txtMaNV.Text),
                 Ho = m_txtHoNV.Text,
                 Ten = m_txtTenNV.Text,
-                MaLoaiNhanVien = Convert.ToInt32(m_cbxLoaiNV.SelectedItem),
-                MaNhaHang = Convert.ToInt32(m_cbxNhaHang.SelectedItem),
+                MaLoaiNhanVien = ((LoaiNhanVienDTO)m_cbxLoaiNV.SelectedItem).MaLoaiNhanVien,
+                MaNhaHang = ((NhaHangDTO)m_cbxNhaHang.SelectedItem).MaNhaHang,
                 CMND = m_txtCMND.Text,
                 DiaChi = m_txtDiaChi.Text,
                 DienThoai = m_txtDienThoai.Text,
-                NgayVaoLam = m_dateTimeInputNgayVaoLam.Value
+                NgayVaoLam = m_dateTimeInputNgayVaoLam.Value,
+                TinhTrang = m_txtTinhTrang.Text
             };
             
             ThongTinNhanVienBUS.ThemNhanVien(nv);

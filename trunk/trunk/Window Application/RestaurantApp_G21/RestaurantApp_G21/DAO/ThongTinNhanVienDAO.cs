@@ -112,14 +112,15 @@ namespace RestaurantApp_G21.DAO
 
         internal static void ThemNhanVien(ThongTinNhanVienDTO nv)
         {
+            
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.ThemNhanVien";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
-            param.ParameterName = "@MaNhanVien";
+            /*param.ParameterName = "@MaNhanVien";
             param.Value = nv.MaNhanVien;
             param.DbType = DbType.Int32;
-            command.Parameters.Add(param);
+            command.Parameters.Add(param);*/
             //// create a new parameter
             param = command.CreateParameter();
             param.ParameterName = "@Ho";
@@ -168,8 +169,15 @@ namespace RestaurantApp_G21.DAO
             param.Value = nv.NgayVaoLam;
             param.DbType = DbType.DateTime;
             command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@TinhTrang";
+            param.Value = nv.TinhTrang;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
 
             DataAccessCode.ExecuteNonQuery(command);
+            //return maNV;
         }
     }
 }

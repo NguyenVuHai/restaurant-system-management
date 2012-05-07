@@ -18,7 +18,7 @@ namespace RestaurantApp_G21.DTO
         private string diaChi;
         private string dienThoai;
         private DateTime ngayVaoLam;
-        private int tinhTrang;
+        private string tinhTrang;
 
         public int MaNhanVien
         {
@@ -74,7 +74,7 @@ namespace RestaurantApp_G21.DTO
             set { ngayVaoLam = value; }
         }
 
-        public int TinhTrang
+        public string TinhTrang
         {
             get { return tinhTrang; }
             set { tinhTrang = value; }
