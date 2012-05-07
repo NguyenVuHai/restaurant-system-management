@@ -18,5 +18,11 @@ namespace RestaurantApp_G21.BUS
         {
             ThongTinNhanVienDAO.ThemNhanVien(nv);
         }
+
+        internal static List<ThongTinNhanVienDTO> LoadDanhSachNhanVien()
+        {
+            //throw new NotImplementedException();
+            return ThongTinNhanVienDAO.LoadDanhSachNhanVien();
+        }
     }
 }

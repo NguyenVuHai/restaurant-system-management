@@ -17,6 +17,7 @@ namespace RestaurantApp_G21
             InitializeComponent();
             LoadNhaHang();
             LoadLoaiNhanVien();
+            LoadDanhSachNhanVien();
         }
 
         private void frmCongTy_Load(object sender, EventArgs e)
@@ -50,6 +51,16 @@ namespace RestaurantApp_G21
             m_cbxLoaiNV.SelectedIndex = 0;
             m_cbxLoaiNV.ValueMember = "MaLoaiNhanVien";
             m_cbxLoaiNV.DisplayMember = "TenLoaiNhanVien";
+        }
+
+        private void LoadDanhSachNhanVien()
+        {
+            List<ThongTinNhanVienDTO> dt = ThongTinNhanVienBUS.LoadDanhSachNhanVien();
+
+            if (dt.Count > 0)
+                m_dgvDanhSachNhanVien.DataSource = dt;
+            else
+                m_dgvDanhSachNhanVien.DataSource = null;
         }
 
         private void m_btnTimKiemNhanVien_Click(object sender, EventArgs e)
