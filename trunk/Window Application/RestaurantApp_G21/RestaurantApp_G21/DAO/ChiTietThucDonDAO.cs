@@ -43,22 +43,36 @@ namespace RestaurantApp_G21.DAO
             return list;
         }
 
-        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead)
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            if (isPhantom)
+            if (GlobalVariables.bMacDinh)
             {
-                if (GlobalVariables.bBongMa)
-                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
-                else
-                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolvePhantom";
+                command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDon";
             }
             else
             {
-                if (GlobalVariables.bDuLieuRac)
-                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonDirtyRead";
+                if (isPhantom)
+                {
+                    if (GlobalVariables.bBongMa)
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
+                    else
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolvePhantom";
+                }
+                else if (isDirtyRead)
+                {
+                    if (GlobalVariables.bDuLieuRac)
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonDirtyRead";
+                    else
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveDirtyRead";
+                }
                 else
-                    command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveDirtyRead";
+                {
+                    if (GlobalVariables.bKhongTheDocLai)
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonUnRepeatableRead";
+                    else
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveUnRepeatableRead";
+                }
             }
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";

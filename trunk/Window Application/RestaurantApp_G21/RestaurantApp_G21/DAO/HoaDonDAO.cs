@@ -57,6 +57,7 @@ namespace RestaurantApp_G21.DAO
                 command.CommandText = "dbo.ThemMonAnPhantom";
             else if (isDirtyRead)
                 command.CommandText = "dbo.ThemMonAnDirtyRead";
+            else command.CommandText = "dbo.ThemMonAn";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";
@@ -84,10 +85,18 @@ namespace RestaurantApp_G21.DAO
             DataAccessCode.ExecuteNonQuery(command);
         }
 
-        public static void XoaMonAn(string maChiTietHoaDon)
+        public static void XoaMonAn(string maChiTietHoaDon, bool isDirtyRead, bool isUnrepeatableRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            command.CommandText = "dbo.XoaMonAnDirtyRead";
+            if (isDirtyRead)
+            {
+                command.CommandText = "dbo.XoaMonAnDirtyRead";
+            }
+            else if (isUnrepeatableRead)
+            {
+                command.CommandText = "dbo.XoaMonAnUnrepeatableRead";
+            }
+            else command.CommandText = "dbo.XoaMonAn";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaChiTietHoaDon";

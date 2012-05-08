@@ -97,7 +97,7 @@ namespace RestaurantApp_G21
 
         private void LoadHoaDon()
         {
-            UserControl uc = new ucQuanLyHoaDon();
+            UserControl uc = new frmQuanLyHoaDon();
             panelQuanLyHoaDOn.Controls.Add(uc);
         }
 

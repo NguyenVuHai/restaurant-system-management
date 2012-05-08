@@ -1,6 +1,6 @@
 ﻿namespace RestaurantApp_G21
 {
-    partial class ucQuanLyHoaDon
+    partial class frmQuanLyHoaDon
     {
         /// <summary> 
         /// Required designer variable.
@@ -83,6 +83,12 @@
             this.rbBiDuLieuRac = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rbNormal = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rbKhongTheDocLai = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rbKhongBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
+            this.rbBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).BeginInit();
             this.groupPanel3.SuspendLayout();
@@ -92,6 +98,8 @@
             this.m_gPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel4
@@ -863,7 +871,7 @@
             this.btnXoaMonAn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnXoaMonAn.BackColor = System.Drawing.SystemColors.Control;
             this.btnXoaMonAn.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.btnXoaMonAn.Location = new System.Drawing.Point(551, 14);
+            this.btnXoaMonAn.Location = new System.Drawing.Point(550, 12);
             this.btnXoaMonAn.Name = "btnXoaMonAn";
             this.btnXoaMonAn.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
             this.btnXoaMonAn.Size = new System.Drawing.Size(75, 23);
@@ -914,12 +922,10 @@
             // rbBongMa
             // 
             this.rbBongMa.AutoSize = true;
-            this.rbBongMa.Checked = true;
-            this.rbBongMa.Location = new System.Drawing.Point(826, 237);
+            this.rbBongMa.Location = new System.Drawing.Point(16, 26);
             this.rbBongMa.Name = "rbBongMa";
             this.rbBongMa.Size = new System.Drawing.Size(67, 17);
             this.rbBongMa.TabIndex = 21;
-            this.rbBongMa.TabStop = true;
             this.rbBongMa.Tag = "Type";
             this.rbBongMa.Text = "Bóng ma";
             this.rbBongMa.UseVisualStyleBackColor = true;
@@ -927,11 +933,10 @@
             // rbDirtyRead
             // 
             this.rbDirtyRead.AutoSize = true;
-            this.rbDirtyRead.Location = new System.Drawing.Point(826, 284);
+            this.rbDirtyRead.Location = new System.Drawing.Point(16, 73);
             this.rbDirtyRead.Name = "rbDirtyRead";
             this.rbDirtyRead.Size = new System.Drawing.Size(97, 17);
             this.rbDirtyRead.TabIndex = 21;
-            this.rbDirtyRead.TabStop = true;
             this.rbDirtyRead.Tag = "Type";
             this.rbDirtyRead.Text = "Đọc dữ liệu rác";
             this.rbDirtyRead.UseVisualStyleBackColor = true;
@@ -990,34 +995,104 @@
             // 
             this.panel1.Controls.Add(this.rbKhongDuLieuRac);
             this.panel1.Controls.Add(this.rbBiDuLieuRac);
-            this.panel1.Location = new System.Drawing.Point(836, 307);
+            this.panel1.Location = new System.Drawing.Point(26, 96);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 26);
+            this.panel1.Size = new System.Drawing.Size(165, 26);
             this.panel1.TabIndex = 25;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.rbKhongBongMa);
             this.panel2.Controls.Add(this.rbBiBongMa);
-            this.panel2.Location = new System.Drawing.Point(836, 254);
+            this.panel2.Location = new System.Drawing.Point(26, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 24);
+            this.panel2.Size = new System.Drawing.Size(165, 24);
             this.panel2.TabIndex = 26;
             // 
-            // ucQuanLyHoaDon
+            // rbNormal
+            // 
+            this.rbNormal.AutoSize = true;
+            this.rbNormal.Checked = true;
+            this.rbNormal.Location = new System.Drawing.Point(16, 3);
+            this.rbNormal.Name = "rbNormal";
+            this.rbNormal.Size = new System.Drawing.Size(70, 17);
+            this.rbNormal.TabIndex = 21;
+            this.rbNormal.TabStop = true;
+            this.rbNormal.Tag = "Type";
+            this.rbNormal.Text = "Mặc định";
+            this.rbNormal.UseVisualStyleBackColor = true;
+            this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rbNormal);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.rbBongMa);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.rbKhongTheDocLai);
+            this.panel3.Controls.Add(this.rbDirtyRead);
+            this.panel3.Location = new System.Drawing.Point(827, 193);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(206, 218);
+            this.panel3.TabIndex = 27;
+            // 
+            // rbKhongTheDocLai
+            // 
+            this.rbKhongTheDocLai.AutoSize = true;
+            this.rbKhongTheDocLai.Location = new System.Drawing.Point(16, 128);
+            this.rbKhongTheDocLai.Name = "rbKhongTheDocLai";
+            this.rbKhongTheDocLai.Size = new System.Drawing.Size(109, 17);
+            this.rbKhongTheDocLai.TabIndex = 21;
+            this.rbKhongTheDocLai.Tag = "Type";
+            this.rbKhongTheDocLai.Text = "Không thể đọc lại";
+            this.rbKhongTheDocLai.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.rbKhongBiKhongTheDocLai);
+            this.panel4.Controls.Add(this.rbBiKhongTheDocLai);
+            this.panel4.Location = new System.Drawing.Point(26, 151);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(165, 26);
+            this.panel4.TabIndex = 25;
+            // 
+            // rbKhongBiKhongTheDocLai
+            // 
+            this.rbKhongBiKhongTheDocLai.AutoSize = true;
+            this.rbKhongBiKhongTheDocLai.Checked = true;
+            this.rbKhongBiKhongTheDocLai.Location = new System.Drawing.Point(94, 3);
+            this.rbKhongBiKhongTheDocLai.Name = "rbKhongBiKhongTheDocLai";
+            this.rbKhongBiKhongTheDocLai.Size = new System.Drawing.Size(56, 17);
+            this.rbKhongBiKhongTheDocLai.TabIndex = 24;
+            this.rbKhongBiKhongTheDocLai.TabStop = true;
+            this.rbKhongBiKhongTheDocLai.Tag = "DuLieuRac";
+            this.rbKhongBiKhongTheDocLai.Text = "Không";
+            this.rbKhongBiKhongTheDocLai.UseVisualStyleBackColor = true;
+            // 
+            // rbBiKhongTheDocLai
+            // 
+            this.rbBiKhongTheDocLai.AutoSize = true;
+            this.rbBiKhongTheDocLai.Location = new System.Drawing.Point(26, 3);
+            this.rbBiKhongTheDocLai.Name = "rbBiKhongTheDocLai";
+            this.rbBiKhongTheDocLai.Size = new System.Drawing.Size(38, 17);
+            this.rbBiKhongTheDocLai.TabIndex = 23;
+            this.rbBiKhongTheDocLai.TabStop = true;
+            this.rbBiKhongTheDocLai.Tag = "DuLieuRac";
+            this.rbBiKhongTheDocLai.Text = "Có";
+            this.rbBiKhongTheDocLai.UseVisualStyleBackColor = true;
+            // 
+            // frmQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.rbDirtyRead);
-            this.Controls.Add(this.rbBongMa);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupPanel4);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.btnThemMonAn);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.m_gPanel);
-            this.Name = "ucQuanLyHoaDon";
+            this.Name = "frmQuanLyHoaDon";
             this.Size = new System.Drawing.Size(1053, 539);
             this.groupPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).EndInit();
@@ -1030,8 +1105,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1086,6 +1164,12 @@
         private System.Windows.Forms.RadioButton rbBiDuLieuRac;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton rbNormal;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton rbKhongTheDocLai;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton rbKhongBiKhongTheDocLai;
+        private System.Windows.Forms.RadioButton rbBiKhongTheDocLai;
 
     }
 }
