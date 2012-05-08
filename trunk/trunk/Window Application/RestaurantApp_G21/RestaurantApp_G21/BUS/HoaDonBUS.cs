@@ -23,14 +23,14 @@ namespace RestaurantApp_G21.BUS
             return HoaDonDAO.KiemTraHoaDon(maLichBan);
         }
 
-        public static void XoaMonAn(List<int> maChiTietHoaDon)
+        public static void XoaMonAn(List<int> maChiTietHoaDon, bool isDirtyRead, bool isUnrepeatableRead)
         {
             StringBuilder strChiTietHoaDon = new StringBuilder();
             foreach (var oMaChiTietHoaDon in maChiTietHoaDon)
             {
                 strChiTietHoaDon.AppendFormat("{0},", oMaChiTietHoaDon);
             }
-            HoaDonDAO.XoaMonAn(strChiTietHoaDon.ToString().Substring(0, strChiTietHoaDon.Length - 1));
+            HoaDonDAO.XoaMonAn(strChiTietHoaDon.ToString().Substring(0, strChiTietHoaDon.Length - 1), isDirtyRead, isUnrepeatableRead);
         }
     }
 }

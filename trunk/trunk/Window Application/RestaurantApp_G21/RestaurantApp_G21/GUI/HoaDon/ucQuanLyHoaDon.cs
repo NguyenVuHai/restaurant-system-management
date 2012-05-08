@@ -11,7 +11,7 @@ using RestaurantApp_G21.DTO;
 
 namespace RestaurantApp_G21
 {
-    public partial class ucQuanLyHoaDon : UserControl
+    public partial class frmQuanLyHoaDon : UserControl
     {
         #region Utils Methods
         private void LoadMonAn()
@@ -29,11 +29,11 @@ namespace RestaurantApp_G21
             }
         }
 
-        private void LoadDanhSachMonAnTrongHoaDon(bool isPhantom, bool isDirtyRead)
+        private void LoadDanhSachMonAnTrongHoaDon()
         {
             try
             {
-                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, isPhantom, isDirtyRead);
+                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked);
                 decimal total = 0;
                 foreach (var item in list)
                 {
@@ -47,7 +47,7 @@ namespace RestaurantApp_G21
             }
         }
         #endregion
-        public ucQuanLyHoaDon()
+        public frmQuanLyHoaDon()
         {
             InitializeComponent();
             LoadMonAn();
@@ -107,10 +107,11 @@ namespace RestaurantApp_G21
             string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
             GlobalVariables.bBongMa = rbBiBongMa.Checked;
             GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
+            GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
             if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
             {
                 LoadThongTinHoaDon(index);
-                LoadDanhSachMonAnTrongHoaDon(rbBongMa.Checked, rbDirtyRead.Checked);
+                LoadDanhSachMonAnTrongHoaDon();
             }
             else
             {
@@ -119,6 +120,7 @@ namespace RestaurantApp_G21
                     int maLichBan = GlobalVariables.maLichBan;
                     GlobalVariables.curMaHoaDon = HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
                     LoadThongTinHoaDon(index);
+                    LoadDanhSachMonAnTrongHoaDon();
                 }
             }
         }
@@ -161,12 +163,13 @@ namespace RestaurantApp_G21
             int soLuong = Int32.Parse(txtSoLuong.Text);
             //m_dtGridDSDatMon
             HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong, rbBongMa.Checked, rbDirtyRead.Checked);
-            LoadDanhSachMonAnTrongHoaDon(rbBongMa.Checked, rbDirtyRead.Checked);
+            LoadDanhSachMonAnTrongHoaDon();
         }
 
         private void btnXoaMonAn_Click(object sender, EventArgs e)
         {
-            HoaDonBUS.XoaMonAn(GlobalVariables.maChiTietHoaDon);
+            HoaDonBUS.XoaMonAn(GlobalVariables.maChiTietHoaDon, rbDirtyRead.Checked, rbKhongTheDocLai.Checked);
+            LoadDanhSachMonAnTrongHoaDon();
         }
 
         private void m_dtGridDSDatMon_Click(object sender, EventArgs e)
@@ -180,6 +183,11 @@ namespace RestaurantApp_G21
                     GlobalVariables.maChiTietHoaDon.Add(maChiTietHoaDon);
                 }
             }
+        }
+
+        private void rbNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bMacDinh = rbNormal.Checked;
         }
     }
 }
