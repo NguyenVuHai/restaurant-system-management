@@ -33,7 +33,7 @@ namespace RestaurantApp_G21
         {
             try
             {
-                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked);
+                List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked, rbLostUpdate.Checked);
                 decimal total = 0;
                 foreach (var item in list)
                 {
@@ -202,7 +202,21 @@ namespace RestaurantApp_G21
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-
+            if (txtSoLuong.Text.Equals(""))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng");
+                return;
+            }
+            int maChiTietThucDon = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).MaChiTietThucDon;
+            decimal donGia;
+            if (txtDonGia.Text.Equals(""))
+                donGia = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).DonGia;
+            else
+                donGia = Decimal.Parse(txtDonGia.Text);
+            int soLuong = Int32.Parse(txtSoLuong.Text);
+            //m_dtGridDSDatMon
+            HoaDonBUS.CapNhatChiTietHoaDon(GlobalVariables.maChiTietHoaDon[0], maChiTietThucDon, donGia, soLuong, rbDirtyRead.Checked);
+            LoadDanhSachMonAnTrongHoaDon();
         }
     }
 }

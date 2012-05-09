@@ -43,10 +43,10 @@ namespace RestaurantApp_G21.DAO
             return list;
         }
 
-        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead)
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead, bool isLostUpdate)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            if (GlobalVariables.bMacDinh)
+            if (GlobalVariables.bMacDinh || isLostUpdate)
             {
                 command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDon";
             }
@@ -66,12 +66,18 @@ namespace RestaurantApp_G21.DAO
                     else
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveDirtyRead";
                 }
-                else
+                else if (isUnrepeatableRead)
                 {
                     if (GlobalVariables.bKhongTheDocLai)
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonUnRepeatableRead";
                     else
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveUnRepeatableRead";
+                } else if (isLostUpdate)
+                {
+                    if (GlobalVariables.bLostUpdate)
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonLostUpdate";
+                    else
+                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveLostUpdate";
                 }
             }
             DbParameter param = command.CreateParameter();

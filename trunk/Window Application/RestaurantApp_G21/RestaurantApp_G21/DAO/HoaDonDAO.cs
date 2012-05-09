@@ -105,5 +105,38 @@ namespace RestaurantApp_G21.DAO
             command.Parameters.Add(param);
             DataAccessCode.ExecuteNonQuery(command);
         }
+
+        public static void CapNhatChiTietHoaDon(int maChiTietHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isDirtyRead)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            if (isDirtyRead)
+                command.CommandText = "dbo.CapNhatChiTietHoaDonDirtyRead";
+            else command.CommandText = "dbo.CapNhatChiTietHoaDon";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaChiTietHoaDon";
+            param.Value = maChiTietHoaDon.ToString();
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@MaChiTietThucDon";
+            param.Value = maChiTietThucDon;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@DonGia";
+            param.Value = donGia;
+            param.DbType = DbType.Decimal;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@SoLuong";
+            param.Value = soLuong;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            DataAccessCode.ExecuteNonQuery(command);
+        }
     }
 }
