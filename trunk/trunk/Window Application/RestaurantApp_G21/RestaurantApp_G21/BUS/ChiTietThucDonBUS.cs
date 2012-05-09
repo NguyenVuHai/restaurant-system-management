@@ -14,9 +14,9 @@ namespace RestaurantApp_G21.BUS
             return ChiTietThucDonDAO.LayDanhSachMonAnTheoNhaHang(maNhaHang,ngay);
         }
 
-        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead)
+        public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead, bool isLostUpdate)
         {
-            return ChiTietThucDonDAO.LayDanhSachMonAnTrongHoaDon(maHoaDon, isPhantom, isDirtyRead, isUnrepeatableRead);
+            return ChiTietThucDonDAO.LayDanhSachMonAnTrongHoaDon(maHoaDon, isPhantom, isDirtyRead, isUnrepeatableRead, isLostUpdate);
         }
     }
 }

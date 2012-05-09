@@ -32,5 +32,10 @@ namespace RestaurantApp_G21.BUS
             }
             HoaDonDAO.XoaMonAn(strChiTietHoaDon.ToString().Substring(0, strChiTietHoaDon.Length - 1), isDirtyRead, isUnrepeatableRead);
         }
+
+        public static void CapNhatChiTietHoaDon(int maChiTietHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isDirtyRead)
+        {
+            HoaDonDAO.CapNhatChiTietHoaDon(maChiTietHoaDon,maChiTietThucDon,donGia,soLuong,isDirtyRead);
+        }
     }
 }
