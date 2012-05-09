@@ -181,6 +181,16 @@ namespace RestaurantApp_G21
                 {
                     int maChiTietHoaDon = Int32.Parse(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietHoaDon"].Value.ToString());
                     GlobalVariables.maChiTietHoaDon.Add(maChiTietHoaDon);
+                    txtDonGia.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["DonGia"].Value.ToString();
+                    txtSoLuong.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["SoLuong"].Value.ToString();
+                    for (int i = 0; i < cbbDanhSachMonAn.Items.Count; i++)
+                    {
+                        if (((ChiTietThucDonDTO)cbbDanhSachMonAn.Items[i]).MaChiTietThucDon.Equals(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietThucDon"].Value))
+                        {
+                            cbbDanhSachMonAn.SelectedIndex = i;
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -188,6 +198,11 @@ namespace RestaurantApp_G21
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVariables.bMacDinh = rbNormal.Checked;
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
