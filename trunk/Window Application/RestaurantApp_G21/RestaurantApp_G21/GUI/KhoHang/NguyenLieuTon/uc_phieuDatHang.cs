@@ -15,9 +15,11 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         {
             InitializeComponent();
             uc_nguyenLieuToiMucToiThieu uc_1 = new uc_nguyenLieuToiMucToiThieu();
+            uc_1.Dock = DockStyle.Fill;
             tabPage_danhSach.AttachedControl.Controls.Add(uc_1);
 
             uc_nhapHangDotXuat uc_2 = new uc_nhapHangDotXuat();
+            uc_2.Dock = DockStyle.Fill;
             tabPage_lapPhieuDatHang.AttachedControl.Controls.Add(uc_2);
         }
 
@@ -41,6 +43,11 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         }
 
         private void bt_tienHanhLapPhieu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage_danhSach_Click(object sender, EventArgs e)
         {
 
         }

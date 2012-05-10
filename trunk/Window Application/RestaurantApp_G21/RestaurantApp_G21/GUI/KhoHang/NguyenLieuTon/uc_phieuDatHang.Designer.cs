@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tab_nguyenLieuOKhoangMucToiThieu = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tabPage_lapPhieuDatHang = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.tabPage_danhSach = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tabPage_lapPhieuDatHang = new DevComponents.DotNetBar.SuperTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.tab_nguyenLieuOKhoangMucToiThieu)).BeginInit();
             this.tab_nguyenLieuOKhoangMucToiThieu.SuspendLayout();
             this.SuspendLayout();
@@ -84,22 +84,6 @@
             this.tab_nguyenLieuOKhoangMucToiThieu.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.tab_nguyenLieuOKhoangMucToiThieu.Text = "superTabControl1";
             // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(942, 525);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.tabPage_lapPhieuDatHang;
-            // 
-            // tabPage_lapPhieuDatHang
-            // 
-            this.tabPage_lapPhieuDatHang.AttachedControl = this.superTabControlPanel2;
-            this.tabPage_lapPhieuDatHang.GlobalItem = false;
-            this.tabPage_lapPhieuDatHang.Name = "tabPage_lapPhieuDatHang";
-            this.tabPage_lapPhieuDatHang.Text = "Lập phiếu đặt hàng";
-            // 
             // superTabControlPanel1
             // 
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,6 +99,23 @@
             this.tabPage_danhSach.GlobalItem = false;
             this.tabPage_danhSach.Name = "tabPage_danhSach";
             this.tabPage_danhSach.Text = "Danh sách";
+            this.tabPage_danhSach.Click += new System.EventHandler(this.tabPage_danhSach_Click);
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(942, 525);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.tabPage_lapPhieuDatHang;
+            // 
+            // tabPage_lapPhieuDatHang
+            // 
+            this.tabPage_lapPhieuDatHang.AttachedControl = this.superTabControlPanel2;
+            this.tabPage_lapPhieuDatHang.GlobalItem = false;
+            this.tabPage_lapPhieuDatHang.Name = "tabPage_lapPhieuDatHang";
+            this.tabPage_lapPhieuDatHang.Text = "Lập phiếu đặt hàng";
             // 
             // uc_phieuDatHang
             // 
