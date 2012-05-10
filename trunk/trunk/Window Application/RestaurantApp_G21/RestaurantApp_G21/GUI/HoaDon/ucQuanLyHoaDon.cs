@@ -162,7 +162,7 @@ namespace RestaurantApp_G21
                 donGia = Decimal.Parse(txtDonGia.Text);
             int soLuong = Int32.Parse(txtSoLuong.Text);
             //m_dtGridDSDatMon
-            HoaDonBUS.ThemMonAn(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong, rbBongMa.Checked, rbDirtyRead.Checked);
+            HoaDonBUS.CapNhatChiTietHoaDon(GlobalVariables.curMaHoaDon, maChiTietThucDon, donGia, soLuong, rbBongMa.Checked, rbDirtyRead.Checked, rbLostUpdate.Checked);
             LoadDanhSachMonAnTrongHoaDon();
         }
 
@@ -198,25 +198,6 @@ namespace RestaurantApp_G21
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVariables.bMacDinh = rbNormal.Checked;
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            if (txtSoLuong.Text.Equals(""))
-            {
-                MessageBox.Show("Vui lòng nhập số lượng");
-                return;
-            }
-            int maChiTietThucDon = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).MaChiTietThucDon;
-            decimal donGia;
-            if (txtDonGia.Text.Equals(""))
-                donGia = ((ChiTietThucDonDTO)cbbDanhSachMonAn.SelectedItem).DonGia;
-            else
-                donGia = Decimal.Parse(txtDonGia.Text);
-            int soLuong = Int32.Parse(txtSoLuong.Text);
-            //m_dtGridDSDatMon
-            HoaDonBUS.CapNhatChiTietHoaDon(GlobalVariables.maChiTietHoaDon[0], maChiTietThucDon, donGia, soLuong, rbDirtyRead.Checked);
-            LoadDanhSachMonAnTrongHoaDon();
         }
     }
 }
