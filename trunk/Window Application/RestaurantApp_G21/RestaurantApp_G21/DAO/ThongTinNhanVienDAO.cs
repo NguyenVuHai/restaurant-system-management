@@ -87,7 +87,7 @@ namespace RestaurantApp_G21.DAO
             else param.Value = ngayVaoLam;
             param.DbType = DbType.DateTime;
             command.Parameters.Add(param);
-            
+
             DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
             List<ThongTinNhanVienDTO> list = new List<ThongTinNhanVienDTO>();
             if (dt != null)
@@ -112,7 +112,7 @@ namespace RestaurantApp_G21.DAO
 
         internal static void ThemNhanVien(ThongTinNhanVienDTO nv)
         {
-            
+
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.ThemNhanVien";
             //// create a new parameter
@@ -206,6 +206,49 @@ namespace RestaurantApp_G21.DAO
                 }
             }
             return list;
+        }
+
+        internal static void XoaNhanVien(int maNhanVien)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.XoaNhanVien";
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaNhanVien";
+            param.Value = maNhanVien;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            DataAccessCode.ExecuteNonQuery(command);
+        }
+
+        internal static void SuaThongTinNhanVien(int maNhanVien, int maNhaHang, int maLoaiNhanVien, bool isLostUpdate)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            if (isLostUpdate)
+            {
+                if (GlobalVariables.bLostUpdate)
+                    command.CommandText = "dbo.ThayDoiThongTinNhanVienLostUpdate";
+                else command.CommandText = "dbo.ThayDoiThongTinNhanVienSolveLostUpdate";
+            }
+            else command.CommandText = "dbo.ThayDoiThongTinNhanVien";
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaNhanVien";
+            param.Value = maNhanVien;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@MaNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@MaLoaiNhanVien";
+            param.Value = maLoaiNhanVien;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataAccessCode.ExecuteNonQuery(command);
         }
     }
 }

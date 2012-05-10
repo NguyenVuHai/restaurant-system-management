@@ -24,5 +24,15 @@ namespace RestaurantApp_G21.BUS
             //throw new NotImplementedException();
             return ThongTinNhanVienDAO.LoadDanhSachNhanVien();
         }
+
+        internal static void XoaNhanVien(int maNhanVien)
+        {
+            ThongTinNhanVienDAO.XoaNhanVien(maNhanVien);
+        }
+
+        internal static void SuaThongTinNhanVien(int maNhanVien, int maNhaHang, int maLoaiNhanVien, bool isLostUpdate)
+        {
+            ThongTinNhanVienDAO.SuaThongTinNhanVien(maNhanVien, maNhaHang, maLoaiNhanVien, isLostUpdate);
+        }
     }
 }

@@ -105,6 +105,7 @@ namespace RestaurantApp_G21
             
             ThongTinNhanVienBUS.ThemNhanVien(nv);
             this.Close();
+            
         }
 
     }
