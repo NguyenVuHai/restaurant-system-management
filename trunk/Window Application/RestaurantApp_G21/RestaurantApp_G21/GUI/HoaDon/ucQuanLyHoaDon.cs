@@ -108,6 +108,7 @@ namespace RestaurantApp_G21
             GlobalVariables.bBongMa = rbBiBongMa.Checked;
             GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
             GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
+            GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
             if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
             {
                 LoadThongTinHoaDon(index);
