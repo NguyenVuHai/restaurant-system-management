@@ -46,6 +46,7 @@ namespace RestaurantApp_G21.DAO
         public static List<ChiTietThucDonDTO> LayDanhSachMonAnTrongHoaDon(Guid maHoaDon, bool isPhantom, bool isDirtyRead, bool isUnrepeatableRead, bool isLostUpdate)
         {
             DbCommand command = DataAccessCode.CreateCommand();
+            bool isSecond = false;
             if (GlobalVariables.bMacDinh || isLostUpdate)
             {
                 command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDon";
@@ -54,8 +55,10 @@ namespace RestaurantApp_G21.DAO
             {
                 if (isPhantom)
                 {
+                    isSecond = true;
                     if (GlobalVariables.bBongMa)
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonPhantom";
+
                     else
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolvePhantom";
                 }
@@ -68,11 +71,13 @@ namespace RestaurantApp_G21.DAO
                 }
                 else if (isUnrepeatableRead)
                 {
+                    isSecond = true;
                     if (GlobalVariables.bKhongTheDocLai)
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonUnRepeatableRead";
                     else
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveUnRepeatableRead";
-                } else if (isLostUpdate)
+                }
+                else if (isLostUpdate)
                 {
                     if (GlobalVariables.bLostUpdate)
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonLostUpdate";
@@ -86,7 +91,13 @@ namespace RestaurantApp_G21.DAO
             param.DbType = DbType.String;
             command.Parameters.Add(param);
 
-            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            DataTable dt;
+            if (isSecond)
+            {
+                dt = DataAccessCode.ExecuteSecondSelectCommand(command);
+            }
+            else dt = DataAccessCode.ExecuteSelectCommand(command);
+
             List<ChiTietThucDonDTO> list = new List<ChiTietThucDonDTO>();
             if (dt != null)
             {
@@ -99,6 +110,7 @@ namespace RestaurantApp_G21.DAO
                     chiTietThucDon.DonGia = Decimal.Parse(dt.Rows[i]["DonGia"].ToString());
                     chiTietThucDon.SoLuong = Int32.Parse(dt.Rows[i]["SoLuong"].ToString());
                     chiTietThucDon.MaChiTietHoaDon = Int32.Parse(dt.Rows[i]["MaChiTietHoaDon"].ToString());
+                    chiTietThucDon.ThanhTien = chiTietThucDon.SoLuong * chiTietThucDon.DonGia;
                     list.Add(chiTietThucDon);
                 }
             }

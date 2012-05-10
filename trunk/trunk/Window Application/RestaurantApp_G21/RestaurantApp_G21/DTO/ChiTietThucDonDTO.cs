@@ -58,5 +58,13 @@ namespace RestaurantApp_G21.DTO
             set { soLuong = value; }
         }
 
+        private decimal thanhTien;
+
+        public decimal ThanhTien
+        {
+            get { return thanhTien; }
+            set { thanhTien = value; }
+        }
+
     }
 }

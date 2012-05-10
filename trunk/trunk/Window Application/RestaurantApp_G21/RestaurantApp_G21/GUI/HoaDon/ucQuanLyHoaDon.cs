@@ -40,6 +40,18 @@ namespace RestaurantApp_G21
                     total += item.SoLuong * item.DonGia;
                 }
                 m_dtGridDSDatMon.DataSource = list;
+                m_dtGridDSDatMon.Columns["MaChiTietHoaDon"].Visible = false;
+                m_dtGridDSDatMon.Columns["MaChiTietThucDon"].Visible = false;
+                m_dtGridDSDatMon.Columns["MaThucDon"].Visible = false;
+                m_dtGridDSDatMon.Columns["MaMonAn"].Visible = false;
+                m_dtGridDSDatMon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
+                m_dtGridDSDatMon.Columns["DonGia"].HeaderText = "Đơn giá";
+                m_dtGridDSDatMon.Columns["SoLuong"].HeaderText = "Số lượng";
+                m_dtGridDSDatMon.Columns["ThanhTien"].HeaderText = "Tổng";
+                for (int i = 0; i < m_dtGridDSDatMon.Columns.Count; i++)
+                {
+                    m_dtGridDSDatMon.Columns[i].Width = m_dtGridDSDatMon.Width / 4;
+                }
                 m_txtTongTien.Text = total.ToString();
             }
             catch (Exception ex)

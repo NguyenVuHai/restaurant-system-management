@@ -60,6 +60,31 @@ public static class DataAccessCode
         }
         return table;
     }
+    public static DataTable ExecuteSecondSelectCommand(DbCommand command)
+    {
+        DataTable table = null;
+        try
+        {
+            command.Connection.Open();
+            DbDataReader reader = command.ExecuteReader();
+            if (reader.HasRows) 
+            {
+                reader.NextResult();
+            }
+            table = new DataTable();
+            table.Load(reader);
+            reader.Close();
+        }
+        catch (Exception ex)
+        {
+            //throw ex;
+        }
+        finally
+        {
+            command.Connection.Close();
+        }
+        return table;
+    }
 
     public static int ExecuteNonQuery(DbCommand command)
     {

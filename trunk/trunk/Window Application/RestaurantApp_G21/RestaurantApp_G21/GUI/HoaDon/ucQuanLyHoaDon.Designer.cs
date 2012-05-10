@@ -412,6 +412,7 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.m_dtGridDSDatMon.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.m_dtGridDSDatMon.RowHeadersVisible = false;
             this.m_dtGridDSDatMon.Size = new System.Drawing.Size(523, 257);
             this.m_dtGridDSDatMon.TabIndex = 3;
             this.m_dtGridDSDatMon.Click += new System.EventHandler(this.m_dtGridDSDatMon_Click);
@@ -897,6 +898,7 @@
             this.m_btnThayDoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_btnThayDoi.TabIndex = 1;
             this.m_btnThayDoi.Text = "Thay Đổi";
+            this.m_btnThayDoi.Visible = false;
             // 
             // m_btnXemHoaDon
             // 
@@ -910,6 +912,7 @@
             this.m_btnXemHoaDon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_btnXemHoaDon.TabIndex = 1;
             this.m_btnXemHoaDon.Text = "Xem Hóa Đơn";
+            this.m_btnXemHoaDon.Visible = false;
             // 
             // m_btnThanhToan
             // 
