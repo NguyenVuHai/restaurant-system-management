@@ -13,11 +13,6 @@ namespace RestaurantApp_G21.BUS
             return HoaDonDAO.ThemHoaDon(maLichBan, ngayLapHoaDon);
         }
 
-        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead)
-        {
-            HoaDonDAO.ThemMonAn(maHoaDon, maChiTietThucDon, donGia, soLuong, isPhantom, isDirtyRead);
-        }
-
         public static string KiemTraHoaDon(int maLichBan)
         {
             return HoaDonDAO.KiemTraHoaDon(maLichBan);
@@ -33,9 +28,9 @@ namespace RestaurantApp_G21.BUS
             HoaDonDAO.XoaMonAn(strChiTietHoaDon.ToString().Substring(0, strChiTietHoaDon.Length - 1), isDirtyRead, isUnrepeatableRead);
         }
 
-        public static void CapNhatChiTietHoaDon(int maChiTietHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isDirtyRead)
+        public static void CapNhatChiTietHoaDon(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead, bool isLostUpdate)
         {
-            HoaDonDAO.CapNhatChiTietHoaDon(maChiTietHoaDon,maChiTietThucDon,donGia,soLuong,isDirtyRead);
+            HoaDonDAO.CapNhatChiTietHoaDon(maHoaDon, maChiTietThucDon, donGia, soLuong, isPhantom, isDirtyRead, isLostUpdate);
         }
     }
 }

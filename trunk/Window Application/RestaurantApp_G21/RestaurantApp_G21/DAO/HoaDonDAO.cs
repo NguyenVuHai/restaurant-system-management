@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Common;
 using System.Data;
+using RestaurantApp_G21.DTO;
 
 namespace RestaurantApp_G21.DAO
 {
@@ -50,41 +51,6 @@ namespace RestaurantApp_G21.DAO
             return flag;
         }
 
-        public static void ThemMonAn(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead)
-        {
-            DbCommand command = DataAccessCode.CreateCommand();
-            if (isPhantom)
-                command.CommandText = "dbo.ThemMonAnPhantom";
-            else if (isDirtyRead)
-                command.CommandText = "dbo.ThemMonAnDirtyRead";
-            else command.CommandText = "dbo.ThemMonAn";
-            //// create a new parameter
-            DbParameter param = command.CreateParameter();
-            param.ParameterName = "@MaHoaDon";
-            param.Value = maHoaDon.ToString();
-            param.DbType = DbType.String;
-            command.Parameters.Add(param);
-            //// create a new parameter
-            param = command.CreateParameter();
-            param.ParameterName = "@MaChiTietThucDon";
-            param.Value = maChiTietThucDon;
-            param.DbType = DbType.Int32;
-            command.Parameters.Add(param);
-            //// create a new parameter
-            param = command.CreateParameter();
-            param.ParameterName = "@DonGia";
-            param.Value = donGia;
-            param.DbType = DbType.Decimal;
-            command.Parameters.Add(param);
-            //// create a new parameter
-            param = command.CreateParameter();
-            param.ParameterName = "@SoLuong";
-            param.Value = soLuong;
-            param.DbType = DbType.Int32;
-            command.Parameters.Add(param);
-            DataAccessCode.ExecuteNonQuery(command);
-        }
-
         public static void XoaMonAn(string maChiTietHoaDon, bool isDirtyRead, bool isUnrepeatableRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -106,16 +72,25 @@ namespace RestaurantApp_G21.DAO
             DataAccessCode.ExecuteNonQuery(command);
         }
 
-        public static void CapNhatChiTietHoaDon(int maChiTietHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isDirtyRead)
+        public static void CapNhatChiTietHoaDon(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead, bool isLostUpdate)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             if (isDirtyRead)
                 command.CommandText = "dbo.CapNhatChiTietHoaDonDirtyRead";
+            else if (isPhantom)
+                command.CommandText = "dbo.CapNhatChiTietHoaDonPhanTom";
+            else if (isLostUpdate)
+            {
+                if (GlobalVariables.bLostUpdate)
+                    command.CommandText = "dbo.CapNhatChiTietHoaDonLostUpdate";
+                else 
+                command.CommandText = "dbo.CapNhatChiTietHoaDonSolveLostUpdate";
+            }
             else command.CommandText = "dbo.CapNhatChiTietHoaDon";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
-            param.ParameterName = "@MaChiTietHoaDon";
-            param.Value = maChiTietHoaDon.ToString();
+            param.ParameterName = "@MaHoaDon";
+            param.Value = maHoaDon.ToString();
             param.DbType = DbType.String;
             command.Parameters.Add(param);
             //// create a new parameter
