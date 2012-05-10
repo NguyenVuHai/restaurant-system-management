@@ -15,9 +15,14 @@ namespace RestaurantApp_G21
         public frmCongTy()
         {
             InitializeComponent();
-            LoadNhaHang();
-            LoadLoaiNhanVien();
-            LoadDanhSachNhanVien();
+            LoadNhaHang(m_cbxNhaHang);
+            LoadNhaHang(m_cbx_nv_nhaHang);
+            LoadLoaiNhanVien(m_cbxLoaiNV);
+            LoadLoaiNhanVien(m_cbx_nv_loaiNhanVien);
+            LoadDanhSachNhanVien(); 
+            m_btn_nv_hoanTatSuaNV.Visible = false;
+
+            LoadLichLamViec();
         }
 
         private void frmCongTy_Load(object sender, EventArgs e)
@@ -25,32 +30,32 @@ namespace RestaurantApp_G21
             this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
         }
 
-        private void LoadNhaHang()
+        private void LoadNhaHang(ComboBox cbx)
         {
-            m_cbxNhaHang.Items.Clear();
-            m_cbxNhaHang.Items.Add("Chọn nhà hàng");
+            cbx.Items.Clear();
+            cbx.Items.Add("Chọn nhà hàng");
             List<NhaHangDTO> nhaHang = NhaHangBUS.LayDanhSachNhaHang();
             foreach (NhaHangDTO oNhaHang in nhaHang)
             {
-                m_cbxNhaHang.Items.Add(oNhaHang);
+                cbx.Items.Add(oNhaHang);
             }
-            m_cbxNhaHang.SelectedIndex = 0;
-            m_cbxNhaHang.ValueMember = "MaNhaHang";
-            m_cbxNhaHang.DisplayMember = "TenNhaHang";
+            cbx.SelectedIndex = 0;
+            cbx.ValueMember = "MaNhaHang";
+            cbx.DisplayMember = "TenNhaHang";
         }
 
-        private void LoadLoaiNhanVien()
+        private void LoadLoaiNhanVien(ComboBox cbx)
         {
-            m_cbxLoaiNV.Items.Clear();
-            m_cbxLoaiNV.Items.Add("Chọn loại nhân viên");
+            cbx.Items.Clear();
+            cbx.Items.Add("Chọn loại nhân viên");
             List<LoaiNhanVienDTO> loaiNhanVien = LoaiNhanVienBUS.LayDanhSachLoaiNhanVien();
             foreach (LoaiNhanVienDTO oLoaiNhanVien in loaiNhanVien)
             {
-                m_cbxLoaiNV.Items.Add(oLoaiNhanVien);
+                cbx.Items.Add(oLoaiNhanVien);
             }
-            m_cbxLoaiNV.SelectedIndex = 0;
-            m_cbxLoaiNV.ValueMember = "MaLoaiNhanVien";
-            m_cbxLoaiNV.DisplayMember = "TenLoaiNhanVien";
+            cbx.SelectedIndex = 0;
+            cbx.ValueMember = "MaLoaiNhanVien";
+            cbx.DisplayMember = "TenLoaiNhanVien";
         }
 
         private void LoadDanhSachNhanVien()
@@ -61,6 +66,19 @@ namespace RestaurantApp_G21
                 m_dgvDanhSachNhanVien.DataSource = dt;
             else
                 m_dgvDanhSachNhanVien.DataSource = null;
+        }
+
+        private void ResetDuLieuPanelThongTinNhanVien()
+        {
+            m_txt_nv_maNV.Text = null;
+            m_txt_nv_hoNhanVien.Text = null;
+            m_txt_nv_tenNhanVien.Text = null;
+            m_txt_nv_cmnd.Text = null;
+            m_txt_nv_dienThoai.Text = null;
+            m_txt_nv_diaChi.Text = null;
+            m_cbx_nv_loaiNhanVien.SelectedIndex = 0;
+            m_cbx_nv_nhaHang.SelectedIndex = 0;
+            m_txt_nv_tinhTrang.Text = null;
         }
 
         private void m_btnTimKiemNhanVien_Click(object sender, EventArgs e)
@@ -93,10 +111,20 @@ namespace RestaurantApp_G21
                 m_dgvDanhSachNhanVien.DataSource = null;
         }
 
+        private void LoadLichLamViec()
+        {
+            List<LichLamViecDTO> dt = LichLamViecBUS.LoadLichLamViec();
+            if (dt.Count > 0)
+                m_dgvLichLamViec.DataSource = dt;
+            else
+                m_dgvLichLamViec.DataSource = null;
+        }
+
         private void m_btnThemNV_Click(object sender, EventArgs e)
         {
-            Form frm = new frmThongTinNhanVien();
-            frm.ShowDialog();
+            ResetDuLieuPanelThongTinNhanVien();
+            m_btn_nv_hoanTatSuaNV.Visible = false;
+            m_titleThongTinNhanVien.Text = "Thêm Thông Tin Nhân Viên";
         }
 
         private void m_btnSuaNV_Click(object sender, EventArgs e)
@@ -120,9 +148,79 @@ namespace RestaurantApp_G21
                 //MessageBox.Show(nh.ToString());
 
                 Form frm = new frmThongTinNhanVien(maNV, nh, loaiNV, hoNV, tenNV, cmnd, diaChi, dienThoai);
+          
                 frm.ShowDialog();
             }
         }
+
+        private void m_dgvDanhSachNhanVien_Click(object sender, EventArgs e)
+        {
+            
+            //Load dữ liệu lên form
+            int numRow = m_dgvDanhSachNhanVien.CurrentCell.RowIndex;
+            m_txt_nv_maNV.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[0].Value);
+            m_cbx_nv_nhaHang.SelectedIndex = Convert.ToInt32(m_dgvDanhSachNhanVien.Rows[numRow].Cells[1].Value);
+            m_cbx_nv_loaiNhanVien.SelectedIndex = Convert.ToInt32(m_dgvDanhSachNhanVien.Rows[numRow].Cells[2].Value);
+            m_txt_nv_hoNhanVien.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[3].Value);
+            m_txt_nv_tenNhanVien.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[4].Value);
+            m_txt_nv_cmnd.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[5].Value);
+            m_txt_nv_diaChi.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[6].Value);
+            m_txt_nv_dienThoai.Text = Convert.ToString(m_dgvDanhSachNhanVien.Rows[numRow].Cells[7].Value);
+
+            //Load label form
+            m_titleThongTinNhanVien.Text = "Sửa Thông Tin Nhân Viên";
+            m_btn_nv_hoanTatThemNV.Visible = false;
+            m_btn_nv_hoanTatSuaNV.Visible = true;
+        }
+
+        private void m_btnHuy_Click(object sender, EventArgs e)
+        {
+            ResetDuLieuPanelThongTinNhanVien();
+            m_titleThongTinNhanVien.Text = "Thông Tin Nhân Viên";
+            m_btn_nv_hoanTatSuaNV.Visible = false;
+            m_btn_nv_hoanTatThemNV.Visible = true;
+        }
+
+        private void m_btn_nv_hoanTatThemNV_Click(object sender, EventArgs e)
+        {
+            ThongTinNhanVienDTO nv = new ThongTinNhanVienDTO()
+            {
+                //MaNhanVien = Convert.ToInt32(m_txtMaNV.Text),
+                Ho = m_txt_nv_hoNhanVien.Text,
+                Ten = m_txt_nv_tenNhanVien.Text,
+                MaLoaiNhanVien = ((LoaiNhanVienDTO)m_cbx_nv_loaiNhanVien.SelectedItem).MaLoaiNhanVien,
+                MaNhaHang = ((NhaHangDTO)m_cbx_nv_nhaHang.SelectedItem).MaNhaHang,
+                CMND = m_txt_nv_cmnd.Text,
+                DiaChi = m_txt_nv_diaChi.Text,
+                DienThoai = m_txt_nv_dienThoai.Text,
+                NgayVaoLam = m_dtp_nv_ngayVaolam.Value,
+                TinhTrang = m_txt_nv_tinhTrang.Text
+            };
+
+            ThongTinNhanVienBUS.ThemNhanVien(nv);
+            LoadDanhSachNhanVien();
+        }
+
+        private void m_btn_nv_hoanTatSuaNV_Click(object sender, EventArgs e)
+        {
+            GlobalVariables.bLostUpdate = rbLostUpdate.Checked;
+            int maNH = m_cbx_nv_nhaHang.SelectedIndex;
+            int maLoai = m_cbx_nv_loaiNhanVien.SelectedIndex;
+            ThongTinNhanVienBUS.SuaThongTinNhanVien(Int32.Parse(m_txt_nv_maNV.Text), maNH, maLoai, rbcLostUpdate.Checked);
+            LoadDanhSachNhanVien();
+        }
+
+        private void m_btnXoaNV_Click(object sender, EventArgs e)
+        {
+            ThongTinNhanVienBUS.XoaNhanVien(GlobalVariables.maNhanVien);
+            LoadDanhSachNhanVien();
+        }
+
+        private void m_dgvDanhSachNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
     }
 }
