@@ -7,6 +7,13 @@ namespace RestaurantApp_G21.DTO
 {
     class KhoHang_NguyenLieuDTO
     {
+        private NguyenLieuDTO nguyenLieu;
+
+        internal NguyenLieuDTO NguyenLieu
+        {
+            get { return nguyenLieu; }
+            set { nguyenLieu = value; }
+        }
         private int soLuongTon;
 
         public int SoLuongTon
@@ -31,6 +38,7 @@ namespace RestaurantApp_G21.DTO
 
         public KhoHang_NguyenLieuDTO()
         {
+            nguyenLieu = new NguyenLieuDTO();
             soLuongTon = 0;
             sucChua = 0;
             mucTonToiThieu = 0;
@@ -38,7 +46,8 @@ namespace RestaurantApp_G21.DTO
 
         public override string ToString()
         {
-            return soLuongTon.ToString();
+            //return soLuongTon.ToString();
+            return nguyenLieu.MaNguyenLieu.ToString();
         }
     }
 }
