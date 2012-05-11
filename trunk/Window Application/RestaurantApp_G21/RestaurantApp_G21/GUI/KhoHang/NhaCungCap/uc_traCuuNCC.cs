@@ -77,6 +77,9 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
             else
             {
                 if (curIndex == 1 || curIndex == 2)
+                    //dsNCC = KhoHangBUS.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(txt_ten.Text, curIndex, GlobalVariables.maNhaHang);
+
+                    //phantom read
                     dsNCC = KhoHangBUS.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(txt_ten.Text, curIndex, GlobalVariables.maNhaHang);
                 if (curIndex == 3)
                     dsNCC = KhoHangBUS.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(txt_ten.Text, GlobalVariables.maNhaHang);
@@ -100,6 +103,28 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         private void txt_ten_TextChanged(object sender, EventArgs e)
         {
             cb_tinTrangGiaoDich_SelectedIndexChanged();
+        }
+
+        private void bt_ngungGiaoDich_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < grid_ds.RowCount; i++)
+            {
+                decimal tongNo = Convert.ToDecimal(grid_ds.Rows[i].Cells["cTongNo"].Value);
+                if (Convert.ToBoolean(grid_ds.Rows[i].Cells["cb"].Value) == true && tongNo == 0)
+                {
+                    int kq = 0;
+                    int maNhaCungCap = Convert.ToInt32(grid_ds.Rows[i].Cells["cMaNhaCungCap"].Value);
+                    kq = NhaCungCapBUS.setNgungGiaoDich(maNhaCungCap, GlobalVariables.maNhaHang, 0);
+                    if (kq == 0)
+                    {
+                        MessageBox.Show("Thao tác không thành công tại\nNhà cung cấp Mã: " + maNhaCungCap.ToString(), "[!] Thông báo");
+                        break;
+                    }
+                }
+                
+            }
+            cb_tinTrangGiaoDich_SelectedIndexChanged();
+
         }
     }
 }
