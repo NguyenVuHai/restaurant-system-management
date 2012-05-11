@@ -10,6 +10,10 @@ namespace RestaurantApp_G21.BUS
 {
     class NhaCungCapBUS
     {
+        public static int setNgungGiaoDich(int maNhaCungCap, int maNhaHang, int tinhTrang)
+        {
+            return NhaCungCapDAO.setNgungGiaoDich(maNhaCungCap,maNhaHang,tinhTrang);
+        }
         public static ArrayList layDanhSachNguyenLieuNhaCungCapCoTheDapUngTheoDonDatHang(int maNhaCungCap, string sqlWHEREor)
         {
             return NhaCungCapDAO.layDanhSachNguyenLieuNhaCungCapCoTheDapUngTheoDonDatHang(maNhaCungCap, sqlWHEREor);

@@ -18,5 +18,13 @@ namespace RestaurantApp_G21.BUS
             }
             return 0;
         }
+        public static int capNhatChiTietKhoHangNguyenLieuT2(KhoHang_NguyenLieuDTO dto, int maNhaHang)
+        {
+            if (dto != null && dto.NguyenLieu.MaNguyenLieu != 0 && maNhaHang != 0)
+            {
+                return KhoHang_NguyenLieuDAO.capNhatChiTietKhoHangNguyenLieuT2(dto, maNhaHang);
+            }
+            return 0;
+        }
     }
 }
