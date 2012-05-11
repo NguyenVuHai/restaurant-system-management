@@ -100,11 +100,14 @@
     <Compile Include="BUS\BuoiBUS.cs" />
     <Compile Include="BUS\ChiTietThucDonBUS.cs" />
     <Compile Include="BUS\HoaDonBUS.cs" />
+    <Compile Include="BUS\KhoHangBUS.cs" />
+    <Compile Include="BUS\KhoHang_NguyenLieuBUS.cs" />
     <Compile Include="BUS\KhuVucBUS.cs" />
     <Compile Include="BUS\LoaiMonAnBUS.cs" />
     <Compile Include="BUS\LoaiNhanVienBUS.cs" />
     <Compile Include="BUS\LoaiNhanVienCNBUS.cs" />
     <Compile Include="BUS\MonAnBUS.cs" />
+    <Compile Include="BUS\NhaCungCapBUS.cs" />
     <Compile Include="BUS\NhaHangBUS.cs" />
     <Compile Include="BUS\PhanLoaiMonAnBUS.cs" />
     <Compile Include="BUS\ThongTinBanBUS.cs" />
@@ -116,11 +119,14 @@
     <Compile Include="DAO\ChiTietThucDonDAO.cs" />
     <Compile Include="DAO\DataAccessCode.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhoHangDAO.cs" />
+    <Compile Include="DAO\KhoHang_NguyenLieuDAO.cs" />
     <Compile Include="DAO\KhuVucDAO.cs" />
     <Compile Include="DAO\LoaiMonAnDAO.cs" />
     <Compile Include="DAO\LoaiNhanVienCNDAO.cs" />
     <Compile Include="DAO\LoaiNhanVienDAO.cs" />
     <Compile Include="DAO\MonAnDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\NhaHangDAO.cs" />
     <Compile Include="DAO\PhanLoaiMonAnDAO.cs" />
     <Compile Include="DAO\ThongTinBanDAO.cs" />
@@ -131,6 +137,7 @@
     <Compile Include="DTO\ChiTietThucDonDTO.cs" />
     <Compile Include="DTO\GlobalVariables.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
+    <Compile Include="DTO\KhoHangDTO.cs" />
     <Compile Include="DTO\KhoHang_NguyenLieuDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
     <Compile Include="DTO\LoaiMonAnDTO.cs" />
@@ -139,6 +146,7 @@
     <Compile Include="DTO\MonAnDTO.cs" />
     <Compile Include="DTO\MonAn_NguyenLieuDTO.cs" />
     <Compile Include="DTO\NguyenLieuDTO.cs" />
+    <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhaHangDTO.cs" />
     <Compile Include="DTO\BanDatDTO.cs" />
     <Compile Include="DTO\PhanLoaiMonAnDTO.cs" />
@@ -196,6 +204,12 @@
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\RestaurantConfiguration.cs" />
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu.designer.cs">
+      <DependentUpon>fm_nguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +252,12 @@
     <Compile Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.Designer.cs">
       <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_nccToiHanCanThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoHang\NhaCungCap\uc_nccToiHanCanThanhToan.designer.cs">
+      <DependentUpon>uc_nccToiHanCanThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoHang\NhaCungCap\uc_NCC_ChiTiet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +290,7 @@
     <Compile Include="GUI\HoaDon\ucQuanLyHoaDon.Designer.cs">
       <DependentUpon>ucQuanLyHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucQuanLyHoaDon.cs" />
     <Compile Include="uCtr_BanChuaDat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -324,6 +345,9 @@
     <EmbeddedResource Include="GUI\Demo\frmDirtyReadNhanVien.resx">
       <DependentUpon>frmDirtyReadNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu.resx">
+      <DependentUpon>fm_nguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu_info.resx">
       <DependentUpon>fm_nguyenLieu_info.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\fm_NCC_ChiTiet.resx">
       <DependentUpon>fm_NCC_ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\uc_nccToiHanCanThanhToan.resx">
+      <DependentUpon>uc_nccToiHanCanThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NhaCungCap\uc_NCC_ChiTiet.resx">
       <DependentUpon>uc_NCC_ChiTiet.cs</DependentUpon>

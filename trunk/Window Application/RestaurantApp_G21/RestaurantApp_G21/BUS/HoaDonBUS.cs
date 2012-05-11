@@ -32,5 +32,10 @@ namespace RestaurantApp_G21.BUS
         {
             HoaDonDAO.CapNhatChiTietHoaDon(maHoaDon, maChiTietThucDon, donGia, soLuong, isPhantom, isDirtyRead, isLostUpdate);
         }
+
+        public static string TinhTongHoaDon(Guid maHoaDon, bool isPhantom, bool isRepeatableRead)
+        {
+            return HoaDonDAO.TinhTongHoaDon(maHoaDon, isPhantom, isRepeatableRead);
+        }
     }
 }
