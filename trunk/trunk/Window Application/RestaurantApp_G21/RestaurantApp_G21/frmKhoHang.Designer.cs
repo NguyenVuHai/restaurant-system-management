@@ -36,16 +36,16 @@
             this.bt_thuGon = new System.Windows.Forms.Button();
             this.bt_dong = new System.Windows.Forms.Button();
             this.main_tab_KhoHang = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tab_nhapHangDotXuat = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tab_nguyenLieuCanNhap = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tab_NL = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.tab_noToiHanThanhToan = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.tab_NCC = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tab_nhapHangDotXuat = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tab_NL = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tab_nguyenLieuCanNhap = new DevComponents.DotNetBar.SuperTabItem();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_tab_KhoHang)).BeginInit();
             this.main_tab_KhoHang.SuspendLayout();
@@ -142,11 +142,11 @@
             this.main_tab_KhoHang.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.main_tab_KhoHang.ControlBox.MenuBox,
             this.main_tab_KhoHang.ControlBox.CloseBox});
-            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel5);
-            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel3);
-            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel2);
             this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel4);
+            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel3);
             this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel1);
+            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel5);
+            this.main_tab_KhoHang.Controls.Add(this.superTabControlPanel2);
             this.main_tab_KhoHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_tab_KhoHang.ForeColor = System.Drawing.Color.Black;
             this.main_tab_KhoHang.Location = new System.Drawing.Point(1, 1);
@@ -166,12 +166,63 @@
             this.main_tab_KhoHang.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.main_tab_KhoHang.Text = "superTabControl1";
             // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            this.superTabControlPanel4.Size = new System.Drawing.Size(942, 559);
+            this.superTabControlPanel4.TabIndex = 0;
+            this.superTabControlPanel4.TabItem = this.tab_nhapHangDotXuat;
+            // 
+            // tab_nhapHangDotXuat
+            // 
+            this.tab_nhapHangDotXuat.AttachedControl = this.superTabControlPanel4;
+            this.tab_nhapHangDotXuat.GlobalItem = false;
+            this.tab_nhapHangDotXuat.Name = "tab_nhapHangDotXuat";
+            this.tab_nhapHangDotXuat.Text = "Quản lý nhập hàng";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(942, 584);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tab_nguyenLieuCanNhap;
+            // 
+            // tab_nguyenLieuCanNhap
+            // 
+            this.tab_nguyenLieuCanNhap.AttachedControl = this.superTabControlPanel1;
+            this.tab_nguyenLieuCanNhap.GlobalItem = false;
+            this.tab_nguyenLieuCanNhap.Name = "tab_nguyenLieuCanNhap";
+            this.tab_nguyenLieuCanNhap.Text = "Nguyên liệu đang ở khoảng mức tối thiểu";
+            this.tab_nguyenLieuCanNhap.Click += new System.EventHandler(this.tab_nguyenLieuCanNhap_Click);
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.AutoSize = true;
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(942, 559);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.tab_NL;
+            // 
+            // tab_NL
+            // 
+            this.tab_NL.AttachedControl = this.superTabControlPanel3;
+            this.tab_NL.GlobalItem = false;
+            this.tab_NL.Name = "tab_NL";
+            this.tab_NL.Text = "Nguyên liệu tồn kho";
+            this.tab_NL.Click += new System.EventHandler(this.superTabItem1_Click);
+            // 
             // superTabControlPanel5
             // 
             this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(942, 559);
+            this.superTabControlPanel5.Size = new System.Drawing.Size(942, 584);
             this.superTabControlPanel5.TabIndex = 0;
             this.superTabControlPanel5.TabItem = this.tab_noToiHanThanhToan;
             // 
@@ -198,57 +249,6 @@
             this.tab_NCC.Name = "tab_NCC";
             this.tab_NCC.Text = "Thông tin Nhà Cung Cấp";
             this.tab_NCC.Click += new System.EventHandler(this.m_sTabItmTTBanDat_Click);
-            // 
-            // superTabControlPanel4
-            // 
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(942, 584);
-            this.superTabControlPanel4.TabIndex = 0;
-            this.superTabControlPanel4.TabItem = this.tab_nhapHangDotXuat;
-            // 
-            // tab_nhapHangDotXuat
-            // 
-            this.tab_nhapHangDotXuat.AttachedControl = this.superTabControlPanel4;
-            this.tab_nhapHangDotXuat.GlobalItem = false;
-            this.tab_nhapHangDotXuat.Name = "tab_nhapHangDotXuat";
-            this.tab_nhapHangDotXuat.Text = "Nhập hàng đột xuất";
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.AutoSize = true;
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(942, 559);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.tab_NL;
-            // 
-            // tab_NL
-            // 
-            this.tab_NL.AttachedControl = this.superTabControlPanel3;
-            this.tab_NL.GlobalItem = false;
-            this.tab_NL.Name = "tab_NL";
-            this.tab_NL.Text = "Nguyên liệu tồn kho";
-            this.tab_NL.Click += new System.EventHandler(this.superTabItem1_Click);
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(942, 584);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tab_nguyenLieuCanNhap;
-            // 
-            // tab_nguyenLieuCanNhap
-            // 
-            this.tab_nguyenLieuCanNhap.AttachedControl = this.superTabControlPanel1;
-            this.tab_nguyenLieuCanNhap.GlobalItem = false;
-            this.tab_nguyenLieuCanNhap.Name = "tab_nguyenLieuCanNhap";
-            this.tab_nguyenLieuCanNhap.Text = "Nguyên liệu đang ở khoảng mức tối thiểu";
-            this.tab_nguyenLieuCanNhap.Click += new System.EventHandler(this.tab_nguyenLieuCanNhap_Click);
             // 
             // frmKhoHang
             // 
