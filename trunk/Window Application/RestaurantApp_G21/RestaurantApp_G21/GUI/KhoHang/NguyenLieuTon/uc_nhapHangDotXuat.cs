@@ -34,15 +34,11 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
 
         private void bt_tabPage_CTPhieuDat_chonTatCa_Click(object sender, EventArgs e)
         {
-            GUI.accessory.checkAllRowsOfGrid(grid_chiTietPhieuDat, true);
-            bt_tabPage_CTPhieuDat_chonTatCa.Text = "Bỏ chọn";
-            bt_tabPage_CTPhieuDat_chonTatCa.Click += new EventHandler(bt_tabPage_CTPhieuDat_boChonTatCa_Click);
+            
         }
         private void bt_tabPage_CTPhieuDat_boChonTatCa_Click(object sender, EventArgs e)
         {
-            GUI.accessory.checkAllRowsOfGrid(grid_chiTietPhieuDat, false);
-            bt_tabPage_CTPhieuDat_chonTatCa.Text = "Chọn tất cả";
-            bt_tabPage_CTPhieuDat_chonTatCa.Click += new EventHandler(bt_tabPage_CTPhieuDat_chonTatCa_Click);
+            
         }
 
         private void bt_tabPage_boRa_Click(object sender, EventArgs e)
@@ -157,7 +153,7 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
                     MonAn_NguyenLieuDTO dto = (MonAn_NguyenLieuDTO)grid_nguyenLieuCanDatHang.Rows[i].Cells["grid_nguyenLieuCanDatHang_cNguyenLieu"].Value;
                     sqlFROM += "(SELECT NHNCC.MaNhaCungCap, NCCNL.DonGia "
                             + " FROM NHAHANG_NHACUNGCAP NHNCC JOIN NHACUNGCAP_NGUYENLIEU NCCNL ON NHNCC.MaNhaCungCap=NCCNL.MaNhaCungCap"
-                            + " WHERE NCCNL.MaNguyenLieu=" + dto.NguyenLieu.MaNguyenLieu.ToString() + " AND NHNCC.MaNhaHang=" + GlobalVariables.maNhaHang.ToString() + ")";
+                            + " WHERE NHNCC.TinhTrang=1 AND NCCNL.MaNguyenLieu=" + dto.NguyenLieu.MaNguyenLieu.ToString() + " AND NHNCC.MaNhaHang=" + GlobalVariables.maNhaHang.ToString() + ")";
                     int j = i + 1;
                     
                     sqlFROM += " UNION ALL ";
@@ -273,7 +269,9 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
 
                             grid_chiTietPhieuDat.Rows[grid_chiTietPhieuDat.RowCount - 1].Cells["gridCTPhieuDatHang_cNCC"].Value = nccDTO;
                             grid_chiTietPhieuDat.Rows[grid_chiTietPhieuDat.RowCount - 1].Cells["gridCTPhieuDatHang_cNguyenLieu"].Value = nlDTO;
-                        }
+                            grid_chiTietPhieuDat.Rows[grid_chiTietPhieuDat.RowCount - 1].Cells["gridCTPhieuDatHang_cDonVi"].Value = nlDTO.DonViTinh;
+                            
+                        } 
                     }
                 }
             }
@@ -286,6 +284,61 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
                     return true;
             }
             return false;
+        }
+
+        private void grid_chiTietPhieuDat_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            NguyenLieuDTO nlDTO = (NguyenLieuDTO)grid_chiTietPhieuDat.CurrentRow.Cells["gridCTPhieuDatHang_cNguyenLieu"].Value;
+
+            int soLuongDatHang = Convert.ToInt32(grid_chiTietPhieuDat.CurrentRow.Cells["gridCTPhieuDatHang_cLuongDat"].Value);
+            decimal thanhTien = Convert.ToDecimal(nlDTO.DonGia * soLuongDatHang);
+            grid_chiTietPhieuDat.CurrentRow.Cells["gridCTPhieuDatHang_cThanhTien"].Value = thanhTien;
+            lb_tongSoTien.Text = tinhTongSoTien().ToString()+"000 VNĐ";
+        }
+        private decimal tinhTongSoTien()
+        {
+            decimal s = 0;
+            for (int i = 0; i < grid_chiTietPhieuDat.RowCount; i++)
+            {
+                s += Convert.ToDecimal(grid_chiTietPhieuDat.Rows[i].Cells["gridCTPhieuDatHang_cThanhTien"].Value);
+            }
+            return s;
+
+        }
+
+        private void dongGoiThongTinThongTinHangNhapDTO(ThongTinHangNhapDTO dto)
+        {
+            dto.KhoHang = KhoHangBUS.layThongTinKhoHangTheoNhaHang(GlobalVariables.maNhaHang);
+            dto.NgayNhap = DateTime.Now;
+            dongGoiChiTietHangNhapDTO(dto);
+        }
+        private void dongGoiChiTietHangNhapDTO(ThongTinHangNhapDTO dto)
+        {
+            for (int i = 0; i < grid_chiTietPhieuDat.RowCount; i++)
+            {
+                ChiTietHangNhapDTO chiTiet = new ChiTietHangNhapDTO();
+                chiTiet.NhaCungCap = (NhaCungCapDTO)grid_chiTietPhieuDat.Rows[i].Cells["gridCTPhieuDatHang_cNCC"].Value;
+                chiTiet.NguyenLieu = (NguyenLieuDTO)grid_chiTietPhieuDat.Rows[i].Cells["gridCTPhieuDatHang_cNguyenLieu"].Value;
+                chiTiet.SoLuong = Convert.ToDecimal(grid_chiTietPhieuDat.Rows[i].Cells["gridCTPhieuDatHang_cLuongDat"].Value);
+
+                dto.ChiTietHangNhap.Add(chiTiet);
+            }
+        }
+        private void bt_lapPhieuDatHang_Click(object sender, EventArgs e)
+        {
+            ThongTinHangNhapDTO ttNhap = new ThongTinHangNhapDTO();
+            dongGoiThongTinThongTinHangNhapDTO(ttNhap);
+            int kq = ThongTinHangNhapBUS.themThongTinHangNhap(ttNhap);
+            if (kq != 0)
+            {
+                MessageBox.Show("Lập phiếu thành công!", "[!] Thông báo");
+                bt_lapPhieuDatHang.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Lập phiếu thất bại!", "[!] Thông báo");
+                bt_lapPhieuDatHang.Enabled = true;
+            }
         }
     }
 }

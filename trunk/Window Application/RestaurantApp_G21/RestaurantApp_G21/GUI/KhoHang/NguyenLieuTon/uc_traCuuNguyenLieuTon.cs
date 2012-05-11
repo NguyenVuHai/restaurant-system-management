@@ -51,7 +51,10 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         {
             //dto.NguyenLieu.TenNguyenLieu = grid_ds.Rows[rowOfGrid].Cells["cTenNguyenLieu"].Value.ToString();
             //quan ly kho ko dc sua ten nguyen lieu, anh huong toi nhung nha hang khac
+            
             dto.SoLuongTon = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongTon"].Value);
+            if(Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongXuat"].Value)!=0)
+                dto.SoLuongTon -= Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongXuat"].Value);
             dto.SucChua = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cToiDa"].Value);
             dto.MucTonToiThieu = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cToiThieu"].Value);
             //dto.NguyenLieu.DonViTinh = grid_ds.Rows[rowOfGrid].Cells["cDonViTinh"].Value.ToString();
@@ -62,7 +65,7 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
             GUI.accessory.readOnlyCheckedRows(grid_ds, false);
             GUI.accessory.readOnlyCheckedSomeCells(grid_ds, true,1);//ma nguyen lieu
             GUI.accessory.readOnlyCheckedSomeCells(grid_ds, true,4);//con trong
-            bt_sua.Text = "Cập nhật";
+            bt_sua.Text = "Lưu lại";
             bt_sua.Click += new EventHandler(bt_capNhat_Click);
         }
         private void bt_capNhat_Click(object sender, EventArgs e)
@@ -74,19 +77,20 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
                     KhoHang_NguyenLieuDTO updateDTO = (KhoHang_NguyenLieuDTO)grid_ds.Rows[i].Cells["cMaNguyenLieu"].Value;
                     layChiTietKhoHangNguyenLieuDTO(updateDTO, i);
                     int kq = KhoHang_NguyenLieuBUS.capNhatChiTietKhoHangNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
-                    if (kq == 0)
+                    if (kq != 1)
                     {
                         MessageBox.Show("Không cập nhật được dòng thứ " + (i + 1).ToString(), "[!]Thông báo");
                         return;
                     }
+                    grid_ds.Rows[i].Cells["cLuongXuat"].Value = 0;
                 }
             }
             //lam tuoi danh sach sau khi da cap nhat thanh cong
             lamTuoiDanhSachTraCuuNguyenLieu();
 
-            GUI.accessory.readOnlyCheckedRows(grid_ds, true);
-            bt_sua.Text = "Sửa";
-            bt_sua.Click += new EventHandler(bt_sua_Click);
+            //GUI.accessory.readOnlyCheckedRows(grid_ds, true);
+            
+            //bt_sua.Click += new EventHandler(bt_sua_Click);
         }
 
         private void bt_chonTatCa_Click(object sender, EventArgs e)
@@ -224,10 +228,10 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         private void bt_lamTuoi_Click(object sender, EventArgs e)
         {
             lamTuoiDanhSachTraCuuNguyenLieu();
-            GUI.accessory.readOnlyCheckedRows(grid_ds, true);
-            bt_sua.Text = "Sửa";
-            bt_sua.Click += new EventHandler(bt_sua_Click);
-            accessory.readOnlyCheckedRows(grid_ds, true);
+            //GUI.accessory.readOnlyCheckedRows(grid_ds, true);
+            //bt_sua.Text = "Sửa";
+            //bt_sua.Click += new EventHandler(bt_sua_Click);
+            //accessory.readOnlyCheckedRows(grid_ds, true);
         }
 
         private void grid_ds_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -278,6 +282,32 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
         private void panelEx1_Resize(object sender, EventArgs e)
         {
             accessory.initButtonDockFillInPanelEx(panelEx1);
+        }
+
+        private void grid_ds_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void bt_luuLaiT2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < grid_ds.RowCount; i++)
+            {
+                if (Convert.ToBoolean(grid_ds.Rows[i].Cells[0].Value) == true)
+                {
+                    KhoHang_NguyenLieuDTO updateDTO = (KhoHang_NguyenLieuDTO)grid_ds.Rows[i].Cells["cMaNguyenLieu"].Value;
+                    layChiTietKhoHangNguyenLieuDTO(updateDTO, i);
+                    int kq = KhoHang_NguyenLieuBUS.capNhatChiTietKhoHangNguyenLieuT2(updateDTO, GlobalVariables.maNhaHang);
+                    if (kq == 0)
+                    {
+                        MessageBox.Show("Không cập nhật được dòng thứ " + (i + 1).ToString(), "[!]Thông báo");
+                        return;
+                    }
+                    grid_ds.Rows[i].Cells["cLuongXuat"].Value = 0;
+                }
+            }
+            //lam tuoi danh sach sau khi da cap nhat thanh cong
+            lamTuoiDanhSachTraCuuNguyenLieu();
         }
 
     }
