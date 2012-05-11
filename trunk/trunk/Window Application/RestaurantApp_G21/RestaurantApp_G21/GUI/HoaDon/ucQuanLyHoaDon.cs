@@ -34,29 +34,34 @@ namespace RestaurantApp_G21
             try
             {
                 List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked, rbLostUpdate.Checked);
-                decimal total = 0;
-                foreach (var item in list)
-                {
-                    total += item.SoLuong * item.DonGia;
-                }
-                m_dtGridDSDatMon.DataSource = list;
-                m_dtGridDSDatMon.Columns["MaChiTietHoaDon"].Visible = false;
-                m_dtGridDSDatMon.Columns["MaChiTietThucDon"].Visible = false;
-                m_dtGridDSDatMon.Columns["MaThucDon"].Visible = false;
-                m_dtGridDSDatMon.Columns["MaMonAn"].Visible = false;
-                m_dtGridDSDatMon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
-                m_dtGridDSDatMon.Columns["DonGia"].HeaderText = "Đơn giá";
-                m_dtGridDSDatMon.Columns["SoLuong"].HeaderText = "Số lượng";
-                m_dtGridDSDatMon.Columns["ThanhTien"].HeaderText = "Tổng";
-                for (int i = 0; i < m_dtGridDSDatMon.Columns.Count; i++)
-                {
-                    m_dtGridDSDatMon.Columns[i].Width = m_dtGridDSDatMon.Width / 4;
-                }
-                m_txtTongTien.Text = total.ToString();
+                GridViewDisplay(list);
             }
             catch (Exception ex)
             {
             }
+        }
+
+        private void GridViewDisplay(List<ChiTietThucDonDTO> list)
+        {
+            decimal total = 0;
+            foreach (var item in list)
+            {
+                total += item.SoLuong * item.DonGia;
+            }
+            m_dtGridDSDatMon.DataSource = list;
+            m_dtGridDSDatMon.Columns["MaChiTietHoaDon"].Visible = false;
+            m_dtGridDSDatMon.Columns["MaChiTietThucDon"].Visible = false;
+            m_dtGridDSDatMon.Columns["MaThucDon"].Visible = false;
+            m_dtGridDSDatMon.Columns["MaMonAn"].Visible = false;
+            m_dtGridDSDatMon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
+            m_dtGridDSDatMon.Columns["DonGia"].HeaderText = "Đơn giá";
+            m_dtGridDSDatMon.Columns["SoLuong"].HeaderText = "Số lượng";
+            m_dtGridDSDatMon.Columns["ThanhTien"].HeaderText = "Tổng";
+            for (int i = 0; i < m_dtGridDSDatMon.Columns.Count; i++)
+            {
+                m_dtGridDSDatMon.Columns[i].Width = m_dtGridDSDatMon.Width / 4;
+            }
+            m_txtTongTien.Text = total.ToString();
         }
         #endregion
         public frmQuanLyHoaDon()
@@ -276,8 +281,14 @@ namespace RestaurantApp_G21
 
         private void m_btnThanhToan_Click(object sender, EventArgs e)
         {
-            string thanhtien = HoaDonBUS.TinhTongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbKhongTheDocLai.Checked);
-            MessageBox.Show(String.Format("Tổng hóa đơn: {0}", thanhtien));
+            List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked, rbLostUpdate.Checked);
+            decimal thanhtien = 0;
+            foreach (ChiTietThucDonDTO item in list)
+            {
+                thanhtien += item.ThanhTien;
+            }
+            MessageBox.Show(String.Format("Tổng số dòng lần 1: {2}\nTổng số dòng lần 2: {1}\nTổng hóa đơn: {0}",thanhtien,list.Count,m_dtGridDSDatMon.Rows.Count),"Demo Phantom");
+            GridViewDisplay(list);
         }
     }
 }

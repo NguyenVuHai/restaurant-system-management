@@ -51,31 +51,6 @@ namespace RestaurantApp_G21.DAO
             return flag;
         }
 
-        public static string TinhTongHoaDon(Guid maHoaDon, bool isPhantom, bool isRepeatableRead)
-        {
-            DbCommand command = DataAccessCode.CreateCommand();
-            if (isPhantom)
-            {
-                if (GlobalVariables.bBongMa)
-                    command.CommandText = "dbo.TinhTongHoaDonPhantom";
-                else command.CommandText = "dbo.TinhTongHoaDonSolvePhantom";
-            } else if (isRepeatableRead)
-            {
-                if (GlobalVariables.bKhongTheDocLai)
-                    command.CommandText = "dbo.TinhTongHoaDonUnrepeatableRead";
-                else command.CommandText = "dbo.TinhTongHoaDonSolveUnrepeatableRead";
-            } else {
-                command.CommandText = "dbo.TinhTongHoaDon";
-            }
-            //// create a new parameter
-            DbParameter param = command.CreateParameter();
-            param.ParameterName = "@MaHoaDon";
-            param.Value = maHoaDon.ToString();
-            param.DbType = DbType.String;
-            command.Parameters.Add(param);
-            return DataAccessCode.ExecuteScalar(command);
-        }
-
         public static void XoaMonAn(string maChiTietHoaDon, bool isDirtyRead, bool isUnrepeatableRead)
         {
             DbCommand command = DataAccessCode.CreateCommand();
