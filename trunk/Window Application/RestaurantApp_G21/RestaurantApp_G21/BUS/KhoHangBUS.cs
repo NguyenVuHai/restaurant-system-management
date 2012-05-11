@@ -9,6 +9,10 @@ namespace RestaurantApp_G21.BUS
 {
     class KhoHangBUS
     {
+        public static KhoHangDTO layThongTinKhoHangTheoNhaHang(int maNhaHang)
+        {
+            return KhoHangDAO.layThongTinKhoHangTheoNhaHang(maNhaHang);
+        }
         public static ArrayList layDanhSachNhaCungCapToiHanDuocThanhToanNoTheoThoiDiemThanhToan(int maNhaHang)
         {
             return KhoHangDAO.layDanhSachNhaCungCapToiHanDuocThanhToanNoTheoThoiDiemThanhToan(maNhaHang);
