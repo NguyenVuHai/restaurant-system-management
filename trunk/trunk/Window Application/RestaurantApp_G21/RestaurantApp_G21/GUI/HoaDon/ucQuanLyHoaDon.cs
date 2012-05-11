@@ -212,5 +212,66 @@ namespace RestaurantApp_G21
         {
             GlobalVariables.bMacDinh = rbNormal.Checked;
         }
+
+        private void rbBiBongMa_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bBongMa = rbBiBongMa.Checked;
+        }
+
+        private void rbKhongBongMa_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bBongMa = rbBiBongMa.Checked;
+        }
+
+        private void rbBiDuLieuRac_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
+        }
+
+        private void rbKhongDuLieuRac_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
+        }
+
+        private void rbBiKhongTheDocLai_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
+
+        }
+
+        private void rbKhongBiKhongTheDocLai_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
+        }
+
+        private void rbBiLostUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
+        }
+
+        private void rbKhongLostUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
+        }
+
+        private void rbBongMa_CheckedChanged(object sender, EventArgs e)
+        {
+        GlobalVariables.bMacDinh = rbNormal.Checked;
+        }
+
+        private void rbDirtyRead_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bMacDinh = rbNormal.Checked;
+        }
+
+        private void rbKhongTheDocLai_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bMacDinh = rbNormal.Checked;
+        }
+
+        private void rbLostUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.bMacDinh = rbNormal.Checked;
+        }
     }
 }
