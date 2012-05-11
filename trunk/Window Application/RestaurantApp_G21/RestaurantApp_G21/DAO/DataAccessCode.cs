@@ -100,7 +100,6 @@ public static class DataAccessCode
         }
         catch (Exception ex)
         {
-            throw;
         }
         finally
         {

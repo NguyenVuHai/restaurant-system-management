@@ -77,13 +77,6 @@ namespace RestaurantApp_G21.DAO
                     else
                         command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveUnRepeatableRead";
                 }
-                else if (isLostUpdate)
-                {
-                    if (GlobalVariables.bLostUpdate)
-                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonLostUpdate";
-                    else
-                        command.CommandText = "dbo.LayDanhSachMonAnTrongHoaDonSolveLostUpdate";
-                }
             }
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";
