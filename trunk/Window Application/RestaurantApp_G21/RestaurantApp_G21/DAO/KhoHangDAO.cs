@@ -12,6 +12,26 @@ namespace RestaurantApp_G21.DAO
 {
     class KhoHangDAO
     {
+        public static KhoHangDTO layThongTinKhoHangTheoNhaHang(int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.layThongTinKhoHangTheoNhaHang";
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            KhoHangDTO dto = new KhoHangDTO();
+            if (dt != null)
+            {
+                dto.MaKhoHang = Convert.ToInt32(dt.Rows[0]["MaKhoHang"]);
+                dto.TenKhoHang = dt.Rows[0]["TenKhoHang"].ToString();
+            }
+            return dto;
+        }
         public static ArrayList layDanhSachNhaCungCapToiHanDuocThanhToanNoTheoDinhMucNo(int maNhaHang)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -116,7 +136,10 @@ namespace RestaurantApp_G21.DAO
         public static ArrayList timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
         {
             DbCommand command = DataAccessCode.CreateCommand();
-            command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //phantom read
+            command.CommandText = "dbo.UnrepeatableReadT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoGiaoDich";
+
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@ten";
             param.Value = ten;
