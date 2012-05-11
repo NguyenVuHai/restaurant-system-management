@@ -273,5 +273,11 @@ namespace RestaurantApp_G21
         {
             GlobalVariables.bMacDinh = rbNormal.Checked;
         }
+
+        private void m_btnThanhToan_Click(object sender, EventArgs e)
+        {
+            string thanhtien = HoaDonBUS.TinhTongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbKhongTheDocLai.Checked);
+            MessageBox.Show(String.Format("Tổng hóa đơn: {0}", thanhtien));
+        }
     }
 }
