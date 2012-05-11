@@ -57,10 +57,11 @@
             this.cb = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cMaNguyenLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTenNguyenLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cConTrong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cToiThieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLuongXuat = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.cLuongTon = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.cConTrong = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.cToiDa = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.cToiThieu = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
             this.cDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -286,9 +287,9 @@
             this.bt_sua.Name = "bt_sua";
             this.bt_sua.Size = new System.Drawing.Size(74, 30);
             this.bt_sua.TabIndex = 60;
-            this.bt_sua.Text = "Sửa";
+            this.bt_sua.Text = "Lưu lại";
             this.bt_sua.UseVisualStyleBackColor = true;
-            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
+            this.bt_sua.Click += new System.EventHandler(this.bt_capNhat_Click);
             // 
             // bt_chonTatCa
             // 
@@ -341,6 +342,7 @@
             this.cb,
             this.cMaNguyenLieu,
             this.cTenNguyenLieu,
+            this.cLuongXuat,
             this.cLuongTon,
             this.cConTrong,
             this.cToiDa,
@@ -352,6 +354,7 @@
             this.grid_ds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_ds.Size = new System.Drawing.Size(990, 325);
             this.grid_ds.TabIndex = 52;
+            this.grid_ds.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_ds_CellValidated);
             // 
             // cb
             // 
@@ -373,34 +376,68 @@
             this.cTenNguyenLieu.Name = "cTenNguyenLieu";
             this.cTenNguyenLieu.ReadOnly = true;
             // 
+            // cLuongXuat
+            // 
+            // 
+            // 
+            // 
+            this.cLuongXuat.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.cLuongXuat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cLuongXuat.FillWeight = 80F;
+            this.cLuongXuat.HeaderText = "Lượng xuất";
+            this.cLuongXuat.Name = "cLuongXuat";
+            // 
             // cLuongTon
             // 
+            // 
+            // 
+            // 
+            this.cLuongTon.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.cLuongTon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cLuongTon.FillWeight = 80F;
             this.cLuongTon.HeaderText = "Lượng tồn";
             this.cLuongTon.Name = "cLuongTon";
-            this.cLuongTon.ReadOnly = true;
+            this.cLuongTon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // cConTrong
             // 
+            // 
+            // 
+            // 
+            this.cConTrong.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.cConTrong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cConTrong.FillWeight = 80F;
             this.cConTrong.HeaderText = "Còn trống";
             this.cConTrong.Name = "cConTrong";
             this.cConTrong.ReadOnly = true;
+            this.cConTrong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // cToiDa
             // 
+            // 
+            // 
+            // 
+            this.cToiDa.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.cToiDa.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cToiDa.FillWeight = 90F;
             this.cToiDa.HeaderText = "Chứa tối đa";
             this.cToiDa.Name = "cToiDa";
             this.cToiDa.ReadOnly = true;
+            this.cToiDa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // cToiThieu
             // 
+            // 
+            // 
+            // 
+            this.cToiThieu.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.cToiThieu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.cToiThieu.DefaultCellStyle = dataGridViewCellStyle2;
             this.cToiThieu.HeaderText = "Chứa tối thiểu";
             this.cToiThieu.Name = "cToiThieu";
             this.cToiThieu.ReadOnly = true;
+            this.cToiThieu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // cDonViTinh
             // 
@@ -502,18 +539,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView grid_ds;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn cb;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMaNguyenLieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTenNguyenLieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLuongTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cConTrong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cToiDa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cToiThieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cDonViTinh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bt_inDanhSach;
         private System.Windows.Forms.Button bt_lamTuoi;
         private System.Windows.Forms.Button bt_sua;
         private System.Windows.Forms.Button bt_chonTatCa;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMaNguyenLieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTenNguyenLieu;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cLuongXuat;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cLuongTon;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cConTrong;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cToiDa;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cToiThieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cDonViTinh;
     }
 }
