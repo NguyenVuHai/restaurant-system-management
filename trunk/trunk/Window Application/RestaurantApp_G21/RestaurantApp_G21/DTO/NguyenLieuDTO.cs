@@ -34,8 +34,16 @@ namespace RestaurantApp_G21.DTO
             maNguyenLieu = 0;
             tenNguyenLieu = "";
             donViTinh = "";
+            donGia = 0;
         }
 
+        private decimal donGia;
+
+        public decimal DonGia
+        {
+            get { return donGia; }
+            set { donGia = value; }
+        }
         public override string ToString()
         {
             return tenNguyenLieu;
