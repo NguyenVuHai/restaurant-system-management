@@ -11,6 +11,31 @@ namespace RestaurantApp_G21.DAO
 {
     class NhaCungCapDAO
     {
+        public static int setNgungGiaoDich(int maNhaCungCap, int maNhaHang,int tinhTrang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.setNgungGiaoDich";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@maNhaCungCap";
+            param.Value = maNhaCungCap;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrang";
+            param.Value = tinhTrang;
+            param.DbType = DbType.Int16;
+            command.Parameters.Add(param);
+
+            return DataAccessCode.ExecuteNonQuery(command);
+        }
         public static ArrayList layDanhSachNguyenLieuNhaCungCapCoTheDapUngTheoDonDatHang(int maNhaCungCap, string sqlWHEREor)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -36,6 +61,9 @@ namespace RestaurantApp_G21.DAO
                     NguyenLieuDTO dto = new NguyenLieuDTO();
                     dto.MaNguyenLieu = Convert.ToInt32(dt.Rows[i]["MaNguyenLieu"]);
                     dto.TenNguyenLieu = dt.Rows[i]["TenNguyenLieu"].ToString();
+                    dto.DonViTinh = dt.Rows[i]["DonViTinh"].ToString();
+                    dto.DonGia = Convert.ToDecimal(dt.Rows[i]["DonGia"]);
+                    
                     list.Add(dto);
                 }
             }
