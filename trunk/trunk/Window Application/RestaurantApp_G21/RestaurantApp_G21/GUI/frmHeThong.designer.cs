@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,9 +41,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeThong));
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
@@ -57,6 +57,28 @@
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.m_sTabCtrHeThong = new DevComponents.DotNetBar.SuperTabControl();
+            this.m_tabCtrHeThongNhaHang = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.m_btnXoa = new DevComponents.DotNetBar.ButtonX();
+            this.m_btnKhongLuu = new DevComponents.DotNetBar.ButtonX();
+            this.m_btnThayDoi = new DevComponents.DotNetBar.ButtonX();
+            this.m_btnThem = new DevComponents.DotNetBar.ButtonX();
+            this.m_btnLuu = new DevComponents.DotNetBar.ButtonX();
+            this.m_dtGNhaHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.m_colMaNhaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_colTenNhaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_txtSoDT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.m_txtTenNH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.m_txtMaNH = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX11 = new DevComponents.DotNetBar.LabelX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.m_iPanelTTBan = new DevComponents.DotNetBar.ItemPanel();
+            this.m_txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.m_sTabItmQLHTNhaHang = new DevComponents.DotNetBar.SuperTabItem();
             this.m_sTabCtrQLTaiKhoan = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.m_btnHuy = new DevComponents.DotNetBar.ButtonX();
@@ -90,28 +112,6 @@
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.m_tabQuyen = new DevComponents.DotNetBar.SuperTabItem();
-            this.m_tabCtrHeThongNhaHang = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.m_btnXoa = new DevComponents.DotNetBar.ButtonX();
-            this.m_btnKhongLuu = new DevComponents.DotNetBar.ButtonX();
-            this.m_btnThayDoi = new DevComponents.DotNetBar.ButtonX();
-            this.m_btnThem = new DevComponents.DotNetBar.ButtonX();
-            this.m_btnLuu = new DevComponents.DotNetBar.ButtonX();
-            this.m_dtGNhaHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.m_colMaNhaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_colTenNhaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_txtSoDT = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.m_txtTenNH = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.m_txtMaNH = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.m_iPanelTTBan = new DevComponents.DotNetBar.ItemPanel();
-            this.m_txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.m_sTabItmQLHTNhaHang = new DevComponents.DotNetBar.SuperTabItem();
             this.itemPanel6 = new DevComponents.DotNetBar.ItemPanel();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -140,14 +140,14 @@
             this.superTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrHeThong)).BeginInit();
             this.m_sTabCtrHeThong.SuspendLayout();
+            this.m_tabCtrHeThongNhaHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_dtGNhaHang)).BeginInit();
+            this.m_iPanelTTBan.SuspendLayout();
             this.m_sTabCtrQLTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dataGTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dataGNhanVien)).BeginInit();
             this.superTabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-            this.m_tabCtrHeThongNhaHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtGNhaHang)).BeginInit();
-            this.m_iPanelTTBan.SuspendLayout();
             this.itemPanel6.SuspendLayout();
             this.itemPanel5.SuspendLayout();
             this.itemPanel4.SuspendLayout();
@@ -368,6 +368,332 @@
             this.m_sTabItmQLHTNhaHang,
             this.m_tabQuyen});
             this.m_sTabCtrHeThong.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
+            // 
+            // m_tabCtrHeThongNhaHang
+            // 
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnXoa);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnKhongLuu);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnThayDoi);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnThem);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnLuu);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_dtGNhaHang);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtSoDT);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtTenNH);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtMaNH);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX11);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX10);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX9);
+            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_iPanelTTBan);
+            this.m_tabCtrHeThongNhaHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_tabCtrHeThongNhaHang.Location = new System.Drawing.Point(0, 25);
+            this.m_tabCtrHeThongNhaHang.Name = "m_tabCtrHeThongNhaHang";
+            this.m_tabCtrHeThongNhaHang.Size = new System.Drawing.Size(1053, 548);
+            this.m_tabCtrHeThongNhaHang.TabIndex = 0;
+            this.m_tabCtrHeThongNhaHang.TabItem = this.m_sTabItmQLHTNhaHang;
+            // 
+            // m_btnXoa
+            // 
+            this.m_btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.m_btnXoa.Location = new System.Drawing.Point(689, 151);
+            this.m_btnXoa.Name = "m_btnXoa";
+            this.m_btnXoa.Size = new System.Drawing.Size(79, 32);
+            this.m_btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_btnXoa.TabIndex = 13;
+            this.m_btnXoa.Text = "Xóa";
+            this.m_btnXoa.Click += new System.EventHandler(this.m_btnXoa_Click);
+            // 
+            // m_btnKhongLuu
+            // 
+            this.m_btnKhongLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_btnKhongLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.m_btnKhongLuu.Location = new System.Drawing.Point(853, 151);
+            this.m_btnKhongLuu.Name = "m_btnKhongLuu";
+            this.m_btnKhongLuu.Size = new System.Drawing.Size(73, 32);
+            this.m_btnKhongLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_btnKhongLuu.TabIndex = 13;
+            this.m_btnKhongLuu.Text = "Không Lưu";
+            this.m_btnKhongLuu.Click += new System.EventHandler(this.m_btnKhongLuu_Click);
+            // 
+            // m_btnThayDoi
+            // 
+            this.m_btnThayDoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_btnThayDoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.m_btnThayDoi.Location = new System.Drawing.Point(774, 151);
+            this.m_btnThayDoi.Name = "m_btnThayDoi";
+            this.m_btnThayDoi.Size = new System.Drawing.Size(73, 32);
+            this.m_btnThayDoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_btnThayDoi.TabIndex = 13;
+            this.m_btnThayDoi.Text = "Thay Đổi";
+            this.m_btnThayDoi.Click += new System.EventHandler(this.m_btnThayDoi_Click);
+            // 
+            // m_btnThem
+            // 
+            this.m_btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.m_btnThem.Location = new System.Drawing.Point(525, 150);
+            this.m_btnThem.Name = "m_btnThem";
+            this.m_btnThem.Size = new System.Drawing.Size(73, 33);
+            this.m_btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_btnThem.TabIndex = 13;
+            this.m_btnThem.Text = "Thêm";
+            this.m_btnThem.Click += new System.EventHandler(this.m_btnThem_Click);
+            // 
+            // m_btnLuu
+            // 
+            this.m_btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.m_btnLuu.Location = new System.Drawing.Point(604, 150);
+            this.m_btnLuu.Name = "m_btnLuu";
+            this.m_btnLuu.Size = new System.Drawing.Size(79, 33);
+            this.m_btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_btnLuu.TabIndex = 13;
+            this.m_btnLuu.Text = "Lưu";
+            this.m_btnLuu.Click += new System.EventHandler(this.m_btnLuu_Click);
+            // 
+            // m_dtGNhaHang
+            // 
+            this.m_dtGNhaHang.AllowUserToAddRows = false;
+            this.m_dtGNhaHang.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGNhaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.m_dtGNhaHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.m_dtGNhaHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.m_colMaNhaHang,
+            this.m_colTenNhaHang,
+            this.m_colDiaChi,
+            this.m_colDienThoai});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.m_dtGNhaHang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.m_dtGNhaHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.m_dtGNhaHang.Location = new System.Drawing.Point(142, 202);
+            this.m_dtGNhaHang.Name = "m_dtGNhaHang";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.m_dtGNhaHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.m_dtGNhaHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.m_dtGNhaHang.Size = new System.Drawing.Size(789, 331);
+            this.m_dtGNhaHang.TabIndex = 14;
+            this.m_dtGNhaHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGNhaHang_CellContentClick);
+            this.m_dtGNhaHang.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGNhaHang_RowEnter);
+            // 
+            // m_colMaNhaHang
+            // 
+            this.m_colMaNhaHang.DataPropertyName = "MaNhaHang";
+            this.m_colMaNhaHang.HeaderText = "Mã Nhà Hàng";
+            this.m_colMaNhaHang.Name = "m_colMaNhaHang";
+            this.m_colMaNhaHang.Width = 90;
+            // 
+            // m_colTenNhaHang
+            // 
+            this.m_colTenNhaHang.DataPropertyName = "TenNhaHang";
+            this.m_colTenNhaHang.HeaderText = "Tên Nhà Hàng";
+            this.m_colTenNhaHang.Name = "m_colTenNhaHang";
+            this.m_colTenNhaHang.Width = 190;
+            // 
+            // m_colDiaChi
+            // 
+            this.m_colDiaChi.DataPropertyName = "DiaChi";
+            this.m_colDiaChi.HeaderText = "Địa Chỉ";
+            this.m_colDiaChi.Name = "m_colDiaChi";
+            this.m_colDiaChi.Width = 300;
+            // 
+            // m_colDienThoai
+            // 
+            this.m_colDienThoai.DataPropertyName = "DienThoai";
+            this.m_colDienThoai.HeaderText = "Điện Thoại";
+            this.m_colDienThoai.Name = "m_colDienThoai";
+            this.m_colDienThoai.Width = 150;
+            // 
+            // m_txtSoDT
+            // 
+            this.m_txtSoDT.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_txtSoDT.Border.Class = "TextBoxBorder";
+            this.m_txtSoDT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtSoDT.ForeColor = System.Drawing.Color.Black;
+            this.m_txtSoDT.Location = new System.Drawing.Point(623, 106);
+            this.m_txtSoDT.Name = "m_txtSoDT";
+            this.m_txtSoDT.Size = new System.Drawing.Size(233, 22);
+            this.m_txtSoDT.TabIndex = 11;
+            // 
+            // m_txtTenNH
+            // 
+            this.m_txtTenNH.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_txtTenNH.Border.Class = "TextBoxBorder";
+            this.m_txtTenNH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtTenNH.ForeColor = System.Drawing.Color.Black;
+            this.m_txtTenNH.Location = new System.Drawing.Point(282, 103);
+            this.m_txtTenNH.Name = "m_txtTenNH";
+            this.m_txtTenNH.Size = new System.Drawing.Size(233, 22);
+            this.m_txtTenNH.TabIndex = 12;
+            // 
+            // m_txtMaNH
+            // 
+            this.m_txtMaNH.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_txtMaNH.Border.Class = "TextBoxBorder";
+            this.m_txtMaNH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtMaNH.ForeColor = System.Drawing.Color.Black;
+            this.m_txtMaNH.Location = new System.Drawing.Point(282, 75);
+            this.m_txtMaNH.Name = "m_txtMaNH";
+            this.m_txtMaNH.Size = new System.Drawing.Size(233, 22);
+            this.m_txtMaNH.TabIndex = 10;
+            // 
+            // labelX11
+            // 
+            this.labelX11.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX11.BackgroundStyle.Class = "";
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.ForeColor = System.Drawing.Color.Black;
+            this.labelX11.Location = new System.Drawing.Point(533, 105);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX11.Size = new System.Drawing.Size(68, 23);
+            this.labelX11.TabIndex = 7;
+            this.labelX11.Text = "Số Điện Thoại";
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX10.BackgroundStyle.Class = "";
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.ForeColor = System.Drawing.Color.Black;
+            this.labelX10.Location = new System.Drawing.Point(190, 100);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX10.Size = new System.Drawing.Size(87, 23);
+            this.labelX10.TabIndex = 9;
+            this.labelX10.Text = "Tên Nhà Hàng";
+            // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX9.BackgroundStyle.Class = "";
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.ForeColor = System.Drawing.Color.Black;
+            this.labelX9.Location = new System.Drawing.Point(190, 74);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX9.Size = new System.Drawing.Size(87, 23);
+            this.labelX9.TabIndex = 8;
+            this.labelX9.Text = "Mã Nhà Hàng";
+            // 
+            // m_iPanelTTBan
+            // 
+            this.m_iPanelTTBan.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_iPanelTTBan.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.m_iPanelTTBan.BackgroundStyle.Class = "ItemPanel";
+            this.m_iPanelTTBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_iPanelTTBan.ContainerControlProcessDialogKey = true;
+            this.m_iPanelTTBan.Controls.Add(this.m_txtDiaChi);
+            this.m_iPanelTTBan.Controls.Add(this.labelX12);
+            this.m_iPanelTTBan.ForeColor = System.Drawing.Color.Black;
+            this.m_iPanelTTBan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem3});
+            this.m_iPanelTTBan.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.m_iPanelTTBan.Location = new System.Drawing.Point(137, 15);
+            this.m_iPanelTTBan.Name = "m_iPanelTTBan";
+            this.m_iPanelTTBan.Size = new System.Drawing.Size(799, 113);
+            this.m_iPanelTTBan.TabIndex = 15;
+            this.m_iPanelTTBan.Text = "Thông Tin Khách - Bàn";
+            // 
+            // m_txtDiaChi
+            // 
+            this.m_txtDiaChi.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_txtDiaChi.Border.Class = "TextBoxBorder";
+            this.m_txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_txtDiaChi.ForeColor = System.Drawing.Color.Black;
+            this.m_txtDiaChi.Location = new System.Drawing.Point(485, 62);
+            this.m_txtDiaChi.Name = "m_txtDiaChi";
+            this.m_txtDiaChi.Size = new System.Drawing.Size(233, 22);
+            this.m_txtDiaChi.TabIndex = 13;
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX12.BackgroundStyle.Class = "";
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.ForeColor = System.Drawing.Color.Black;
+            this.labelX12.Location = new System.Drawing.Point(425, 61);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX12.Size = new System.Drawing.Size(41, 23);
+            this.labelX12.TabIndex = 12;
+            this.labelX12.Text = "Địa Chỉ";
+            // 
+            // metroTileItem3
+            // 
+            this.metroTileItem3.Name = "metroTileItem3";
+            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            this.metroTileItem3.TileSize = new System.Drawing.Size(180, 25);
+            // 
+            // 
+            // 
+            this.metroTileItem3.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(83)))), ((int)(((byte)(117)))));
+            this.metroTileItem3.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(103)))), ((int)(((byte)(155)))));
+            this.metroTileItem3.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem3.TileStyle.Class = "";
+            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem3.TileStyle.PaddingBottom = 4;
+            this.metroTileItem3.TileStyle.PaddingLeft = 4;
+            this.metroTileItem3.TileStyle.PaddingRight = 4;
+            this.metroTileItem3.TileStyle.PaddingTop = 4;
+            this.metroTileItem3.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem3.TitleText = "Thông Tin Khách - Bàn";
+            // 
+            // m_sTabItmQLHTNhaHang
+            // 
+            this.m_sTabItmQLHTNhaHang.AttachedControl = this.m_tabCtrHeThongNhaHang;
+            this.m_sTabItmQLHTNhaHang.GlobalItem = false;
+            this.m_sTabItmQLHTNhaHang.Name = "m_sTabItmQLHTNhaHang";
+            this.m_sTabItmQLHTNhaHang.Text = "Quản Lý Hệ Thống Nhà Hàng";
             // 
             // m_sTabCtrQLTaiKhoan
             // 
@@ -838,332 +1164,6 @@
             this.m_tabQuyen.GlobalItem = false;
             this.m_tabQuyen.Name = "m_tabQuyen";
             this.m_tabQuyen.Text = "Phân Quyền";
-            // 
-            // m_tabCtrHeThongNhaHang
-            // 
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnXoa);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnKhongLuu);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnThayDoi);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnThem);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_btnLuu);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_dtGNhaHang);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtSoDT);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtTenNH);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_txtMaNH);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX11);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX10);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.labelX9);
-            this.m_tabCtrHeThongNhaHang.Controls.Add(this.m_iPanelTTBan);
-            this.m_tabCtrHeThongNhaHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_tabCtrHeThongNhaHang.Location = new System.Drawing.Point(0, 25);
-            this.m_tabCtrHeThongNhaHang.Name = "m_tabCtrHeThongNhaHang";
-            this.m_tabCtrHeThongNhaHang.Size = new System.Drawing.Size(1053, 548);
-            this.m_tabCtrHeThongNhaHang.TabIndex = 0;
-            this.m_tabCtrHeThongNhaHang.TabItem = this.m_sTabItmQLHTNhaHang;
-            // 
-            // m_btnXoa
-            // 
-            this.m_btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnXoa.Location = new System.Drawing.Point(689, 151);
-            this.m_btnXoa.Name = "m_btnXoa";
-            this.m_btnXoa.Size = new System.Drawing.Size(79, 32);
-            this.m_btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnXoa.TabIndex = 13;
-            this.m_btnXoa.Text = "Xóa";
-            this.m_btnXoa.Click += new System.EventHandler(this.m_btnXoa_Click);
-            // 
-            // m_btnKhongLuu
-            // 
-            this.m_btnKhongLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_btnKhongLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnKhongLuu.Location = new System.Drawing.Point(853, 151);
-            this.m_btnKhongLuu.Name = "m_btnKhongLuu";
-            this.m_btnKhongLuu.Size = new System.Drawing.Size(73, 32);
-            this.m_btnKhongLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnKhongLuu.TabIndex = 13;
-            this.m_btnKhongLuu.Text = "Không Lưu";
-            this.m_btnKhongLuu.Click += new System.EventHandler(this.m_btnKhongLuu_Click);
-            // 
-            // m_btnThayDoi
-            // 
-            this.m_btnThayDoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_btnThayDoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThayDoi.Location = new System.Drawing.Point(774, 151);
-            this.m_btnThayDoi.Name = "m_btnThayDoi";
-            this.m_btnThayDoi.Size = new System.Drawing.Size(73, 32);
-            this.m_btnThayDoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnThayDoi.TabIndex = 13;
-            this.m_btnThayDoi.Text = "Thay Đổi";
-            this.m_btnThayDoi.Click += new System.EventHandler(this.m_btnThayDoi_Click);
-            // 
-            // m_btnThem
-            // 
-            this.m_btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnThem.Location = new System.Drawing.Point(525, 150);
-            this.m_btnThem.Name = "m_btnThem";
-            this.m_btnThem.Size = new System.Drawing.Size(73, 33);
-            this.m_btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnThem.TabIndex = 13;
-            this.m_btnThem.Text = "Thêm";
-            this.m_btnThem.Click += new System.EventHandler(this.m_btnThem_Click);
-            // 
-            // m_btnLuu
-            // 
-            this.m_btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnLuu.Location = new System.Drawing.Point(604, 150);
-            this.m_btnLuu.Name = "m_btnLuu";
-            this.m_btnLuu.Size = new System.Drawing.Size(79, 33);
-            this.m_btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_btnLuu.TabIndex = 13;
-            this.m_btnLuu.Text = "Lưu";
-            this.m_btnLuu.Click += new System.EventHandler(this.m_btnLuu_Click);
-            // 
-            // m_dtGNhaHang
-            // 
-            this.m_dtGNhaHang.AllowUserToAddRows = false;
-            this.m_dtGNhaHang.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGNhaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.m_dtGNhaHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.m_dtGNhaHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.m_colMaNhaHang,
-            this.m_colTenNhaHang,
-            this.m_colDiaChi,
-            this.m_colDienThoai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.m_dtGNhaHang.DefaultCellStyle = dataGridViewCellStyle2;
-            this.m_dtGNhaHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.m_dtGNhaHang.Location = new System.Drawing.Point(142, 202);
-            this.m_dtGNhaHang.Name = "m_dtGNhaHang";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.m_dtGNhaHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.m_dtGNhaHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.m_dtGNhaHang.Size = new System.Drawing.Size(789, 331);
-            this.m_dtGNhaHang.TabIndex = 14;
-            this.m_dtGNhaHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGNhaHang_CellContentClick);
-            this.m_dtGNhaHang.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGNhaHang_RowEnter);
-            // 
-            // m_colMaNhaHang
-            // 
-            this.m_colMaNhaHang.DataPropertyName = "MaNhaHang";
-            this.m_colMaNhaHang.HeaderText = "Mã Nhà Hàng";
-            this.m_colMaNhaHang.Name = "m_colMaNhaHang";
-            this.m_colMaNhaHang.Width = 90;
-            // 
-            // m_colTenNhaHang
-            // 
-            this.m_colTenNhaHang.DataPropertyName = "TenNhaHang";
-            this.m_colTenNhaHang.HeaderText = "Tên Nhà Hàng";
-            this.m_colTenNhaHang.Name = "m_colTenNhaHang";
-            this.m_colTenNhaHang.Width = 190;
-            // 
-            // m_colDiaChi
-            // 
-            this.m_colDiaChi.DataPropertyName = "DiaChi";
-            this.m_colDiaChi.HeaderText = "Địa Chỉ";
-            this.m_colDiaChi.Name = "m_colDiaChi";
-            this.m_colDiaChi.Width = 300;
-            // 
-            // m_colDienThoai
-            // 
-            this.m_colDienThoai.DataPropertyName = "DienThoai";
-            this.m_colDienThoai.HeaderText = "Điện Thoại";
-            this.m_colDienThoai.Name = "m_colDienThoai";
-            this.m_colDienThoai.Width = 150;
-            // 
-            // m_txtSoDT
-            // 
-            this.m_txtSoDT.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_txtSoDT.Border.Class = "TextBoxBorder";
-            this.m_txtSoDT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_txtSoDT.ForeColor = System.Drawing.Color.Black;
-            this.m_txtSoDT.Location = new System.Drawing.Point(623, 106);
-            this.m_txtSoDT.Name = "m_txtSoDT";
-            this.m_txtSoDT.Size = new System.Drawing.Size(233, 22);
-            this.m_txtSoDT.TabIndex = 11;
-            // 
-            // m_txtTenNH
-            // 
-            this.m_txtTenNH.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_txtTenNH.Border.Class = "TextBoxBorder";
-            this.m_txtTenNH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_txtTenNH.ForeColor = System.Drawing.Color.Black;
-            this.m_txtTenNH.Location = new System.Drawing.Point(282, 103);
-            this.m_txtTenNH.Name = "m_txtTenNH";
-            this.m_txtTenNH.Size = new System.Drawing.Size(233, 22);
-            this.m_txtTenNH.TabIndex = 12;
-            // 
-            // m_txtMaNH
-            // 
-            this.m_txtMaNH.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_txtMaNH.Border.Class = "TextBoxBorder";
-            this.m_txtMaNH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_txtMaNH.ForeColor = System.Drawing.Color.Black;
-            this.m_txtMaNH.Location = new System.Drawing.Point(282, 75);
-            this.m_txtMaNH.Name = "m_txtMaNH";
-            this.m_txtMaNH.Size = new System.Drawing.Size(233, 22);
-            this.m_txtMaNH.TabIndex = 10;
-            // 
-            // labelX11
-            // 
-            this.labelX11.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX11.BackgroundStyle.Class = "";
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.ForeColor = System.Drawing.Color.Black;
-            this.labelX11.Location = new System.Drawing.Point(533, 105);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX11.Size = new System.Drawing.Size(68, 23);
-            this.labelX11.TabIndex = 7;
-            this.labelX11.Text = "Số Điện Thoại";
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX10.BackgroundStyle.Class = "";
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(190, 100);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX10.Size = new System.Drawing.Size(87, 23);
-            this.labelX10.TabIndex = 9;
-            this.labelX10.Text = "Tên Nhà Hàng";
-            // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX9.BackgroundStyle.Class = "";
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(190, 74);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX9.Size = new System.Drawing.Size(87, 23);
-            this.labelX9.TabIndex = 8;
-            this.labelX9.Text = "Mã Nhà Hàng";
-            // 
-            // m_iPanelTTBan
-            // 
-            this.m_iPanelTTBan.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_iPanelTTBan.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.m_iPanelTTBan.BackgroundStyle.Class = "ItemPanel";
-            this.m_iPanelTTBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_iPanelTTBan.ContainerControlProcessDialogKey = true;
-            this.m_iPanelTTBan.Controls.Add(this.m_txtDiaChi);
-            this.m_iPanelTTBan.Controls.Add(this.labelX12);
-            this.m_iPanelTTBan.ForeColor = System.Drawing.Color.Black;
-            this.m_iPanelTTBan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem3});
-            this.m_iPanelTTBan.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.m_iPanelTTBan.Location = new System.Drawing.Point(137, 15);
-            this.m_iPanelTTBan.Name = "m_iPanelTTBan";
-            this.m_iPanelTTBan.Size = new System.Drawing.Size(799, 113);
-            this.m_iPanelTTBan.TabIndex = 15;
-            this.m_iPanelTTBan.Text = "Thông Tin Khách - Bàn";
-            // 
-            // m_txtDiaChi
-            // 
-            this.m_txtDiaChi.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_txtDiaChi.Border.Class = "TextBoxBorder";
-            this.m_txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_txtDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.m_txtDiaChi.Location = new System.Drawing.Point(485, 62);
-            this.m_txtDiaChi.Name = "m_txtDiaChi";
-            this.m_txtDiaChi.Size = new System.Drawing.Size(233, 22);
-            this.m_txtDiaChi.TabIndex = 13;
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX12.BackgroundStyle.Class = "";
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(425, 61);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX12.Size = new System.Drawing.Size(41, 23);
-            this.labelX12.TabIndex = 12;
-            this.labelX12.Text = "Địa Chỉ";
-            // 
-            // metroTileItem3
-            // 
-            this.metroTileItem3.Name = "metroTileItem3";
-            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            this.metroTileItem3.TileSize = new System.Drawing.Size(180, 25);
-            // 
-            // 
-            // 
-            this.metroTileItem3.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(83)))), ((int)(((byte)(117)))));
-            this.metroTileItem3.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(103)))), ((int)(((byte)(155)))));
-            this.metroTileItem3.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem3.TileStyle.Class = "";
-            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem3.TileStyle.PaddingBottom = 4;
-            this.metroTileItem3.TileStyle.PaddingLeft = 4;
-            this.metroTileItem3.TileStyle.PaddingRight = 4;
-            this.metroTileItem3.TileStyle.PaddingTop = 4;
-            this.metroTileItem3.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem3.TitleText = "Thông Tin Khách - Bàn";
-            // 
-            // m_sTabItmQLHTNhaHang
-            // 
-            this.m_sTabItmQLHTNhaHang.AttachedControl = this.m_tabCtrHeThongNhaHang;
-            this.m_sTabItmQLHTNhaHang.GlobalItem = false;
-            this.m_sTabItmQLHTNhaHang.Name = "m_sTabItmQLHTNhaHang";
-            this.m_sTabItmQLHTNhaHang.Text = "Quản Lý Hệ Thống Nhà Hàng";
             // 
             // itemPanel6
             // 
@@ -1655,14 +1655,14 @@
             this.superTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrHeThong)).EndInit();
             this.m_sTabCtrHeThong.ResumeLayout(false);
+            this.m_tabCtrHeThongNhaHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_dtGNhaHang)).EndInit();
+            this.m_iPanelTTBan.ResumeLayout(false);
             this.m_sTabCtrQLTaiKhoan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_dataGTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dataGNhanVien)).EndInit();
             this.superTabControlPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
-            this.m_tabCtrHeThongNhaHang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtGNhaHang)).EndInit();
-            this.m_iPanelTTBan.ResumeLayout(false);
             this.itemPanel6.ResumeLayout(false);
             this.itemPanel5.ResumeLayout(false);
             this.itemPanel4.ResumeLayout(false);

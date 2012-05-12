@@ -19,5 +19,29 @@ namespace RestaurantApp_G21.BUS
         {
             return ThongTinBanDAO.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
         }
+        public static List<ThongTinBanDTO> TimBanTrongDirtyRead(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongDirtyRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
+        public static List<ThongTinBanDTO> TimBanTrongSolvedDirtyRead(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongSolvedDirtyRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
+        public static List<ThongTinBanDTO> TimBanTrongSolvedUnRRead(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongSolvedUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
+        public static List<ThongTinBanDTO> TimBanTrongUnRRead(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
+        public static List<ThongTinBanDTO> TimBanTrongPhanTom(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongPhanTom(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
+        public static List<ThongTinBanDTO> TimBanTrongSolvedPhanTom(int maNhaHang, int maKhuVuc, DateTime ngayDatBan, int buoi, int soLuong)
+        {
+            return ThongTinBanDAO.TimBanTrongSolvedPhanTom(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+        }
     }
 }

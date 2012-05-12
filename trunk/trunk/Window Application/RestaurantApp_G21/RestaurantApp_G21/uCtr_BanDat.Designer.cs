@@ -34,11 +34,10 @@
             this.m_labelItemMaBan = new DevComponents.DotNetBar.LabelItem();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.pDatOi = new DevComponents.DotNetBar.ItemPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.m_btnHuyDatBan = new DevComponents.DotNetBar.ButtonX();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.circularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.pChuaDat.SuspendLayout();
             this.pDatOi.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +62,6 @@
             this.pChuaDat.BackgroundStyle.Class = "";
             this.pChuaDat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pChuaDat.ContainerControlProcessDialogKey = true;
-            this.pChuaDat.Controls.Add(this.circularProgress1);
             this.pChuaDat.Controls.Add(this.m_btnDatBan);
             this.pChuaDat.Dock = System.Windows.Forms.DockStyle.Left;
             this.pChuaDat.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -153,6 +151,18 @@
             this.pDatOi.TabIndex = 2;
             this.pDatOi.Text = "itemPanel2";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
+            this.buttonX1.Location = new System.Drawing.Point(62, 69);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(37, 36);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 0;
+            this.buttonX1.Click += new System.EventHandler(this.m_btnHuyDatBan_Click);
+            // 
             // m_btnHuyDatBan
             // 
             this.m_btnHuyDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -194,40 +204,14 @@
             this.metroTileItem2.TileStyle.PaddingTop = 4;
             this.metroTileItem2.TileStyle.TextColor = System.Drawing.Color.White;
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
-            this.buttonX1.Location = new System.Drawing.Point(62, 69);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(37, 36);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 0;
-            this.buttonX1.Click += new System.EventHandler(this.m_btnHuyDatBan_Click);
-            // 
-            // circularProgress1
-            // 
-            // 
-            // 
-            // 
-            this.circularProgress1.BackgroundStyle.Class = "";
-            this.circularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.circularProgress1.Location = new System.Drawing.Point(15, 40);
-            this.circularProgress1.Name = "circularProgress1";
-            this.circularProgress1.ProgressColor = System.Drawing.Color.Honeydew;
-            this.circularProgress1.Size = new System.Drawing.Size(75, 27);
-            this.circularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.circularProgress1.TabIndex = 1;
-            // 
-            // uCtr_BanChuaDat
+            // uCtr_BanDat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pDatOi);
             this.Controls.Add(this.pChuaDat);
-            this.Name = "uCtr_BanChuaDat";
+            this.Name = "uCtr_BanDat";
             this.Size = new System.Drawing.Size(222, 117);
             this.pChuaDat.ResumeLayout(false);
             this.pDatOi.ResumeLayout(false);
@@ -244,7 +228,6 @@
         private DevComponents.DotNetBar.ButtonX m_btnHuyDatBan;
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
-        private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem2;
     }

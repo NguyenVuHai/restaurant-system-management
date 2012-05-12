@@ -68,31 +68,11 @@
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.m_sTabCtrDatBan = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.m_tabCtrKhuVuc = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
-            this.m_cboxTimBuoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.m_dateTimeInputNgayDatBan = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX21 = new DevComponents.DotNetBar.LabelX();
-            this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.labelX23 = new DevComponents.DotNetBar.LabelX();
-            this.m_txtTimSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.m_btnTimBan = new DevComponents.DotNetBar.ButtonX();
-            this.m_cBoxKhuVuc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX24 = new DevComponents.DotNetBar.LabelX();
-            this.m_cBoxNhaHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX30 = new DevComponents.DotNetBar.LabelX();
-            this.m_sTabItmDBan = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.dgvDanhSachBanDat = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.btnHuyBanDat = new DevComponents.DotNetBar.ButtonX();
-            this.btnLuuThongTinDatBan = new DevComponents.DotNetBar.ButtonX();
+            this.btnThayDoi = new DevComponents.DotNetBar.ButtonX();
             this.cbbBuoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.dtNgayDatBan = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.txtSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtSoDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtKhuVuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtCMND = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -107,10 +87,42 @@
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.m_iPanelTTBan = new DevComponents.DotNetBar.ItemPanel();
+            this.btnThem = new DevComponents.DotNetBar.ButtonX();
+            this.cboChonLoaiXungDot = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.btnLuuThongTinDatBan = new DevComponents.DotNetBar.ButtonX();
+            this.chkXLKoDocLai = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkXLRac = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkXLMatDLCapNhat = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkXLBongMa = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.chkDatBan = new System.Windows.Forms.CheckBox();
             this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.m_sTabItmTTBanDat = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.m_tabCtrKhuVuc = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.cboxLoaiXungDot = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.chhkBongMa = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkUnRead = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkDirtyRead = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.m_cboxTimBuoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.m_dateTimeInputNgayDatBan = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.labelX23 = new DevComponents.DotNetBar.LabelX();
+            this.m_txtTimSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.m_btnTimBan = new DevComponents.DotNetBar.ButtonX();
+            this.m_cBoxKhuVuc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX24 = new DevComponents.DotNetBar.LabelX();
+            this.m_cBoxNhaHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX30 = new DevComponents.DotNetBar.LabelX();
+            this.m_sTabItmDBan = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelQuanLyHoaDOn = new DevComponents.DotNetBar.PanelEx();
             this.m_sTabItmDatMon = new DevComponents.DotNetBar.SuperTabItem();
@@ -159,15 +171,15 @@
             this.itemPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrDatBan)).BeginInit();
             this.m_sTabCtrDatBan.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBanDat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayDatBan)).BeginInit();
+            this.m_iPanelTTBan.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_tabCtrKhuVuc)).BeginInit();
             this.m_tabCtrKhuVuc.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dateTimeInputNgayDatBan)).BeginInit();
-            this.superTabControlPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBanDat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgayDatBan)).BeginInit();
-            this.m_iPanelTTBan.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.m_sTabCtrPDatBan.SuspendLayout();
             this.itemPanel11.SuspendLayout();
@@ -721,6 +733,569 @@
             this.m_sTabItmHoaDon});
             this.m_sTabCtrDatBan.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.dgvDanhSachBanDat);
+            this.superTabControlPanel2.Controls.Add(this.btnThayDoi);
+            this.superTabControlPanel2.Controls.Add(this.cbbBuoi);
+            this.superTabControlPanel2.Controls.Add(this.dtNgayDatBan);
+            this.superTabControlPanel2.Controls.Add(this.txtSoDienThoai);
+            this.superTabControlPanel2.Controls.Add(this.txtKhuVuc);
+            this.superTabControlPanel2.Controls.Add(this.txtCMND);
+            this.superTabControlPanel2.Controls.Add(this.txtMaBan);
+            this.superTabControlPanel2.Controls.Add(this.labelX16);
+            this.superTabControlPanel2.Controls.Add(this.labelX15);
+            this.superTabControlPanel2.Controls.Add(this.labelX14);
+            this.superTabControlPanel2.Controls.Add(this.txtHoTenKhachHang);
+            this.superTabControlPanel2.Controls.Add(this.labelX13);
+            this.superTabControlPanel2.Controls.Add(this.labelX11);
+            this.superTabControlPanel2.Controls.Add(this.labelX12);
+            this.superTabControlPanel2.Controls.Add(this.labelX10);
+            this.superTabControlPanel2.Controls.Add(this.labelX9);
+            this.superTabControlPanel2.Controls.Add(this.m_iPanelTTBan);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 572);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
+            this.superTabControlPanel2.Text = "s";
+            this.superTabControlPanel2.Click += new System.EventHandler(this.superTabControlPanel2_Click);
+            // 
+            // dgvDanhSachBanDat
+            // 
+            this.dgvDanhSachBanDat.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSachBanDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDanhSachBanDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDanhSachBanDat.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDanhSachBanDat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.dgvDanhSachBanDat.Location = new System.Drawing.Point(70, 250);
+            this.dgvDanhSachBanDat.Name = "dgvDanhSachBanDat";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSachBanDat.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDanhSachBanDat.Size = new System.Drawing.Size(769, 283);
+            this.dgvDanhSachBanDat.TabIndex = 5;
+            this.dgvDanhSachBanDat.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachBanDat_RowEnter);
+            // 
+            // btnThayDoi
+            // 
+            this.btnThayDoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThayDoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThayDoi.Location = new System.Drawing.Point(861, 377);
+            this.btnThayDoi.Name = "btnThayDoi";
+            this.btnThayDoi.Size = new System.Drawing.Size(101, 24);
+            this.btnThayDoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThayDoi.TabIndex = 4;
+            this.btnThayDoi.Text = "Thay Đổi";
+            this.btnThayDoi.Click += new System.EventHandler(this.buttonX3_Click);
+            // 
+            // cbbBuoi
+            // 
+            this.cbbBuoi.DisplayMember = "Text";
+            this.cbbBuoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbBuoi.ForeColor = System.Drawing.Color.Black;
+            this.cbbBuoi.FormattingEnabled = true;
+            this.cbbBuoi.ItemHeight = 16;
+            this.cbbBuoi.Location = new System.Drawing.Point(504, 184);
+            this.cbbBuoi.Name = "cbbBuoi";
+            this.cbbBuoi.Size = new System.Drawing.Size(106, 22);
+            this.cbbBuoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbBuoi.TabIndex = 9;
+            // 
+            // dtNgayDatBan
+            // 
+            this.dtNgayDatBan.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.dtNgayDatBan.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtNgayDatBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtNgayDatBan.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtNgayDatBan.ButtonDropDown.Visible = true;
+            this.dtNgayDatBan.ForeColor = System.Drawing.Color.Black;
+            this.dtNgayDatBan.IsPopupCalendarOpen = false;
+            this.dtNgayDatBan.Location = new System.Drawing.Point(504, 155);
+            // 
+            // 
+            // 
+            this.dtNgayDatBan.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtNgayDatBan.MonthCalendar.BackgroundStyle.Class = "";
+            this.dtNgayDatBan.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtNgayDatBan.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dtNgayDatBan.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtNgayDatBan.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.dtNgayDatBan.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dtNgayDatBan.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtNgayDatBan.MonthCalendar.TodayButtonVisible = true;
+            this.dtNgayDatBan.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtNgayDatBan.Name = "dtNgayDatBan";
+            this.dtNgayDatBan.Size = new System.Drawing.Size(168, 22);
+            this.dtNgayDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtNgayDatBan.TabIndex = 8;
+            // 
+            // txtSoDienThoai
+            // 
+            this.txtSoDienThoai.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtSoDienThoai.Border.Class = "TextBoxBorder";
+            this.txtSoDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
+            this.txtSoDienThoai.Location = new System.Drawing.Point(196, 127);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(202, 22);
+            this.txtSoDienThoai.TabIndex = 3;
+            // 
+            // txtKhuVuc
+            // 
+            this.txtKhuVuc.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtKhuVuc.Border.Class = "TextBoxBorder";
+            this.txtKhuVuc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtKhuVuc.Enabled = false;
+            this.txtKhuVuc.ForeColor = System.Drawing.Color.Black;
+            this.txtKhuVuc.Location = new System.Drawing.Point(504, 98);
+            this.txtKhuVuc.Name = "txtKhuVuc";
+            this.txtKhuVuc.Size = new System.Drawing.Size(168, 22);
+            this.txtKhuVuc.TabIndex = 5;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtCMND.Border.Class = "TextBoxBorder";
+            this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCMND.ForeColor = System.Drawing.Color.Black;
+            this.txtCMND.Location = new System.Drawing.Point(196, 99);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(202, 22);
+            this.txtCMND.TabIndex = 2;
+            // 
+            // txtMaBan
+            // 
+            this.txtMaBan.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtMaBan.Border.Class = "TextBoxBorder";
+            this.txtMaBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaBan.Enabled = false;
+            this.txtMaBan.ForeColor = System.Drawing.Color.Black;
+            this.txtMaBan.Location = new System.Drawing.Point(504, 70);
+            this.txtMaBan.Name = "txtMaBan";
+            this.txtMaBan.Size = new System.Drawing.Size(168, 22);
+            this.txtMaBan.TabIndex = 4;
+            // 
+            // labelX16
+            // 
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX16.BackgroundStyle.Class = "";
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.ForeColor = System.Drawing.Color.Black;
+            this.labelX16.Location = new System.Drawing.Point(419, 183);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX16.Size = new System.Drawing.Size(85, 23);
+            this.labelX16.TabIndex = 0;
+            this.labelX16.Text = "Buổi";
+            // 
+            // labelX15
+            // 
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX15.BackgroundStyle.Class = "";
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.ForeColor = System.Drawing.Color.Black;
+            this.labelX15.Location = new System.Drawing.Point(419, 154);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX15.Size = new System.Drawing.Size(85, 23);
+            this.labelX15.TabIndex = 0;
+            this.labelX15.Text = "Ngày Đặt Bàn";
+            // 
+            // labelX14
+            // 
+            this.labelX14.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX14.BackgroundStyle.Class = "";
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.ForeColor = System.Drawing.Color.Black;
+            this.labelX14.Location = new System.Drawing.Point(419, 125);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX14.Size = new System.Drawing.Size(85, 23);
+            this.labelX14.TabIndex = 0;
+            this.labelX14.Text = "Số Lượng";
+            // 
+            // txtHoTenKhachHang
+            // 
+            this.txtHoTenKhachHang.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtHoTenKhachHang.Border.Class = "TextBoxBorder";
+            this.txtHoTenKhachHang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtHoTenKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.txtHoTenKhachHang.Location = new System.Drawing.Point(196, 71);
+            this.txtHoTenKhachHang.Name = "txtHoTenKhachHang";
+            this.txtHoTenKhachHang.Size = new System.Drawing.Size(202, 22);
+            this.txtHoTenKhachHang.TabIndex = 1;
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX13.BackgroundStyle.Class = "";
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.ForeColor = System.Drawing.Color.Black;
+            this.labelX13.Location = new System.Drawing.Point(419, 95);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX13.Size = new System.Drawing.Size(85, 23);
+            this.labelX13.TabIndex = 0;
+            this.labelX13.Text = "Khu Vực";
+            // 
+            // labelX11
+            // 
+            this.labelX11.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX11.BackgroundStyle.Class = "";
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.ForeColor = System.Drawing.Color.Black;
+            this.labelX11.Location = new System.Drawing.Point(86, 126);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX11.Size = new System.Drawing.Size(74, 23);
+            this.labelX11.TabIndex = 0;
+            this.labelX11.Text = "Số Điện Thoại";
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX12.BackgroundStyle.Class = "";
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.ForeColor = System.Drawing.Color.Black;
+            this.labelX12.Location = new System.Drawing.Point(419, 69);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX12.Size = new System.Drawing.Size(85, 23);
+            this.labelX12.TabIndex = 0;
+            this.labelX12.Text = "Mã Bàn";
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX10.BackgroundStyle.Class = "";
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.ForeColor = System.Drawing.Color.Black;
+            this.labelX10.Location = new System.Drawing.Point(86, 96);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX10.Size = new System.Drawing.Size(74, 23);
+            this.labelX10.TabIndex = 0;
+            this.labelX10.Text = "CMND";
+            // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.labelX9.BackgroundStyle.Class = "";
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.ForeColor = System.Drawing.Color.Black;
+            this.labelX9.Location = new System.Drawing.Point(86, 70);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX9.Size = new System.Drawing.Size(74, 23);
+            this.labelX9.TabIndex = 0;
+            this.labelX9.Text = "Họ Tên Khách";
+            // 
+            // m_iPanelTTBan
+            // 
+            this.m_iPanelTTBan.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.m_iPanelTTBan.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.m_iPanelTTBan.BackgroundStyle.Class = "ItemPanel";
+            this.m_iPanelTTBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_iPanelTTBan.ContainerControlProcessDialogKey = true;
+            this.m_iPanelTTBan.Controls.Add(this.btnThem);
+            this.m_iPanelTTBan.Controls.Add(this.cboChonLoaiXungDot);
+            this.m_iPanelTTBan.Controls.Add(this.txtSoLuong);
+            this.m_iPanelTTBan.Controls.Add(this.labelX19);
+            this.m_iPanelTTBan.Controls.Add(this.btnLuuThongTinDatBan);
+            this.m_iPanelTTBan.Controls.Add(this.chkXLKoDocLai);
+            this.m_iPanelTTBan.Controls.Add(this.chkXLRac);
+            this.m_iPanelTTBan.Controls.Add(this.chkXLMatDLCapNhat);
+            this.m_iPanelTTBan.Controls.Add(this.chkXLBongMa);
+            this.m_iPanelTTBan.Controls.Add(this.btnHuy);
+            this.m_iPanelTTBan.Controls.Add(this.chkDatBan);
+            this.m_iPanelTTBan.ForeColor = System.Drawing.Color.Black;
+            this.m_iPanelTTBan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem3});
+            this.m_iPanelTTBan.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.m_iPanelTTBan.Location = new System.Drawing.Point(26, 17);
+            this.m_iPanelTTBan.Name = "m_iPanelTTBan";
+            this.m_iPanelTTBan.Size = new System.Drawing.Size(977, 227);
+            this.m_iPanelTTBan.TabIndex = 6;
+            this.m_iPanelTTBan.Text = "Thông Tin Khách - Bàn";
+            // 
+            // btnThem
+            // 
+            this.btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThem.Location = new System.Drawing.Point(258, 168);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 27);
+            this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThem.TabIndex = 43;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // cboChonLoaiXungDot
+            // 
+            this.cboChonLoaiXungDot.DisplayMember = "Text";
+            this.cboChonLoaiXungDot.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboChonLoaiXungDot.ForeColor = System.Drawing.Color.Black;
+            this.cboChonLoaiXungDot.FormattingEnabled = true;
+            this.cboChonLoaiXungDot.ItemHeight = 16;
+            this.cboChonLoaiXungDot.Location = new System.Drawing.Point(788, 53);
+            this.cboChonLoaiXungDot.Name = "cboChonLoaiXungDot";
+            this.cboChonLoaiXungDot.Size = new System.Drawing.Size(148, 22);
+            this.cboChonLoaiXungDot.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cboChonLoaiXungDot.TabIndex = 42;
+            this.cboChonLoaiXungDot.SelectedIndexChanged += new System.EventHandler(this.cboChonLoaiXungDot_SelectedIndexChanged);
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtSoLuong.Border.Class = "TextBoxBorder";
+            this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
+            this.txtSoLuong.Location = new System.Drawing.Point(479, 110);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(167, 22);
+            this.txtSoLuong.TabIndex = 41;
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.Class = "";
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.ForeColor = System.Drawing.Color.Black;
+            this.labelX19.Location = new System.Drawing.Point(678, 48);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(106, 28);
+            this.labelX19.TabIndex = 38;
+            this.labelX19.Text = "Các Loại Xung Đột";
+            // 
+            // btnLuuThongTinDatBan
+            // 
+            this.btnLuuThongTinDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuuThongTinDatBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuuThongTinDatBan.Location = new System.Drawing.Point(179, 168);
+            this.btnLuuThongTinDatBan.Name = "btnLuuThongTinDatBan";
+            this.btnLuuThongTinDatBan.Size = new System.Drawing.Size(71, 24);
+            this.btnLuuThongTinDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuuThongTinDatBan.TabIndex = 10;
+            this.btnLuuThongTinDatBan.Text = "Lưu";
+            this.btnLuuThongTinDatBan.Click += new System.EventHandler(this.btnLuuThongTinDatBan_Click);
+            // 
+            // chkXLKoDocLai
+            // 
+            this.chkXLKoDocLai.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.chkXLKoDocLai.BackgroundStyle.Class = "";
+            this.chkXLKoDocLai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkXLKoDocLai.ForeColor = System.Drawing.Color.Black;
+            this.chkXLKoDocLai.Location = new System.Drawing.Point(789, 141);
+            this.chkXLKoDocLai.Name = "chkXLKoDocLai";
+            this.chkXLKoDocLai.Size = new System.Drawing.Size(134, 23);
+            this.chkXLKoDocLai.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkXLKoDocLai.TabIndex = 37;
+            this.chkXLKoDocLai.Text = "DL Không Thể Đọc Lại";
+            // 
+            // chkXLRac
+            // 
+            this.chkXLRac.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.chkXLRac.BackgroundStyle.Class = "";
+            this.chkXLRac.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkXLRac.ForeColor = System.Drawing.Color.Black;
+            this.chkXLRac.Location = new System.Drawing.Point(789, 88);
+            this.chkXLRac.Name = "chkXLRac";
+            this.chkXLRac.Size = new System.Drawing.Size(134, 23);
+            this.chkXLRac.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkXLRac.TabIndex = 37;
+            this.chkXLRac.Text = "Xử Lý DL Rác";
+            // 
+            // chkXLMatDLCapNhat
+            // 
+            this.chkXLMatDLCapNhat.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.chkXLMatDLCapNhat.BackgroundStyle.Class = "";
+            this.chkXLMatDLCapNhat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkXLMatDLCapNhat.ForeColor = System.Drawing.Color.Black;
+            this.chkXLMatDLCapNhat.Location = new System.Drawing.Point(789, 114);
+            this.chkXLMatDLCapNhat.Name = "chkXLMatDLCapNhat";
+            this.chkXLMatDLCapNhat.Size = new System.Drawing.Size(134, 23);
+            this.chkXLMatDLCapNhat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkXLMatDLCapNhat.TabIndex = 37;
+            this.chkXLMatDLCapNhat.Text = "Xử Lý Mất DL Cập Nhật";
+            // 
+            // chkXLBongMa
+            // 
+            this.chkXLBongMa.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.chkXLBongMa.BackgroundStyle.Class = "";
+            this.chkXLBongMa.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkXLBongMa.ForeColor = System.Drawing.Color.Black;
+            this.chkXLBongMa.Location = new System.Drawing.Point(790, 166);
+            this.chkXLBongMa.Name = "chkXLBongMa";
+            this.chkXLBongMa.Size = new System.Drawing.Size(122, 23);
+            this.chkXLBongMa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkXLBongMa.TabIndex = 36;
+            this.chkXLBongMa.Text = "Xử Lý DL Bóng Ma";
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuy.Location = new System.Drawing.Point(90, 168);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(79, 24);
+            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuy.TabIndex = 8;
+            this.btnHuy.Text = "Hủy ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // chkDatBan
+            // 
+            this.chkDatBan.AutoSize = true;
+            this.chkDatBan.BackColor = System.Drawing.Color.White;
+            this.chkDatBan.ForeColor = System.Drawing.Color.Black;
+            this.chkDatBan.Location = new System.Drawing.Point(285, 141);
+            this.chkDatBan.Name = "chkDatBan";
+            this.chkDatBan.Size = new System.Drawing.Size(67, 17);
+            this.chkDatBan.TabIndex = 7;
+            this.chkDatBan.Text = "Đặt bàn";
+            this.chkDatBan.UseVisualStyleBackColor = false;
+            // 
+            // metroTileItem3
+            // 
+            this.metroTileItem3.Name = "metroTileItem3";
+            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            this.metroTileItem3.TileSize = new System.Drawing.Size(180, 25);
+            // 
+            // 
+            // 
+            this.metroTileItem3.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(83)))), ((int)(((byte)(117)))));
+            this.metroTileItem3.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(103)))), ((int)(((byte)(155)))));
+            this.metroTileItem3.TileStyle.BackColorGradientAngle = 45;
+            this.metroTileItem3.TileStyle.Class = "";
+            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem3.TileStyle.PaddingBottom = 4;
+            this.metroTileItem3.TileStyle.PaddingLeft = 4;
+            this.metroTileItem3.TileStyle.PaddingRight = 4;
+            this.metroTileItem3.TileStyle.PaddingTop = 4;
+            this.metroTileItem3.TileStyle.TextColor = System.Drawing.Color.White;
+            this.metroTileItem3.TitleText = "Thông Tin Khách - Bàn";
+            // 
+            // m_sTabItmTTBanDat
+            // 
+            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
+            this.m_sTabItmTTBanDat.GlobalItem = false;
+            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
+            this.m_sTabItmTTBanDat.Text = "Thông Tin Bàn Đặt";
+            // 
             // superTabControlPanel1
             // 
             this.superTabControlPanel1.Controls.Add(this.m_tabCtrKhuVuc);
@@ -777,6 +1352,12 @@
             // 
             this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expandablePanel1.Controls.Add(this.buttonX1);
+            this.expandablePanel1.Controls.Add(this.cboxLoaiXungDot);
+            this.expandablePanel1.Controls.Add(this.labelX17);
+            this.expandablePanel1.Controls.Add(this.chhkBongMa);
+            this.expandablePanel1.Controls.Add(this.chkUnRead);
+            this.expandablePanel1.Controls.Add(this.chkDirtyRead);
             this.expandablePanel1.Controls.Add(this.m_cboxTimBuoi);
             this.expandablePanel1.Controls.Add(this.m_dateTimeInputNgayDatBan);
             this.expandablePanel1.Controls.Add(this.labelX21);
@@ -806,6 +1387,91 @@
             this.expandablePanel1.TitleStyle.GradientAngle = 90;
             this.expandablePanel1.TitleText = "<font color=\"#000000\"><b>Tìm Bàn Trống</b></font>";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(612, 119);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(66, 26);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 38;
+            this.buttonX1.Text = "buttonX1";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // cboxLoaiXungDot
+            // 
+            this.cboxLoaiXungDot.DisplayMember = "Text";
+            this.cboxLoaiXungDot.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboxLoaiXungDot.ForeColor = System.Drawing.Color.Black;
+            this.cboxLoaiXungDot.FormattingEnabled = true;
+            this.cboxLoaiXungDot.ItemHeight = 16;
+            this.cboxLoaiXungDot.Location = new System.Drawing.Point(802, 41);
+            this.cboxLoaiXungDot.Name = "cboxLoaiXungDot";
+            this.cboxLoaiXungDot.Size = new System.Drawing.Size(179, 22);
+            this.cboxLoaiXungDot.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cboxLoaiXungDot.TabIndex = 37;
+            this.cboxLoaiXungDot.SelectedIndexChanged += new System.EventHandler(this.cboxLoaiXungDot_SelectedIndexChanged);
+            // 
+            // labelX17
+            // 
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.Class = "";
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.ForeColor = System.Drawing.Color.Black;
+            this.labelX17.Location = new System.Drawing.Point(678, 41);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(110, 23);
+            this.labelX17.TabIndex = 36;
+            this.labelX17.Text = "Chọn Loại Xung Đột";
+            // 
+            // chhkBongMa
+            // 
+            // 
+            // 
+            // 
+            this.chhkBongMa.BackgroundStyle.Class = "";
+            this.chhkBongMa.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chhkBongMa.ForeColor = System.Drawing.Color.Black;
+            this.chhkBongMa.Location = new System.Drawing.Point(824, 134);
+            this.chhkBongMa.Name = "chhkBongMa";
+            this.chhkBongMa.Size = new System.Drawing.Size(170, 23);
+            this.chhkBongMa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chhkBongMa.TabIndex = 35;
+            this.chhkBongMa.Text = "Xử Lý DL Bóng Ma";
+            // 
+            // chkUnRead
+            // 
+            // 
+            // 
+            // 
+            this.chkUnRead.BackgroundStyle.Class = "";
+            this.chkUnRead.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkUnRead.ForeColor = System.Drawing.Color.Black;
+            this.chkUnRead.Location = new System.Drawing.Point(824, 105);
+            this.chkUnRead.Name = "chkUnRead";
+            this.chkUnRead.Size = new System.Drawing.Size(170, 23);
+            this.chkUnRead.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkUnRead.TabIndex = 35;
+            this.chkUnRead.Text = "Xử Lý DL Không Thể Đọc Lại";
+            // 
+            // chkDirtyRead
+            // 
+            // 
+            // 
+            // 
+            this.chkDirtyRead.BackgroundStyle.Class = "";
+            this.chkDirtyRead.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkDirtyRead.ForeColor = System.Drawing.Color.Black;
+            this.chkDirtyRead.Location = new System.Drawing.Point(824, 75);
+            this.chkDirtyRead.Name = "chkDirtyRead";
+            this.chkDirtyRead.Size = new System.Drawing.Size(112, 23);
+            this.chkDirtyRead.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkDirtyRead.TabIndex = 35;
+            this.chkDirtyRead.Text = "Xử Lý DL Rác";
+            // 
             // m_cboxTimBuoi
             // 
             this.m_cboxTimBuoi.DisplayMember = "Text";
@@ -813,7 +1479,7 @@
             this.m_cboxTimBuoi.ForeColor = System.Drawing.Color.Black;
             this.m_cboxTimBuoi.FormattingEnabled = true;
             this.m_cboxTimBuoi.ItemHeight = 16;
-            this.m_cboxTimBuoi.Location = new System.Drawing.Point(504, 100);
+            this.m_cboxTimBuoi.Location = new System.Drawing.Point(438, 102);
             this.m_cboxTimBuoi.Name = "m_cboxTimBuoi";
             this.m_cboxTimBuoi.Size = new System.Drawing.Size(106, 22);
             this.m_cboxTimBuoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -831,7 +1497,7 @@
             this.m_dateTimeInputNgayDatBan.ButtonDropDown.Visible = true;
             this.m_dateTimeInputNgayDatBan.ForeColor = System.Drawing.Color.Black;
             this.m_dateTimeInputNgayDatBan.IsPopupCalendarOpen = false;
-            this.m_dateTimeInputNgayDatBan.Location = new System.Drawing.Point(504, 69);
+            this.m_dateTimeInputNgayDatBan.Location = new System.Drawing.Point(438, 71);
             // 
             // 
             // 
@@ -881,7 +1547,7 @@
             this.labelX21.BackgroundStyle.Class = "";
             this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX21.ForeColor = System.Drawing.Color.Black;
-            this.labelX21.Location = new System.Drawing.Point(423, 99);
+            this.labelX21.Location = new System.Drawing.Point(357, 101);
             this.labelX21.Name = "labelX21";
             this.labelX21.Size = new System.Drawing.Size(75, 23);
             this.labelX21.TabIndex = 31;
@@ -896,7 +1562,7 @@
             this.labelX22.BackgroundStyle.Class = "";
             this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX22.ForeColor = System.Drawing.Color.Black;
-            this.labelX22.Location = new System.Drawing.Point(423, 70);
+            this.labelX22.Location = new System.Drawing.Point(357, 72);
             this.labelX22.Name = "labelX22";
             this.labelX22.Size = new System.Drawing.Size(75, 23);
             this.labelX22.TabIndex = 32;
@@ -911,7 +1577,7 @@
             this.labelX23.BackgroundStyle.Class = "";
             this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX23.ForeColor = System.Drawing.Color.Black;
-            this.labelX23.Location = new System.Drawing.Point(423, 38);
+            this.labelX23.Location = new System.Drawing.Point(357, 40);
             this.labelX23.Name = "labelX23";
             this.labelX23.Size = new System.Drawing.Size(75, 23);
             this.labelX23.TabIndex = 33;
@@ -926,16 +1592,16 @@
             this.m_txtTimSoLuong.Border.Class = "TextBoxBorder";
             this.m_txtTimSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_txtTimSoLuong.ForeColor = System.Drawing.Color.Black;
-            this.m_txtTimSoLuong.Location = new System.Drawing.Point(504, 41);
+            this.m_txtTimSoLuong.Location = new System.Drawing.Point(438, 43);
             this.m_txtTimSoLuong.Name = "m_txtTimSoLuong";
-            this.m_txtTimSoLuong.Size = new System.Drawing.Size(233, 22);
+            this.m_txtTimSoLuong.Size = new System.Drawing.Size(198, 22);
             this.m_txtTimSoLuong.TabIndex = 29;
             // 
             // m_btnTimBan
             // 
             this.m_btnTimBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_btnTimBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_btnTimBan.Location = new System.Drawing.Point(357, 128);
+            this.m_btnTimBan.Location = new System.Drawing.Point(252, 111);
             this.m_btnTimBan.Name = "m_btnTimBan";
             this.m_btnTimBan.Size = new System.Drawing.Size(75, 23);
             this.m_btnTimBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -950,7 +1616,7 @@
             this.m_cBoxKhuVuc.ForeColor = System.Drawing.Color.Black;
             this.m_cBoxKhuVuc.FormattingEnabled = true;
             this.m_cBoxKhuVuc.ItemHeight = 16;
-            this.m_cBoxKhuVuc.Location = new System.Drawing.Point(188, 70);
+            this.m_cBoxKhuVuc.Location = new System.Drawing.Point(146, 70);
             this.m_cBoxKhuVuc.Name = "m_cBoxKhuVuc";
             this.m_cBoxKhuVuc.Size = new System.Drawing.Size(180, 22);
             this.m_cBoxKhuVuc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -965,7 +1631,7 @@
             this.labelX24.BackgroundStyle.Class = "";
             this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX24.ForeColor = System.Drawing.Color.Black;
-            this.labelX24.Location = new System.Drawing.Point(124, 69);
+            this.labelX24.Location = new System.Drawing.Point(82, 69);
             this.labelX24.Name = "labelX24";
             this.labelX24.Size = new System.Drawing.Size(75, 23);
             this.labelX24.TabIndex = 24;
@@ -978,7 +1644,7 @@
             this.m_cBoxNhaHang.ForeColor = System.Drawing.Color.Black;
             this.m_cBoxNhaHang.FormattingEnabled = true;
             this.m_cBoxNhaHang.ItemHeight = 16;
-            this.m_cBoxNhaHang.Location = new System.Drawing.Point(188, 42);
+            this.m_cBoxNhaHang.Location = new System.Drawing.Point(146, 42);
             this.m_cBoxNhaHang.Name = "m_cBoxNhaHang";
             this.m_cBoxNhaHang.Size = new System.Drawing.Size(180, 22);
             this.m_cBoxNhaHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -994,7 +1660,7 @@
             this.labelX30.BackgroundStyle.Class = "";
             this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX30.ForeColor = System.Drawing.Color.Black;
-            this.labelX30.Location = new System.Drawing.Point(124, 41);
+            this.labelX30.Location = new System.Drawing.Point(82, 41);
             this.labelX30.Name = "labelX30";
             this.labelX30.Size = new System.Drawing.Size(75, 23);
             this.labelX30.TabIndex = 25;
@@ -1006,467 +1672,6 @@
             this.m_sTabItmDBan.GlobalItem = false;
             this.m_sTabItmDBan.Name = "m_sTabItmDBan";
             this.m_sTabItmDBan.Text = " Đặt Bàn ";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Controls.Add(this.dgvDanhSachBanDat);
-            this.superTabControlPanel2.Controls.Add(this.buttonX3);
-            this.superTabControlPanel2.Controls.Add(this.btnHuyBanDat);
-            this.superTabControlPanel2.Controls.Add(this.btnLuuThongTinDatBan);
-            this.superTabControlPanel2.Controls.Add(this.cbbBuoi);
-            this.superTabControlPanel2.Controls.Add(this.dtNgayDatBan);
-            this.superTabControlPanel2.Controls.Add(this.txtSoLuong);
-            this.superTabControlPanel2.Controls.Add(this.txtSoDienThoai);
-            this.superTabControlPanel2.Controls.Add(this.txtKhuVuc);
-            this.superTabControlPanel2.Controls.Add(this.txtCMND);
-            this.superTabControlPanel2.Controls.Add(this.txtMaBan);
-            this.superTabControlPanel2.Controls.Add(this.labelX16);
-            this.superTabControlPanel2.Controls.Add(this.labelX15);
-            this.superTabControlPanel2.Controls.Add(this.labelX14);
-            this.superTabControlPanel2.Controls.Add(this.txtHoTenKhachHang);
-            this.superTabControlPanel2.Controls.Add(this.labelX13);
-            this.superTabControlPanel2.Controls.Add(this.labelX11);
-            this.superTabControlPanel2.Controls.Add(this.labelX12);
-            this.superTabControlPanel2.Controls.Add(this.labelX10);
-            this.superTabControlPanel2.Controls.Add(this.labelX9);
-            this.superTabControlPanel2.Controls.Add(this.m_iPanelTTBan);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1036, 572);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.m_sTabItmTTBanDat;
-            this.superTabControlPanel2.Text = "s";
-            // 
-            // dgvDanhSachBanDat
-            // 
-            this.dgvDanhSachBanDat.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSachBanDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDanhSachBanDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDanhSachBanDat.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDanhSachBanDat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.dgvDanhSachBanDat.Location = new System.Drawing.Point(146, 259);
-            this.dgvDanhSachBanDat.Name = "dgvDanhSachBanDat";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSachBanDat.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDanhSachBanDat.Size = new System.Drawing.Size(722, 256);
-            this.dgvDanhSachBanDat.TabIndex = 5;
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(902, 442);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(101, 24);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 4;
-            this.buttonX3.Text = "Thay Đổi";
-            // 
-            // btnHuyBanDat
-            // 
-            this.btnHuyBanDat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyBanDat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnHuyBanDat.Location = new System.Drawing.Point(902, 412);
-            this.btnHuyBanDat.Name = "btnHuyBanDat";
-            this.btnHuyBanDat.Size = new System.Drawing.Size(101, 24);
-            this.btnHuyBanDat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnHuyBanDat.TabIndex = 4;
-            this.btnHuyBanDat.Text = "Xóa";
-            // 
-            // btnLuuThongTinDatBan
-            // 
-            this.btnLuuThongTinDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuThongTinDatBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuuThongTinDatBan.Location = new System.Drawing.Point(355, 193);
-            this.btnLuuThongTinDatBan.Name = "btnLuuThongTinDatBan";
-            this.btnLuuThongTinDatBan.Size = new System.Drawing.Size(127, 24);
-            this.btnLuuThongTinDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLuuThongTinDatBan.TabIndex = 10;
-            this.btnLuuThongTinDatBan.Text = "Lưu Thông Tin";
-            this.btnLuuThongTinDatBan.Click += new System.EventHandler(this.btnLuuThongTinDatBan_Click);
-            // 
-            // cbbBuoi
-            // 
-            this.cbbBuoi.DisplayMember = "Text";
-            this.cbbBuoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbBuoi.ForeColor = System.Drawing.Color.Black;
-            this.cbbBuoi.FormattingEnabled = true;
-            this.cbbBuoi.ItemHeight = 16;
-            this.cbbBuoi.Location = new System.Drawing.Point(604, 193);
-            this.cbbBuoi.Name = "cbbBuoi";
-            this.cbbBuoi.Size = new System.Drawing.Size(106, 22);
-            this.cbbBuoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbbBuoi.TabIndex = 9;
-            // 
-            // dtNgayDatBan
-            // 
-            this.dtNgayDatBan.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.dtNgayDatBan.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtNgayDatBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtNgayDatBan.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dtNgayDatBan.ButtonDropDown.Visible = true;
-            this.dtNgayDatBan.ForeColor = System.Drawing.Color.Black;
-            this.dtNgayDatBan.IsPopupCalendarOpen = false;
-            this.dtNgayDatBan.Location = new System.Drawing.Point(604, 164);
-            // 
-            // 
-            // 
-            this.dtNgayDatBan.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtNgayDatBan.MonthCalendar.BackgroundStyle.Class = "";
-            this.dtNgayDatBan.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtNgayDatBan.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dtNgayDatBan.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.dtNgayDatBan.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtNgayDatBan.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.dtNgayDatBan.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dtNgayDatBan.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.dtNgayDatBan.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtNgayDatBan.MonthCalendar.TodayButtonVisible = true;
-            this.dtNgayDatBan.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dtNgayDatBan.Name = "dtNgayDatBan";
-            this.dtNgayDatBan.Size = new System.Drawing.Size(241, 22);
-            this.dtNgayDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtNgayDatBan.TabIndex = 8;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtSoLuong.Border.Class = "TextBoxBorder";
-            this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
-            this.txtSoLuong.Location = new System.Drawing.Point(604, 135);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(241, 22);
-            this.txtSoLuong.TabIndex = 6;
-            // 
-            // txtSoDienThoai
-            // 
-            this.txtSoDienThoai.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtSoDienThoai.Border.Class = "TextBoxBorder";
-            this.txtSoDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(272, 136);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(233, 22);
-            this.txtSoDienThoai.TabIndex = 3;
-            // 
-            // txtKhuVuc
-            // 
-            this.txtKhuVuc.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtKhuVuc.Border.Class = "TextBoxBorder";
-            this.txtKhuVuc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtKhuVuc.Enabled = false;
-            this.txtKhuVuc.ForeColor = System.Drawing.Color.Black;
-            this.txtKhuVuc.Location = new System.Drawing.Point(604, 107);
-            this.txtKhuVuc.Name = "txtKhuVuc";
-            this.txtKhuVuc.Size = new System.Drawing.Size(241, 22);
-            this.txtKhuVuc.TabIndex = 5;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtCMND.Border.Class = "TextBoxBorder";
-            this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCMND.ForeColor = System.Drawing.Color.Black;
-            this.txtCMND.Location = new System.Drawing.Point(272, 108);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(233, 22);
-            this.txtCMND.TabIndex = 2;
-            // 
-            // txtMaBan
-            // 
-            this.txtMaBan.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtMaBan.Border.Class = "TextBoxBorder";
-            this.txtMaBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaBan.Enabled = false;
-            this.txtMaBan.ForeColor = System.Drawing.Color.Black;
-            this.txtMaBan.Location = new System.Drawing.Point(604, 79);
-            this.txtMaBan.Name = "txtMaBan";
-            this.txtMaBan.Size = new System.Drawing.Size(241, 22);
-            this.txtMaBan.TabIndex = 4;
-            // 
-            // labelX16
-            // 
-            this.labelX16.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX16.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX16.BackgroundStyle.Class = "";
-            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.ForeColor = System.Drawing.Color.Black;
-            this.labelX16.Location = new System.Drawing.Point(519, 192);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX16.Size = new System.Drawing.Size(85, 23);
-            this.labelX16.TabIndex = 0;
-            this.labelX16.Text = "Buổi";
-            // 
-            // labelX15
-            // 
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX15.BackgroundStyle.Class = "";
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.ForeColor = System.Drawing.Color.Black;
-            this.labelX15.Location = new System.Drawing.Point(519, 163);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX15.Size = new System.Drawing.Size(85, 23);
-            this.labelX15.TabIndex = 0;
-            this.labelX15.Text = "Ngày Đặt Bàn";
-            // 
-            // labelX14
-            // 
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX14.BackgroundStyle.Class = "";
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.ForeColor = System.Drawing.Color.Black;
-            this.labelX14.Location = new System.Drawing.Point(519, 134);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX14.Size = new System.Drawing.Size(85, 23);
-            this.labelX14.TabIndex = 0;
-            this.labelX14.Text = "Số Lượng";
-            // 
-            // txtHoTenKhachHang
-            // 
-            this.txtHoTenKhachHang.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtHoTenKhachHang.Border.Class = "TextBoxBorder";
-            this.txtHoTenKhachHang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtHoTenKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.txtHoTenKhachHang.Location = new System.Drawing.Point(272, 80);
-            this.txtHoTenKhachHang.Name = "txtHoTenKhachHang";
-            this.txtHoTenKhachHang.Size = new System.Drawing.Size(233, 22);
-            this.txtHoTenKhachHang.TabIndex = 1;
-            // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX13.BackgroundStyle.Class = "";
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.ForeColor = System.Drawing.Color.Black;
-            this.labelX13.Location = new System.Drawing.Point(519, 104);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX13.Size = new System.Drawing.Size(85, 23);
-            this.labelX13.TabIndex = 0;
-            this.labelX13.Text = "Khu Vực";
-            // 
-            // labelX11
-            // 
-            this.labelX11.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX11.BackgroundStyle.Class = "";
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.ForeColor = System.Drawing.Color.Black;
-            this.labelX11.Location = new System.Drawing.Point(180, 135);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX11.Size = new System.Drawing.Size(87, 23);
-            this.labelX11.TabIndex = 0;
-            this.labelX11.Text = "Số Điện Thoại";
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX12.BackgroundStyle.Class = "";
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(519, 78);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX12.Size = new System.Drawing.Size(85, 23);
-            this.labelX12.TabIndex = 0;
-            this.labelX12.Text = "Mã Bàn";
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX10.BackgroundStyle.Class = "";
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(180, 105);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX10.Size = new System.Drawing.Size(87, 23);
-            this.labelX10.TabIndex = 0;
-            this.labelX10.Text = "CMND";
-            // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.labelX9.BackgroundStyle.Class = "";
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(180, 79);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX9.Size = new System.Drawing.Size(87, 23);
-            this.labelX9.TabIndex = 0;
-            this.labelX9.Text = "Họ Tên Khách";
-            // 
-            // m_iPanelTTBan
-            // 
-            this.m_iPanelTTBan.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.m_iPanelTTBan.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.m_iPanelTTBan.BackgroundStyle.Class = "ItemPanel";
-            this.m_iPanelTTBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_iPanelTTBan.ContainerControlProcessDialogKey = true;
-            this.m_iPanelTTBan.Controls.Add(this.btnHuy);
-            this.m_iPanelTTBan.Controls.Add(this.chkDatBan);
-            this.m_iPanelTTBan.ForeColor = System.Drawing.Color.Black;
-            this.m_iPanelTTBan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem3});
-            this.m_iPanelTTBan.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.m_iPanelTTBan.Location = new System.Drawing.Point(146, 26);
-            this.m_iPanelTTBan.Name = "m_iPanelTTBan";
-            this.m_iPanelTTBan.Size = new System.Drawing.Size(722, 218);
-            this.m_iPanelTTBan.TabIndex = 6;
-            this.m_iPanelTTBan.Text = "Thông Tin Khách - Bàn";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnHuy.Location = new System.Drawing.Point(80, 167);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(101, 24);
-            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnHuy.TabIndex = 8;
-            this.btnHuy.Text = "Hủy ";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // chkDatBan
-            // 
-            this.chkDatBan.AutoSize = true;
-            this.chkDatBan.BackColor = System.Drawing.Color.White;
-            this.chkDatBan.ForeColor = System.Drawing.Color.Black;
-            this.chkDatBan.Location = new System.Drawing.Point(285, 141);
-            this.chkDatBan.Name = "chkDatBan";
-            this.chkDatBan.Size = new System.Drawing.Size(67, 17);
-            this.chkDatBan.TabIndex = 7;
-            this.chkDatBan.Text = "Đặt bàn";
-            this.chkDatBan.UseVisualStyleBackColor = false;
-            // 
-            // metroTileItem3
-            // 
-            this.metroTileItem3.Name = "metroTileItem3";
-            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            this.metroTileItem3.TileSize = new System.Drawing.Size(180, 25);
-            // 
-            // 
-            // 
-            this.metroTileItem3.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(83)))), ((int)(((byte)(117)))));
-            this.metroTileItem3.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(103)))), ((int)(((byte)(155)))));
-            this.metroTileItem3.TileStyle.BackColorGradientAngle = 45;
-            this.metroTileItem3.TileStyle.Class = "";
-            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem3.TileStyle.PaddingBottom = 4;
-            this.metroTileItem3.TileStyle.PaddingLeft = 4;
-            this.metroTileItem3.TileStyle.PaddingRight = 4;
-            this.metroTileItem3.TileStyle.PaddingTop = 4;
-            this.metroTileItem3.TileStyle.TextColor = System.Drawing.Color.White;
-            this.metroTileItem3.TitleText = "Thông Tin Khách - Bàn";
-            // 
-            // m_sTabItmTTBanDat
-            // 
-            this.m_sTabItmTTBanDat.AttachedControl = this.superTabControlPanel2;
-            this.m_sTabItmTTBanDat.GlobalItem = false;
-            this.m_sTabItmTTBanDat.Name = "m_sTabItmTTBanDat";
-            this.m_sTabItmTTBanDat.Text = "Thông Tin Bàn Đặt";
-            this.m_sTabItmTTBanDat.Visible = false;
             // 
             // superTabControlPanel3
             // 
@@ -2108,6 +2313,7 @@
             this.Name = "frmDatBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DotNetBar Metro App Form";
+            this.Load += new System.EventHandler(this.frmDatBan_Load);
             this.itemPanel1.ResumeLayout(false);
             this.itemPanel8.ResumeLayout(false);
             this.itemPanel2.ResumeLayout(false);
@@ -2117,16 +2323,16 @@
             this.itemPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_sTabCtrDatBan)).EndInit();
             this.m_sTabCtrDatBan.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_tabCtrKhuVuc)).EndInit();
-            this.m_tabCtrKhuVuc.ResumeLayout(false);
-            this.expandablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_dateTimeInputNgayDatBan)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBanDat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayDatBan)).EndInit();
             this.m_iPanelTTBan.ResumeLayout(false);
             this.m_iPanelTTBan.PerformLayout();
+            this.superTabControlPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_tabCtrKhuVuc)).EndInit();
+            this.m_tabCtrKhuVuc.ResumeLayout(false);
+            this.expandablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_dateTimeInputNgayDatBan)).EndInit();
             this.superTabControlPanel3.ResumeLayout(false);
             this.m_sTabCtrPDatBan.ResumeLayout(false);
             this.itemPanel11.ResumeLayout(false);
@@ -2183,7 +2389,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtCMND;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenKhachHang;
         private DevComponents.DotNetBar.LabelX labelX9;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtSoLuong;
         private DevComponents.DotNetBar.Controls.TextBoxX txtKhuVuc;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMaBan;
         private DevComponents.DotNetBar.LabelX labelX14;
@@ -2197,8 +2402,7 @@
         private DevComponents.DotNetBar.LabelX labelX15;
         private DevComponents.DotNetBar.ButtonX btnLuuThongTinDatBan;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvDanhSachBanDat;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX btnHuyBanDat;
+        private DevComponents.DotNetBar.ButtonX btnThayDoi;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
         private DevComponents.DotNetBar.SuperTabItem m_sTabItmDatMon;
         private DevComponents.DotNetBar.Controls.DataGridViewX m_dtGridDSBanH;
@@ -2253,6 +2457,20 @@
         private System.Windows.Forms.CheckBox chkDatBan;
         private DevComponents.DotNetBar.ButtonX btnHuy;
         private DevComponents.DotNetBar.PanelEx panelQuanLyHoaDOn;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkDirtyRead;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboxLoaiXungDot;
+        private DevComponents.DotNetBar.LabelX labelX17;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkUnRead;
+        private DevComponents.DotNetBar.LabelX labelX19;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkXLMatDLCapNhat;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkXLBongMa;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSoLuong;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkXLKoDocLai;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chhkBongMa;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboChonLoaiXungDot;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkXLRac;
+        private DevComponents.DotNetBar.ButtonX btnThem;
 
     }
 }
