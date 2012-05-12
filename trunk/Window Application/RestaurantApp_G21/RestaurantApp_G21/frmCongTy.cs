@@ -15,8 +15,12 @@ namespace RestaurantApp_G21
         public frmCongTy()
         {
             InitializeComponent();
+
+            LoadLoaiTruyXuat();
+
             LoadNhaHang(m_cbxNhaHang);
             LoadNhaHang(m_cbx_nv_nhaHang);
+            LoadNhaHang(m_cbxThongKeNhaHang);
             LoadLoaiNhanVien(m_cbxLoaiNV);
             LoadLoaiNhanVien(m_cbx_nv_loaiNhanVien);
             LoadDanhSachNhanVien(); 
@@ -28,6 +32,19 @@ namespace RestaurantApp_G21
         private void frmCongTy_Load(object sender, EventArgs e)
         {
             this.m_mtTileCongTy.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+        }
+
+        private void LoadLoaiTruyXuat()
+        {
+            m_cbxLoaiTruyXuat.Items.Clear();
+            m_cbxLoaiTruyXuat.Items.Add("Chọn loại truy xuất");
+
+            m_cbxLoaiTruyXuat.Items.Add("Lost Update");
+            m_cbxLoaiTruyXuat.Items.Add("Dirty Read");
+            m_cbxLoaiTruyXuat.Items.Add("Unrepeatable");
+            m_cbxLoaiTruyXuat.Items.Add("Phantom");
+
+            m_cbxLoaiTruyXuat.SelectedIndex = 0;
         }
 
         private void LoadNhaHang(ComboBox cbx)
@@ -127,7 +144,7 @@ namespace RestaurantApp_G21
             m_titleThongTinNhanVien.Text = "Thêm Thông Tin Nhân Viên";
         }
 
-        private void m_btnSuaNV_Click(object sender, EventArgs e)
+        /*private void m_btnSuaNV_Click(object sender, EventArgs e)
         {
             if (m_dgvDanhSachNhanVien.CurrentCell.RowIndex == null)
             {
@@ -151,7 +168,7 @@ namespace RestaurantApp_G21
           
                 frm.ShowDialog();
             }
-        }
+        }*/
 
         private void m_dgvDanhSachNhanVien_Click(object sender, EventArgs e)
         {
@@ -203,7 +220,11 @@ namespace RestaurantApp_G21
 
         private void m_btn_nv_hoanTatSuaNV_Click(object sender, EventArgs e)
         {
-            GlobalVariables.bLostUpdate = rbLostUpdate.Checked;
+            //GlobalVariables.bLostUpdate = rbLostUpdate.Checked;
+            if (m_cbxLoaiTruyXuat.SelectedIndex == 1)
+                GlobalVariables.bLostUpdate = true;
+            else
+                GlobalVariables.bLostUpdate = false;
             int maNH = m_cbx_nv_nhaHang.SelectedIndex;
             int maLoai = m_cbx_nv_loaiNhanVien.SelectedIndex;
             ThongTinNhanVienBUS.SuaThongTinNhanVien(Int32.Parse(m_txt_nv_maNV.Text), maNH, maLoai, rbcLostUpdate.Checked);
@@ -212,7 +233,7 @@ namespace RestaurantApp_G21
 
         private void m_btnXoaNV_Click(object sender, EventArgs e)
         {
-            ThongTinNhanVienBUS.XoaNhanVien(GlobalVariables.maNhanVien);
+            ThongTinNhanVienBUS.XoaNhanVien(Int32.Parse(m_txt_nv_maNV.Text));
             LoadDanhSachNhanVien();
         }
 
@@ -220,6 +241,17 @@ namespace RestaurantApp_G21
         {
 
         }
+
+        private void m_cbxThongKeNhaHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(m_cbxThongKeNhaHang.SelectedValue.ToString());
+            int maNH = Int32.Parse(m_cbxThongKeNhaHang.SelectedIndex.ToString());
+            MessageBox.Show(maNH.ToString());
+            int temp = ThongKeNhanVienBUS.TinhTongNhanVien(maNH);
+            //MessageBox.Show(temp.ToString());
+            m_txtThongKeTongNV.Text = temp.ToString();
+        }
+
 
 
     }
