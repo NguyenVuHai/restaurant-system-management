@@ -15,18 +15,53 @@ namespace RestaurantApp_G21
     {
         public List<ThongTinBanDTO> listBan = new List<ThongTinBanDTO>();
 
-        #region Utils Methods
 
+        private List<LoaiXungDotDTO> LoaiXungDot()
+        {
+            List<LoaiXungDotDTO> loaiXD = new List<LoaiXungDotDTO>();
+            for (int i = -1; i < 4; i++)
+            {
+                loaiXD.Add(new LoaiXungDotDTO() { MaXungDot = i });
+            }
+            loaiXD[0].TenXungDot = "Chọn Loại Xung Đột";
+            loaiXD[1].TenXungDot = "Đọc Dữ Liệu Rác";
+            loaiXD[2].TenXungDot = "Mất Dữ Liệu Cập Nhật";
+            loaiXD[3].TenXungDot = "Không Thể Đọc Lại";
+            loaiXD[4].TenXungDot = "Bóng Ma";
+            return loaiXD;
+        }
+        
+        #region Utils Methods
+        
         private void LoadDanhSachBanDat()
         {
-            List<BanDatDTO> listBanDat = BanDatBUS.LayDanhSachBanDat();
-            dgvDanhSachBanDat.DataSource = listBanDat;
-            dgvDanhSachBanDat.Columns["HoTen"].Visible = false;
-            dgvDanhSachBanDat.Columns["CMND"].Visible = false;
-            dgvDanhSachBanDat.Columns["DienThoai"].Visible = false;
-            dgvDanhSachBanDat.Columns["MaLichBan"].Visible = false;
-        }
+            SetValue();
+           // List<BanDatDTO> listBD = BanDatBUS.ThongTinKhachVaBanDat();
+           // dgvDanhSachBanDat.DataSource = listBD;
+            //List<BanDatDTO> listBanDat = BanDatBUS.LayDanhSachBanDat();
+            //dgvDanhSachBanDat.DataSource = listBanDat;
+            DataTable dt = BanDatBUS.ThongTinKhachVaBanDat();
+            dgvDanhSachBanDat.DataSource = dt;
+            dgvDanhSachBanDat.Enabled = false;
+           
+            //dgvDanhSachBanDat.Columns["MaNhaHang"].Visible = false;
+            //dgvDanhSachBanDat.Columns["TenBuoi"].Visible = false;
+            //dgvDanhSachBanDat.Columns["MaLichBan"].Visible = false;
+            //dgvDanhSachBanDat.Columns["MaThongTinKhachHang"].Visible = false;
+            //dgvDanhSachBanDat.Columns["TinhTrang"].Visible = false;
 
+        }
+        private void SetValue()
+        {
+            txtCMND.Text = "" ;
+            txtHoTenKhachHang.Text = "";
+            txtSoDienThoai.Text = "";
+            txtSoLuong.Text = "";
+            txtMaBan.Text = "";
+            txtKhuVuc.Text = "";
+            dtNgayDatBan.Text = "";
+            cbbBuoi.Text = "";
+        }
         private void LoadNhaHang()
         {
             m_cBoxNhaHang.Items.Clear();
@@ -83,6 +118,16 @@ namespace RestaurantApp_G21
             {
             }
         }
+        private void LoadDL()
+        {
+            cboxLoaiXungDot.DisplayMember = "TenXungDot";
+            cboxLoaiXungDot.ValueMember = "MaXungDot";
+            cboxLoaiXungDot.DataSource = LoaiXungDot();
+            
+            cboChonLoaiXungDot.DisplayMember = "TenXungDot";
+            cboChonLoaiXungDot.ValueMember = "MaXungDot";
+            cboChonLoaiXungDot.DataSource = LoaiXungDot();
+        }
         #endregion
 
         public frmDatBan()
@@ -93,12 +138,13 @@ namespace RestaurantApp_G21
             LoadBuoi(m_cboxTimBuoi, 0);
             LoadBuoi(cbbBuoi, 0);
             LoadHoaDon();
+            LoadDL();
         }
 
         private void LoadHoaDon()
         {
-            UserControl uc = new frmQuanLyHoaDon();
-            panelQuanLyHoaDOn.Controls.Add(uc);
+            //UserControl uc = new ucQuanLyHoaDon();
+            //panelQuanLyHoaDOn.Controls.Add(uc);
         }
 
         public void LoadBanTrongKhuVuc()
@@ -139,6 +185,12 @@ namespace RestaurantApp_G21
             m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
             txtMaBan.Text = maBan;
             txtKhuVuc.Text = maKhuVuc.ToString();
+            txtCMND.Text = "";
+            txtHoTenKhachHang.Text = "";
+            txtSoDienThoai.Text = "";
+            txtSoLuong.Text = "";
+            dtNgayDatBan.Text = "";
+            btnLuuThongTinDatBan.Enabled = true;
             LoadBuoi(cbbBuoi, m_cboxTimBuoi.SelectedIndex);
         }
 
@@ -157,6 +209,294 @@ namespace RestaurantApp_G21
         }
 
         private void m_btnTimBan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int maNhaHang = 0;
+                    int maKhuVuc = 0;
+                    DateTime ngayDatBan = new DateTime();
+                    int buoi = 0;
+                    int soLuong = -1;
+
+                    maNhaHang = m_cBoxNhaHang.SelectedIndex == 0 ? 0 : ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
+                    maKhuVuc = m_cBoxKhuVuc.SelectedIndex == 0 ? 0 : ((KhuVucDTO)m_cBoxKhuVuc.SelectedItem).MaKhuVuc;
+                    DateTime.TryParse(m_dateTimeInputNgayDatBan.Text, out ngayDatBan);
+                    buoi = cbbBuoi.SelectedIndex == 0 ? 0 : ((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
+                    Int32.TryParse(m_txtTimSoLuong.Text, out soLuong);
+                    if (m_txtTimSoLuong.Text != "" && soLuong < 0)
+                    {
+                        MessageBox.Show("Số lượng không hợp lệ.");
+                        m_txtTimSoLuong.Focus();
+                        m_txtTimSoLuong.SelectAll();
+                        return;
+                    }
+                    if (ngayDatBan == new DateTime() && m_dateTimeInputNgayDatBan.Text != "")
+                    {
+                        MessageBox.Show("Ngày đặt bàn không hợp lệ.");
+                        m_dateTimeInputNgayDatBan.Focus();
+                        return;
+                    }
+                switch(Convert.ToInt32( cboxLoaiXungDot.SelectedValue))
+                {
+                    case 0:
+
+                        if (chkDirtyRead.Checked)
+                        {
+                            // Solved Dirty Read
+
+                            listBan = ThongTinBanBUS.TimBanTrongSolvedDirtyRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                            LoadBanTrongKhuVuc();
+                        }
+                        else
+                        {
+                            // Dirty Read
+                                listBan = ThongTinBanBUS.TimBanTrongDirtyRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                                LoadBanTrongKhuVuc();
+                        }
+                        break;
+                    case 2 :
+                        if (chkUnRead.Checked)
+                        {
+                         // Solved UnRRead
+                         listBan = ThongTinBanBUS.TimBanTrongSolvedUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                         LoadBanTrongKhuVuc();
+                        }
+                        else
+                        {
+                             // UnRRead
+                             listBan = ThongTinBanBUS.TimBanTrongUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                             LoadBanTrongKhuVuc();
+                        }
+                     break;
+                    case 3 :
+                        if (chhkBongMa.Checked)
+                        {
+                            listBan = ThongTinBanBUS.TimBanTrongSolvedPhanTom(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                            LoadBanTrongKhuVuc();
+                        }
+                        else
+                        {
+                            listBan = ThongTinBanBUS.TimBanTrongPhanTom(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                            LoadBanTrongKhuVuc();
+                        }
+                     break;
+                    default:
+                    listBan = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                    LoadBanTrongKhuVuc();
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maNhaHang = 0;
+            if (m_cBoxNhaHang.SelectedIndex != 0)
+            {
+                maNhaHang = ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
+            }
+            LoadKhuVuc(maNhaHang);
+        }
+
+        private void btnLuuThongTinDatBan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int loai = chkDatBan.Checked == true ? 1 : 0;
+                btnThem.Enabled = true;
+                if (chkDatBan.Checked)
+                {
+                    if (txtCMND.Text == String.Empty || txtHoTenKhachHang.Text == string.Empty || txtSoDienThoai.Text == string.Empty || dtNgayDatBan.Text == string.Empty || cbbBuoi.Text == string.Empty)
+                    {
+                        MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin");
+                    }
+                    if (txtCMND.Text == "%" || txtCMND.Text.IndexOf("'") >= 0 || txtCMND.Text.IndexOf("`") >= 0)
+                    {
+                        MessageBox.Show("Không Hợp Lệ");
+                    }
+                    if (txtHoTenKhachHang.Text == "%" || txtHoTenKhachHang.Text.IndexOf("'") >= 0 || txtHoTenKhachHang.Text.IndexOf("`") >= 0)
+                    {
+                        MessageBox.Show("Không Hợp Lệ");
+                    }
+                    if (txtSoDienThoai.Text == "%" || txtSoDienThoai.Text.IndexOf("'") >= 0 || txtSoDienThoai.Text.IndexOf("`") >= 0)
+                    {
+                        MessageBox.Show("Không Hợp Lệ");
+                    }
+                    
+                    BanDatDTO banDat = new BanDatDTO()
+                    {
+                        HoTen = txtHoTenKhachHang.Text,
+                        Cmnd = txtCMND.Text,
+                        DienThoai = txtSoDienThoai.Text,
+                        MaBan = Int32.Parse(txtMaBan.Text),
+                        MaBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi,
+                        NgayDatBan = dtNgayDatBan.Value,
+                        SoLuong = Int32.Parse(txtSoLuong.Text),
+                        TinhTrangBan = !chkDatBan.Checked
+                    };
+                    if (Convert.ToInt32(cboChonLoaiXungDot.SelectedValue) == 3)
+                    {
+                        BanDatBUS.ThemThongTinKhachVaBanDatPhanTom(banDat, loai);
+                    }
+                    else
+                    {
+                        BanDatBUS.ThemThongTinBanDat(banDat, loai);
+                    }
+                }
+                else
+                {
+                    //Cap nhat thong tin ban dat
+                   int maBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
+                   int soLuong = Int32.Parse(txtSoLuong.Text);
+                   DateTime ngay = dtNgayDatBan.Value;
+                  // BanDatBUS.CapNhatThongTinKhachBanDatUnRRead(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                   switch (Convert.ToInt32(cboChonLoaiXungDot.SelectedValue))
+                   { 
+                       case 0:
+                                 BanDatBUS.CapNhatThongTinBanDat(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                                 LoadDanhSachBanDat();
+                           break;
+                       case 2:
+                           
+                               BanDatBUS.CapNhatThongTinKhachBanDatUnRRead(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                               LoadDanhSachBanDat();
+                       
+                          
+                           break;
+
+                       default:
+                         BanDatBUS.CapNhatThongTinKhachBanDatDefault(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                         LoadDanhSachBanDat();
+                          break;
+                   }
+                }
+                LoadDanhSachBanDat();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            //m_sTabItmTTBanDat.Visible = false;
+            //m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
+        }
+
+        private void dgvDanhSachBanDat_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int dong = e.RowIndex;
+            try
+            {
+                if (dgvDanhSachBanDat.Rows[dong].DataBoundItem != null)
+                {
+                    
+                    txtHoTenKhachHang.Text = dgvDanhSachBanDat.Rows[dong].Cells["HoTen"].Value.ToString();
+                    txtCMND.Text = dgvDanhSachBanDat.Rows[dong].Cells["CMND"].Value.ToString();
+                    txtSoDienThoai.Text = dgvDanhSachBanDat.Rows[dong].Cells["DienThoai"].Value.ToString();
+                    dtNgayDatBan.Text = dgvDanhSachBanDat.Rows[dong].Cells["NgayDatBan"].Value.ToString();
+                    cbbBuoi.Text = dgvDanhSachBanDat.Rows[dong].Cells["TenBuoi"].Value.ToString();
+                    txtSoLuong.Text = dgvDanhSachBanDat.Rows[dong].Cells["SoLuong"].Value.ToString();
+                    txtMaBan.Text = dgvDanhSachBanDat.Rows[dong].Cells["MaBan"].Value.ToString();
+                    txtKhuVuc.Text = dgvDanhSachBanDat.Rows[dong].Cells["MaKhuVuc"].Value.ToString();
+                    //txtTinhTrang.Text = dgvDanhSachBanDat.Rows[dong].Cells["TinhTrangBan"].Value.ToString();
+
+                    GlobalVariables.maLichBan = Int32.Parse(dgvDanhSachBanDat.Rows[dong].Cells["MaLichBan"].Value.ToString());
+                    GlobalVariables.maKhachHang = Int32.Parse(dgvDanhSachBanDat.Rows[dong].Cells["MaThongTinKhachHang"].Value.ToString());                   
+                     
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            dgvDanhSachBanDat.Enabled = true;
+            btnThem.Enabled = false;
+            btnLuuThongTinDatBan.Enabled = true;
+        }
+
+        // Tranh Chấp Đồng Thời
+
+        private void btnLostUpDate_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                int loai = chkDatBan.Checked == true ? 1 : 0;
+                int maBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
+                int soLuong = Int32.Parse(txtSoLuong.Text);
+                DateTime ngay = dtNgayDatBan.Value; 
+                if (chkDatBan.Checked)
+                {
+                    if (txtCMND.Text == String.Empty)
+                    {
+                        MessageBox.Show("Nhập chứng minh nhân dân.");
+                        return;
+                    }
+
+                    BanDatDTO banDat = new BanDatDTO()
+                    {
+                        HoTen = txtHoTenKhachHang.Text,
+                        Cmnd = txtCMND.Text,
+                        DienThoai = txtSoDienThoai.Text,
+                        MaBan = Int32.Parse(txtMaBan.Text),
+                        MaBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi,
+                        NgayDatBan = dtNgayDatBan.Value,
+                        SoLuong = Int32.Parse(txtSoLuong.Text),
+                        TinhTrangBan = !chkDatBan.Checked
+                    };
+                    BanDatBUS.ThemThongTinBanDat(banDat, loai);
+                }
+                else
+                {
+                    //Cap nhat thong tin ban dat T1
+                    if (chkXLMatDLCapNhat.Checked)
+                    {
+                        BanDatBUS.CapNhatThongTinBanDatSolvedLostUpdate(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                    }
+                    if (chkXLMatDLCapNhat.Checked)
+                    {
+                       // BanDatBUS.CapNhatThongTinBanDatLostUpdate(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                    }
+                   // BanDatBUS.CapNhatThongTinBanDatLostU(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                }
+                LoadDanhSachBanDat();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuyBanDat_Click(object sender, EventArgs e)
+        {
+            int maBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi;
+            int soLuong = Int32.Parse(txtSoLuong.Text);
+            DateTime ngay = dtNgayDatBan.Value; 
+            try
+            {
+                BanDatBUS.CapNhatThongTinKhachBanDatUnRRead(GlobalVariables.maLichBan,maBuoi,ngay,soLuong);
+                LoadDanhSachBanDat();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void superTabControlPanel2_Click(object sender, EventArgs e)
+        {
+
+        }
+        // UnRRead
+        private void buttonX1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -184,51 +524,19 @@ namespace RestaurantApp_G21
                     m_dateTimeInputNgayDatBan.Focus();
                     return;
                 }
-                listBan = ThongTinBanBUS.TimBanTrong(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
-                LoadBanTrongKhuVuc();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void m_cBoxNhaHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int maNhaHang = 0;
-            if (m_cBoxNhaHang.SelectedIndex != 0)
-            {
-                maNhaHang = ((NhaHangDTO)m_cBoxNhaHang.SelectedItem).MaNhaHang;
-            }
-            LoadKhuVuc(maNhaHang);
-        }
-
-        private void btnLuuThongTinDatBan_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int loai = chkDatBan.Checked == true ? 1 : 0;
-                if (chkDatBan.Checked)
+                if (chkXLKoDocLai.Checked)
                 {
-                    if (txtCMND.Text == String.Empty)
-                    {
-                        MessageBox.Show("Nhập chứng minh nhân dân.");
-                        return;
-                    }
+                    // Solved UnRRead
+
+                    listBan = ThongTinBanBUS.TimBanTrongSolvedUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                    LoadBanTrongKhuVuc();
                 }
-                BanDatDTO banDat = new BanDatDTO()
+                else
                 {
-                    HoTen = txtHoTenKhachHang.Text,
-                    Cmnd = txtCMND.Text,
-                    DienThoai = txtSoDienThoai.Text,
-                    MaBan = Int32.Parse(txtMaBan.Text),
-                    MaBuoi = (int)((BuoiDTO)cbbBuoi.SelectedItem).MaBuoi,
-                    NgayDatBan = dtNgayDatBan.Value,
-                    SoLuong = Int32.Parse(txtSoLuong.Text),
-                    TinhTrangBan = !chkDatBan.Checked
-                };
-                BanDatBUS.ThemThongTinBanDat(banDat, loai);
-                LoadDanhSachBanDat();
+                    // UnRRead
+                    listBan = ThongTinBanBUS.TimBanTrongUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                    LoadBanTrongKhuVuc();
+                }
             }
             catch (Exception ex)
             {
@@ -236,10 +544,120 @@ namespace RestaurantApp_G21
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void cboxLoaiXungDot_SelectedIndexChanged(object sender, EventArgs e)
         {
-            m_sTabItmTTBanDat.Visible = false;
-            m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
+
+            switch (Convert.ToInt32(cboxLoaiXungDot.SelectedValue))
+            {
+                case 0:
+                    chkUnRead.Enabled = chhkBongMa.Enabled = false;
+                    chkUnRead.Checked = chhkBongMa.Checked = false;
+                    chkDirtyRead.Enabled = true;
+                    chkDirtyRead.Checked = true; 
+                    break;
+            //         loaiXD[0].TenXungDot = "Chọn Loại Xung Đột";
+            //loaiXD[1].TenXungDot = "Đọc Dữ Liệu Rác";
+            //loaiXD[2].TenXungDot = "Mất Dữ Liệu Cập Nhật";
+            //loaiXD[3].TenXungDot = "Không Thể Đọc Lại";
+            //loaiXD[4].TenXungDot = "Bóng Ma";
+                case 2:
+                    chkDirtyRead.Enabled = chhkBongMa.Enabled = false;
+                    chkDirtyRead.Checked = chhkBongMa.Checked = false;
+                    chkUnRead.Enabled = true;
+                    chkUnRead.Checked = true;
+                    break;
+                
+                case 3:
+                    chkDirtyRead.Enabled = chkUnRead.Enabled = false;
+                    chkDirtyRead.Checked = chkUnRead.Checked = false;
+                    chhkBongMa.Enabled = true;
+                    chhkBongMa.Checked = true;
+                    break;
+              
+                default:
+                    chkDirtyRead.Enabled = chkUnRead.Enabled = chhkBongMa.Enabled  = false;
+                    chkDirtyRead.Checked = chkUnRead.Checked = chhkBongMa.Checked = false;
+                    break;
+                
+
+
+            }
+           // MessageBox.Show(cboxLoaiXungDot.SelectedValue.ToString());
+        }
+
+        private void cboChonLoaiXungDot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (Convert.ToInt32(cboChonLoaiXungDot.SelectedValue))
+            {   // rác
+                case 0:
+                    chkXLBongMa.Enabled = chkXLKoDocLai.Enabled = chkXLMatDLCapNhat.Enabled = false;
+                    chkXLRac.Enabled = true;
+                    chkXLBongMa.Checked = chkXLKoDocLai.Checked = chkXLMatDLCapNhat.Checked = false;
+                    chkXLRac.Checked = true;
+                    break;
+                // mất dữ cập nhật
+                case 1:
+                    chkXLBongMa.Enabled = chkXLKoDocLai.Enabled = chkXLRac.Enabled = false;
+                    chkXLMatDLCapNhat.Enabled = true;
+
+                    chkXLBongMa.Checked = chkXLKoDocLai.Checked = chkXLRac.Checked = false;
+                    chkXLMatDLCapNhat.Checked = true;
+                    break;
+                // Không thể đọc lại
+                case 2:
+                    chkXLBongMa.Enabled = chkXLMatDLCapNhat.Enabled = chkXLRac.Enabled = false;
+                    chkXLKoDocLai.Enabled = true;
+
+                    chkXLBongMa.Checked = chkXLMatDLCapNhat.Checked = chkXLRac.Checked = false;
+                    chkXLKoDocLai.Checked = true;
+                    break; 
+                // Bóng ma
+                case 3:
+                    chkXLKoDocLai.Enabled = chkXLMatDLCapNhat.Enabled = chkXLRac.Enabled = false;
+                    chkXLBongMa.Enabled = true;
+
+                    chkXLKoDocLai.Checked = chkXLMatDLCapNhat.Checked = chkXLRac.Checked = false;
+                    chkXLBongMa.Checked = true;
+                    break;
+                default :
+                    chkXLKoDocLai.Enabled = chkXLMatDLCapNhat.Enabled = chkXLRac.Enabled = false;
+                    chkXLBongMa.Enabled = false;
+
+                   // chkXLKoDocLai.Checked = chkXLMatDLCapNhat.Checked = chkXLRac.Checked = false;
+                  //  chkXLBongMa.Checked = true;
+                    break;
+
+            }
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SetValue();
+            txtMaBan.Enabled = true;
+            txtKhuVuc.Enabled = true;
+            btnLuuThongTinDatBan.Enabled = true;
+        }
+        private void EnableEditing(bool editing1)
+        {
+            // button
+            // Khi đang thêm thì nút thêm cũng sẽ ẩn đi
+            btnThem.Enabled = !editing1;
+            btnThayDoi.Enabled = !editing1;
+            btnHuy.Enabled = !editing1;
+            btnLuuThongTinDatBan.Enabled = editing1;
+            //m_txtDiaChi.Enabled = editing1;
+            //m_txtMaNH.Enabled = !editing;
+            //m_txtSoDT.Enabled = editing1;
+           // m_txtTenNH.Enabled = editing1;
+
+           // m_dtGNhaHang.Enabled = !editing1;
+        }
+
+        private void frmDatBan_Load(object sender, EventArgs e)
+        {
+            EnableEditing(false);
+
         }
 
     }
