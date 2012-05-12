@@ -79,7 +79,7 @@ AS
 				end
 			else
 				begin
-					Set @SQLQuery = N'UPDATE CHITIETHOADON SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong =' + Convert(nvarchar,@SoLuong+@SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
+					Set @SQLQuery = N'UPDATE CHITIETHOADON WITH (NOLOCK) SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong =' + Convert(nvarchar,@SoLuong+@SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
 					Execute sp_Executesql @SQLQuery
 					WAITFOR DELAY '00:00:10'
 				end
