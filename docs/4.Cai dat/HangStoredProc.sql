@@ -1,4 +1,4 @@
-CREATE PROCEDURE dbo.CapNhatChiTietHoaDon
+ALTER PROCEDURE dbo.CapNhatChiTietHoaDon
 (
 	@MaHoaDon nvarchar(36),
 	@MaChiTietThucDon int,
@@ -63,15 +63,15 @@ ALTER PROCEDURE dbo.CapNhatChiTietHoaDonLostUpdate
 	@SoLuong int
 )
 AS
-	BEGIN
+	SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+	BEGIN TRANSACTION
 		Declare @SQLQuery nvarchar(4000)
 		Declare @MaChiTietHoaDon int = null
 		Declare @SoLuongCu int
-		BEGIN TRANSACTION
 			Set @SQLQuery = N'SELECT @MaChiTietHoaDon = MaChiTietHoaDon, @SoLuongCu = SoLuong FROM CHITIETHOADON WHERE MaHoaDon = '''+ @MaHoaDon + ''' AND MaChiTietThucDon = ' + Convert(nvarchar, @MaChiTietThucDon) 
 			EXEC sp_Executesql @Query  = @SQLQuery , @Params = N'@MaChiTietHoaDon int OUTPUT, @SoLuongCu int OUTPUT', @MaChiTietHoaDon = @MaChiTietHoaDon OUTPUT, @SoLuongCu = @SoLuongCu OUTPUT
 			
-			WAITFOR DELAY '00:00:10'
+			
 			if (@MaChiTietHoaDon is null)
 				begin
 					Set @SQLQuery = N'INSERT INTO CHITIETHOADON (MaHoaDon, MaChiTietThucDon, DonGia, SoLuong) VALUES ('''+@MaHoaDon+''','+CONVERT(nvarchar, @MaChiTietThucDon)+','+ CONVERT(nvarchar, @DonGia)+','+ CONVERT(nvarchar, @SoLuong) +')'
@@ -79,11 +79,11 @@ AS
 				end
 			else
 				begin
-					Set @SQLQuery = N'UPDATE CHITIETHOADON SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong = ' + Convert(nvarchar,@SoLuong + @SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
+					Set @SQLQuery = N'UPDATE CHITIETHOADON SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong =' + Convert(nvarchar,@SoLuong+@SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
 					Execute sp_Executesql @SQLQuery
+					WAITFOR DELAY '00:00:10'
 				end
-		COMMIT
-	END
+	COMMIT
 GO
 ALTER PROCEDURE dbo.CapNhatChiTietHoaDonPhantom
 (
@@ -127,10 +127,10 @@ AS
 		Declare @MaChiTietHoaDon int = null
 		Declare @SoLuongCu int
 		BEGIN TRANSACTION
-			Set @SQLQuery = N'SELECT @MaChiTietHoaDon = MaChiTietHoaDon, @SoLuongCu = SoLuong FROM CHITIETHOADON WITH (UPDLOCK, HOLDLOCK) WHERE MaHoaDon = '''+ @MaHoaDon + ''' AND MaChiTietThucDon = ' + Convert(nvarchar, @MaChiTietThucDon) 
+			Set @SQLQuery = N'SELECT @MaChiTietHoaDon = MaChiTietHoaDon, @SoLuongCu = SoLuong FROM CHITIETHOADON WHERE MaHoaDon = '''+ @MaHoaDon + ''' AND MaChiTietThucDon = ' + Convert(nvarchar, @MaChiTietThucDon) 
 			EXEC sp_Executesql @Query  = @SQLQuery , @Params = N'@MaChiTietHoaDon int OUTPUT, @SoLuongCu int OUTPUT', @MaChiTietHoaDon = @MaChiTietHoaDon OUTPUT, @SoLuongCu = @SoLuongCu OUTPUT
 
-			WAITFOR DELAY '00:00:10'
+			
 			if (@MaChiTietHoaDon is null)
 				begin
 					Set @SQLQuery = N'INSERT INTO CHITIETHOADON (MaHoaDon, MaChiTietThucDon, DonGia, SoLuong) VALUES ('''+@MaHoaDon+''','+CONVERT(nvarchar, @MaChiTietThucDon)+','+ CONVERT(nvarchar, @DonGia)+','+ CONVERT(nvarchar, @SoLuong) +')'
@@ -138,8 +138,9 @@ AS
 				end
 			else
 				begin
-					Set @SQLQuery = N'UPDATE CHITIETHOADON SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong = ' + Convert(nvarchar,@SoLuong + @SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
+					Set @SQLQuery = N'UPDATE CHITIETHOADON  WITH (ROWLOCK, HOLDLOCK)  SET MaChiTietThucDon = ' + Convert(nvarchar,@MaChiTietThucDon) + ',DonGia = ' + Convert(nvarchar,@DonGia) + ',SoLuong = ' + Convert(nvarchar,@SoLuong + @SoLuongCu) + ' WHERE MaChiTietHoaDon = ' + Convert(nvarchar,@MaChiTietHoaDon)
 					Execute sp_Executesql @SQLQuery
+					WAITFOR DELAY '00:00:10'
 				end
 
 		COMMIT
