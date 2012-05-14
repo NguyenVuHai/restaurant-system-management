@@ -93,6 +93,7 @@
             this.rbBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
             this.rbLostUpdate = new System.Windows.Forms.RadioButton();
             this.rbKhongTheDocLai = new System.Windows.Forms.RadioButton();
+            this.rbDeadLock = new System.Windows.Forms.RadioButton();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).BeginInit();
             this.groupPanel3.SuspendLayout();
@@ -807,9 +808,9 @@
             this.m_gPanel.Controls.Add(this.m_btnThayDoi);
             this.m_gPanel.Controls.Add(this.m_btnXemHoaDon);
             this.m_gPanel.Controls.Add(this.m_btnThanhToan);
-            this.m_gPanel.Location = new System.Drawing.Point(285, 417);
+            this.m_gPanel.Location = new System.Drawing.Point(285, 457);
             this.m_gPanel.Name = "m_gPanel";
-            this.m_gPanel.Size = new System.Drawing.Size(748, 110);
+            this.m_gPanel.Size = new System.Drawing.Size(748, 70);
             // 
             // 
             // 
@@ -1046,12 +1047,13 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.rbDeadLock);
             this.panel3.Controls.Add(this.rbLostUpdate);
             this.panel3.Controls.Add(this.rbKhongTheDocLai);
             this.panel3.Controls.Add(this.rbDirtyRead);
             this.panel3.Location = new System.Drawing.Point(827, 183);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(206, 228);
+            this.panel3.Size = new System.Drawing.Size(206, 268);
             this.panel3.TabIndex = 27;
             // 
             // panel5
@@ -1150,6 +1152,18 @@
             this.rbKhongTheDocLai.UseVisualStyleBackColor = true;
             this.rbKhongTheDocLai.CheckedChanged += new System.EventHandler(this.rbKhongTheDocLai_CheckedChanged);
             // 
+            // rbDeadLock
+            // 
+            this.rbDeadLock.AutoSize = true;
+            this.rbDeadLock.Location = new System.Drawing.Point(16, 238);
+            this.rbDeadLock.Name = "rbDeadLock";
+            this.rbDeadLock.Size = new System.Drawing.Size(71, 17);
+            this.rbDeadLock.TabIndex = 21;
+            this.rbDeadLock.Tag = "Type";
+            this.rbDeadLock.Text = "Deadlock";
+            this.rbDeadLock.UseVisualStyleBackColor = true;
+            this.rbDeadLock.CheckedChanged += new System.EventHandler(this.rbLostUpdate_CheckedChanged);
+            // 
             // frmQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1244,6 +1258,7 @@
         private System.Windows.Forms.RadioButton rbKhongLostUpdate;
         private System.Windows.Forms.RadioButton rbBiLostUpdate;
         private System.Windows.Forms.RadioButton rbLostUpdate;
+        private System.Windows.Forms.RadioButton rbDeadLock;
 
     }
 }
