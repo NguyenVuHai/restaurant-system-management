@@ -70,11 +70,6 @@ namespace RestaurantApp_G21
             LoadMonAn();
         }
 
-        private void txtTimMaBan_Enter(object sender, EventArgs e)
-        {
-            TimBan();
-        }
-
         private void btnTim_Click(object sender, EventArgs e)
         {
             TimBan();
@@ -115,32 +110,6 @@ namespace RestaurantApp_G21
 
             List<BanDatDTO> list = BanDatBUS.TimBan(GlobalVariables.maNhaHang, maBan, tenBan, ngay);
             m_dtGirdDSBan.DataSource = list;
-        }
-
-        private void m_dtGirdDSBan_Click(object sender, EventArgs e)
-        {
-            int index = m_dtGirdDSBan.SelectedCells[0].RowIndex;
-            GlobalVariables.maLichBan = Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
-            string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
-            GlobalVariables.bBongMa = rbBiBongMa.Checked;
-            GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
-            GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
-            GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
-            if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
-            {
-                LoadThongTinHoaDon(index);
-                LoadDanhSachMonAnTrongHoaDon();
-            }
-            else
-            {
-                if (MessageBox.Show("Hóa đơn chưa tồn tại. Bạn có muốn tạo mới hóa đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    int maLichBan = GlobalVariables.maLichBan;
-                    GlobalVariables.curMaHoaDon = HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
-                    LoadThongTinHoaDon(index);
-                    LoadDanhSachMonAnTrongHoaDon();
-                }
-            }
         }
 
         private void LoadThongTinHoaDon(int index)
@@ -188,29 +157,6 @@ namespace RestaurantApp_G21
         {
             HoaDonBUS.XoaMonAn(GlobalVariables.maChiTietHoaDon, rbDirtyRead.Checked, rbKhongTheDocLai.Checked);
             LoadDanhSachMonAnTrongHoaDon();
-        }
-
-        private void m_dtGridDSDatMon_Click(object sender, EventArgs e)
-        {
-            if (m_dtGridDSDatMon.Rows.Count > 0)
-            {
-                GlobalVariables.maChiTietHoaDon.Clear();
-                foreach (DataGridViewCell cell in m_dtGridDSDatMon.SelectedCells)
-                {
-                    int maChiTietHoaDon = Int32.Parse(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietHoaDon"].Value.ToString());
-                    GlobalVariables.maChiTietHoaDon.Add(maChiTietHoaDon);
-                    txtDonGia.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["DonGia"].Value.ToString();
-                    txtSoLuong.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["SoLuong"].Value.ToString();
-                    for (int i = 0; i < cbbDanhSachMonAn.Items.Count; i++)
-                    {
-                        if (((ChiTietThucDonDTO)cbbDanhSachMonAn.Items[i]).MaChiTietThucDon.Equals(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietThucDon"].Value))
-                        {
-                            cbbDanhSachMonAn.SelectedIndex = i;
-                            break;
-                        }
-                    }
-                }
-            }
         }
 
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
@@ -289,6 +235,60 @@ namespace RestaurantApp_G21
             }
             MessageBox.Show(String.Format("Tổng số dòng lần 1: {2}\nTổng số dòng lần 2: {1}\nTổng hóa đơn: {0}",thanhtien,list.Count,m_dtGridDSDatMon.Rows.Count),"Demo Phantom");
             GridViewDisplay(list);
+        }
+
+        private void m_dtGirdDSBan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = m_dtGirdDSBan.SelectedCells[0].RowIndex;
+            GlobalVariables.maLichBan = Int32.Parse(m_dtGirdDSBan.Rows[index].Cells["MaLichBan"].Value.ToString());
+            string maHoaDon = HoaDonBUS.KiemTraHoaDon(GlobalVariables.maLichBan);
+            GlobalVariables.bBongMa = rbBiBongMa.Checked;
+            GlobalVariables.bDuLieuRac = rbBiDuLieuRac.Checked;
+            GlobalVariables.bKhongTheDocLai = rbBiKhongTheDocLai.Checked;
+            GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
+            if (Guid.TryParse(maHoaDon, out GlobalVariables.curMaHoaDon))
+            {
+                LoadThongTinHoaDon(index);
+                LoadDanhSachMonAnTrongHoaDon();
+            }
+            else
+            {
+                if (MessageBox.Show("Hóa đơn chưa tồn tại. Bạn có muốn tạo mới hóa đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int maLichBan = GlobalVariables.maLichBan;
+                    GlobalVariables.curMaHoaDon = HoaDonBUS.ThemHoaDon(maLichBan, DateTime.Today);
+                    LoadThongTinHoaDon(index);
+                    LoadDanhSachMonAnTrongHoaDon();
+                }
+            }
+        }
+
+        private void txtTimMaBan_TextChanged(object sender, EventArgs e)
+        {
+            TimBan();
+        }
+
+        private void m_dtGridDSDatMon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (m_dtGridDSDatMon.Rows.Count > 0)
+            {
+                GlobalVariables.maChiTietHoaDon.Clear();
+                foreach (DataGridViewCell cell in m_dtGridDSDatMon.SelectedCells)
+                {
+                    int maChiTietHoaDon = Int32.Parse(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietHoaDon"].Value.ToString());
+                    GlobalVariables.maChiTietHoaDon.Add(maChiTietHoaDon);
+                    txtDonGia.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["DonGia"].Value.ToString();
+                    txtSoLuong.Text = m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["SoLuong"].Value.ToString();
+                    for (int i = 0; i < cbbDanhSachMonAn.Items.Count; i++)
+                    {
+                        if (((ChiTietThucDonDTO)cbbDanhSachMonAn.Items[i]).MaChiTietThucDon.Equals(m_dtGridDSDatMon.Rows[cell.RowIndex].Cells["MaChiTietThucDon"].Value))
+                        {
+                            cbbDanhSachMonAn.SelectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 }
