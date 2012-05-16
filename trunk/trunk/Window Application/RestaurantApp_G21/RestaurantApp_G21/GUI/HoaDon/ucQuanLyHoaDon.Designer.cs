@@ -91,9 +91,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.rbKhongBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
             this.rbBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
+            this.rbDeadLock = new System.Windows.Forms.RadioButton();
             this.rbLostUpdate = new System.Windows.Forms.RadioButton();
             this.rbKhongTheDocLai = new System.Windows.Forms.RadioButton();
-            this.rbDeadLock = new System.Windows.Forms.RadioButton();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).BeginInit();
             this.groupPanel3.SuspendLayout();
@@ -416,7 +416,7 @@
             this.m_dtGridDSDatMon.RowHeadersVisible = false;
             this.m_dtGridDSDatMon.Size = new System.Drawing.Size(523, 257);
             this.m_dtGridDSDatMon.TabIndex = 3;
-            this.m_dtGridDSDatMon.Click += new System.EventHandler(this.m_dtGridDSDatMon_Click);
+            this.m_dtGridDSDatMon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGridDSDatMon_CellClick);
             // 
             // groupPanel3
             // 
@@ -546,7 +546,6 @@
             this.txtTimTenBan.Name = "txtTimTenBan";
             this.txtTimTenBan.Size = new System.Drawing.Size(137, 20);
             this.txtTimTenBan.TabIndex = 2;
-            this.txtTimTenBan.Enter += new System.EventHandler(this.txtTimMaBan_Enter);
             // 
             // txtTimMaBan
             // 
@@ -561,7 +560,7 @@
             this.txtTimMaBan.Name = "txtTimMaBan";
             this.txtTimMaBan.Size = new System.Drawing.Size(137, 20);
             this.txtTimMaBan.TabIndex = 2;
-            this.txtTimMaBan.Enter += new System.EventHandler(this.txtTimMaBan_Enter);
+            this.txtTimMaBan.TextChanged += new System.EventHandler(this.txtTimMaBan_TextChanged);
             // 
             // labelX6
             // 
@@ -644,7 +643,7 @@
             this.m_dtGirdDSBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.m_dtGirdDSBan.Size = new System.Drawing.Size(236, 363);
             this.m_dtGirdDSBan.TabIndex = 3;
-            this.m_dtGirdDSBan.Click += new System.EventHandler(this.m_dtGirdDSBan_Click);
+            this.m_dtGirdDSBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dtGirdDSBan_CellClick);
             // 
             // btnThemMonAn
             // 
@@ -747,7 +746,6 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(121, 20);
             this.txtSoLuong.TabIndex = 2;
-            this.txtSoLuong.Enter += new System.EventHandler(this.txtTimMaBan_Enter);
             // 
             // labelX10
             // 
@@ -778,7 +776,6 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(121, 20);
             this.txtDonGia.TabIndex = 2;
-            this.txtDonGia.Enter += new System.EventHandler(this.txtTimMaBan_Enter);
             // 
             // labelX9
             // 
@@ -1128,6 +1125,18 @@
             this.rbBiKhongTheDocLai.UseVisualStyleBackColor = true;
             this.rbBiKhongTheDocLai.CheckedChanged += new System.EventHandler(this.rbBiKhongTheDocLai_CheckedChanged);
             // 
+            // rbDeadLock
+            // 
+            this.rbDeadLock.AutoSize = true;
+            this.rbDeadLock.Location = new System.Drawing.Point(16, 238);
+            this.rbDeadLock.Name = "rbDeadLock";
+            this.rbDeadLock.Size = new System.Drawing.Size(71, 17);
+            this.rbDeadLock.TabIndex = 21;
+            this.rbDeadLock.Tag = "Type";
+            this.rbDeadLock.Text = "Deadlock";
+            this.rbDeadLock.UseVisualStyleBackColor = true;
+            this.rbDeadLock.CheckedChanged += new System.EventHandler(this.rbLostUpdate_CheckedChanged);
+            // 
             // rbLostUpdate
             // 
             this.rbLostUpdate.AutoSize = true;
@@ -1151,18 +1160,6 @@
             this.rbKhongTheDocLai.Text = "Không thể đọc lại";
             this.rbKhongTheDocLai.UseVisualStyleBackColor = true;
             this.rbKhongTheDocLai.CheckedChanged += new System.EventHandler(this.rbKhongTheDocLai_CheckedChanged);
-            // 
-            // rbDeadLock
-            // 
-            this.rbDeadLock.AutoSize = true;
-            this.rbDeadLock.Location = new System.Drawing.Point(16, 238);
-            this.rbDeadLock.Name = "rbDeadLock";
-            this.rbDeadLock.Size = new System.Drawing.Size(71, 17);
-            this.rbDeadLock.TabIndex = 21;
-            this.rbDeadLock.Tag = "Type";
-            this.rbDeadLock.Text = "Deadlock";
-            this.rbDeadLock.UseVisualStyleBackColor = true;
-            this.rbDeadLock.CheckedChanged += new System.EventHandler(this.rbLostUpdate_CheckedChanged);
             // 
             // frmQuanLyHoaDon
             // 
