@@ -98,6 +98,76 @@ namespace RestaurantApp_G21.DAO
             }
             return list;
         }
+        public static ArrayList phantomTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(string ten, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.PhantomTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich";
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSecondSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
+        public static ArrayList phantomSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(string ten, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.PhantomSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich";
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSecondSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
         public static ArrayList timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(string ten, int maNhaHang)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -133,12 +203,213 @@ namespace RestaurantApp_G21.DAO
             }
             return list;
         }
+        //UNREPEATABLE
+        public static ArrayList unrepeatableTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.UnrepeatableReadT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoGiaoDich";
+
+
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrangGiaoDich";
+            param.Value = tinhTrangGiaoDich;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSecondSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
+        //UNREPEATABLE SOLVED
+        public static ArrayList unrepeatableSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //phantom read
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //dirty
+            //command.CommandText = "dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+            //unrepeat
+            command.CommandText = "dbo.UnrepeatableReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoGiaoDich";
+
+
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrangGiaoDich";
+            param.Value = tinhTrangGiaoDich;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSecondSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
+
+        //DIRTY READ
+        public static ArrayList dirtyReadTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //phantom read
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //dirty
+            //command.CommandText = "dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+            //unrepeat
+            command.CommandText = "dbo.DirtyReadT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+
+
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrangGiaoDich";
+            param.Value = tinhTrangGiaoDich;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
+        //DIRTY READ SOLVED
+        public static ArrayList dirtyReadSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //phantom read
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //dirty
+            //command.CommandText = "dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+            //unrepeat
+            command.CommandText = "dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+
+
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@ten";
+            param.Value = ten;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrangGiaoDich";
+            param.Value = tinhTrangGiaoDich;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            DataTable dt = DataAccessCode.ExecuteSelectCommand(command);
+            ArrayList list = new ArrayList();
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NhaCungCapDTO dto = new NhaCungCapDTO();
+                    dto.MaNhaCungCap = Convert.ToInt32(dt.Rows[i]["MaNhaCungCap"]);
+                    dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
+                    dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                    dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TongNo"].ToString() != "")
+                        dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);
+
+                    list.Add(dto);
+                }
+            }
+            return list;
+        }
         public static ArrayList timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
             //phantom read
-            command.CommandText = "dbo.UnrepeatableReadT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoGiaoDich";
+            //command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            //dirty
+            //command.CommandText = "dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich";
+            //unrepeat
+            command.CommandText = "dbo.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung";
+            
 
             DbParameter param = command.CreateParameter();
             param.ParameterName = "@ten";
@@ -204,6 +475,8 @@ namespace RestaurantApp_G21.DAO
                     dto.TenNhaCungCap = dt.Rows[i]["TenNhaCungCap"].ToString();
                     dto.DienThoai = dt.Rows[i]["DienThoai"].ToString();
                     dto.SoTaiKhoan = dt.Rows[i]["SoTaiKhoan"].ToString();
+                    if (dt.Rows[i]["TinhTrang"].ToString()!="")
+                        dto.TinhTrangGiaoDich = Convert.ToInt16(dt.Rows[i]["TinhTrang"]);
                     string a = dt.Rows[i]["TongNo"].ToString();
                     if (dt.Rows[i]["TongNo"].ToString() != "")
                         dto.TongNo = Convert.ToDecimal(dt.Rows[i]["TongNo"]);

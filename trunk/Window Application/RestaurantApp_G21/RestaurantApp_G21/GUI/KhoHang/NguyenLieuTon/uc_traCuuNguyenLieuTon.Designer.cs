@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cb_deMoXungDot = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cb_monAn = new System.Windows.Forms.ComboBox();
@@ -67,7 +70,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lb_soLuongKQ = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cb_mucCoLap = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,6 +95,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cb_mucCoLap);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.cb_deMoXungDot);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.cb_monAn);
@@ -109,11 +118,45 @@
             this.panel1.Size = new System.Drawing.Size(990, 134);
             this.panel1.TabIndex = 49;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 74);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox3.TabIndex = 62;
+            this.pictureBox3.TabStop = false;
+            // 
+            // cb_deMoXungDot
+            // 
+            this.cb_deMoXungDot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_deMoXungDot.FormattingEnabled = true;
+            this.cb_deMoXungDot.Items.AddRange(new object[] {
+            "Lost updated",
+            "Lost updated Solved",
+            "Deadlock",
+            "Deadlock Solved",
+            "Không dùng"});
+            this.cb_deMoXungDot.Location = new System.Drawing.Point(172, 78);
+            this.cb_deMoXungDot.Name = "cb_deMoXungDot";
+            this.cb_deMoXungDot.Size = new System.Drawing.Size(144, 21);
+            this.cb_deMoXungDot.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(56, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 16);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "Demo Xung đột:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(645, 105);
+            this.label3.Location = new System.Drawing.Point(682, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 16);
             this.label3.TabIndex = 59;
@@ -122,7 +165,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
-            this.pictureBox6.Location = new System.Drawing.Point(425, 74);
+            this.pictureBox6.Location = new System.Drawing.Point(462, 74);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 29);
             this.pictureBox6.TabIndex = 58;
@@ -132,17 +175,17 @@
             // 
             this.cb_monAn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_monAn.FormattingEnabled = true;
-            this.cb_monAn.Location = new System.Drawing.Point(595, 81);
+            this.cb_monAn.Location = new System.Drawing.Point(632, 81);
             this.cb_monAn.Name = "cb_monAn";
             this.cb_monAn.Size = new System.Drawing.Size(225, 21);
-            this.cb_monAn.TabIndex = 57;
+            this.cb_monAn.TabIndex = 2;
             this.cb_monAn.SelectedIndexChanged += new System.EventHandler(this.cb_monAn_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(459, 83);
+            this.label6.Location = new System.Drawing.Point(496, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 16);
             this.label6.TabIndex = 56;
@@ -151,7 +194,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
-            this.pictureBox5.Location = new System.Drawing.Point(425, 38);
+            this.pictureBox5.Location = new System.Drawing.Point(462, 38);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 29);
             this.pictureBox5.TabIndex = 55;
@@ -179,7 +222,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(829, 53);
+            this.button1.Location = new System.Drawing.Point(866, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 39);
             this.button1.TabIndex = 54;
@@ -191,17 +234,17 @@
             // 
             this.cb_loaiMonAn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_loaiMonAn.FormattingEnabled = true;
-            this.cb_loaiMonAn.Location = new System.Drawing.Point(595, 45);
+            this.cb_loaiMonAn.Location = new System.Drawing.Point(632, 45);
             this.cb_loaiMonAn.Name = "cb_loaiMonAn";
             this.cb_loaiMonAn.Size = new System.Drawing.Size(225, 21);
-            this.cb_loaiMonAn.TabIndex = 53;
+            this.cb_loaiMonAn.TabIndex = 1;
             this.cb_loaiMonAn.SelectedIndexChanged += new System.EventHandler(this.cb_loaiMonAn_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(459, 47);
+            this.label4.Location = new System.Drawing.Point(496, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 16);
             this.label4.TabIndex = 52;
@@ -211,7 +254,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 46);
+            this.label2.Location = new System.Drawing.Point(56, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 50;
@@ -219,16 +262,16 @@
             // 
             // txt_ten
             // 
-            this.txt_ten.Location = new System.Drawing.Point(148, 45);
+            this.txt_ten.Location = new System.Drawing.Point(131, 45);
             this.txt_ten.Name = "txt_ten";
-            this.txt_ten.Size = new System.Drawing.Size(259, 20);
-            this.txt_ten.TabIndex = 51;
+            this.txt_ten.Size = new System.Drawing.Size(305, 20);
+            this.txt_ten.TabIndex = 0;
             this.txt_ten.TextChanged += new System.EventHandler(this.txt_ten_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 29);
             this.pictureBox1.TabIndex = 48;
@@ -263,7 +306,7 @@
             this.bt_inDanhSach.Location = new System.Drawing.Point(300, 0);
             this.bt_inDanhSach.Name = "bt_inDanhSach";
             this.bt_inDanhSach.Size = new System.Drawing.Size(103, 30);
-            this.bt_inDanhSach.TabIndex = 62;
+            this.bt_inDanhSach.TabIndex = 9;
             this.bt_inDanhSach.Text = "In danh sách";
             this.bt_inDanhSach.UseVisualStyleBackColor = true;
             // 
@@ -274,7 +317,7 @@
             this.bt_lamTuoi.Location = new System.Drawing.Point(176, 0);
             this.bt_lamTuoi.Name = "bt_lamTuoi";
             this.bt_lamTuoi.Size = new System.Drawing.Size(124, 30);
-            this.bt_lamTuoi.TabIndex = 61;
+            this.bt_lamTuoi.TabIndex = 8;
             this.bt_lamTuoi.Text = "Làm tươi danh sách";
             this.bt_lamTuoi.UseVisualStyleBackColor = true;
             this.bt_lamTuoi.Click += new System.EventHandler(this.bt_lamTuoi_Click);
@@ -286,7 +329,7 @@
             this.bt_sua.Location = new System.Drawing.Point(102, 0);
             this.bt_sua.Name = "bt_sua";
             this.bt_sua.Size = new System.Drawing.Size(74, 30);
-            this.bt_sua.TabIndex = 60;
+            this.bt_sua.TabIndex = 6;
             this.bt_sua.Text = "Lưu lại";
             this.bt_sua.UseVisualStyleBackColor = true;
             this.bt_sua.Click += new System.EventHandler(this.bt_capNhat_Click);
@@ -298,7 +341,7 @@
             this.bt_chonTatCa.Location = new System.Drawing.Point(0, 0);
             this.bt_chonTatCa.Name = "bt_chonTatCa";
             this.bt_chonTatCa.Size = new System.Drawing.Size(102, 30);
-            this.bt_chonTatCa.TabIndex = 59;
+            this.bt_chonTatCa.TabIndex = 5;
             this.bt_chonTatCa.Text = "Chọn tất cả";
             this.bt_chonTatCa.UseVisualStyleBackColor = true;
             this.bt_chonTatCa.Click += new System.EventHandler(this.bt_chonTatCa_Click);
@@ -353,7 +396,7 @@
             this.grid_ds.Name = "grid_ds";
             this.grid_ds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_ds.Size = new System.Drawing.Size(990, 325);
-            this.grid_ds.TabIndex = 52;
+            this.grid_ds.TabIndex = 4;
             this.grid_ds.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_ds_CellValidated);
             // 
             // cb
@@ -486,6 +529,21 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Kết quả tìm kiếm:";
             // 
+            // cb_mucCoLap
+            // 
+            this.cb_mucCoLap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_mucCoLap.FormattingEnabled = true;
+            this.cb_mucCoLap.Items.AddRange(new object[] {
+            "Mặc định",
+            "Read Uncommitted",
+            "Read Committed",
+            "Repeatable Read",
+            "Serializable"});
+            this.cb_mucCoLap.Location = new System.Drawing.Point(323, 78);
+            this.cb_mucCoLap.Name = "cb_mucCoLap";
+            this.cb_mucCoLap.Size = new System.Drawing.Size(113, 21);
+            this.cb_mucCoLap.TabIndex = 63;
+            // 
             // uc_traCuuNguyenLieuTon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,6 +557,7 @@
             this.Size = new System.Drawing.Size(990, 526);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -553,5 +612,9 @@
         private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cToiDa;
         private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn cToiThieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDonViTinh;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ComboBox cb_deMoXungDot;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cb_mucCoLap;
     }
 }

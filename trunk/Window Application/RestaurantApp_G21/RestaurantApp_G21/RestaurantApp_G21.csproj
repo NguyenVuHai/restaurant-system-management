@@ -103,6 +103,7 @@
     <Compile Include="BUS\KhoHangBUS.cs" />
     <Compile Include="BUS\KhoHang_NguyenLieuBUS.cs" />
     <Compile Include="BUS\KhuVucBUS.cs" />
+    <Compile Include="BUS\LichLamViecBUS.cs" />
     <Compile Include="BUS\LoaiMonAnBUS.cs" />
     <Compile Include="BUS\LoaiNhanVienBUS.cs" />
     <Compile Include="BUS\LoaiNhanVienCNBUS.cs" />
@@ -110,7 +111,9 @@
     <Compile Include="BUS\NhaCungCapBUS.cs" />
     <Compile Include="BUS\NhaHangBUS.cs" />
     <Compile Include="BUS\PhanLoaiMonAnBUS.cs" />
+    <Compile Include="BUS\ThongKeNhanVienBUS.cs" />
     <Compile Include="BUS\ThongTinBanBUS.cs" />
+    <Compile Include="BUS\ThongTinHangNhapBUS.cs" />
     <Compile Include="BUS\ThongTinNhanVienBUS.cs" />
     <Compile Include="BUS\ThongTinNhanVienCNBUS.cs" />
     <Compile Include="BUS\ThongTinTaiKhoanBUS.cs" />
@@ -122,6 +125,7 @@
     <Compile Include="DAO\KhoHangDAO.cs" />
     <Compile Include="DAO\KhoHang_NguyenLieuDAO.cs" />
     <Compile Include="DAO\KhuVucDAO.cs" />
+    <Compile Include="DAO\LichLamViecDAO.cs" />
     <Compile Include="DAO\LoaiMonAnDAO.cs" />
     <Compile Include="DAO\LoaiNhanVienCNDAO.cs" />
     <Compile Include="DAO\LoaiNhanVienDAO.cs" />
@@ -129,20 +133,25 @@
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\NhaHangDAO.cs" />
     <Compile Include="DAO\PhanLoaiMonAnDAO.cs" />
+    <Compile Include="DAO\ThongKeNhanVienDAO.cs" />
     <Compile Include="DAO\ThongTinBanDAO.cs" />
+    <Compile Include="DAO\ThongTinHangNhapDAO.cs" />
     <Compile Include="DAO\ThongTinNhanVienCNDAO.cs" />
     <Compile Include="DAO\ThongTinNhanVienDAO.cs" />
     <Compile Include="DAO\ThongTinTaiKhoanDAO.cs" />
     <Compile Include="DTO\BuoiDTO.cs" />
+    <Compile Include="DTO\ChiTietHangNhapDTO.cs" />
     <Compile Include="DTO\ChiTietThucDonDTO.cs" />
     <Compile Include="DTO\GlobalVariables.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhoHangDTO.cs" />
     <Compile Include="DTO\KhoHang_NguyenLieuDTO.cs" />
     <Compile Include="DTO\KhuVucDTO.cs" />
+    <Compile Include="DTO\LichLamViecDTO.cs" />
     <Compile Include="DTO\LoaiMonAnDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienCNDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
+    <Compile Include="DTO\LoaiXungDotDTO.cs" />
     <Compile Include="DTO\MonAnDTO.cs" />
     <Compile Include="DTO\MonAn_NguyenLieuDTO.cs" />
     <Compile Include="DTO\NguyenLieuDTO.cs" />
@@ -150,10 +159,13 @@
     <Compile Include="DTO\NhaHangDTO.cs" />
     <Compile Include="DTO\BanDatDTO.cs" />
     <Compile Include="DTO\PhanLoaiMonAnDTO.cs" />
+    <Compile Include="DTO\ThongKeNhanVienDTO.cs" />
     <Compile Include="DTO\ThongTinBanDTO.cs" />
+    <Compile Include="DTO\ThongTinHangNhapDTO.cs" />
     <Compile Include="DTO\ThongTinNhanVienCNDTO.cs" />
     <Compile Include="DTO\ThongTinNhanVienDTO.cs" />
     <Compile Include="DTO\ThongTinTaiKhoanDTO.cs" />
+    <Compile Include="DTO\TinhTrangDTO.cs" />
     <Compile Include="frmCongTy.cs">
       <SubType>Form</SubType>
     </Compile>

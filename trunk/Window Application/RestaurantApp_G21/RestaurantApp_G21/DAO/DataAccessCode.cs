@@ -26,7 +26,31 @@ public static class DataAccessCode
     //    RestaurantConfiguration.command.CommandType = CommandType.StoredProcedure;
     //    return RestaurantConfiguration.command;
     //}
-
+    public static int ExecuteNonQueryReturnIsRollBackOutputValue(DbCommand command)
+    {
+        // The number of affected rows 
+        int kq = 0;
+        // Execute the command making sure the connection gets closed in the
+        try
+        {
+            // Open the connection of the command
+            command.Connection.Open();
+            // Execute the command and get the number of affected rows
+            command.ExecuteNonQuery();
+            kq = Convert.ToInt16(command.Parameters["@isRollBack"].Value);
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+        finally
+        {
+            // Close the connection
+            command.Connection.Close();
+        }
+        // return the number of affected rows
+        return kq;
+    }
     public static DbCommand CreateCommand()
     {
         string providerName = RestaurantConfiguration.DbProviderName;

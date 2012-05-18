@@ -22,7 +22,8 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
             accessory.initComboLoaiMonAn(cb_loaiMonAn);
 
             accessory.initButtonDockFillInPanelEx(panelEx1);
-            
+            cb_deMoXungDot.SelectedIndex = cb_deMoXungDot.Items.Count - 1;
+            cb_mucCoLap.SelectedIndex = 0;
             showComboMonAn();
         }
 
@@ -42,9 +43,9 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            fm_nguyenLieu fm = new fm_nguyenLieu();
-            //fm.NgLieu = null;
-            fm.Show();
+            //fm_nguyenLieu fm = new fm_nguyenLieu();
+            ////fm.NgLieu = null;
+            //fm.Show();
         }
 
         private void layChiTietKhoHangNguyenLieuDTO(KhoHang_NguyenLieuDTO dto, int rowOfGrid)
@@ -54,7 +55,7 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
             
             dto.SoLuongTon = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongTon"].Value);
             if(Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongXuat"].Value)!=0)
-                dto.SoLuongTon -= Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongXuat"].Value);
+                dto.SoLuongXuat = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cLuongXuat"].Value);
             dto.SucChua = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cToiDa"].Value);
             dto.MucTonToiThieu = Convert.ToInt32(grid_ds.Rows[rowOfGrid].Cells["cToiThieu"].Value);
             //dto.NguyenLieu.DonViTinh = grid_ds.Rows[rowOfGrid].Cells["cDonViTinh"].Value.ToString();
@@ -76,7 +77,23 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
                 {
                     KhoHang_NguyenLieuDTO updateDTO = (KhoHang_NguyenLieuDTO)grid_ds.Rows[i].Cells["cMaNguyenLieu"].Value;
                     layChiTietKhoHangNguyenLieuDTO(updateDTO, i);
-                    int kq = KhoHang_NguyenLieuBUS.capNhatChiTietKhoHangNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                    int kq = 0;
+                    if(updateDTO.SoLuongXuat==0)
+                        kq = KhoHang_NguyenLieuBUS.capNhatChiTietKhoHangNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                    else if (updateDTO.SoLuongXuat > 0)
+                    {
+                        if(cb_deMoXungDot.SelectedIndex==0)//LOST UPDATED
+                            kq = KhoHang_NguyenLieuBUS.lostUpdatedXuatNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                        else if(cb_deMoXungDot.SelectedIndex==1)//LOST UPDATED SOLVED
+                            kq = KhoHang_NguyenLieuBUS.lostUpdatedSolvedXuatNguyenLieu(updateDTO, GlobalVariables.maNhaHang, cb_mucCoLap.SelectedIndex);
+                        else if(cb_deMoXungDot.SelectedIndex==2)//DEADLOCK
+                            kq = KhoHang_NguyenLieuBUS.deadlockXuatNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                        else if (cb_deMoXungDot.SelectedIndex == 3)//DEADLOCK SOLVED
+                            kq = KhoHang_NguyenLieuBUS.deadlockSolvedXuatNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                        else if (cb_deMoXungDot.SelectedIndex==cb_deMoXungDot.Items.Count-1)//KHÔNG DÙNG
+                            kq = KhoHang_NguyenLieuBUS.xuatNguyenLieu(updateDTO, GlobalVariables.maNhaHang);
+                    }
+
                     if (kq != 1)
                     {
                         MessageBox.Show("Không cập nhật được dòng thứ " + (i + 1).ToString(), "[!]Thông báo");
@@ -308,6 +325,32 @@ namespace RestaurantApp_G21.GUI.KhoHang.NguyenLieuTon
             }
             //lam tuoi danh sach sau khi da cap nhat thanh cong
             lamTuoiDanhSachTraCuuNguyenLieu();
+        }
+
+        private void bt_luuLaiT2_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < grid_ds.RowCount; i++)
+            {
+                if (Convert.ToBoolean(grid_ds.Rows[i].Cells[0].Value) == true)
+                {
+                    KhoHang_NguyenLieuDTO updateDTO = (KhoHang_NguyenLieuDTO)grid_ds.Rows[i].Cells["cMaNguyenLieu"].Value;
+                    layChiTietKhoHangNguyenLieuDTO(updateDTO, i);
+                    int kq = KhoHang_NguyenLieuBUS.capNhatChiTietKhoHangNguyenLieuT2(updateDTO, GlobalVariables.maNhaHang);
+                    if (kq != 1)
+                    {
+                        MessageBox.Show("Không cập nhật được dòng thứ " + (i + 1).ToString(), "[!]Thông báo");
+                        return;
+                    }
+                    //MessageBox.Show(kq.ToString());
+                    grid_ds.Rows[i].Cells["cLuongXuat"].Value = 0;
+                }
+            }
+            //lam tuoi danh sach sau khi da cap nhat thanh cong
+            //lamTuoiDanhSachTraCuuNguyenLieu();
+
+            //GUI.accessory.readOnlyCheckedRows(grid_ds, true);
+
+            //bt_sua.Click += new EventHandler(bt_sua_Click);
         }
 
     }

@@ -29,12 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bt_chonAll = new System.Windows.Forms.Button();
-            this.bt_sua = new System.Windows.Forms.Button();
-            this.bt_ngungGiaoDich = new System.Windows.Forms.Button();
-            this.bt_inDanhSach = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.grid_ds = new System.Windows.Forms.DataGridView();
@@ -58,8 +54,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bt_them = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bt_inDanhSach = new System.Windows.Forms.Button();
+            this.bt_ngungGiaoDich = new System.Windows.Forms.Button();
+            this.bt_them = new System.Windows.Forms.Button();
+            this.bt_sua = new System.Windows.Forms.Button();
+            this.bt_chonAll = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_demoXungDot = new System.Windows.Forms.ComboBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +72,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -78,57 +82,6 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ReshowDelay = 200;
             this.toolTip1.ShowAlways = true;
-            // 
-            // bt_chonAll
-            // 
-            this.bt_chonAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bt_chonAll.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_chonAll.Location = new System.Drawing.Point(0, 0);
-            this.bt_chonAll.Name = "bt_chonAll";
-            this.bt_chonAll.Size = new System.Drawing.Size(108, 30);
-            this.bt_chonAll.TabIndex = 23;
-            this.bt_chonAll.Text = "Chọn tất cả";
-            this.toolTip1.SetToolTip(this.bt_chonAll, "Chọn tất cả những dòng để có thể thao tác được.");
-            this.bt_chonAll.UseVisualStyleBackColor = true;
-            this.bt_chonAll.Click += new System.EventHandler(this.bt_chonAll_Click);
-            // 
-            // bt_sua
-            // 
-            this.bt_sua.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bt_sua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_sua.Location = new System.Drawing.Point(108, 0);
-            this.bt_sua.Name = "bt_sua";
-            this.bt_sua.Size = new System.Drawing.Size(75, 30);
-            this.bt_sua.TabIndex = 24;
-            this.bt_sua.Text = "Sửa";
-            this.toolTip1.SetToolTip(this.bt_sua, "Click nút này để những dòng có check có thể thao tác được.\r\n\r\nSửa thông tin trực " +
-                    "tiếp trên danh sách đang hiển thị.");
-            this.bt_sua.UseVisualStyleBackColor = true;
-            // 
-            // bt_ngungGiaoDich
-            // 
-            this.bt_ngungGiaoDich.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bt_ngungGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_ngungGiaoDich.Location = new System.Drawing.Point(258, 0);
-            this.bt_ngungGiaoDich.Name = "bt_ngungGiaoDich";
-            this.bt_ngungGiaoDich.Size = new System.Drawing.Size(142, 30);
-            this.bt_ngungGiaoDich.TabIndex = 26;
-            this.bt_ngungGiaoDich.Text = "Ngừng giao dịch";
-            this.toolTip1.SetToolTip(this.bt_ngungGiaoDich, "Ngừng giao dịch với những dòng đã chọn");
-            this.bt_ngungGiaoDich.UseVisualStyleBackColor = true;
-            this.bt_ngungGiaoDich.Click += new System.EventHandler(this.bt_ngungGiaoDich_Click);
-            // 
-            // bt_inDanhSach
-            // 
-            this.bt_inDanhSach.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bt_inDanhSach.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_inDanhSach.Location = new System.Drawing.Point(400, 0);
-            this.bt_inDanhSach.Name = "bt_inDanhSach";
-            this.bt_inDanhSach.Size = new System.Drawing.Size(109, 30);
-            this.bt_inDanhSach.TabIndex = 27;
-            this.bt_inDanhSach.Text = "In danh sách";
-            this.toolTip1.SetToolTip(this.bt_inDanhSach, "In ra danh sách đang hiển thị.");
-            this.bt_inDanhSach.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -156,14 +109,14 @@
             this.grid_ds.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_ds.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grid_ds.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_ds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_ds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grid_ds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_ds.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cb,
@@ -179,6 +132,7 @@
             this.grid_ds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_ds.Size = new System.Drawing.Size(990, 370);
             this.grid_ds.TabIndex = 15;
+            this.grid_ds.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_ds_CellContentClick);
             this.grid_ds.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gv_ds_CellMouseDoubleClick);
             // 
             // cb
@@ -344,6 +298,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cb_demoXungDot);
+            this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label5);
@@ -377,17 +334,6 @@
             this.panel2.TabIndex = 23;
             this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
             // 
-            // bt_them
-            // 
-            this.bt_them.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bt_them.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_them.Location = new System.Drawing.Point(183, 0);
-            this.bt_them.Name = "bt_them";
-            this.bt_them.Size = new System.Drawing.Size(75, 30);
-            this.bt_them.TabIndex = 25;
-            this.bt_them.Text = "Thêm";
-            this.bt_them.UseVisualStyleBackColor = true;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.grid_ds);
@@ -396,6 +342,107 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(990, 370);
             this.panel3.TabIndex = 24;
+            // 
+            // bt_inDanhSach
+            // 
+            this.bt_inDanhSach.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bt_inDanhSach.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_inDanhSach.Location = new System.Drawing.Point(400, 0);
+            this.bt_inDanhSach.Name = "bt_inDanhSach";
+            this.bt_inDanhSach.Size = new System.Drawing.Size(109, 30);
+            this.bt_inDanhSach.TabIndex = 51;
+            this.bt_inDanhSach.Text = "In danh sách";
+            this.toolTip1.SetToolTip(this.bt_inDanhSach, "In ra danh sách đang hiển thị.");
+            this.bt_inDanhSach.UseVisualStyleBackColor = true;
+            // 
+            // bt_ngungGiaoDich
+            // 
+            this.bt_ngungGiaoDich.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bt_ngungGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ngungGiaoDich.Location = new System.Drawing.Point(258, 0);
+            this.bt_ngungGiaoDich.Name = "bt_ngungGiaoDich";
+            this.bt_ngungGiaoDich.Size = new System.Drawing.Size(142, 30);
+            this.bt_ngungGiaoDich.TabIndex = 50;
+            this.bt_ngungGiaoDich.Text = "Ngừng giao dịch";
+            this.toolTip1.SetToolTip(this.bt_ngungGiaoDich, "Ngừng giao dịch với những dòng đã chọn");
+            this.bt_ngungGiaoDich.UseVisualStyleBackColor = true;
+            this.bt_ngungGiaoDich.Click += new System.EventHandler(this.bt_ngungGiaoDich_Click);
+            // 
+            // bt_them
+            // 
+            this.bt_them.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bt_them.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_them.Location = new System.Drawing.Point(183, 0);
+            this.bt_them.Name = "bt_them";
+            this.bt_them.Size = new System.Drawing.Size(75, 30);
+            this.bt_them.TabIndex = 49;
+            this.bt_them.Text = "Thêm";
+            this.bt_them.UseVisualStyleBackColor = true;
+            this.bt_them.Click += new System.EventHandler(this.bt_them_Click);
+            // 
+            // bt_sua
+            // 
+            this.bt_sua.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bt_sua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_sua.Location = new System.Drawing.Point(108, 0);
+            this.bt_sua.Name = "bt_sua";
+            this.bt_sua.Size = new System.Drawing.Size(75, 30);
+            this.bt_sua.TabIndex = 48;
+            this.bt_sua.Text = "Lưu lại";
+            this.toolTip1.SetToolTip(this.bt_sua, "Click nút này để những dòng có check có thể thao tác được.\r\n\r\nSửa thông tin trực " +
+                    "tiếp trên danh sách đang hiển thị.");
+            this.bt_sua.UseVisualStyleBackColor = true;
+            this.bt_sua.Click += new System.EventHandler(this.bt_sua_Click);
+            // 
+            // bt_chonAll
+            // 
+            this.bt_chonAll.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bt_chonAll.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_chonAll.Location = new System.Drawing.Point(0, 0);
+            this.bt_chonAll.Name = "bt_chonAll";
+            this.bt_chonAll.Size = new System.Drawing.Size(108, 30);
+            this.bt_chonAll.TabIndex = 47;
+            this.bt_chonAll.Text = "Chọn tất cả";
+            this.toolTip1.SetToolTip(this.bt_chonAll, "Chọn tất cả những dòng để có thể thao tác được.");
+            this.bt_chonAll.UseVisualStyleBackColor = true;
+            this.bt_chonAll.Click += new System.EventHandler(this.bt_chonAll_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(459, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Demo Xung đột:";
+            // 
+            // cb_demoXungDot
+            // 
+            this.cb_demoXungDot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_demoXungDot.FormattingEnabled = true;
+            this.cb_demoXungDot.Items.AddRange(new object[] {
+            "Unrepeatable",
+            "Unrepeatable Solved",
+            "Dirty read",
+            "Dirty read Solved",
+            "Phantom",
+            "Phantom Solved",
+            "Không dùng"});
+            this.cb_demoXungDot.Location = new System.Drawing.Point(614, 80);
+            this.cb_demoXungDot.Name = "cb_demoXungDot";
+            this.cb_demoXungDot.Size = new System.Drawing.Size(175, 21);
+            this.cb_demoXungDot.TabIndex = 16;
+            this.cb_demoXungDot.SelectedIndexChanged += new System.EventHandler(this.cb_demoXungDot_SelectedIndexChanged);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::RestaurantApp_G21.Properties.Resources._1334501656_bullet_black;
+            this.pictureBox6.Location = new System.Drawing.Point(425, 73);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
             // 
             // uc_traCuuNCC
             // 
@@ -418,6 +465,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,11 +490,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button bt_inDanhSach;
-        private System.Windows.Forms.Button bt_ngungGiaoDich;
-        private System.Windows.Forms.Button bt_them;
-        private System.Windows.Forms.Button bt_sua;
-        private System.Windows.Forms.Button bt_chonAll;
         private System.Windows.Forms.DataGridViewCheckBoxColumn cb;
         private System.Windows.Forms.DataGridViewTextBoxColumn cMaNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTenNhaCungCap;
@@ -454,5 +497,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cSoTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTongNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cGiaoDich;
+        private System.Windows.Forms.Button bt_inDanhSach;
+        private System.Windows.Forms.Button bt_ngungGiaoDich;
+        private System.Windows.Forms.Button bt_them;
+        private System.Windows.Forms.Button bt_sua;
+        private System.Windows.Forms.Button bt_chonAll;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cb_demoXungDot;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
