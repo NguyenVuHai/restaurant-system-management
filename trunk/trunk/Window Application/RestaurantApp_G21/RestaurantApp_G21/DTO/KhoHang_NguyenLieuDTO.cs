@@ -14,6 +14,13 @@ namespace RestaurantApp_G21.DTO
             get { return nguyenLieu; }
             set { nguyenLieu = value; }
         }
+        private int soLuongXuat;//tai tung thoi diem
+
+        public int SoLuongXuat
+        {
+            get { return soLuongXuat; }
+            set { soLuongXuat = value; }
+        }
         private int soLuongTon;
 
         public int SoLuongTon
@@ -40,6 +47,7 @@ namespace RestaurantApp_G21.DTO
         {
             nguyenLieu = new NguyenLieuDTO();
             soLuongTon = 0;
+            soLuongXuat = 0;
             sucChua = 0;
             mucTonToiThieu = 0;
         }

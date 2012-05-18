@@ -11,9 +11,155 @@ namespace RestaurantApp_G21.DAO
 {
     class NhaCungCapDAO
     {
+        //PHANTOM
+        public static int phantomThemMoi(NhaCungCapDTO dto)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.ThemNhaCungCap";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@tenNhaCungCap";
+            param.Value = dto.TenNhaCungCap;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@dienThoai";
+            param.Value = dto.DienThoai;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@soTaiKhoan";
+            param.Value = dto.SoTaiKhoan;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            return DataAccessCode.ExecuteNonQuery(command);
+        }
+        //PHANTOM SOLVED
+        public static int phantomSolvedThemMoi(NhaCungCapDTO dto)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.PhanTomT2ThemNhaCungCap";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@tenNhaCungCap";
+            param.Value = dto.TenNhaCungCap;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@dienThoai";
+            param.Value = dto.DienThoai;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@soTaiKhoan";
+            param.Value = dto.SoTaiKhoan;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            return DataAccessCode.ExecuteNonQuery(command);
+        }
+        public static int themMoi(NhaCungCapDTO dto)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.ThemNhaCungCap";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@tenNhaCungCap";
+            param.Value = dto.TenNhaCungCap;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@dienThoai";
+            param.Value = dto.DienThoai;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@soTaiKhoan";
+            param.Value = dto.SoTaiKhoan;
+            param.DbType = DbType.String;
+            command.Parameters.Add(param);
+
+            return DataAccessCode.ExecuteNonQuery(command);
+        }
+        //DIRTY READ
+        public static int dirtyReadSetNgungGiaoDich(int maNhaCungCap, int maNhaHang, int tinhTrang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.setNgungGiaoDich";
+            command.CommandText = "dbo.DirtyReadT2SetNgungGiaoDich";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@maNhaCungCap";
+            param.Value = maNhaCungCap;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrang";
+            param.Value = tinhTrang;
+            param.DbType = DbType.Int16;
+            command.Parameters.Add(param);
+            //create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@isRollback";
+            param.Direction = ParameterDirection.Output;
+            param.Value = 0;
+            param.DbType = DbType.Int16;
+            command.Parameters.Add(param);
+            
+            return DataAccessCode.ExecuteNonQueryReturnIsRollBackOutputValue(command);
+        }
+        //DIRTY READ SOLVED
+        public static int dirtyReadSolvedSetNgungGiaoDich(int maNhaCungCap, int maNhaHang, int tinhTrang)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.setNgungGiaoDich";
+            command.CommandText = "dbo.DirtyReadSolvedT2SetNgungGiaoDich";
+            //// create a new parameter
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@maNhaCungCap";
+            param.Value = maNhaCungCap;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@maNhaHang";
+            param.Value = maNhaHang;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //// create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@tinhTrang";
+            param.Value = tinhTrang;
+            param.DbType = DbType.Int16;
+            command.Parameters.Add(param);
+            //create a new parameter
+            param = command.CreateParameter();
+            param.ParameterName = "@isRollback";
+            param.Direction = ParameterDirection.Output;
+            param.Value = 0;
+            param.DbType = DbType.Int16;
+            command.Parameters.Add(param);
+
+            return DataAccessCode.ExecuteNonQueryReturnIsRollBackOutputValue(command);
+        }
         public static int setNgungGiaoDich(int maNhaCungCap, int maNhaHang,int tinhTrang)
         {
             DbCommand command = DataAccessCode.CreateCommand();
+            //command.CommandText = "dbo.setNgungGiaoDich";
             command.CommandText = "dbo.setNgungGiaoDich";
             //// create a new parameter
             DbParameter param = command.CreateParameter();
@@ -33,6 +179,8 @@ namespace RestaurantApp_G21.DAO
             param.Value = tinhTrang;
             param.DbType = DbType.Int16;
             command.Parameters.Add(param);
+
+            
 
             return DataAccessCode.ExecuteNonQuery(command);
         }

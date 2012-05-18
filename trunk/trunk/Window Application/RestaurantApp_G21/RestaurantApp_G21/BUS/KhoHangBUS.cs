@@ -25,6 +25,37 @@ namespace RestaurantApp_G21.BUS
         {
             return KhoHangDAO.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(ten, maNhaHang);
         }
+        //PHANTOM
+        public static ArrayList phantomTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(string ten, int maNhaHang)
+        {
+            return KhoHangDAO.phantomTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(ten, maNhaHang);
+        }
+        //PHANTOM SOLVED
+        public static ArrayList phantomSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(string ten, int maNhaHang)
+        {
+            return KhoHangDAO.phantomSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich(ten, maNhaHang);
+        }
+        //UNREPEATABLE
+        public static ArrayList unrepeatableTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            return KhoHangDAO.unrepeatableTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(ten, tinhTrangGiaoDich, maNhaHang);
+        }
+        //UNREPEATABLE SOLVED
+        public static ArrayList unrepeatableSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            return KhoHangDAO.unrepeatableSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(ten, tinhTrangGiaoDich, maNhaHang);
+        }
+        //DIRTY READ
+        public static ArrayList dirtyReadTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            return KhoHangDAO.dirtyReadTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(ten, tinhTrangGiaoDich, maNhaHang);
+        }
+        //DIRTY READ SOLVED
+        public static ArrayList dirtyReadSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
+        {
+            return KhoHangDAO.dirtyReadSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(ten, tinhTrangGiaoDich, maNhaHang);
+        }
+
         public static ArrayList timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(string ten, int tinhTrangGiaoDich, int maNhaHang)
         {
             return KhoHangDAO.timKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichCoHoacNgung(ten, tinhTrangGiaoDich, maNhaHang);

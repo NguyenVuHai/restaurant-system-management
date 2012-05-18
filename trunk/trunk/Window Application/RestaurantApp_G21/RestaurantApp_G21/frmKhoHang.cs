@@ -75,6 +75,7 @@ namespace RestaurantApp_G21
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        
+
+
     }
 }

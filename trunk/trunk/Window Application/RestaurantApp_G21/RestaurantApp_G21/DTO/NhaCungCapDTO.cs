@@ -85,8 +85,17 @@ namespace RestaurantApp_G21.DTO
             get { return giaTriDinhMucNo; }
             set { giaTriDinhMucNo = value; }
         }
+        private int tinhTrangGiaoDich;
+
+        public int TinhTrangGiaoDich
+        {
+            get { return tinhTrangGiaoDich; }
+            set { tinhTrangGiaoDich = value; }
+        }
+
         public NhaCungCapDTO()
         {
+            tinhTrangGiaoDich = -1;//chua tung giao dich voi nha hang dang xet
             maNhaCungCap = 0;
             tenNhaCungCap = "";
             dienThoai = "";
