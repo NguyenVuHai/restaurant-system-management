@@ -95,6 +95,9 @@
             this.rbBiKhongTheDocLai = new System.Windows.Forms.RadioButton();
             this.rbLostUpdate = new System.Windows.Forms.RadioButton();
             this.rbKhongTheDocLai = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).BeginInit();
             this.groupPanel3.SuspendLayout();
@@ -114,6 +117,7 @@
             this.groupPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.label3);
             this.groupPanel4.Controls.Add(this.labelX8);
             this.groupPanel4.Controls.Add(this.labelX7);
             this.groupPanel4.Controls.Add(this.lblBuoi);
@@ -164,7 +168,6 @@
             this.groupPanel4.StyleMouseOver.Class = "";
             this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel4.TabIndex = 20;
-            this.groupPanel4.Text = "THÔNG TIN HÓA ĐƠN";
             // 
             // labelX8
             // 
@@ -175,7 +178,7 @@
             this.labelX8.BackgroundStyle.Class = "";
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.ForeColor = System.Drawing.Color.Black;
-            this.labelX8.Location = new System.Drawing.Point(303, 31);
+            this.labelX8.Location = new System.Drawing.Point(302, 47);
             this.labelX8.Name = "labelX8";
             this.labelX8.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX8.Size = new System.Drawing.Size(60, 23);
@@ -191,7 +194,7 @@
             this.labelX7.BackgroundStyle.Class = "";
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.ForeColor = System.Drawing.Color.Black;
-            this.labelX7.Location = new System.Drawing.Point(292, 7);
+            this.labelX7.Location = new System.Drawing.Point(291, 23);
             this.labelX7.Name = "labelX7";
             this.labelX7.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX7.Size = new System.Drawing.Size(60, 23);
@@ -207,10 +210,10 @@
             this.lblBuoi.BackgroundStyle.Class = "";
             this.lblBuoi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblBuoi.ForeColor = System.Drawing.Color.Black;
-            this.lblBuoi.Location = new System.Drawing.Point(358, 86);
+            this.lblBuoi.Location = new System.Drawing.Point(357, 102);
             this.lblBuoi.Name = "lblBuoi";
             this.lblBuoi.SingleLineColor = System.Drawing.Color.Transparent;
-            this.lblBuoi.Size = new System.Drawing.Size(137, 23);
+            this.lblBuoi.Size = new System.Drawing.Size(111, 23);
             this.lblBuoi.TabIndex = 0;
             // 
             // lblMaBan
@@ -222,7 +225,7 @@
             this.lblMaBan.BackgroundStyle.Class = "";
             this.lblMaBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMaBan.ForeColor = System.Drawing.Color.Black;
-            this.lblMaBan.Location = new System.Drawing.Point(48, 86);
+            this.lblMaBan.Location = new System.Drawing.Point(47, 102);
             this.lblMaBan.Name = "lblMaBan";
             this.lblMaBan.SingleLineColor = System.Drawing.Color.Transparent;
             this.lblMaBan.Size = new System.Drawing.Size(137, 23);
@@ -237,7 +240,7 @@
             this.lblCMND.BackgroundStyle.Class = "";
             this.lblCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblCMND.ForeColor = System.Drawing.Color.Black;
-            this.lblCMND.Location = new System.Drawing.Point(48, 57);
+            this.lblCMND.Location = new System.Drawing.Point(47, 73);
             this.lblCMND.Name = "lblCMND";
             this.lblCMND.SingleLineColor = System.Drawing.Color.Transparent;
             this.lblCMND.Size = new System.Drawing.Size(137, 23);
@@ -252,10 +255,10 @@
             this.lblDienThoai.BackgroundStyle.Class = "";
             this.lblDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.lblDienThoai.Location = new System.Drawing.Point(369, 31);
+            this.lblDienThoai.Location = new System.Drawing.Point(368, 47);
             this.lblDienThoai.Name = "lblDienThoai";
             this.lblDienThoai.SingleLineColor = System.Drawing.Color.Transparent;
-            this.lblDienThoai.Size = new System.Drawing.Size(137, 23);
+            this.lblDienThoai.Size = new System.Drawing.Size(87, 23);
             this.lblDienThoai.TabIndex = 0;
             // 
             // lblHoTenKhachHang
@@ -267,7 +270,7 @@
             this.lblHoTenKhachHang.BackgroundStyle.Class = "";
             this.lblHoTenKhachHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblHoTenKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.lblHoTenKhachHang.Location = new System.Drawing.Point(48, 31);
+            this.lblHoTenKhachHang.Location = new System.Drawing.Point(47, 47);
             this.lblHoTenKhachHang.Name = "lblHoTenKhachHang";
             this.lblHoTenKhachHang.SingleLineColor = System.Drawing.Color.Transparent;
             this.lblHoTenKhachHang.Size = new System.Drawing.Size(137, 23);
@@ -282,10 +285,10 @@
             this.lblNhaHang.BackgroundStyle.Class = "";
             this.lblNhaHang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblNhaHang.ForeColor = System.Drawing.Color.Black;
-            this.lblNhaHang.Location = new System.Drawing.Point(358, 7);
+            this.lblNhaHang.Location = new System.Drawing.Point(357, 23);
             this.lblNhaHang.Name = "lblNhaHang";
             this.lblNhaHang.SingleLineColor = System.Drawing.Color.Transparent;
-            this.lblNhaHang.Size = new System.Drawing.Size(137, 23);
+            this.lblNhaHang.Size = new System.Drawing.Size(111, 23);
             this.lblNhaHang.TabIndex = 0;
             // 
             // lblNgayLapHoaDon
@@ -297,7 +300,7 @@
             this.lblNgayLapHoaDon.BackgroundStyle.Class = "";
             this.lblNgayLapHoaDon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblNgayLapHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.lblNgayLapHoaDon.Location = new System.Drawing.Point(112, 7);
+            this.lblNgayLapHoaDon.Location = new System.Drawing.Point(111, 23);
             this.lblNgayLapHoaDon.Name = "lblNgayLapHoaDon";
             this.lblNgayLapHoaDon.SingleLineColor = System.Drawing.Color.Transparent;
             this.lblNgayLapHoaDon.Size = new System.Drawing.Size(137, 23);
@@ -312,7 +315,7 @@
             this.labelX12.BackgroundStyle.Class = "";
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(303, 86);
+            this.labelX12.Location = new System.Drawing.Point(302, 102);
             this.labelX12.Name = "labelX12";
             this.labelX12.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX12.Size = new System.Drawing.Size(60, 23);
@@ -328,7 +331,7 @@
             this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(61, 7);
+            this.labelX4.Location = new System.Drawing.Point(60, 23);
             this.labelX4.Name = "labelX4";
             this.labelX4.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX4.Size = new System.Drawing.Size(60, 23);
@@ -344,7 +347,7 @@
             this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(3, 86);
+            this.labelX3.Location = new System.Drawing.Point(2, 102);
             this.labelX3.Name = "labelX3";
             this.labelX3.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX3.Size = new System.Drawing.Size(60, 23);
@@ -360,7 +363,7 @@
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(3, 57);
+            this.labelX2.Location = new System.Drawing.Point(2, 73);
             this.labelX2.Name = "labelX2";
             this.labelX2.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX2.Size = new System.Drawing.Size(60, 23);
@@ -376,7 +379,7 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(3, 31);
+            this.labelX1.Location = new System.Drawing.Point(2, 47);
             this.labelX1.Name = "labelX1";
             this.labelX1.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX1.Size = new System.Drawing.Size(60, 23);
@@ -404,7 +407,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.m_dtGridDSDatMon.DefaultCellStyle = dataGridViewCellStyle2;
             this.m_dtGridDSDatMon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.m_dtGridDSDatMon.Location = new System.Drawing.Point(3, 115);
+            this.m_dtGridDSDatMon.Location = new System.Drawing.Point(2, 131);
             this.m_dtGridDSDatMon.Name = "m_dtGridDSDatMon";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -424,6 +427,7 @@
             this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.label2);
             this.groupPanel3.Controls.Add(this.btnTim);
             this.groupPanel3.Controls.Add(this.dtNgayDatBan);
             this.groupPanel3.Controls.Add(this.txtTimTenBan);
@@ -467,13 +471,12 @@
             this.groupPanel3.StyleMouseOver.Class = "";
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 19;
-            this.groupPanel3.Text = "TRA CỨU HÓA ĐƠN";
             // 
             // btnTim
             // 
             this.btnTim.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTim.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTim.Location = new System.Drawing.Point(105, 94);
+            this.btnTim.Location = new System.Drawing.Point(105, 110);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(75, 23);
             this.btnTim.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -493,7 +496,7 @@
             this.dtNgayDatBan.ButtonDropDown.Visible = true;
             this.dtNgayDatBan.ForeColor = System.Drawing.Color.Black;
             this.dtNgayDatBan.IsPopupCalendarOpen = false;
-            this.dtNgayDatBan.Location = new System.Drawing.Point(121, 65);
+            this.dtNgayDatBan.Location = new System.Drawing.Point(121, 81);
             // 
             // 
             // 
@@ -543,7 +546,7 @@
             this.txtTimTenBan.Border.Class = "TextBoxBorder";
             this.txtTimTenBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTimTenBan.ForeColor = System.Drawing.Color.Black;
-            this.txtTimTenBan.Location = new System.Drawing.Point(121, 36);
+            this.txtTimTenBan.Location = new System.Drawing.Point(121, 52);
             this.txtTimTenBan.Name = "txtTimTenBan";
             this.txtTimTenBan.Size = new System.Drawing.Size(137, 20);
             this.txtTimTenBan.TabIndex = 2;
@@ -557,7 +560,7 @@
             this.txtTimMaBan.Border.Class = "TextBoxBorder";
             this.txtTimMaBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTimMaBan.ForeColor = System.Drawing.Color.Black;
-            this.txtTimMaBan.Location = new System.Drawing.Point(121, 6);
+            this.txtTimMaBan.Location = new System.Drawing.Point(121, 22);
             this.txtTimMaBan.Name = "txtTimMaBan";
             this.txtTimMaBan.Size = new System.Drawing.Size(137, 20);
             this.txtTimMaBan.TabIndex = 2;
@@ -572,7 +575,7 @@
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.ForeColor = System.Drawing.Color.Black;
-            this.labelX6.Location = new System.Drawing.Point(55, 65);
+            this.labelX6.Location = new System.Drawing.Point(55, 81);
             this.labelX6.Name = "labelX6";
             this.labelX6.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX6.Size = new System.Drawing.Size(60, 23);
@@ -588,7 +591,7 @@
             this.labelX5.BackgroundStyle.Class = "";
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.ForeColor = System.Drawing.Color.Black;
-            this.labelX5.Location = new System.Drawing.Point(55, 36);
+            this.labelX5.Location = new System.Drawing.Point(55, 52);
             this.labelX5.Name = "labelX5";
             this.labelX5.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX5.Size = new System.Drawing.Size(60, 23);
@@ -604,7 +607,7 @@
             this.labelX17.BackgroundStyle.Class = "";
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX17.ForeColor = System.Drawing.Color.Black;
-            this.labelX17.Location = new System.Drawing.Point(55, 7);
+            this.labelX17.Location = new System.Drawing.Point(55, 23);
             this.labelX17.Name = "labelX17";
             this.labelX17.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX17.Size = new System.Drawing.Size(60, 23);
@@ -632,7 +635,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.m_dtGirdDSBan.DefaultCellStyle = dataGridViewCellStyle5;
             this.m_dtGirdDSBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.m_dtGirdDSBan.Location = new System.Drawing.Point(3, 122);
+            this.m_dtGirdDSBan.Location = new System.Drawing.Point(3, 138);
             this.m_dtGirdDSBan.Name = "m_dtGirdDSBan";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -664,6 +667,7 @@
             this.groupPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.label4);
             this.groupPanel1.Controls.Add(this.cbbDanhSachMonAn);
             this.groupPanel1.Controls.Add(this.labelX11);
             this.groupPanel1.Controls.Add(this.txtSoLuong);
@@ -705,7 +709,6 @@
             this.groupPanel1.StyleMouseOver.Class = "";
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 17;
-            this.groupPanel1.Text = "THÊM MÓN ĂN";
             // 
             // cbbDanhSachMonAn
             // 
@@ -713,7 +716,7 @@
             this.cbbDanhSachMonAn.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbbDanhSachMonAn.FormattingEnabled = true;
             this.cbbDanhSachMonAn.ItemHeight = 16;
-            this.cbbDanhSachMonAn.Location = new System.Drawing.Point(77, 13);
+            this.cbbDanhSachMonAn.Location = new System.Drawing.Point(77, 33);
             this.cbbDanhSachMonAn.Name = "cbbDanhSachMonAn";
             this.cbbDanhSachMonAn.Size = new System.Drawing.Size(121, 22);
             this.cbbDanhSachMonAn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -728,7 +731,7 @@
             this.labelX11.BackgroundStyle.Class = "";
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.ForeColor = System.Drawing.Color.Black;
-            this.labelX11.Location = new System.Drawing.Point(3, 69);
+            this.labelX11.Location = new System.Drawing.Point(3, 89);
             this.labelX11.Name = "labelX11";
             this.labelX11.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX11.Size = new System.Drawing.Size(60, 23);
@@ -744,7 +747,7 @@
             this.txtSoLuong.Border.Class = "TextBoxBorder";
             this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
-            this.txtSoLuong.Location = new System.Drawing.Point(77, 75);
+            this.txtSoLuong.Location = new System.Drawing.Point(77, 95);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(121, 20);
             this.txtSoLuong.TabIndex = 2;
@@ -758,7 +761,7 @@
             this.labelX10.BackgroundStyle.Class = "";
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(3, 42);
+            this.labelX10.Location = new System.Drawing.Point(3, 62);
             this.labelX10.Name = "labelX10";
             this.labelX10.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX10.Size = new System.Drawing.Size(60, 23);
@@ -774,7 +777,7 @@
             this.txtDonGia.Border.Class = "TextBoxBorder";
             this.txtDonGia.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDonGia.ForeColor = System.Drawing.Color.Black;
-            this.txtDonGia.Location = new System.Drawing.Point(77, 45);
+            this.txtDonGia.Location = new System.Drawing.Point(77, 65);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(121, 20);
             this.txtDonGia.TabIndex = 2;
@@ -788,7 +791,7 @@
             this.labelX9.BackgroundStyle.Class = "";
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(3, 13);
+            this.labelX9.Location = new System.Drawing.Point(3, 33);
             this.labelX9.Name = "labelX9";
             this.labelX9.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX9.Size = new System.Drawing.Size(60, 23);
@@ -1171,6 +1174,36 @@
             this.rbKhongTheDocLai.UseVisualStyleBackColor = true;
             this.rbKhongTheDocLai.CheckedChanged += new System.EventHandler(this.rbKhongTheDocLai_CheckedChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(92, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "TRA CỨU HOÁ ĐƠN";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(156, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(163, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "THÔNG TIN HOÁ ĐƠN";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "THÊM MÓN ĂN";
+            // 
             // frmQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1184,11 +1217,14 @@
             this.Name = "frmQuanLyHoaDon";
             this.Size = new System.Drawing.Size(1053, 539);
             this.groupPanel4.ResumeLayout(false);
+            this.groupPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGridDSDatMon)).EndInit();
             this.groupPanel3.ResumeLayout(false);
+            this.groupPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayDatBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtGirdDSBan)).EndInit();
             this.groupPanel1.ResumeLayout(false);
+            this.groupPanel1.PerformLayout();
             this.m_gPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1267,6 +1303,9 @@
         private System.Windows.Forms.RadioButton rbLostUpdate;
         private System.Windows.Forms.ComboBox cbMucCoLap;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
 
     }
 }
