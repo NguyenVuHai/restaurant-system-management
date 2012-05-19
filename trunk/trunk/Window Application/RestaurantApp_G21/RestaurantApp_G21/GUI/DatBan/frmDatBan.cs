@@ -14,8 +14,6 @@ namespace RestaurantApp_G21
     public partial class frmDatBan : DevComponents.DotNetBar.Metro.MetroAppForm
     {
         public List<ThongTinBanDTO> listBan = new List<ThongTinBanDTO>();
-
-
         private List<LoaiXungDotDTO> LoaiXungDot()
         {
             List<LoaiXungDotDTO> loaiXD = new List<LoaiXungDotDTO>();
@@ -30,20 +28,25 @@ namespace RestaurantApp_G21
             loaiXD[4].TenXungDot = "Bóng Ma";
             return loaiXD;
         }
-        
+        public void QuayVeTrangChu()
+        {
+            frmTrangChu frm = new frmTrangChu();
+            frm.DisableCacChucNang(true,3);
+            frm.Show();
+        }
         #region Utils Methods
         
         private void LoadDanhSachBanDat()
         {
-            SetValue();
+            
            // List<BanDatDTO> listBD = BanDatBUS.ThongTinKhachVaBanDat();
            // dgvDanhSachBanDat.DataSource = listBD;
             //List<BanDatDTO> listBanDat = BanDatBUS.LayDanhSachBanDat();
             //dgvDanhSachBanDat.DataSource = listBanDat;
-            DataTable dt = BanDatBUS.ThongTinKhachVaBanDat();
-            dgvDanhSachBanDat.DataSource = dt;
-            dgvDanhSachBanDat.Enabled = false;
-           
+            SetValue(false,false);
+            dgvDanhSachBanDat.DataSource = BanDatBUS.ThongTinKhachVaBanDat();
+            //if(dgvDanhSachBanDat.Enabled == true)
+                //dgvDanhSachBanDat.Enabled = false;            
             //dgvDanhSachBanDat.Columns["MaNhaHang"].Visible = false;
             //dgvDanhSachBanDat.Columns["TenBuoi"].Visible = false;
             //dgvDanhSachBanDat.Columns["MaLichBan"].Visible = false;
@@ -51,16 +54,21 @@ namespace RestaurantApp_G21
             //dgvDanhSachBanDat.Columns["TinhTrang"].Visible = false;
 
         }
-        private void SetValue()
+        public void SetValue(bool clear, bool enable)
         {
-            txtCMND.Text = "" ;
-            txtHoTenKhachHang.Text = "";
-            txtSoDienThoai.Text = "";
-            txtSoLuong.Text = "";
-            txtMaBan.Text = "";
-            txtKhuVuc.Text = "";
-            dtNgayDatBan.Text = "";
-            cbbBuoi.Text = "";
+            if (clear == true)
+            {
+                txtCMND.Text = "";
+                txtHoTenKhachHang.Text = "";
+                txtSoDienThoai.Text = "";
+                txtSoLuong.Text = "";
+                txtMaBan.Text = "";
+                txtKhuVuc.Text = "";
+                dtNgayDatBan.Text = "";
+                cbbBuoi.Text = "";
+            }
+            txtCMND.Enabled = txtHoTenKhachHang.Enabled = txtSoDienThoai.Enabled = txtSoLuong.Enabled = enable;
+            txtMaBan.Enabled = txtKhuVuc.Enabled = dtNgayDatBan.Enabled = cbbBuoi.Enabled = enable;
         }
         private void LoadNhaHang()
         {
@@ -140,7 +148,6 @@ namespace RestaurantApp_G21
             LoadHoaDon();
             LoadDL();
         }
-
         private void LoadHoaDon()
         {
             UserControl uc = new frmQuanLyHoaDon();
@@ -258,8 +265,8 @@ namespace RestaurantApp_G21
                         if (chkUnRead.Checked)
                         {
                          // Solved UnRRead
-                         listBan = ThongTinBanBUS.TimBanTrongSolvedUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
-                         LoadBanTrongKhuVuc();
+                            listBan = ThongTinBanBUS.TimBanTrongSolvedUnRRead(maNhaHang, maKhuVuc, ngayDatBan, buoi, soLuong);
+                            LoadBanTrongKhuVuc();
                         }
                         else
                         {
@@ -304,6 +311,7 @@ namespace RestaurantApp_G21
 
         private void btnLuuThongTinDatBan_Click(object sender, EventArgs e)
         {
+           // MessageBox.Show("Thêm mới thông tin khách click check Đặt Bàn - Cập Nhật Thông Tin Khách bỏ Check Đặt Bàn");
             try
             {
                 int loai = chkDatBan.Checked == true ? 1 : 0;
@@ -340,12 +348,13 @@ namespace RestaurantApp_G21
                     };
                     if (Convert.ToInt32(cboChonLoaiXungDot.SelectedValue) == 3)
                     {
-                        BanDatBUS.ThemThongTinKhachVaBanDatPhanTom(banDat, loai);
+                        if (chkXLBongMa.Checked)
+                        {
+                            BanDatBUS.ThemThongTinKhachVaBanDatPhanTom(banDat, loai);
+                        }
+                        //LoadDanhSachBanDat();
                     }
-                    else
-                    {
-                        BanDatBUS.ThemThongTinBanDat(banDat, loai);
-                    }
+                    BanDatBUS.ThemThongTinBanDat(banDat, loai);
                 }
                 else
                 {
@@ -358,19 +367,36 @@ namespace RestaurantApp_G21
                    { 
                        case 0:
                                  BanDatBUS.CapNhatThongTinBanDat(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
-                                 LoadDanhSachBanDat();
+                                 //LoadDanhSachBanDat();
+                                 break;
+                       case 1: // trường hợp mất dữ liệu cập nhật
+                                 if (chkXLMatDLCapNhat.Checked)
+                                 {
+                                     // xử lý
+                                     BanDatBUS.CapNhatThongTinBanDatSolvedLostUpdate(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                                 }
+                                 else
+                                 {
+                                     if (chkDocMatDLCapNhat.Checked)
+                                     {
+                                         // đọc dữ liệu sai , stored t2 chưa giải quyết
+                                         BanDatBUS.CapNhatThongTinBanDatKoXuLyLostUpdate(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                                     }
+                                     // T2 đã giải quyết
+                                     BanDatBUS.CapNhatThongTinBanDatLostUpdate(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
+                                 }
                            break;
                        case 2:
-                           
                                BanDatBUS.CapNhatThongTinKhachBanDatUnRRead(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
-                               LoadDanhSachBanDat();
-                       
-                          
+                              // LoadDanhSachBanDat();
+                           break;
+                       case 3:
+                           BanDatBUS.CapNhatThongTinKhachBanDatPhanTom(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
                            break;
 
                        default:
                          BanDatBUS.CapNhatThongTinKhachBanDatDefault(GlobalVariables.maLichBan, maBuoi, ngay, soLuong);
-                         LoadDanhSachBanDat();
+                        // LoadDanhSachBanDat();
                           break;
                    }
                 }
@@ -384,43 +410,21 @@ namespace RestaurantApp_G21
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            //m_sTabItmTTBanDat.Visible = false;
-            //m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
-        }
 
-        private void dgvDanhSachBanDat_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            int dong = e.RowIndex;
-            try
-            {
-                if (dgvDanhSachBanDat.Rows[dong].DataBoundItem != null)
-                {
-                    
-                    txtHoTenKhachHang.Text = dgvDanhSachBanDat.Rows[dong].Cells["HoTen"].Value.ToString();
-                    txtCMND.Text = dgvDanhSachBanDat.Rows[dong].Cells["CMND"].Value.ToString();
-                    txtSoDienThoai.Text = dgvDanhSachBanDat.Rows[dong].Cells["DienThoai"].Value.ToString();
-                    dtNgayDatBan.Text = dgvDanhSachBanDat.Rows[dong].Cells["NgayDatBan"].Value.ToString();
-                    cbbBuoi.Text = dgvDanhSachBanDat.Rows[dong].Cells["TenBuoi"].Value.ToString();
-                    txtSoLuong.Text = dgvDanhSachBanDat.Rows[dong].Cells["SoLuong"].Value.ToString();
-                    txtMaBan.Text = dgvDanhSachBanDat.Rows[dong].Cells["MaBan"].Value.ToString();
-                    txtKhuVuc.Text = dgvDanhSachBanDat.Rows[dong].Cells["MaKhuVuc"].Value.ToString();
-                    //txtTinhTrang.Text = dgvDanhSachBanDat.Rows[dong].Cells["TinhTrangBan"].Value.ToString();
+            MessageBox.Show("Chức Năng Này Chưa Hoàn Thiện");
+                //BanDatBUS.HuyThongTinKhachVaBanDatUnRRead(GlobalVariables.maLichBan);
+                //m_sTabItmTTBanDat.Visible = false;
+                //m_sTabCtrDatBan.SelectedTab = m_sTabItmTTBanDat;
 
-                    GlobalVariables.maLichBan = Int32.Parse(dgvDanhSachBanDat.Rows[dong].Cells["MaLichBan"].Value.ToString());
-                    GlobalVariables.maKhachHang = Int32.Parse(dgvDanhSachBanDat.Rows[dong].Cells["MaThongTinKhachHang"].Value.ToString());                   
-                     
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
         private void buttonX3_Click(object sender, EventArgs e)
-        {
+        {            
             dgvDanhSachBanDat.Enabled = true;
             btnThem.Enabled = false;
-            btnLuuThongTinDatBan.Enabled = true;
+            btnLuuThongTinDatBan.Enabled = true;            
+            //dgvDanhSachBanDat.Rows[0].Selected = true;
+            //this.Refresh();
+            //dgvDanhSachBanDat.DataSource = BanDatBUS.ThongTinKhachVaBanDat();
         }
 
         // Tranh Chấp Đồng Thời
@@ -495,7 +499,7 @@ namespace RestaurantApp_G21
         {
 
         }
-        // UnRRead
+        // UnRRead đã xóa
         private void buttonX1_Click(object sender, EventArgs e)
         {
             try
@@ -633,17 +637,18 @@ namespace RestaurantApp_G21
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            SetValue();
+            SetValue(true,true);
             txtMaBan.Enabled = true;
             txtKhuVuc.Enabled = true;
             btnLuuThongTinDatBan.Enabled = true;
+           
         }
         private void EnableEditing(bool editing1)
         {
             // button
             // Khi đang thêm thì nút thêm cũng sẽ ẩn đi
             btnThem.Enabled = !editing1;
-            btnThayDoi.Enabled = !editing1;
+            //FbtnThayDoi.Enabled = !editing1;
             btnHuy.Enabled = !editing1;
             btnLuuThongTinDatBan.Enabled = editing1;
             //m_txtDiaChi.Enabled = editing1;
@@ -657,8 +662,58 @@ namespace RestaurantApp_G21
         private void frmDatBan_Load(object sender, EventArgs e)
         {
             EnableEditing(false);
+            SetValue(false,false);
+        }
+
+        private void btnThayDoi_Click(object sender, EventArgs e)
+        {
+            SetValue(false, true);
+            //dgvDanhSachBanDat.Enabled = true;
+            btnThem.Enabled = false;
+            btnLuuThongTinDatBan.Enabled = true;           
+        }
+
+        private void m_mtTileHome_Click(object sender, EventArgs e)
+        {
+            QuayVeTrangChu();
+        }
+
+        private void dgvDanhSachBanDat_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
+        private void dgvDanhSachBanDat_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow dong = dgvDanhSachBanDat.CurrentRow;
+            if (dong == null)
+                return;            
+            try
+            {
+                if (dong.DataBoundItem != null)
+                {
+
+                    txtHoTenKhachHang.Text = dong.Cells["HoTen"].Value.ToString();
+                    txtCMND.Text = dong.Cells["CMND"].Value.ToString();
+                    txtSoDienThoai.Text = dong.Cells["DienThoai"].Value.ToString();
+                    dtNgayDatBan.Text = dong.Cells["NgayDatBan"].Value.ToString();
+                    cbbBuoi.Text = dong.Cells["TenBuoi"].Value.ToString();
+                    txtSoLuong.Text = dong.Cells["SoLuong"].Value.ToString();
+                    txtMaBan.Text = dong.Cells["MaBan"].Value.ToString();
+                    txtKhuVuc.Text = dong.Cells["MaKhuVuc"].Value.ToString();
+                    //txtTinhTrang.Text = dgvDanhSachBanDat.Rows[dong].Cells["TinhTrangBan"].Value.ToString();
+
+                    GlobalVariables.maLichBan = Int32.Parse(dong.Cells["MaLichBan"].Value.ToString());
+                    GlobalVariables.maKhachHang = Int32.Parse(dong.Cells["MaThongTinKhachHang"].Value.ToString());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }   
+        }
+
+       
     }
 }
