@@ -14,8 +14,6 @@ namespace RestaurantApp_G21
 
     public partial class frmDangNhap : DevComponents.DotNetBar.Metro.MetroForm
     {
-       
-
         public frmDangNhap()
         {
             InitializeComponent();
@@ -52,12 +50,11 @@ namespace RestaurantApp_G21
             }
             else
             {
-
                 frmTrangChu frm = new frmTrangChu();
                 frm.Show();
-                frm.DisableCacChucNang(true, taiKhoan.LoaiNhanVien);
-                frm.m_lbHienThiTen.Text = taiKhoan.TenDangNhap;
                 
+                frm.DisableCacChucNang(true, taiKhoan.LoaiNhanVien);
+                frm.m_lbHienThiTen.Text = taiKhoan.TenDangNhap;   
             }
             
         }

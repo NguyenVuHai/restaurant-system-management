@@ -237,7 +237,6 @@ namespace RestaurantApp_G21
         {
             doFilter();
         }
-       
     }
 #endregion
     
