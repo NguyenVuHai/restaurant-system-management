@@ -40,9 +40,10 @@ namespace RestaurantApp_G21.BUS
                 return true;
             return false;
         }
-        public static bool CapNhatThongTinBanDatLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong,bool t)
+        
+        public static bool CapNhatThongTinBanDatLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
-            if (BanDatDAO.CapNhatThongTinBanDatLostUpdate(maLichBan, maBuoi, ngay, soLuong,t))
+            if (BanDatDAO.CapNhatThongTinBanDatLostUpdate(maLichBan, maBuoi, ngay, soLuong))
                 return true;
             return false;
         }
@@ -52,6 +53,19 @@ namespace RestaurantApp_G21.BUS
                 return true;
             return false;
         }
+        public static bool CapNhatThongTinBanDatKoXuLyLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
+        {
+            if (BanDatDAO.CapNhatThongTinKhachBanDatXuLyLostUpdate(maLichBan, maBuoi, ngay, soLuong))
+                return true;
+            return false;
+        }
+        public static bool CapNhatThongTinBanDatT1ChuaXuLyLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
+        {
+            if (BanDatDAO.CapNhatThongTinKhachBanDatT1ChuaXLLostUpdate(maLichBan, maBuoi, ngay, soLuong))
+                return true;
+            return false;
+        }
+        
         public static bool CapNhatThongTinKhachBanDatUnRRead( int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
             if (BanDatDAO.CapNhatThongTinKhachBanDatUnRRead(maLichBan,maBuoi,ngay,soLuong))
@@ -64,9 +78,20 @@ namespace RestaurantApp_G21.BUS
                 return true;
             return false;
         }
-        public static bool ThemThongTinKhachVaBanDatPhanTom(BanDatDTO ban, int loai)
+        public static bool CapNhatThongTinKhachBanDatPhanTom(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
-            if (BanDatDAO.ThemThongTinKhachVaBanDatPhamTom(ban, loai))
+            if (BanDatDAO.CapNhatThongTinKhachBanDatPhanTom(maLichBan, maBuoi, ngay, soLuong))
+                return true;
+            return false;
+        }
+        
+        public static void ThemThongTinKhachVaBanDatPhanTom(BanDatDTO ban, int loai)
+        {
+            BanDatDAO.ThemThongTinKhachVaBanDatPhamTom(ban, loai);
+        }
+        public static bool HuyThongTinKhachVaBanDatUnRRead(int maLich)
+        {
+            if (BanDatDAO.HuyThongTinKhachVaBanDatUnRRead(maLich))
                 return true;
             return false;
         }
