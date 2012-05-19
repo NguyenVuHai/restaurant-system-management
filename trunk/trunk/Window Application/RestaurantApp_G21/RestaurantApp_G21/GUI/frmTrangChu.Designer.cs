@@ -31,12 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
+            this.metroTabPanel1 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
+            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
+            this.metroTabItem1 = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.m_lbThayDoiMK = new System.Windows.Forms.LinkLabel();
             this.m_lbHienThiTen = new DevComponents.DotNetBar.LabelX();
+            this.m_lbH = new DevComponents.DotNetBar.LabelX();
             this.itemPanel14 = new DevComponents.DotNetBar.ItemPanel();
             this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel8 = new DevComponents.DotNetBar.ItemPanel();
@@ -53,11 +58,6 @@
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.itemPanel15 = new DevComponents.DotNetBar.ItemPanel();
             this.m_mtTileItemBatBan = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.m_lbH = new DevComponents.DotNetBar.LabelX();
-            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
-            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
-            this.metroTabItem1 = new DevComponents.DotNetBar.Metro.MetroTabItem();
-            this.metroTabPanel1 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.metroShell1.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
@@ -83,10 +83,10 @@
             this.labelItem3,
             this.metroTabItem1});
             this.metroShell1.KeyTipsFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroShell1.Location = new System.Drawing.Point(1, 1);
+            this.metroShell1.Location = new System.Drawing.Point(0, 1);
             this.metroShell1.Name = "metroShell1";
             this.metroShell1.SettingsButtonVisible = false;
-            this.metroShell1.Size = new System.Drawing.Size(996, 25);
+            this.metroShell1.Size = new System.Drawing.Size(997, 25);
             this.metroShell1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.metroShell1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
             this.metroShell1.SystemText.QatAddItemText = "&Add to Quick Access Toolbar";
@@ -107,6 +107,47 @@
             this.metroShell1.Text = "Hệ thống quản lý Nhà Hàng";
             this.metroShell1.TitleText = "<font color=\"#FFFFFF\" size=\"12\"><b>HỆ THỐNG QUẢN LÝ NHÀ HÀNG</b></font>";
             // 
+            // metroTabPanel1
+            // 
+            this.metroTabPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabPanel1.Name = "metroTabPanel1";
+            this.metroTabPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel1.Size = new System.Drawing.Size(996, 25);
+            // 
+            // 
+            // 
+            this.metroTabPanel1.Style.Class = "";
+            this.metroTabPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel1.StyleMouseDown.Class = "";
+            this.metroTabPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel1.StyleMouseOver.Class = "";
+            this.metroTabPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel1.TabIndex = 1;
+            // 
+            // labelItem2
+            // 
+            this.labelItem2.Name = "labelItem2";
+            this.labelItem2.Text = "labelItem2";
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.Text = "labelItem3";
+            // 
+            // metroTabItem1
+            // 
+            this.metroTabItem1.Name = "metroTabItem1";
+            this.metroTabItem1.Panel = this.metroTabPanel1;
+            this.metroTabItem1.Text = "metroTabItem1";
+            // 
             // styleManager1
             // 
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
@@ -126,9 +167,9 @@
             this.metroStatusBar1.ForeColor = System.Drawing.Color.Black;
             this.metroStatusBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem1});
-            this.metroStatusBar1.Location = new System.Drawing.Point(1, 694);
+            this.metroStatusBar1.Location = new System.Drawing.Point(0, 694);
             this.metroStatusBar1.Name = "metroStatusBar1";
-            this.metroStatusBar1.Size = new System.Drawing.Size(996, 21);
+            this.metroStatusBar1.Size = new System.Drawing.Size(997, 21);
             this.metroStatusBar1.TabIndex = 1;
             this.metroStatusBar1.Text = "metroStatusBar1";
             // 
@@ -188,6 +229,22 @@
             this.m_lbHienThiTen.Name = "m_lbHienThiTen";
             this.m_lbHienThiTen.Size = new System.Drawing.Size(123, 34);
             this.m_lbHienThiTen.TabIndex = 47;
+            // 
+            // m_lbH
+            // 
+            this.m_lbH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lbH.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.m_lbH.BackgroundStyle.Class = "";
+            this.m_lbH.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_lbH.ForeColor = System.Drawing.Color.Black;
+            this.m_lbH.Location = new System.Drawing.Point(334, 9);
+            this.m_lbH.Name = "m_lbH";
+            this.m_lbH.Size = new System.Drawing.Size(70, 34);
+            this.m_lbH.TabIndex = 47;
+            this.m_lbH.Text = "Người dùng:";
             // 
             // itemPanel14
             // 
@@ -525,63 +582,6 @@
             this.m_mtTileItemBatBan.TileStyle.PaddingTop = 4;
             this.m_mtTileItemBatBan.TileStyle.TextColor = System.Drawing.Color.White;
             this.m_mtTileItemBatBan.Click += new System.EventHandler(this.metroTileItemBatBan_Click);
-            // 
-            // m_lbH
-            // 
-            this.m_lbH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.m_lbH.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.m_lbH.BackgroundStyle.Class = "";
-            this.m_lbH.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_lbH.ForeColor = System.Drawing.Color.Black;
-            this.m_lbH.Location = new System.Drawing.Point(334, 9);
-            this.m_lbH.Name = "m_lbH";
-            this.m_lbH.Size = new System.Drawing.Size(70, 34);
-            this.m_lbH.TabIndex = 47;
-            this.m_lbH.Text = "Người dùng:";
-            // 
-            // labelItem2
-            // 
-            this.labelItem2.Name = "labelItem2";
-            this.labelItem2.Text = "labelItem2";
-            // 
-            // labelItem3
-            // 
-            this.labelItem3.Name = "labelItem3";
-            this.labelItem3.Text = "labelItem3";
-            // 
-            // metroTabItem1
-            // 
-            this.metroTabItem1.Name = "metroTabItem1";
-            this.metroTabItem1.Panel = this.metroTabPanel1;
-            this.metroTabItem1.Text = "metroTabItem1";
-            // 
-            // metroTabPanel1
-            // 
-            this.metroTabPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabPanel1.Name = "metroTabPanel1";
-            this.metroTabPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel1.Size = new System.Drawing.Size(996, 25);
-            // 
-            // 
-            // 
-            this.metroTabPanel1.Style.Class = "";
-            this.metroTabPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel1.StyleMouseDown.Class = "";
-            this.metroTabPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel1.StyleMouseOver.Class = "";
-            this.metroTabPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel1.TabIndex = 1;
             // 
             // frmTrangChu
             // 

@@ -240,14 +240,18 @@ namespace RestaurantApp_G21
 
         private void m_btnThanhToan_Click(object sender, EventArgs e)
         {
-            List<ChiTietThucDonDTO> list = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked, rbLostUpdate.Checked);
+            GlobalVariables.chiTietThucDonDTO = ChiTietThucDonBUS.LayDanhSachMonAnTrongHoaDon(GlobalVariables.curMaHoaDon, rbBongMa.Checked, rbDirtyRead.Checked, rbKhongTheDocLai.Checked, rbLostUpdate.Checked);
             decimal thanhtien = 0;
-            foreach (ChiTietThucDonDTO item in list)
+            foreach (ChiTietThucDonDTO item in GlobalVariables.chiTietThucDonDTO)
             {
                 thanhtien += item.ThanhTien;
             }
-            MessageBox.Show(String.Format("Tổng số dòng lần 1: {2}\nTổng số dòng lần 2: {1}\nTổng hóa đơn: {0}",thanhtien,list.Count,m_dtGridDSDatMon.Rows.Count),"Demo Phantom");
-            GridViewDisplay(list);
+            //MessageBox.Show(String.Format("Tổng số dòng lần 1: {2}\nTổng số dòng lần 2: {1}\nTổng hóa đơn: {0}",thanhtien,list.Count,m_dtGridDSDatMon.Rows.Count),"Demo Phantom");
+            GlobalVariables.maBan = Int32.Parse(lblMaBan.Text);
+            GlobalVariables.tenNhaHang = lblNhaHang.Text;
+            GridViewDisplay(GlobalVariables.chiTietThucDonDTO);
+            frmXuatHoaDon frm = new frmXuatHoaDon();
+            frm.ShowDialog();
         }
 
         private void m_dtGirdDSBan_CellClick(object sender, DataGridViewCellEventArgs e)
