@@ -150,6 +150,7 @@ namespace RestaurantApp_G21.DAO
                     banDat.MaLichBan = Int32.Parse(dt.Rows[i]["MaLichBan"].ToString());
                     //banDat.MaThongTinKhachHang = Int32.Parse(dt.Rows[i]["MaThongTinKhachHang"].ToString());
                     banDat.TenBuoi = dt.Rows[i]["TenBuoi"].ToString();
+                    banDat.TinhTrangBan = Boolean.Parse(dt.Rows[i]["TinhTrangBan"].ToString());
                     list.Add(banDat);
 
                 }

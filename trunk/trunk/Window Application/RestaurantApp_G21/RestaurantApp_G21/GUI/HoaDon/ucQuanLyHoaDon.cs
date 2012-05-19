@@ -121,6 +121,23 @@ namespace RestaurantApp_G21
 
             List<BanDatDTO> list = BanDatBUS.TimBan(GlobalVariables.maNhaHang, maBan, tenBan, ngay);
             m_dtGirdDSBan.DataSource = list;
+            for (int i = 0; i < m_dtGirdDSBan.Columns.Count; i++)
+            {
+                m_dtGirdDSBan.Columns[i].Width = m_dtGirdDSBan.Width / 4;
+            }
+            m_dtGirdDSBan.Columns["TinhTrangBan"].HeaderText = "Đã đặt";
+            m_dtGirdDSBan.Columns["TenBuoi"].HeaderText = "Buổi";
+            m_dtGirdDSBan.Columns["MaBan"].HeaderText = "Mã bàn";
+            m_dtGirdDSBan.Columns["NgayDatBan"].HeaderText = "Ngày đặt bàn";
+            m_dtGirdDSBan.Columns["MaNhaHang"].Visible = false;
+            m_dtGirdDSBan.Columns["HoTen"].Visible = false;
+            m_dtGirdDSBan.Columns["Cmnd"].Visible = false;
+            m_dtGirdDSBan.Columns["DienThoai"].Visible = false;
+            m_dtGirdDSBan.Columns["MaLichBan"].Visible = false;
+            m_dtGirdDSBan.Columns["MaThongTinKhachHang"].Visible = false;
+            m_dtGirdDSBan.Columns["SoLuong"].Visible = false;
+            m_dtGirdDSBan.Columns["MaLichBan"].Visible = false;
+            m_dtGirdDSBan.Columns["MaBuoi"].Visible = false;
         }
 
         private void LoadThongTinHoaDon(int index)
