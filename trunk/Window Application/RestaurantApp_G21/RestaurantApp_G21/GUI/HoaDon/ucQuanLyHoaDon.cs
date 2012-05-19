@@ -63,11 +63,22 @@ namespace RestaurantApp_G21
             }
             m_txtTongTien.Text = total.ToString();
         }
+
+        private void LoadMucCoLap()
+        {
+            cbMucCoLap.Items.Add("Mặc định");
+            cbMucCoLap.Items.Add("Read Uncommitted");
+            cbMucCoLap.Items.Add("Read Committed");
+            cbMucCoLap.Items.Add("Repeatable Read");
+            cbMucCoLap.Items.Add("Serializable");
+            cbMucCoLap.SelectedIndex = 0;
+        }
         #endregion
         public frmQuanLyHoaDon()
         {
             InitializeComponent();
             LoadMonAn();
+            LoadMucCoLap();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -203,6 +214,7 @@ namespace RestaurantApp_G21
         private void rbKhongLostUpdate_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVariables.bLostUpdate = rbBiLostUpdate.Checked;
+            cbMucCoLap.Enabled = rbLostUpdate.Checked && rbKhongLostUpdate.Checked;
         }
 
         private void rbBongMa_CheckedChanged(object sender, EventArgs e)
@@ -223,6 +235,7 @@ namespace RestaurantApp_G21
         private void rbLostUpdate_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVariables.bMacDinh = rbNormal.Checked;
+            cbMucCoLap.Enabled = rbLostUpdate.Checked && rbKhongLostUpdate.Checked;
         }
 
         private void m_btnThanhToan_Click(object sender, EventArgs e)
@@ -289,6 +302,11 @@ namespace RestaurantApp_G21
                     }
                 }
             }
+        }
+
+        private void cbMucCoLap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GlobalVariables.mucCoLap = cbMucCoLap.SelectedIndex;
         }
     }
 }

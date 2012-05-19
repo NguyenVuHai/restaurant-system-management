@@ -75,6 +75,7 @@ namespace RestaurantApp_G21.DAO
         public static void CapNhatChiTietHoaDon(Guid maHoaDon, int maChiTietThucDon, decimal donGia, int soLuong, bool isPhantom, bool isDirtyRead, bool isLostUpdate)
         {
             DbCommand command = DataAccessCode.CreateCommand();
+            DbParameter param;
             if (isDirtyRead)
                 command.CommandText = "dbo.CapNhatChiTietHoaDonDirtyRead";
             else if (isPhantom)
@@ -83,12 +84,18 @@ namespace RestaurantApp_G21.DAO
             {
                 if (GlobalVariables.bLostUpdate)
                     command.CommandText = "dbo.CapNhatChiTietHoaDonLostUpdate";
-                else
+                else {
                     command.CommandText = "dbo.CapNhatChiTietHoaDonSolveLostUpdate";
+                    param = command.CreateParameter();
+                    param.ParameterName = "@MucCoLap";
+                    param.Value = GlobalVariables.mucCoLap;
+                    param.DbType = DbType.Int32;
+                    command.Parameters.Add(param);
+                    }
             }
             else command.CommandText = "dbo.CapNhatChiTietHoaDon";
             //// create a new parameter
-            DbParameter param = command.CreateParameter();
+            param = command.CreateParameter();
             param.ParameterName = "@MaHoaDon";
             param.Value = maHoaDon.ToString();
             param.DbType = DbType.String;
