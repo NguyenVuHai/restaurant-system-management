@@ -18,5 +18,6 @@ namespace RestaurantApp_G21.DTO
         public static bool bMacDinh = true;
         public static int maKhachHang;
         public static List<int> maChiTietHoaDon = new List<int>();
+        public static int mucCoLap = 0;
     }
 }
