@@ -178,6 +178,12 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong.Designer.cs">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,30 @@
       <DependentUpon>frmTimBan.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\RestaurantConfiguration.cs" />
+    <Compile Include="GUI\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDoiMatKhau.designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHeThong.designer.cs">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +371,9 @@
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhanCong.resx">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThongTinNhanVien.resx">
       <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +391,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Demo\frmDirtyReadNhanVien.resx">
       <DependentUpon>frmDirtyReadNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHeThong.resx">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoHang\NguyenLieuTon\fm_nguyenLieu.resx">
       <DependentUpon>fm_nguyenLieu.cs</DependentUpon>
