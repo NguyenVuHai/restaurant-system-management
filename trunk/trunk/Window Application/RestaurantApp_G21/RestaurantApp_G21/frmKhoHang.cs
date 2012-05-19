@@ -12,6 +12,7 @@ namespace RestaurantApp_G21
     {
         public frmKhoHang()
         {
+            
             InitializeComponent();
             GUI.KhoHang.NguyenLieuTon.uc_traCuuNguyenLieuTon uc_NL = new GUI.KhoHang.NguyenLieuTon.uc_traCuuNguyenLieuTon();
             uc_NL.Dock = DockStyle.Fill;
@@ -32,6 +33,7 @@ namespace RestaurantApp_G21
             GUI.KhoHang.NhaCungCap.uc_nccToiHanCanThanhToan uc_nccToiHanCanThanhToan = new GUI.KhoHang.NhaCungCap.uc_nccToiHanCanThanhToan();
             uc_nccToiHanCanThanhToan.Dock = DockStyle.Fill;
             tab_noToiHanThanhToan.AttachedControl.Controls.Add(uc_nccToiHanCanThanhToan);
+            main_tab_KhoHang.BackColor = Color.Black;
         }
 
         private void bt_dong_Click(object sender, EventArgs e)
@@ -66,14 +68,17 @@ namespace RestaurantApp_G21
 
         private void panelEx1_SizeChanged(object sender, EventArgs e)
         {
-            int w = (panelEx1.Width / 4);
-            for (int i = 0; i < panelEx1.Controls.Count; i++)
-                panelEx1.Controls[i].Width = w;
+            
         }
 
         private void bt_anDi_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelEx3_Resize(object sender, EventArgs e)
+        {
+            GUI.accessory.initButtonDockFillInPanelEx(panelEx3);
         }
 
 
