@@ -40,6 +40,7 @@ namespace RestaurantApp_G21
         {
             frmDatBan frm = this.parentKhuVuc.getParent();
             frm.tabThongTinDatBan(this.MaBan, this.parentKhuVuc.MaKV);
+            frm.SetValue(false, true);
         }
 
         private void m_btnDatBan_Click(object sender, EventArgs e)
