@@ -68,7 +68,7 @@
             // 
             // 
             // 
-            this.metroShell1.BackgroundStyle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.metroShell1.BackgroundStyle.BackColor = System.Drawing.Color.SteelBlue;
             this.metroShell1.BackgroundStyle.Class = "";
             this.metroShell1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroShell1.BackgroundStyle.TextColor = System.Drawing.Color.White;
