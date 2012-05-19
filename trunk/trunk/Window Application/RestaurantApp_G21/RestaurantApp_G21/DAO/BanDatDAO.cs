@@ -183,6 +183,8 @@ namespace RestaurantApp_G21.DAO
             //    }
 
             //}
+            if (dt == null)
+                dt = new DataTable();
             return dt;
         }
         public static bool CapNhatThongTinBanDat(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
@@ -268,7 +270,8 @@ namespace RestaurantApp_G21.DAO
             }
             return false;
         }
-        public static bool CapNhatThongTinBanDatLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong, Boolean t)
+        
+        public static bool CapNhatThongTinBanDatLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.CnLostUpdate";
@@ -279,12 +282,7 @@ namespace RestaurantApp_G21.DAO
             param.DbType = DbType.Int32;
             command.Parameters.Add(param);
             //
-            param = command.CreateParameter();
-            param.ParameterName = "@TinhTrangBan";
-            param.Value = t;
-            param.DbType = DbType.Boolean;
-            command.Parameters.Add(param);
-            //
+            
             param = command.CreateParameter();
             param.ParameterName = "@MaBuoi";
             param.Value = maBuoi;
@@ -305,11 +303,96 @@ namespace RestaurantApp_G21.DAO
             if (DataAccessCode.ExecuteNonQuery(command) != -1)
             {
                 MessageBox.Show("Thay Đổi Thông Tin Bàn Đặt Thành Công");
+
+                return true;
+            }
+            MessageBox.Show("Chưa Được Lưu");
+            return false;
+        }
+        public static bool CapNhatThongTinKhachBanDatXuLyLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.CnLostUpdate2";
+            DbParameter pm = command.CreateParameter();
+
+            //
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaLichBan";
+            param.Value = maLichBan;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.ParameterName = "@MaBuoi";
+            param.Value = maBuoi;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = ngay;
+            param.ParameterName = "@NgayDat";
+            param.DbType = DbType.DateTime;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = soLuong;
+            param.ParameterName = "@SoLuong";
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            if (DataAccessCode.ExecuteNonQuery(command) != -1)
+            {
+                MessageBox.Show("Cập Nhật Thông Tin Khách - Bàn Đặt Thành Công-LostUpdate");
                 return true;
             }
             return false;
-        }
 
+        }
+        public static bool CapNhatThongTinKhachBanDatT1ChuaXLLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.CnLostUpDateT1ChuaXL";
+            DbParameter pm = command.CreateParameter();
+
+            //
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaLichBan";
+            param.Value = maLichBan;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            //param = command.CreateParameter();
+            //param.ParameterName = "@TinhTrangBan";
+            //param.Value = t;
+            //param.DbType = DbType.Boolean;
+            //command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.ParameterName = "@MaBuoi";
+            param.Value = maBuoi;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = ngay;
+            param.ParameterName = "@NgayDat";
+            param.DbType = DbType.DateTime;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = soLuong;
+            param.ParameterName = "@SoLuong";
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            if (DataAccessCode.ExecuteNonQuery(command) != -1)
+            {
+                MessageBox.Show("Cập Nhật Thông Tin Khách - Bàn Đặt Thành Công-LostUpdate");
+                return true;
+            }
+            return false;
+
+        }
         public static bool CapNhatThongTinBanDatSolvedLostUpdate(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -345,6 +428,7 @@ namespace RestaurantApp_G21.DAO
             }
             return false;
         }
+   
         public static bool CapNhatThongTinKhachBanDatUnRRead(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
         {
             DbCommand command = DataAccessCode.CreateCommand();
@@ -433,7 +517,52 @@ namespace RestaurantApp_G21.DAO
             }
             return false;
         }
-        public static bool ThemThongTinKhachVaBanDatPhamTom(BanDatDTO banDat, int loai)
+        public static bool CapNhatThongTinKhachBanDatPhanTom(int maLichBan, int maBuoi, DateTime ngay, int soLuong)
+        {
+            DbCommand command = DataAccessCode.CreateCommand();
+            command.CommandText = "dbo.CnCapNhatThongTinBanDatPhanTom";
+            DbParameter pm = command.CreateParameter();
+
+            //
+            DbParameter param = command.CreateParameter();
+            param.ParameterName = "@MaLichBan";
+            param.Value = maLichBan;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            //param = command.CreateParameter();
+            //param.ParameterName = "@TinhTrangBan";
+            //param.Value = t;
+            //param.DbType = DbType.Boolean;
+            //command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.ParameterName = "@MaBuoi";
+            param.Value = maBuoi;
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = ngay;
+            param.ParameterName = "@NgayDat";
+            param.DbType = DbType.DateTime;
+            command.Parameters.Add(param);
+            //
+            param = command.CreateParameter();
+            param.Value = soLuong;
+            param.ParameterName = "@SoLuong";
+            param.DbType = DbType.Int32;
+            command.Parameters.Add(param);
+
+            if (DataAccessCode.ExecuteNonQuery(command) != -1)
+            {
+                MessageBox.Show("Cập Nhật Thông Tin Khách - Bàn Đặt Thành Công-Bóng Ma");
+                return true;
+            }
+            return false;
+        }
+        
+        public static void ThemThongTinKhachVaBanDatPhamTom(BanDatDTO banDat, int loai)
         {
             DbCommand command = DataAccessCode.CreateCommand();
             command.CommandText = "dbo.CnThemThongTinKhachVaBanDatPhanTom";
@@ -495,10 +624,36 @@ namespace RestaurantApp_G21.DAO
             if (DataAccessCode.ExecuteNonQuery(command) != -1)
             {
                 MessageBox.Show("Thêm Thành Công");
-                return true;
-            }
-            return false;
-        }
 
+            }
+        }
+        public static bool HuyThongTinKhachVaBanDatUnRRead(int maLich)
+        {
+            try
+            {
+                DbCommand cm = DataAccessCode.CreateCommand();
+                cm.CommandText = "dbo.CnHuyThongTinKhachBanDatUnRRead";
+                //
+                DbParameter pm = cm.CreateParameter();
+                pm.ParameterName = "@maLichBan";
+                pm.Value = maLich;
+                pm.DbType = DbType.Int32;
+                cm.Parameters.Add(cm);
+
+                if (DataAccessCode.ExecuteNonQuery(cm) != -1)
+                {
+                    MessageBox.Show("Hủy Thành Công");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return false;
+            
+        }
+        
     }
 }
