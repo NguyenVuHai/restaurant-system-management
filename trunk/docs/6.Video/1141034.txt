@@ -1,0 +1,8 @@
+Dirty Read
+http://www.mediafire.com/?y8x5uoot7lp2az7
+Unrepeatable Read
+http://www.mediafire.com/?df47mfisix4ys31
+Phantom
+http://www.mediafire.com/?og58wb1xgp5fr35
+Lost update
+http://www.mediafire.com/?0b9gadh34jyylti
