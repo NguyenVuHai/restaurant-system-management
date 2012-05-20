@@ -64,9 +64,9 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.metroShell2);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEx1.Location = new System.Drawing.Point(0, 1);
+            this.panelEx1.Location = new System.Drawing.Point(1, 1);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(943, 25);
+            this.panelEx1.Size = new System.Drawing.Size(942, 25);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.Transparent;
             this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -96,7 +96,7 @@
             this.metroShell2.Location = new System.Drawing.Point(0, 0);
             this.metroShell2.Name = "metroShell2";
             this.metroShell2.SettingsButtonVisible = false;
-            this.metroShell2.Size = new System.Drawing.Size(943, 25);
+            this.metroShell2.Size = new System.Drawing.Size(942, 25);
             this.metroShell2.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.metroShell2.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
             this.metroShell2.SystemText.QatAddItemText = "&Add to Quick Access Toolbar";
@@ -115,7 +115,8 @@
             this.metroShell2.TabIndex = 1;
             this.metroShell2.TabStripFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroShell2.Text = "Hệ thống quản lý Nhà Hàng";
-            this.metroShell2.TitleText = "<font color=\"#FFFFFF\" size=\"12\"><b>HỆ THỐNG QUẢN LÝ NHÀ HÀNG</b></font>";
+            this.metroShell2.TitleText = "<font color=\"#FFFFFF\" size=\"12\"><b>HỆ THỐNG QUẢN LÝ NHÀ HÀNG :: QUẢN LÝ KHO</b></" +
+                "font>";
             // 
             // m_btn3QC
             // 
@@ -129,9 +130,9 @@
             this.panelEx2.Controls.Add(this.main_tab_KhoHang);
             this.panelEx2.Controls.Add(this.panelEx3);
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx2.Location = new System.Drawing.Point(0, 26);
+            this.panelEx2.Location = new System.Drawing.Point(1, 26);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(943, 589);
+            this.panelEx2.Size = new System.Drawing.Size(942, 589);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.Transparent;
             this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -169,7 +170,7 @@
             this.main_tab_KhoHang.ReorderTabsEnabled = true;
             this.main_tab_KhoHang.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.main_tab_KhoHang.SelectedTabIndex = 0;
-            this.main_tab_KhoHang.Size = new System.Drawing.Size(943, 559);
+            this.main_tab_KhoHang.Size = new System.Drawing.Size(942, 559);
             this.main_tab_KhoHang.TabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.main_tab_KhoHang.TabIndex = 45;
             this.main_tab_KhoHang.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -187,7 +188,7 @@
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(943, 534);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(942, 534);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.tab_NL;
             // 
@@ -203,7 +204,7 @@
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(943, 559);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(942, 559);
             this.superTabControlPanel1.TabIndex = 0;
             this.superTabControlPanel1.TabItem = this.tab_nguyenLieuCanNhap;
             // 
@@ -219,7 +220,7 @@
             this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(943, 559);
+            this.superTabControlPanel5.Size = new System.Drawing.Size(942, 559);
             this.superTabControlPanel5.TabIndex = 0;
             this.superTabControlPanel5.TabItem = this.tab_noToiHanThanhToan;
             // 
@@ -235,7 +236,7 @@
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(943, 559);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(942, 559);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.tab_NCC;
             // 
@@ -251,7 +252,7 @@
             this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(943, 559);
+            this.superTabControlPanel4.Size = new System.Drawing.Size(942, 559);
             this.superTabControlPanel4.TabIndex = 0;
             this.superTabControlPanel4.TabItem = this.tab_nhapHangDotXuat;
             // 
@@ -273,7 +274,7 @@
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx3.Location = new System.Drawing.Point(0, 559);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(943, 30);
+            this.panelEx3.Size = new System.Drawing.Size(942, 30);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.Color = System.Drawing.SystemColors.InactiveCaption;
             this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -320,7 +321,7 @@
             // 
             this.bt_dong.Dock = System.Windows.Forms.DockStyle.Right;
             this.bt_dong.ForeColor = System.Drawing.Color.Black;
-            this.bt_dong.Location = new System.Drawing.Point(878, 0);
+            this.bt_dong.Location = new System.Drawing.Point(877, 0);
             this.bt_dong.Name = "bt_dong";
             this.bt_dong.Size = new System.Drawing.Size(65, 30);
             this.bt_dong.TabIndex = 1;

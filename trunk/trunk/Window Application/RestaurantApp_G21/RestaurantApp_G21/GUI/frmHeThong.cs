@@ -237,6 +237,13 @@ namespace RestaurantApp_G21
         {
             doFilter();
         }
+
+        private void panelEx1_Resize(object sender, EventArgs e)
+        {
+            panelEx10.Location = new Point((panelEx1.Width / 2 - panelEx10.Width / 2), panelEx10.Location.Y);
+        }
+
+
     }
 #endregion
     

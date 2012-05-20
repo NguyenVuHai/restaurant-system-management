@@ -152,6 +152,7 @@ namespace RestaurantApp_G21
         private void LoadHoaDon()
         {
             UserControl uc = new frmQuanLyHoaDon();
+            uc.Dock = DockStyle.Fill;
             panelQuanLyHoaDOn.Controls.Add(uc);
         }
 
@@ -745,6 +746,11 @@ namespace RestaurantApp_G21
             this.Dispose();
             FrmQuanLyNhanVien frm = new FrmQuanLyNhanVien();
             frm.ShowDialog();
+        }
+
+        private void panelEx1_Resize(object sender, EventArgs e)
+        {
+            panelEx2.Location = new Point((panelEx1.Width / 2 - panelEx2.Width / 2), panelEx2.Location.Y);
         }
 
     }
