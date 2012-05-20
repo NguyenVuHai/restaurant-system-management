@@ -1,0 +1,46 @@
+CREATE PROCEDURE dbo.lostUpdatedSolvedXuatNguyenLieu
+	(
+	@soLuongXuat int,
+	@maNguyenLieu int,
+	@maNhaHang int,
+	@mucCoLap int
+	)
+AS
+	BEGIN
+	IF @mucCoLap=0
+		SET TRAN ISOLATION LEVEL SERIALIZABLE
+	ELSE IF @mucCoLap=1
+		SET TRAN ISOLATION LEVEL READ UNCOMMITTED
+	ELSE IF @mucCoLap=2
+		SET TRAN ISOLATION LEVEL READ COMMITTED
+	ELSE IF @mucCoLap=3
+		SET TRAN ISOLATION LEVEL REPEATABLE READ
+	ELSE IF @mucCoLap=4
+		SET TRAN ISOLATION LEVEL SERIALIZABLE
+	
+		Declare @SQLQuery int
+		Declare @maKhoHang int
+		Declare @soLuongTonOld int
+
+		Set @maKhoHang = (SELECT MaKhoHang FROM KHOHANG WHERE MaNhaHang=@maNhaHang)
+		RETRY:
+		BEGIN TRAN
+		BEGIN TRY
+		Set @soLuongTonOld = (SELECT SoLuongTon FROM KHOHANG_NGUYENLIEU WHERE MaNguyenLieu=@maNguyenLieu AND MaKhoHang=@maKhoHang)
+			
+		waitfor delay '00:00:03'
+
+		UPDATE KHOHANG_NGUYENLIEU 
+							SET SoLuongTon=(select @soLuongTonOld - @soLuongXuat)
+							 WHERE MaKhoHang=@maKhoHang
+									 AND MaNguyenLieu=@maNguyenLieu
+		COMMIT
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRAN IF ERROR_NUMBER()=1205
+				BEGIN
+					WAITFOR DELAY '00:00:03'
+					GOTO RETRY
+					END
+		END CATCH
+	END

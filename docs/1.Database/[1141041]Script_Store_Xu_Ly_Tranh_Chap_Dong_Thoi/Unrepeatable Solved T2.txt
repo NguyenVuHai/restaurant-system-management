@@ -1,0 +1,24 @@
+CREATE PROCEDURE dbo.UnrepeatableReadT2setNgungGiaoDich
+	/*
+	(
+	@parameter1 int = 5,
+	@parameter2 datatype OUTPUT
+	)
+	*/
+	(
+	@maNhaCungCap int,
+	@maNhaHang int,
+	@tinhTrang int
+	)
+AS
+	
+		Declare @SQLQuery nvarchar(4000)
+		SET TRAN ISOLATION LEVEL READ COMMITTED
+		BEGIN TRAN
+		Set @SQLQuery = N'UPDATE NHAHANG_NHACUNGCAP 
+							SET TinhTrang='+CONVERT(nvarchar,@tinhTrang)+
+							'WHERE MaNhaHang='+CONVERT(nvarchar,@maNhaHang)+
+									' AND MaNhaCungCap='+CONVERT(nvarchar,@maNhaCungCap)
+		Execute sp_Executesql @SQLQuery
+		COMMIT
+

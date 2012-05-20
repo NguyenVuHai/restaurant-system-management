@@ -1,0 +1,25 @@
+CREATE PROCEDURE dbo.DirtyReadSolvedT1TimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichNgungGiaoDich
+	(
+	@ten nvarchar(500),
+	@tinhTrangGiaoDich int,
+	@maNhaHang int
+	)
+AS
+	
+		Declare @SQLQuery nvarchar(4000)
+		SET TRAN ISOLATION LEVEL READ COMMITTED
+		BEGIN TRAN
+		Set @SQLQuery = N'( SELECT NHNCC.MaNhaCungCap,NCC.TenNhaCungCap,NCC.DienThoai,NCC.SoTaiKhoan, NHNCC.TongNo
+							FROM NHAHANG_NHACUNGCAP NHNCC JOIN NHACUNGCAP NCC ON NHNCC.MaNhaCungCap=NCC.MaNhaCungCap
+							WHERE NHNCC.MaNhaHang='+CONVERT(nvarchar,@maNhaHang)
+		Set @tinhTrangGiaoDich = 1;
+		if @ten !=''
+			Set @SQLQuery = @SQLQuery + ' AND (CONVERT(nvarchar,NCC.MaNhaCungCap)='''+@ten+''' OR NCC.TenNhaCungCap LIKE N''%'+@ten+'%'') '
+		if @tinhTrangGiaoDich=1
+			Set @SQLQuery = @SQLQuery + ' AND NHNCC.TinhTrang=0)'
+		if @tinhTrangGiaoDich=2
+			Set @SQLQuery = @SQLQuery + ' AND NHNCC.TinhTrang=1)'
+    Execute sp_Executesql @SQLQuery
+	COMMIT
+	
+
