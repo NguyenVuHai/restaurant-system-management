@@ -1,0 +1,35 @@
+CREATE PROCEDURE dbo.PhantomSolvedTimKiemNhaCungCapTheoTenVaTheoTinhTrangGiaoDichChuaTungGiaoDich
+	(
+	@ten nvarchar(500),
+	@maNhaHang int
+	)
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+		SET TRAN ISOLATION LEVEL SERIALIZABLE
+		BEGIN TRAN
+		Set @SQLQuery = N'(SELECT T3.MaNhaCungCap,T4.TenNhaCungCap,T4.DienThoai,T4.SoTaiKhoan,T3.TongNo 
+							FROM 
+								(SELECT T1.MaNhaCungCap,T2.TongNo 
+								  FROM (SELECT MaNhaCungCap 
+										FROM NhaCungCap 
+										WHERE MaNhaCungCap NOT IN(SELECT NHNCC1.MaNhaCungCap 
+																	FROM NHAHANG_NHACUNGCAP NHNCC1 
+																	WHERE NHNCC1.MaNhaHang='+CONVERT(nvarchar,@maNhaHang)+')) AS T1 
+										LEFT JOIN 
+											  (SELECT NHNCC2.MaNhaCungCap,NHNCC2.TongNo
+												FROM NHAHANG_NHACUNGCAP NHNCC2
+												WHERE NHNCC2.MaNhaHang='+CONVERT(nvarchar,@maNhaHang)+') AS T2 
+										ON T1.MaNhaCungCap=T2.MaNhaCungcap) AS T3 
+								JOIN NHACUNGCAP T4 ON T3.MaNhaCungCap=T4.MaNhaCungCap'
+		if @ten !=''
+			Set @SQLQuery = @SQLQuery + ' WHERE CONVERT(nvarchar,T3.MaNhaCungCap)='''+@ten+''' OR T4.TenNhaCungCap LIKE N''%'+@ten+'%'' '
+		Set @SQLQuery = @SQLQuery + ' )'
+    Execute sp_Executesql @SQLQuery
+	WAITFOR DELAY '00:00:10'
+	Execute sp_Executesql @SQLQuery
+	COMMIT
+	END
+
+
+

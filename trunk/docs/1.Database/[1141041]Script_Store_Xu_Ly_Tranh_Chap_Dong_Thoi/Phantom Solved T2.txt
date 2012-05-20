@@ -1,0 +1,20 @@
+CREATE PROCEDURE dbo.PhanTomT2ThemNhaCungCap
+(
+	@tenNhaCungCap nvarchar(300),
+	@dienThoai nvarchar(300),
+	@soTaiKhoan nvarchar(300)/*,
+	@maThoiDiemThanhToan int,
+	@maThoiDiemGuiDS int*/
+)
+AS
+	BEGIN
+		SET TRAN ISOLATION LEVEL READ COMMITTED
+		BEGIN TRAN
+		Declare @SQLQuery nvarchar(4000)
+		
+		/*Set @SQLQuery = N'INSERT INTO NHACUNGCAP (TenNhaCungCap, DienThoai, SoTaiKhoan, MaThoiDiemThanhToan,MaThoiDiemGuiDS) VALUES ('''+@tenNhaCungCap+''','''+@dienThoai+''','''+@soTaiKhoan+''','+CONVERT(nvarchar,@maThoiDiemThanhToan)+','+CONVERT(nvarchar,@maThoiDiemGuiDS)+')'*/
+		Set @SQLQuery = N'INSERT INTO NHACUNGCAP (TenNhaCungCap, DienThoai, SoTaiKhoan, MaThoiDiemThanhToan,MaThoiDiemGuiDS) VALUES ('''+@tenNhaCungCap+''','''+@dienThoai+''','''+@soTaiKhoan+''',2,1)'
+	
+    Execute sp_Executesql @SQLQuery
+	COMMIT
+	END
