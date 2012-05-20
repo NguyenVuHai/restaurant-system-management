@@ -166,12 +166,6 @@
     <Compile Include="DTO\ThongTinNhanVienDTO.cs" />
     <Compile Include="DTO\ThongTinTaiKhoanDTO.cs" />
     <Compile Include="DTO\TinhTrangDTO.cs" />
-    <Compile Include="frmCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCongTy.Designer.cs">
-      <DependentUpon>frmCongTy.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +177,6 @@
     </Compile>
     <Compile Include="frmPhanCong.Designer.cs">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongTinNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongTinNhanVien.Designer.cs">
-      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\accessory.cs" />
     <Compile Include="GUI\Demo\frmDirtyReadNhanVien.cs">
@@ -239,6 +227,12 @@
     </Compile>
     <Compile Include="GUI\frmHeThong.designer.cs">
       <DependentUpon>frmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNhanVien.designer.cs">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmTrangChu.cs">
       <SubType>Form</SubType>
@@ -377,17 +371,11 @@
     <Compile Include="uCtr_KhuVuc.Designer.cs">
       <DependentUpon>uCtr_KhuVuc.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmCongTy.resx">
-      <DependentUpon>frmCongTy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhanCong.resx">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinNhanVien.resx">
-      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DatBan\frmDatBan.resx">
       <DependentUpon>frmDatBan.cs</DependentUpon>
@@ -412,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLyNhanVien.resx">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
