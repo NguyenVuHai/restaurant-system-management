@@ -1,0 +1,28 @@
+﻿ALTER PROCEDURE dbo.CnThemThongTinKhachVaBanPhamTom
+	(
+	@Loai int = 1,
+	@HoTen nvarchar(50) = NULL,
+	@CMND nvarchar(10) = NULL,
+	@DienThoai varchar(50) = NULL,
+	@MaBan int,
+	@NgayDatBan datetime,
+	@Buoi int,
+	@SoLuong int,
+	@TinhTrangBan bit = false
+)
+AS
+		SET TRANSACTION ISOLATION LEVEL  READ COMMITTED
+BEGIN TRANSACTION
+	DECLARE @SQLQuery nvarchar(4000)
+		
+	-- Them thong tin khach hang
+	IF @Loai = 1
+	BEGIN
+		INSERT INTO THONGTINKHACHHANG (HoTen, CMND, DienThoai) VALUES (''+@HoTen+'',''+@CMND+'',''+@DienThoai+'')
+		DECLARE @MaThongTinKhachHang int
+		SET @MaThongTinKhachHang = @@Identity
+	END
+	-- Them thong tin ban dat
+	INSERT INTO LICHBAN (MaBan, NgayDatBan, MaBuoi, MaThongTinKhachHang, SoLuong, TinhTrangBan) VALUES(@MaBan, ''+@NgayDatBan+'', @Buoi, @MaThongTinKhachHang, @SoLuong, @TinhTrangBan)
+	
+	COMMIT
