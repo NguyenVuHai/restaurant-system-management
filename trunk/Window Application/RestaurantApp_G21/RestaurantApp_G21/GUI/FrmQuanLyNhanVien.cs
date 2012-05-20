@@ -27,8 +27,7 @@ namespace RestaurantApp_G21
             LoadComboboxLoaiTruyXuat();
             int loaiTruyXuat = m_cbxLoaiTruyXuat.SelectedIndex;
             TinhTongNhanVien(-1, loaiTruyXuat);
-
-
+            
         }
 
         private void LoadComboboxNhaHang(ComboBox cbx)
@@ -400,6 +399,16 @@ namespace RestaurantApp_G21
             this.Dispose();
             frmKhoHang frm = new frmKhoHang();
             frm.ShowDialog();
+        }
+
+        private void panelEx111_Resize(object sender, EventArgs e)
+        {
+            panelEx100.Location = new Point((panelEx111.Width / 2 - panelEx100.Width / 2), panelEx100.Location.Y);
+        }
+
+        private void FrmQuanLyNhanVien_Load(object sender, EventArgs e)
+        {
+            
         }
 
 

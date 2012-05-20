@@ -35,8 +35,8 @@ namespace RestaurantApp_G21.GUI.KhoHang.NhaCungCap
         private void layThongTinNhaCungCapDTO(NhaCungCapDTO dto, int indexRow)
         {
             dto.TenNhaCungCap = grid_ds.Rows[indexRow].Cells["cTenNhaCungCap"].Value.ToString();
-            dto.DienThoai = grid_ds.Rows[indexRow].Cells["cTenNhaCungCap"].Value.ToString();
-            dto.SoTaiKhoan = grid_ds.Rows[indexRow].Cells["cTenNhaCungCap"].Value.ToString();
+            dto.DienThoai = grid_ds.Rows[indexRow].Cells["cDienThoai"].Value.ToString();
+            dto.SoTaiKhoan = grid_ds.Rows[indexRow].Cells["cSoTaiKhoan"].Value.ToString();
         }
         private void bt_sua_Click(object sender, EventArgs e)//tam thoi chi dung de them ncc moi
         {

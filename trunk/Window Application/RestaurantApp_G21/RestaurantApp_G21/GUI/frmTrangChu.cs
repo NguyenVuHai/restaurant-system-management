@@ -115,6 +115,7 @@ namespace RestaurantApp_G21
         private void m_mtTileItemCongTy_Click(object sender, EventArgs e)
         {
             FrmQuanLyNhanVien frm = new FrmQuanLyNhanVien();
+            frm.Location = new Point(0, 0);
             frm.ShowDialog();
         }
         
