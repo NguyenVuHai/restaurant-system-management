@@ -32,10 +32,22 @@ namespace RestaurantApp_G21.DTO
             set { maNhaHang = value; }
         }
 
+        public string TenNhaHang
+        {
+            get { return tenNhaHang; }
+            set { tenNhaHang = value; }
+        }
+
         public int MaLoaiNhanVien
         {
             get { return maLoaiNhanVien; }
             set { maLoaiNhanVien = value; }
+        }
+
+        public string TenLoaiNhanVien
+        {
+            get { return tenLoaiNhanVien; }
+            set { tenLoaiNhanVien = value; }
         }
 
         public string Ho
@@ -78,6 +90,22 @@ namespace RestaurantApp_G21.DTO
         {
             get { return tinhTrang; }
             set { tinhTrang = value; }
+        }
+
+        public ThongTinNhanVienDTO()
+        {
+            maNhanVien = 0;
+            maNhaHang = 0;
+            tenNhaHang = "";
+            maLoaiNhanVien = 0;
+            tenLoaiNhanVien = "";
+            ho = "";
+            ten ="";
+            cmnd ="";
+            diaChi ="";
+            dienThoai="";
+            ngayVaoLam=new DateTime();
+            tinhTrang="";
         }
     }
 }

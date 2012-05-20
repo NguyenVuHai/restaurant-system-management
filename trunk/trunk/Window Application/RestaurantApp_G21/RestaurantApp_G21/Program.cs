@@ -18,7 +18,7 @@ namespace RestaurantApp_G21
             //Application.Run(new frmTrangChu());
             //Application.Run(new frmDirtyReadNhanVien());
             //Application.Run(new frmCongTy());
-            Application.Run(new frmDatBan());
+            Application.Run(new FrmQuanLyNhanVien());
             //Application.Run(new frmKhoHang());
         }
     }

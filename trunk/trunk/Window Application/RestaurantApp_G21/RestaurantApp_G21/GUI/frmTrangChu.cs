@@ -47,12 +47,6 @@ namespace RestaurantApp_G21
             frm.Show();
         }
 
-        private void m_mtTileItemCongTy_Click(object sender, EventArgs e)
-        {
-            frmCongTy frm = new frmCongTy();
-            frm.Show();
-        }
-
         private void frmTrangChu_Resize(object sender, EventArgs e)
         {
             panelEx1.Location = new Point((this.Width - panelEx1.Width) / 2, (this.Height - panelEx1.Height) / 2);
