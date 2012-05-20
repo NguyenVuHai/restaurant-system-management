@@ -15,10 +15,10 @@ namespace RestaurantApp_G21
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmTrangChu());
+            Application.Run(new frmTrangChu());
             //Application.Run(new frmDirtyReadNhanVien());
             //Application.Run(new frmCongTy());
-            Application.Run(new FrmQuanLyNhanVien());
+            //Application.Run(new FrmQuanLyNhanVien());
             //Application.Run(new frmKhoHang());
         }
     }

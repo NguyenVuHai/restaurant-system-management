@@ -28,7 +28,7 @@ namespace RestaurantApp_G21
         private void m_mtTileItemNhaHang_Click(object sender, EventArgs e)
         {
             frmNhaHang frm = new frmNhaHang();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void m_mtTileItemKho_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace RestaurantApp_G21
             //this.panelEx1.Controls.Add(uc);
 
             frmKhoHang frm = new frmKhoHang();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void m_mtTileItemHeThong_Click(object sender, EventArgs e)
@@ -108,9 +108,15 @@ namespace RestaurantApp_G21
         private void m_lbThayDoiMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmDoiMatKhau fDoiMatKhau = new frmDoiMatKhau();
-            fDoiMatKhau.Show();
+            fDoiMatKhau.ShowDialog();
         }
         #endregion
+
+        private void m_mtTileItemCongTy_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyNhanVien frm = new FrmQuanLyNhanVien();
+            frm.ShowDialog();
+        }
         
     }
 }

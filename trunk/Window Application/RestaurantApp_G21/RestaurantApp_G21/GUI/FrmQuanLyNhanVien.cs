@@ -15,7 +15,7 @@ namespace RestaurantApp_G21
         public FrmQuanLyNhanVien()
         {
             InitializeComponent();
-
+            metroTileItem2.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
             LoadComboboxNhaHang(m_cbxThongTinNhaHang);
             LoadComboboxLoaiNhanVien(m_cbxThongTinLoaiNhanVien);
 
@@ -26,9 +26,9 @@ namespace RestaurantApp_G21
 
             LoadComboboxLoaiTruyXuat();
             int loaiTruyXuat = m_cbxLoaiTruyXuat.SelectedIndex;
-            TinhTongNhanVien(-1,loaiTruyXuat);
+            TinhTongNhanVien(-1, loaiTruyXuat);
 
-            
+
         }
 
         private void LoadComboboxNhaHang(ComboBox cbx)
@@ -127,8 +127,8 @@ namespace RestaurantApp_G21
             }
             else
                 m_dgvDanhSachNhanVien.DataSource = null;
-            
-            
+
+
         }
 
         private string GetTenLoaiNhanVien(List<LoaiNhanVienDTO> listLoaiNhanVien, int maLoaiNhanVien)
@@ -155,19 +155,19 @@ namespace RestaurantApp_G21
         {
             if (maNH == 0) //null
             {
-                int temp = ThongTinNhanVienBUS.SumNhanVien(0,loaiTruyXuat);
+                int temp = ThongTinNhanVienBUS.SumNhanVien(0, loaiTruyXuat);
                 m_lblTimKiemTenNhaHang.Text = "nhân viên chưa được phân công vào nhà hàng nào";
                 m_txtThongKeTongNV.Text = temp.ToString();
             }
             else if (maNH == -1)    //tất cả
             {
-                int temp = ThongTinNhanVienBUS.SumNhanVien(-1,loaiTruyXuat);
+                int temp = ThongTinNhanVienBUS.SumNhanVien(-1, loaiTruyXuat);
                 m_lblTimKiemTenNhaHang.Text = "nhân viên thuộc tổng công ty ";
                 m_txtThongKeTongNV.Text = temp.ToString();
             }
             else
             {
-                int temp = ThongTinNhanVienBUS.SumNhanVien(maNH,loaiTruyXuat);
+                int temp = ThongTinNhanVienBUS.SumNhanVien(maNH, loaiTruyXuat);
                 m_lblTimKiemTenNhaHang.Text = "nhân viên thuộc nhà hàng " + ((NhaHangDTO)m_cbxTimKiemNhaHang.SelectedItem).TenNhaHang;
                 m_txtThongKeTongNV.Text = temp.ToString();
             }
@@ -283,7 +283,7 @@ namespace RestaurantApp_G21
                 nv.MaLoaiNhanVien = ((LoaiNhanVienDTO)m_cbxThongTinLoaiNhanVien.SelectedItem).MaLoaiNhanVien;
 
             ThongTinNhanVienBUS.EditThongTinNhanVien(nv, loaiTruyXuat);
-            
+
             //LoadDanhSachNhanVien();
 
             ThongTinNhanVienDTO nvTimKiem = new ThongTinNhanVienDTO();
@@ -359,6 +359,47 @@ namespace RestaurantApp_G21
         private void m_iPanelThongTinNV_ItemClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTileItem2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmNhaHang frm = new frmNhaHang();
+            frm.ShowDialog();
+
+        }
+
+        private void m_mtTileItmDatBan_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmDatBan frm = new frmDatBan();
+            frm.ShowDialog();
+        }
+
+        private void m_mtTileHome_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmTrangChu frm = new frmTrangChu();
+            frm.ShowDialog();
+        }
+
+        private void m_mtTileCongTy_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void m_mtHThong_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmHeThong frm = new frmHeThong();
+            frm.ShowDialog();
+        }
+
+        private void m_mtTieKhoHang_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmKhoHang frm = new frmKhoHang();
+            frm.ShowDialog();
         }
 
 

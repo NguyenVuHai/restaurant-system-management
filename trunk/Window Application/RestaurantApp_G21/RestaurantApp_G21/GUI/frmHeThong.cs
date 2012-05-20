@@ -17,7 +17,7 @@ namespace RestaurantApp_G21
         public frmHeThong()
         {
             InitializeComponent();
-            
+            m_mtHThong.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
         }
         private void loadNhaHang()
         {

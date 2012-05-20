@@ -454,7 +454,7 @@
             this.m_mtTileItemCongTy.TileStyle.PaddingRight = 4;
             this.m_mtTileItemCongTy.TileStyle.PaddingTop = 4;
             this.m_mtTileItemCongTy.TileStyle.TextColor = System.Drawing.Color.White;
-            
+            this.m_mtTileItemCongTy.Click += new System.EventHandler(this.m_mtTileItemCongTy_Click);
             // 
             // itemPanel12
             // 
