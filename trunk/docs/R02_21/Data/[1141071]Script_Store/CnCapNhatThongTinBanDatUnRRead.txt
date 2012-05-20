@@ -1,0 +1,26 @@
+﻿ALTER PROCEDURE dbo.CnCapNhatThongTinBanDatUnRRead
+	(
+	@MaLichBan int,
+	@NgayDat datetime,
+	@SoLuong int,
+	@MaBuoi int
+	--@TinhTrangBan bit
+	)
+AS
+	/* SET NOCOUNT ON */
+	SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
+	
+	BEGIN TRANSACTION
+	
+		Declare @sql nvarchar(4000)
+		set @sql = N'UPDATE LICHBAN SET MaBuoi = '+convert(nvarchar,@MaBuoi)+',SoLuong = '+convert(nvarchar,@SoLuong)+',NgayDatBan ='''+convert(nvarchar,@NgayDat)+
+					''' WHERE MaLichBan = ' + convert(nvarchar,@MaLichBan)
+	execute sp_Executesql @sql
+	
+	--Waitfor delay '00:00:30' 
+	--IF @@ERROR <> 0
+	--BEGIN
+	--	ROLLBACK
+	--   Return
+	-- END
+	COMMIT
