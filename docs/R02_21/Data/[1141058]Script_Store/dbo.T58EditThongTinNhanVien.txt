@@ -1,0 +1,30 @@
+CREATE PROCEDURE dbo.T58EditThongTinNhanVien
+	@MaNhanVien int,
+	@MaNhaHang int,
+	@MaLoaiNhanVien int,
+	@Ho nvarchar(50) = null,
+	@Ten nvarchar(20) = null,
+	@CMND nvarchar(10) = null,
+	@DiaChi nvarchar(50) = null,
+	@DienThoai nvarchar(50) = null,
+	@NgayVaoLam date,
+	@TinhTrang nvarchar(1) = null
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+
+		Set @SQLQuery = N'UPDATE NHANVIEN SET Ho = N'''+CONVERT(nvarchar,@Ho)+''', Ten = N'''+CONVERT(nvarchar,@Ten)+''', CMND = '''+CONVERT(nvarchar,@CMND)+''', DiaChi = N'''+CONVERT(nvarchar,@DiaChi)+''', DienThoai = '''+CONVERT(nvarchar,@DienThoai)+''', NgayVaoLam = '''+CONVERT(nvarchar,@NgayVaoLam)+''', TinhTrang = '''+CONVERT(nvarchar,@TinhTrang)+''''
+		If @MaNhaHang != 0
+			Set @SQLQuery = @SQLQuery + ', MaNhaHang =' + CONVERT(nvarchar,@MaNhaHang)
+		Else
+			Set @SQLQuery = @SQLQuery + ', MaNhaHang = NULL'
+		If @MaLoaiNhanVien != 0
+			Set @SQLQuery = @SQLQuery + ', MaLoaiNhanVien =' + CONVERT(nvarchar,@MaLoaiNhanVien)
+		Else
+			Set @SQLQuery = @SQLQuery + ', MaLoaiNhanVien = NULL'
+			  
+		Set @SQLQuery = @SQLQuery + ' WHERE MaNhanVien = '+CONVERT(nvarchar,@MaNhanVien)
+			
+		Execute sp_Executesql @SQLQuery
+		
+	END

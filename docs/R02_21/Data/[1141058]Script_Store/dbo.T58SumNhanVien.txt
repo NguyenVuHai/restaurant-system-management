@@ -1,0 +1,15 @@
+CREATE PROCEDURE dbo.T58SumNhanVien
+	@MaNhaHang int
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+		Set @SQLQuery = N'SELECT COUNT(*) as Tong FROM NHANVIEN'
+		If @MaNhaHang = 0
+			Set @SQLQuery = @SQLQuery + ' WHERE MaNhaHang is null'
+		Else If @MaNhaHang = -1
+			Set @SQLQuery = @SQLQuery + ' WHERE MaNhaHang like ''%'''
+		Else
+			Set @SQLQuery = @SQLQuery + ' WHERE MaNhaHang='+CONVERT(nvarchar,@MaNhaHang)
+		Execute sp_Executesql @SQLQuery
+		RETURN
+	END

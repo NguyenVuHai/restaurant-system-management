@@ -1,0 +1,8 @@
+CREATE PROCEDURE dbo.T58LoadDanhSachNhanVien
+	
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+		Set @SQLQuery = N'(SELECT NV.MaNhanVien, NV.Ho, NV.Ten, NV.MaNhaHang, NV.MaLoaiNhanVien, NV.CMND, NV.DiaChi, NV.DienThoai, NV.NgayVaoLam, NV.TinhTrang  FROM NHANVIEN NV WHERE (1=1))'
+		Execute sp_Executesql @SQLQuery
+	END
