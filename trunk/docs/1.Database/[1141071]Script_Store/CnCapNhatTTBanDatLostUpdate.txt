@@ -1,0 +1,24 @@
+﻿ALTER PROCEDURE dbo.CnLostUpdate
+	(
+	@MaLichBan int,
+	@NgayDat datetime, -- 12
+	@SoLuong int,
+	@MaBuoi int -- 2
+	)
+AS
+	/* SET NOCOUNT ON */
+	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+	begin transaction
+		declare @ngayDatBan datetime
+		declare @Buoi int -- 1
+		Declare @SQLQuery nvarchar(4000)
+		-- lấy dữ liệu đã đc lưu trước đó lên để  so sánh
+		Select @ngayDatBan = NgayDatBan From LichBan Where MaLichBan = ''+convert(nvarchar,@MaLichBan)+''
+		Select @Buoi = MaBuoi From LichBan Where MaLichBan = ''+convert(nvarchar,@MaLichBan)+''
+
+		if(@NgayDat <> @ngayDatBan and @Buoi <> @MaBuoi)
+			set @SQLQuery = N'UPDATE LICHBAN SET MaBuoi = '+convert(nvarchar,@MaBuoi)+' ,SoLuong = '+convert(nvarchar,@SoLuong)+',NgayDatBan ='''+convert(nvarchar,@ngayDatBan)+
+			''' WHERE MaLichBan = ' + convert(nvarchar,@MaLichBan)
+		execute sp_Executesql @SQLQuery 
+	COMMIT
+	
