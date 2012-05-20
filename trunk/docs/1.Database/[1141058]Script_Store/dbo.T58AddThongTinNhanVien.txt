@@ -1,0 +1,29 @@
+CREATE PROCEDURE dbo.T58AddThongTinNhanVien
+(
+	@MaNhaHang smallint = -1,
+	@MaLoaiNhanVien smallint = -1,
+	@Ho nvarchar(50),
+	@Ten nvarchar(20),
+	@CMND nvarchar(10),
+	@DiaChi nvarchar(100),
+	@DienThoai nvarchar(50),
+	@NgayVaoLam smalldatetime,
+	@TinhTrang nvarchar(1)
+)
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+		Declare @MaNhanVien int
+		If @MaNhaHang = -1
+			If @MaLoaiNhanVien = -1
+				Set @SQLQuery = N'INSERT INTO NHANVIEN (Ho, Ten, CMND, DiaChi, DienThoai, NgayVaoLam, TinhTrang) VALUES ('+' N'''+CONVERT(nvarchar, @Ho)+''', N'''+CONVERT(nvarchar, @Ten)+''', N'''+CONVERT(nvarchar, @CMND)+''', N'''+CONVERT(nvarchar, @DiaChi)+''', N'''+CONVERT(nvarchar, @DienThoai)+''', N'''+CONVERT(nvarchar, @NgayVaoLam)+''', N'''+CONVERT(nvarchar, @TinhTrang)+''')'
+			Else
+				Set @SQLQuery = N'INSERT INTO NHANVIEN (MaLoaiNhanVien, Ho, Ten, CMND, DiaChi, DienThoai, NgayVaoLam, TinhTrang) VALUES ('+CONVERT(nvarchar, @MaLoaiNhanVien)+', N'''+CONVERT(nvarchar, @Ho)+''', N'''+CONVERT(nvarchar, @Ten)+''', N'''+CONVERT(nvarchar, @CMND)+''', N'''+CONVERT(nvarchar, @DiaChi)+''', N'''+CONVERT(nvarchar, @DienThoai)+''', N'''+CONVERT(nvarchar, @NgayVaoLam)+''', N'''+CONVERT(nvarchar, @TinhTrang)+''')'
+		Else
+			If @MaLoaiNhanVien = -1
+				Set @SQLQuery = N'INSERT INTO NHANVIEN (MaNhaHang, Ho, Ten, CMND, DiaChi, DienThoai, NgayVaoLam, TinhTrang) VALUES ('+CONVERT(nvarchar, @MaNhaHang)+', N'''+CONVERT(nvarchar, @Ho)+''', N'''+CONVERT(nvarchar, @Ten)+''', N'''+CONVERT(nvarchar, @CMND)+''', N'''+CONVERT(nvarchar, @DiaChi)+''', N'''+CONVERT(nvarchar, @DienThoai)+''', N'''+CONVERT(nvarchar, @NgayVaoLam)+''', N'''+CONVERT(nvarchar, @TinhTrang)+''')'
+			Else
+				Set @SQLQuery = N'INSERT INTO NHANVIEN (MaNhaHang, MaLoaiNhanVien, Ho, Ten, CMND, DiaChi, DienThoai, NgayVaoLam, TinhTrang) VALUES ('+CONVERT(nvarchar, @MaNhaHang)+', '+CONVERT(nvarchar, @MaLoaiNhanVien)+', N'''+CONVERT(nvarchar, @Ho)+''', N'''+CONVERT(nvarchar, @Ten)+''', N'''+CONVERT(nvarchar, @CMND)+''', N'''+CONVERT(nvarchar, @DiaChi)+''', N'''+CONVERT(nvarchar, @DienThoai)+''', N'''+CONVERT(nvarchar, @NgayVaoLam)+''', N'''+CONVERT(nvarchar, @TinhTrang)+''')'
+		SET @MaNhanVien = @@Identity
+    Execute sp_Executesql @SQLQuery
+	END

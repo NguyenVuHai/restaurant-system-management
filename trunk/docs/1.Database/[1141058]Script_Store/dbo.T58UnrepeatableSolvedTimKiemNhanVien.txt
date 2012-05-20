@@ -1,0 +1,66 @@
+CREATE PROCEDURE dbo.T58UnrepeatableSolvedTimKiemNhanVien
+(
+	@MaNhanVien int  = NULL,
+	@MaNhaHang int = NULL,
+	@MaLoaiNhanVien int = NULL,
+	@Ho nvarchar(50) = NULL,
+	@Ten nvarchar(20) = NULL,
+	@CMND nvarchar(10) = NULL,
+	@DiaChi nvarchar(100) = NULL,
+	@DienThoai nvarchar(50) = NULL,
+	@NgayVaoLam datetime = NULL,
+	@TinhTrang nvarchar(1) = NULL
+)
+AS
+	BEGIN
+		Declare @SQLQuery nvarchar(4000)
+		SET TRAN ISOLATION LEVEL REPEATABLE READ
+		BEGIN TRAN
+		Set @SQLQuery = N'SELECT NV.MaNhanVien, NV.Ho, NV.Ten, NV.MaNhaHang, NV.MaLoaiNhanVien, NV.CMND, NV.DiaChi, NV.DienThoai, NV.NgayVaoLam, NV.TinhTrang
+						FROM NHANVIEN AS NV
+						WHERE (1=1)'
+		
+		If @MaNhanVien != 0
+			Set @SQLQuery = @SQLQuery + ' AND (NV.MaNhanVien = '+CONVERT(nvarchar, @MaNhanVien)+')'
+
+		If @MaNhaHang = 0
+			Set @SQLQuery = @SQLQuery + ' AND (NV.MaNhaHang is null )'
+		else if @MaNhaHang != -1
+			Set @SQLQuery = @SQLQuery + ' AND (NV.MaNhaHang = '+CONVERT(nvarchar, @MaNhaHang)+')'
+		else
+			Set @SQLQuery = @SQLQuery
+
+		If @MaLoaiNhanVien = 0
+			Set @SQLQuery = @SQLQuery + ' AND (NV.MaLoaiNhanVien is null )'
+		else if @MaLoaiNhanVien != -1
+			Set @SQLQuery = @SQLQuery + ' AND (NV.MaLoaiNhanVien = '+CONVERT(nvarchar, @MaLoaiNhanVien)+')'
+		else
+			Set @SQLQuery = @SQLQuery
+
+		If @Ho != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.Ho = N'''+@Ho+''')'
+			
+		If @Ten != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.Ten = N'''+@Ten+ ''')'
+			
+		If @CMND != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.CMND = '''+@CMND+''')'
+
+		If @DiaChi != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.DiaChi = N'''+@DiaChi+''')'
+
+		If @DienThoai != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.DienThoai = '''+@DienThoai+''')'
+
+		If @NgayVaoLam is not NULL
+			Set @SQLQuery = @SQLQuery + ' AND (NV.NgayVaoLam = '''+CONVERT(nvarchar, @NgayVaoLam)+''')'
+
+		If @TinhTrang != ''
+			Set @SQLQuery = @SQLQuery + ' AND (NV.TinhTrang = '+@TinhTrang+')'
+    
+	Execute sp_Executesql @SQLQuery
+	WAITFOR DELAY '00:00:15'
+	Execute sp_Executesql @SQLQuery
+	COMMIT
+	
+	END
