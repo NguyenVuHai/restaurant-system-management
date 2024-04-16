@@ -1,34 +1,14 @@
-<a href="https://heijco.vn/vi/products/35/Tu-bang-dien-tai-Hai-Phong.html">Tủ điện</a>
-<a href="https://sieuthiaua.vn">Siêu thị Điện</a>
-<a href="https://heijco.vn/vi/products/33/Thang-mang-cap-tai-Hai-Phong.html">Thang máng cáp</a>
-<a href="https://heijco.vn/den-pha-le-tiep">Đèn chùm</a>
-<a href="https://heijco.vn/vi/products/128/Den-trang-tri-cao-cap-tai-Hai-Phong.html">Đèn trang trí</a>
-<a href="https://heijco.vn/vi/products/82/Den-chum-pha-le-tai-Hai-Phong.html">Đèn chùm pha lê</a>
-<a href="https://heijco.vn/den-pha-le-tiep">Đèn Tiệp</a>
-<a href="https://heijco.vn/den-pha-le-tiep">Đèn chùm Tiệp</a>
-<a href="https://heijco.vn/vi/product-detail/4699/Tu-bang-dien-Vo-tu-dien-son-tinh-dien-tai-Hai-Phong.html">Vỏ tủ sơn tĩnh điện</a>
-<a href="https://heijco.vn/vi/product-detail/4698/Tu-bang-dien-Vo-tu-dien-Inox-tai-Hai-Phong.html">Vỏ tủ Inox</a>
-<a href="https://heijco.vn/vi/product-detail/3420/Tu-bang-dien-Tu-cong-to-tai-Hai-Phong.html">Tủ công tơ</a>
-<a href="https://heijco.vn/vi/product-detail/3419/Tu-bang-dien-Tu-tu-bu-tai-Hai-Phong.html">Tủ tụ bù</a>
-<a href="https://heijco.vn/vi/product-detail/3418/Tu-bang-dien-Tu-ATS-tai-Hai-Phong.html">Tủ ATS</a>
-<a href="https://heijco.vn/vi/product-detail/92/Tu-bang-dien-Vo-tu-cuu-hoa-tai-Hai-Phong.html">Tủ cứu hoả</a>
-<a href="https://heijco.vn/vi/product-detail/91/Tu-bang-dien-Tu-dieu-khien-chieu-sang-tai-Hai-Phong.html">Tủ chiếu sáng</a>
-<a href="https://heijco.vn/vi/product-detail/90/Tu-bang-dien-Tu-phan-phoi-MSB--DB-tai-Hai-Phong.html">Tủ phân phối</a>
-<a href="https://heijco.vn/vi/product-detail/89/Tu-bang-dien-Tu-dien-tong-tai-Hai-Phong.html">Tủ điện tổng</a>
-<a href="https://heijco.vn/vi/product-detail/88/Tu-bang-dien-Tu-KIOSK-may-bien-ap-tai-Hai-Phong.html">Tủ trạm KIOSK</a>
-<a href="https://heijco.vn/vi/manufacture/60/Nha-phan-phoi-cua-ArtGlass-Crystal-tai-Hai-Phong.html">ArtGlass</a>
-<a href="https://heijco.vn/vi/manufacture/4/Nha-phan-phoi-cua-TERASAKI-tai-Hai-Phong.html">Terasaki</a>
-<a href="https://heijco.vn/vi/manufacture/5/Nha-phan-phoi-cua-LS-tai-Hai-Phong.html">LS</a>
-<a href="https://heijco.vn/vi/manufacture/71/Nha-phan-phoi-cua-Schneider-tai-Hai-Phong.html">Schneider</a>
-<a href="https://heijco.vn/vi/manufacture/11/Nha-phan-phoi-cua-Panasonic-tai-Hai-Phong.html">Panasonic</a>
-<a href="https://heijco.vn/vi/manufacture/12/Nha-phan-phoi-cua-Hyundai-tai-Hai-Phong.html">Hyundai</a>
-<a href="https://heijco.vn/led-hai-phong">Đèn LED</a>
-<a href="https://heijco.vn/vi/products/168/LED-Rang-Dong-tai-Hai-Phong.html">LED Rạng Đông</a>
-<a href="https://heijco.vn/vi/products/153/Den-LED-Panasonic-tai-Hai-Phong.html">LED Panasonic</a>
-<a href="https://heijco.vn/vi/products/130/Den-LED-Roman-tai-Hai-Phong.html">LED Roman</a>
-<a href="https://heijco.vn/vi/products/49/Den-tau-thuy-tai-Hai-Phong.html">Đèn tàu thuỷ</a>
-<a href="https://heijco.vn/vi/products/47/Cap-tau-thuy-tai-Hai-Phong.html">Cáp tàu thuỷ</a>
-<a href="https://heijco.vn/vi/manufacture/6/Nha-phan-phoi-cua-HAIXING-tai-Hai-Phong.html">Haixing</a>
-
-
-
+Xu hướng thiết kế nội thất hot nhất 2024: Hé lộ tương lai
+Bắt đầu từng bước vào những ý tưởng thiết kế nội thất, nơi mà sự sáng tạo không có giới hạn và sự đổi mới luôn dẫn đầu. Năm 2024, ngành nội thất trở thành bức tranh để thể hiện bản thân, không chỉ còn là những vật dụng với nhu cầu cơ bản. Hãy cùng khám phá những xu hướng hàng đầu ngay nào!
+1.	Sống xanh để hít thở không khí trong lành
+Sống xanh không chỉ là một xu hướng, đó còn là một phong cách sống của con người hiện đại. Trong năm 2024, thiết kế nội thất thân thiện với môi trường chiếm vị trí trung tâm, bao trùm nhiều xu hướng khác. Các vật liệu bền vững, yếu tố thiên nhiên và những bức tường sống động sẽ mang không gian mở vào ngôi nhà của bạn.
+Các yếu tố và thiết kế lấy cảm hứng từ thiên nhiên góp phần cải thiện sức khỏe, làm nổi bật mối liên hệ với thiên nhiên và đánh thức ý thức trách nhiệm đối với môi trường. Nắm bắt xu hướng, ta có thể dễ dàng biến đổi ngôi nhà bằng cách giữ cửa sổ trống để ngắm cảnh, cây trồng trong chậu hoặc có ý thức về môi trường trong các lựa chọn thiết kế vật dụng của bạn.
+2.	Ngôi nhà thông minh mang tương lai đến trong tầm tay bạn
+Những ngôi nhà với thiết kế thông minh tiếp tục thống trị trong năm 2024. Công nghệ sẽ tích hợp với môi trường xung quanh chúng ta, nâng cao sự thoải mái và tiện nghi hơn nữa. Từ xu hướng thiết kế hệ thống chiếu sáng kích hoạt bằng giọng nói và kính thông minh cho đến quản lý nhà dựa trên AI, những cải tiến này giúp cuộc sống hàng ngày trở nên dễ dàng hơn, hiệu quả hơn và thoáng mát hơn.
+3.	Gạch độc đáo tạo điểm nhấn
+Tường và sàn đều là những nơi mang lại cảm giác kích thích cao. Những loại gạch cỡ lớn, có kích thước rộng với kiểu trang trí thủ công độc đáo. Hay những họa tiết ấn tượng, bố cục mới và cách bố trí bất ngờ sẽ tạo thêm cảm giác hùng vĩ và cá tính cho không gian. Ngoài ra, gạch lát sàn và ốp tường có thể tạo điểm nhấn ấn tượng như một bức tường đặc trưng điển hình.
+4.	Văn phòng tại gia trở thành cố định
+Một trong những xu hướng nội thất của năm 2024 chắc chắn sẽ tiếp tục xoay quanh yếu tố năng suất. Văn phòng tại nhà đang dần chiếm vị trí cao hơn, nhà không còn chỉ là nơi để nghỉ ngơi. Những công việc từ xa đang ngày càng phát triển, mọi người đầu tư vào đồ nội thất tiện dụng, cách âm và thiết kế phong cách để làm cho không gian làm việc của họ trở nên tiện nghi và đầy cảm hứng hơn. 
+Do đó, đồ nội thất và trang trí cho những không gian này ngày càng đa dạng. Vì vậy, bạn có thể sở hữu những chiếc ghế văn phòng tuyệt đẹp, hệ thống chiếu sáng riêng biệt,… để làm cho những nội thất này trở nên nổi bật và phù hợp với mọi nhu cầu của bạn.
+5.	Truyền thống được xác định lại cho sự hấp dẫn đương đại
+Thiết kế truyền thống sẽ có sự thay đổi thú vị vào năm 2024. Chúng ta đang chứng kiến sự trở lại của các yếu tố cổ điển nhưng có thêm những sự thay đổi mới mẻ. Đồ nội thất trang trí công phu có thể bổ sung cho thiết kế cơ bản nhưng cũng mang lại cảm giác nhẹ nhàng và giản dị, đặc trưng của nội thất hiện đại. Thiết kế thông minh là kết hợp sự quyến rũ của quá khứ với những tiện nghi của tương lai.
